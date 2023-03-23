@@ -1,16 +1,18 @@
+import { Link } from "@inertiajs/react";
 import image from "./img-example.jpg";
 
 const isNews = (news) => {
     return news.map((data, i) => {
         return (
             <div className="card w-full  lg:w-96 bg-base-100 shadow-xl" key={i}>
+                <Link href="/ShowNews"></Link>
                 <figure>
                     <img src={image} alt="Shoes" />
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title">
                         {data.title}
-                        <div className="badge badge-secondary"></div>
+                        <div className="badge badge-primary">NEW</div>
                     </h2>
                     <p>{data.description}</p>
                     <div className="card-actions justify-end">

@@ -2,51 +2,47 @@ import { Link } from "@inertiajs/react";
 
 const Navbar = ({ user }) => {
     return (
-        <div className="navbar bg-base-100">
-            <div className="flex-1">
-                <a className="btn btn-ghost normal-case text-xl">Panel Warta</a>
-            </div>
-            <div className="flex-1">
-                <ul className="menu menu-horizontal px-1">
-                    <li>
-                        <a>Berita</a>
-                    </li>
-                    <li tabIndex={0}>
-                        <a>
-                            Parent
-                            <svg
-                                className="fill-current"
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="20"
-                                viewBox="0 0 24 24"
-                            >
-                                <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-                            </svg>
-                        </a>
-                        <ul className="p-2 bg-base-100">
+        <div>
+            <header className="bg-slate-600 p-20">
+                <h1 className="text-white text-4xl text-center">Panel Warta</h1>
+                <h2 className="text-white text-xl text-center">
+                    All About Information
+                </h2>
+            </header>
+            <div className="sticky top-0">
+                <nav className="sticky top-0 navbar bg-base-100 ">
+                    <div className="flex-1">
+                        {/* <a className="btn btn-ghost normal-case text-xl">
+                        Panel Warta
+                    </a> */}
+                        <ul className="menu menu-horizontal px-5">
                             <li>
-                                <a>Submenu 1</a>
+                                <a>Berita</a>
                             </li>
                             <li>
-                                <a>Submenu 2</a>
+                                <a>Nasional</a>
+                            </li>
+                            <li>
+                                <a>Daerah</a>
+                            </li>
+                            <li>
+                                <a>Wisata</a>
+                            </li>
+                            <li>
+                                <a>Olahraga</a>
                             </li>
                         </ul>
-                    </li>
-                    <li>
-                        <a>Olahraga</a>
-                    </li>
-                </ul>
-            </div>
-            <div className="flex-none gap-2">
-                <div className="form-control">
-                    <input
-                        type="text"
-                        placeholder="Search"
-                        className="input input-bordered"
-                    />
-                </div>
-                {/* <div className="dropdown dropdown-end">
+                    </div>
+                    <div className="flex-none"></div>
+                    <div className="flex-none gap-2">
+                        <div className="form-control px-5">
+                            <input
+                                type="text"
+                                placeholder="Search"
+                                className="input input-bordered"
+                            />
+                        </div>
+                        {/* <div className="dropdown dropdown-end">
                     <label
                         tabIndex="0"
                         className="btn btn-ghost btn-circle avatar"
@@ -105,6 +101,8 @@ const Navbar = ({ user }) => {
                         )}
                     </ul>
                 </div> */}
+                    </div>
+                </nav>
             </div>
         </div>
     );

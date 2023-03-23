@@ -5,7 +5,7 @@ const isNews = (news) => {
     return news.map((data, i) => {
         return (
             <div className="card w-full  lg:w-96 bg-base-100 shadow-xl" key={i}>
-                <Link href="/ShowNews"></Link>
+                {/* <Link href="/ShowNews"></Link> */}
                 <figure>
                     <img src={image} alt="Shoes" />
                 </figure>

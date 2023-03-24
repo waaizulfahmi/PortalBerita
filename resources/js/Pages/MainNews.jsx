@@ -3,7 +3,7 @@ const MainNews = () => {
         <div>
             <main className="max-w-7xl mx-auto ">
                 <div className="box-border flex flex-wrap">
-                    <article className="w-full md:w-2/3  p-4">
+                    <article className="w-full h-full md:w-2/3  p-4">
                         <div className="p-1">
                             <h1 className="text-black p-4 lg:text-2xl  sm:text-xl">
                                 Berita Terkini

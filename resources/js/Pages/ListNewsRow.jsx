@@ -1,7 +1,8 @@
 const ListNewsRow = () => {
     return (
-        <div className="container my-20  mx-auto">
+        <div className="container my-20  mx-auto ml-0">
             <section className="mb-15 text-gray-800 text-center md:text-left">
+                {/* <h1>Berita Hot</h1> */}
                 <div className="flex flex-wrap mb-1/2">
                     <div className="grow-0 shrink-0 basis-auto w-full md:w-3/12 px-3 mb-6 md:mb-0 ml-auto">
                         <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6">

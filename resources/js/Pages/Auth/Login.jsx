@@ -11,7 +11,11 @@ export default function Login({ status, canResetPassword }) {
     const { data, setData, post, processing, errors, reset } = useForm({
         email: '',
         password: '',
+<<<<<<< HEAD
         remember: false,
+=======
+        remember: '',
+>>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c
     });
 
     useEffect(() => {
@@ -20,6 +24,13 @@ export default function Login({ status, canResetPassword }) {
         };
     }, []);
 
+<<<<<<< HEAD
+=======
+    const handleOnChange = (event) => {
+        setData(event.target.name, event.target.type === 'checkbox' ? event.target.checked : event.target.value);
+    };
+
+>>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c
     const submit = (e) => {
         e.preventDefault();
 
@@ -44,7 +55,11 @@ export default function Login({ status, canResetPassword }) {
                         className="mt-1 block w-full"
                         autoComplete="username"
                         isFocused={true}
+<<<<<<< HEAD
                         onChange={(e) => setData('email', e.target.value)}
+=======
+                        onChange={handleOnChange}
+>>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c
                     />
 
                     <InputError message={errors.email} className="mt-2" />
@@ -60,7 +75,11 @@ export default function Login({ status, canResetPassword }) {
                         value={data.password}
                         className="mt-1 block w-full"
                         autoComplete="current-password"
+<<<<<<< HEAD
                         onChange={(e) => setData('password', e.target.value)}
+=======
+                        onChange={handleOnChange}
+>>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c
                     />
 
                     <InputError message={errors.password} className="mt-2" />
@@ -68,11 +87,15 @@ export default function Login({ status, canResetPassword }) {
 
                 <div className="block mt-4">
                     <label className="flex items-center">
+<<<<<<< HEAD
                         <Checkbox
                             name="remember"
                             checked={data.remember}
                             onChange={(e) => setData('remember', e.target.checked)}
                         />
+=======
+                        <Checkbox name="remember" value={data.remember} onChange={handleOnChange} />
+>>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c
                         <span className="ml-2 text-sm text-gray-600">Remember me</span>
                     </label>
                 </div>

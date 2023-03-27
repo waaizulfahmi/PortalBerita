@@ -5,7 +5,11 @@ import TextInput from '@/Components/TextInput';
 import { Link, useForm, usePage } from '@inertiajs/react';
 import { Transition } from '@headlessui/react';
 
+<<<<<<< HEAD
 export default function UpdateProfileInformation({ mustVerifyEmail, status, className = '' }) {
+=======
+export default function UpdateProfileInformation({ mustVerifyEmail, status, className }) {
+>>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c
     const user = usePage().props.auth.user;
 
     const { data, setData, patch, errors, processing, recentlySuccessful } = useForm({

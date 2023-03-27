@@ -7,7 +7,11 @@ import { Head } from '@inertiajs/react';
 export default function Edit({ auth, mustVerifyEmail, status }) {
     return (
         <AuthenticatedLayout
+<<<<<<< HEAD
             user={auth.user}
+=======
+            auth={auth}
+>>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c
             header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Profile</h2>}
         >
             <Head title="Profile" />

@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "f3e59c83b2bdce9d866ac04aee241e83",
+=======
+    "content-hash": "8846fbadf5e2a8b7528786fb0a80267a",
+>>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c
     "packages": [
         {
             "name": "brick/math",
@@ -5740,6 +5744,7 @@
         },
         {
             "name": "laravel/breeze",
+<<<<<<< HEAD
             "version": "v1.20.0",
             "source": {
                 "type": "git",
@@ -5762,6 +5767,29 @@
             "require-dev": {
                 "orchestra/testbench": "^8.0",
                 "phpstan/phpstan": "^1.10"
+=======
+            "version": "v1.19.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/breeze.git",
+                "reference": "725e0c4fb1f630afdd90b5fba2a7f6d8d547ac29"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/breeze/zipball/725e0c4fb1f630afdd90b5fba2a7f6d8d547ac29",
+                "reference": "725e0c4fb1f630afdd90b5fba2a7f6d8d547ac29",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^9.21|^10.0",
+                "illuminate/filesystem": "^9.21|^10.0",
+                "illuminate/support": "^9.21|^10.0",
+                "illuminate/validation": "^9.21|^10.0",
+                "php": "^8.0.2"
+            },
+            "conflict": {
+                "laravel/framework": "<9.37.0"
+>>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c
             },
             "type": "library",
             "extra": {
@@ -5798,7 +5826,11 @@
                 "issues": "https://github.com/laravel/breeze/issues",
                 "source": "https://github.com/laravel/breeze"
             },
+<<<<<<< HEAD
             "time": "2023-03-20T11:31:54+00:00"
+=======
+            "time": "2023-02-18T20:55:43+00:00"
+>>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c
         },
         {
             "name": "laravel/pint",

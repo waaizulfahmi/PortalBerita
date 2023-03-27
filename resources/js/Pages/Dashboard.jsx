@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
-import { Head } from '@inertiajs/react';
-
-export default function Dashboard({ auth }) {
-    return (
-        <AuthenticatedLayout
-            user={auth.user}
-            header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Dashboard</h2>}
-=======
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
 import { useState, useEffect } from "react";
 import { Head, Link } from "@inertiajs/react";
@@ -51,19 +41,11 @@ export default function Dashboard(props) {
                     Berita Saya
                 </h2>
             }
->>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c
         >
             <Head title="Dashboard" />
 
             <div className="py-12">
                 <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
-<<<<<<< HEAD
-                    <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                        <div className="p-6 text-gray-900">You're logged in!</div>
-                    </div>
-                </div>
-            </div>
-=======
                     <div>
                         {isNotif && (
                             <div className="alert alert-info shadow-lg">
@@ -170,7 +152,6 @@ export default function Dashboard(props) {
                     <p>Data Belum tersedia</p>
                 )}
             </div>
->>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c
         </AuthenticatedLayout>
     );
 }

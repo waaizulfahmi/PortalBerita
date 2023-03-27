@@ -17,13 +17,6 @@ export default function ConfirmPassword() {
         };
     }, []);
 
-<<<<<<< HEAD
-=======
-    const handleOnChange = (event) => {
-        setData(event.target.name, event.target.value);
-    };
-
->>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c
     const submit = (e) => {
         e.preventDefault();
 
@@ -49,11 +42,7 @@ export default function ConfirmPassword() {
                         value={data.password}
                         className="mt-1 block w-full"
                         isFocused={true}
-<<<<<<< HEAD
                         onChange={(e) => setData('password', e.target.value)}
-=======
-                        onChange={handleOnChange}
->>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c
                     />
 
                     <InputError message={errors.password} className="mt-2" />

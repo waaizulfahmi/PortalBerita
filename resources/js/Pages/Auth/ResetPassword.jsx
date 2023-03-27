@@ -20,13 +20,6 @@ export default function ResetPassword({ token, email }) {
         };
     }, []);
 
-<<<<<<< HEAD
-=======
-    const onHandleChange = (event) => {
-        setData(event.target.name, event.target.value);
-    };
-
->>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c
     const submit = (e) => {
         e.preventDefault();
 
@@ -48,11 +41,7 @@ export default function ResetPassword({ token, email }) {
                         value={data.email}
                         className="mt-1 block w-full"
                         autoComplete="username"
-<<<<<<< HEAD
                         onChange={(e) => setData('email', e.target.value)}
-=======
-                        onChange={onHandleChange}
->>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c
                     />
 
                     <InputError message={errors.email} className="mt-2" />
@@ -69,11 +58,7 @@ export default function ResetPassword({ token, email }) {
                         className="mt-1 block w-full"
                         autoComplete="new-password"
                         isFocused={true}
-<<<<<<< HEAD
                         onChange={(e) => setData('password', e.target.value)}
-=======
-                        onChange={onHandleChange}
->>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c
                     />
 
                     <InputError message={errors.password} className="mt-2" />
@@ -88,11 +73,7 @@ export default function ResetPassword({ token, email }) {
                         value={data.password_confirmation}
                         className="mt-1 block w-full"
                         autoComplete="new-password"
-<<<<<<< HEAD
                         onChange={(e) => setData('password_confirmation', e.target.value)}
-=======
-                        onChange={onHandleChange}
->>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c
                     />
 
                     <InputError message={errors.password_confirmation} className="mt-2" />

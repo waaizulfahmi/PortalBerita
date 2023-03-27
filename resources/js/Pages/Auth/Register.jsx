@@ -20,13 +20,6 @@ export default function Register() {
         };
     }, []);
 
-<<<<<<< HEAD
-=======
-    const handleOnChange = (event) => {
-        setData(event.target.name, event.target.type === 'checkbox' ? event.target.checked : event.target.value);
-    };
-
->>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c
     const submit = (e) => {
         e.preventDefault();
 
@@ -48,11 +41,7 @@ export default function Register() {
                         className="mt-1 block w-full"
                         autoComplete="name"
                         isFocused={true}
-<<<<<<< HEAD
                         onChange={(e) => setData('name', e.target.value)}
-=======
-                        onChange={handleOnChange}
->>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c
                         required
                     />
 
@@ -69,11 +58,7 @@ export default function Register() {
                         value={data.email}
                         className="mt-1 block w-full"
                         autoComplete="username"
-<<<<<<< HEAD
                         onChange={(e) => setData('email', e.target.value)}
-=======
-                        onChange={handleOnChange}
->>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c
                         required
                     />
 
@@ -90,11 +75,7 @@ export default function Register() {
                         value={data.password}
                         className="mt-1 block w-full"
                         autoComplete="new-password"
-<<<<<<< HEAD
                         onChange={(e) => setData('password', e.target.value)}
-=======
-                        onChange={handleOnChange}
->>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c
                         required
                     />
 
@@ -111,11 +92,7 @@ export default function Register() {
                         value={data.password_confirmation}
                         className="mt-1 block w-full"
                         autoComplete="new-password"
-<<<<<<< HEAD
                         onChange={(e) => setData('password_confirmation', e.target.value)}
-=======
-                        onChange={handleOnChange}
->>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c
                         required
                     />
 

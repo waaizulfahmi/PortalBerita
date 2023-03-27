@@ -12,7 +12,7 @@ const isNews = (news) => {
                 <div className="card-body">
                     <h2 className="card-title">
                         {data.title}
-                        <div className="badge badge-primary">NEW</div>
+                        <div className="badge badge-primary">Baru</div>
                     </h2>
                     <p>{data.description}</p>
                     <div className="card-actions justify-end">

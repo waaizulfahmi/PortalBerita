@@ -5,11 +5,7 @@ import NavLink from '@/Components/NavLink';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
 import { Link } from '@inertiajs/react';
 
-<<<<<<< HEAD
 export default function Authenticated({ user, header, children }) {
-=======
-export default function Authenticated({ auth, header, children }) {
->>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c
     const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
 
     return (
@@ -40,11 +36,7 @@ export default function Authenticated({ auth, header, children }) {
                                                 type="button"
                                                 className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150"
                                             >
-<<<<<<< HEAD
                                                 {user.name}
-=======
-                                                {auth.user.name}
->>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c
 
                                                 <svg
                                                     className="ml-2 -mr-0.5 h-4 w-4"
@@ -107,15 +99,8 @@ export default function Authenticated({ auth, header, children }) {
 
                     <div className="pt-4 pb-1 border-t border-gray-200">
                         <div className="px-4">
-<<<<<<< HEAD
                             <div className="font-medium text-base text-gray-800">{user.name}</div>
                             <div className="font-medium text-sm text-gray-500">{user.email}</div>
-=======
-                            <div className="font-medium text-base text-gray-800">
-                                {auth.user.name}
-                            </div>
-                            <div className="font-medium text-sm text-gray-500">{auth.user.email}</div>
->>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c
                         </div>
 
                         <div className="mt-3 space-y-1">

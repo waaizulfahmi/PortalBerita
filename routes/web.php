@@ -2,7 +2,10 @@
 
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProfileController;
+<<<<<<< HEAD
+=======
 use Faker\Provider\ar_EG\Internet;
+>>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -36,4 +39,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+<<<<<<< HEAD
+require __DIR__ . '/auth.php';
+=======
 require __DIR__.'/auth.php';
+>>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c

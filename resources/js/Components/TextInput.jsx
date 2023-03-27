@@ -10,6 +10,17 @@ export default forwardRef(function TextInput({ type = 'text', className = '', is
     }, []);
 
     return (
+<<<<<<< HEAD
+        <input
+            {...props}
+            type={type}
+            className={
+                'border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm ' +
+                className
+            }
+            ref={localRef}
+        />
+=======
         <div className="flex flex-col items-start">
             <input
                 {...props}
@@ -21,5 +32,6 @@ export default forwardRef(function TextInput({ type = 'text', className = '', is
                 ref={input}
             />
         </div>
+>>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c
     );
 });

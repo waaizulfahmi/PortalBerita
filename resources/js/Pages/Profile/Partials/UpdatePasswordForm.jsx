@@ -6,7 +6,11 @@ import TextInput from '@/Components/TextInput';
 import { useForm } from '@inertiajs/react';
 import { Transition } from '@headlessui/react';
 
+<<<<<<< HEAD
+export default function UpdatePasswordForm({ className = '' }) {
+=======
 export default function UpdatePasswordForm({ className }) {
+>>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c
     const passwordInput = useRef();
     const currentPasswordInput = useRef();
 
@@ -22,7 +26,11 @@ export default function UpdatePasswordForm({ className }) {
         put(route('password.update'), {
             preserveScroll: true,
             onSuccess: () => reset(),
+<<<<<<< HEAD
+            onError: (errors) => {
+=======
             onError: () => {
+>>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c
                 if (errors.password) {
                     reset('password', 'password_confirmation');
                     passwordInput.current.focus();

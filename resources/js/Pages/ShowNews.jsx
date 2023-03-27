@@ -11,10 +11,7 @@ const ShowNews = (props) => {
             <h1 className="text-black p-4 lg:text-2xl  sm:text-xl ml-14">
                 Berita Olahraga
             </h1>
-<<<<<<< HEAD
-=======
             <Link></Link>
->>>>>>> ee9b03424e11b011f21fd0546fe61c4d9508dc9c
             <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4">
                 <NewsList news={props.news.data} />
             </div>

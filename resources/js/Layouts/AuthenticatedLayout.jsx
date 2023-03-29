@@ -3,7 +3,7 @@ import ApplicationLogo from "@/Components/ApplicationLogo";
 import Dropdown from "@/Components/Dropdown";
 import NavLink from "@/Components/NavLink";
 import ResponsiveNavLink from "@/Components/ResponsiveNavLink";
-import { Link } from "@inertiajs/react";
+import { Head, Link } from "@inertiajs/react";
 import HeaderDashboard from "./dashboard-assets/HeaderDashboard";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faCoffee } from "@fortawesome/free-solid-svg-icons";
@@ -18,6 +18,7 @@ export default function Authenticated({ auth, header, children }) {
 
     return (
         <div>
+            <Head title="DashBoard"></Head>
             <meta charSet="UTF-8" />
             <meta
                 name="viewport"
@@ -54,12 +55,12 @@ export default function Authenticated({ auth, header, children }) {
                             Dashboard Saya
                         </a>
                         <button className="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
-                            <i className="fas fa-plus mr-3"></i> New Report
+                            <i className="fas fa-plus mr-3"></i> New Post
                         </button>
                     </div>
                     <nav className="text-white text-base font-semibold pt-3">
                         <a
-                            href="index.html"
+                            href="#"
                             className="flex items-center active-nav-link text-white py-4 pl-6 nav-item"
                         >
                             <i className="fas fa-tachometer-alt mr-3"></i>
@@ -67,7 +68,7 @@ export default function Authenticated({ auth, header, children }) {
                             Dashboard
                         </a>
                         <a
-                            href="blank.html"
+                            href="#"
                             className="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
                         >
                             <i className="fas fa-sticky-note mr-3"></i>
@@ -75,28 +76,28 @@ export default function Authenticated({ auth, header, children }) {
                             Blank Page
                         </a>
                         <a
-                            href="tables.html"
+                            href="#"
                             className="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
                         >
                             <i className="fas fa-table mr-3"></i>
                             Tables
                         </a>
                         <a
-                            href="forms.html"
+                            href="#"
                             className="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
                         >
                             <i className="fas fa-align-left mr-3"></i>
                             Forms
                         </a>
                         <a
-                            href="tabs.html"
+                            href="#"
                             className="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
                         >
                             <i className="fas fa-tablet-alt mr-3"></i>
                             Tabbed Content
                         </a>
                         <a
-                            href="calendar.html"
+                            href="#"
                             className="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
                         >
                             <i className="fas fa-calendar mr-3"></i>
@@ -243,42 +244,42 @@ export default function Authenticated({ auth, header, children }) {
                         {/* <!-- Dropdown Nav --> */}
                         <nav className="flex flex-col pt-4">
                             <a
-                                href="index.html"
+                                href="#"
                                 className="flex items-center active-nav-link text-white py-2 pl-4 nav-item"
                             >
                                 <i className="fas fa-tachometer-alt mr-3"></i>
                                 Dashboard
                             </a>
                             <a
-                                href="blank.html"
+                                href="#"
                                 className="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"
                             >
                                 <i className="fas fa-sticky-note mr-3"></i>
                                 Blank Page
                             </a>
                             <a
-                                href="tables.html"
+                                href="#"
                                 className="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"
                             >
                                 <i className="fas fa-table mr-3"></i>
                                 Tables
                             </a>
                             <a
-                                href="forms.html"
+                                href="#"
                                 className="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"
                             >
                                 <i className="fas fa-align-left mr-3"></i>
                                 Forms
                             </a>
                             <a
-                                href="tabs.html"
+                                href="#"
                                 className="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"
                             >
                                 <i className="fas fa-tablet-alt mr-3"></i>
                                 Tabbed Content
                             </a>
                             <a
-                                href="calendar.html"
+                                href="#"
                                 className="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"
                             >
                                 <i className="fas fa-calendar mr-3"></i>
@@ -320,8 +321,8 @@ export default function Authenticated({ auth, header, children }) {
                             <h1 className="text-3xl text-black pb-6">
                                 Dashboard
                             </h1>
-
-                            <div className="flex flex-wrap mt-6">
+                            <main>{children}</main>
+                            {/* <div className="flex flex-wrap mt-6">
                                 <div className="w-full lg:w-1/2 pr-0 lg:pr-2">
                                     <p className="text-xl pb-3 flex items-center">
                                         <i className="fas fa-plus mr-3"></i>{" "}
@@ -348,9 +349,9 @@ export default function Authenticated({ auth, header, children }) {
                                         ></canvas>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
 
-                            <div className="w-full mt-12">
+                            {/* <div className="w-full mt-12">
                                 <p className="text-xl pb-3 flex items-center">
                                     <i className="fas fa-list mr-3"></i> Latest
                                     Reports
@@ -401,7 +402,7 @@ export default function Authenticated({ auth, header, children }) {
                                         </tbody>
                                     </table>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
 
                         <footer className="w-full bg-white text-right p-4">

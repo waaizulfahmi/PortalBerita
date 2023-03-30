@@ -1,4 +1,4 @@
-const ListNewsRow = () => {
+const ListNewsRow = () => { 
     return (
         <div className="container my-20  mx-auto ml-0">
             <section className="mb-15 text-gray-800 text-center md:text-left">

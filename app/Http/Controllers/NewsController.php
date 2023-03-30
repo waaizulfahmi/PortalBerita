@@ -15,7 +15,7 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $news = new NewsCollection(News::OrderByDesc('id')->paginate(6));
+        $news = new NewsCollection(News::OrderByDesc('id')->paginate(9));
         // dd($news);
         return Inertia::render('Homepage', [
             'title' => 'Portal Berita',
@@ -39,12 +39,12 @@ class NewsController extends Controller
     public function store(Request $request)
     {
         $news = new News();
-        $news->title = $request->title; 
-        $news->description = $request->description; 
-        $news->category = $request->category; 
-        $news->author = auth()->user()->email; 
+        $news->title = $request->title;
+        $news->description = $request->description;
+        $news->category = $request->category;
+        $news->author = auth()->user()->email;
         $news->save();
-        return redirect()->back()->with('message','Berita berhasil dibuat');
+        return redirect()->back()->with('message', 'Berita berhasil dibuat');
     }
 
     /**
@@ -57,7 +57,6 @@ class NewsController extends Controller
             'myNews' => $myNews,
 
         ]);
-        
     }
 
     /**
@@ -86,7 +85,7 @@ class NewsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy( Request $request)
+    public function destroy(Request $request)
     {
         $news = News::find($request->id);
         $news->delete();

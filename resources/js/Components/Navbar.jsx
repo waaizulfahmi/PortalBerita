@@ -4,7 +4,7 @@ import { Link } from "@inertiajs/react";
 const Navbar = ({ user }) => {
     return (
         <div>
-            <div className="navbar bg-purple-900 p-10 ">
+            <div className="navbar bg-violet-900 p-10 ">
                 <div className="flex-1">
                 <h1 className="text-white text-5xl btn btn-ghost normal-case ">PanelWarta.id</h1>
                 </div>
@@ -30,7 +30,7 @@ const Navbar = ({ user }) => {
             </a>
             </li>
                 <li><a>Login</a></li>
-                <li><a>Logout</a></li>
+                <li><a>Setting</a></li>
             </ul>
             </div>
             </div>

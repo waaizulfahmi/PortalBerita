@@ -1,7 +1,7 @@
 const MainNews = () => {
-    return (
+    return ( 
         <div>
-            <main className="max-w-7xl mx-auto ">
+            <main className="max-w-7xl mx-auto "> 
                 <div className="box-border flex flex-wrap">
                     <article className="w-full h-full md:w-2/3  p-4">
                         <div className="p-1">
@@ -27,7 +27,7 @@ const MainNews = () => {
                                     >
                                         <div className="flex justify-start items-end h-full">
                                             <div className="text-white m-6">
-                                                <h1 className="font-bold text-xl mb-3">
+                                                <h1 className="font-bold text-5xl mb-3">
                                                     Kuliner Makanan Khas Indonesia
                                                 </h1>
                                                 <p>

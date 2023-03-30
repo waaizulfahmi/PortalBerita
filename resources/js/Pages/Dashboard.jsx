@@ -2,12 +2,15 @@ import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
 import { useState, useEffect } from "react";
 import { Head, Link } from "@inertiajs/react";
 import { router } from "@inertiajs/react";
+import Tiptap from "@/Layouts/dashboard-assets/Tiptap";
+import parser from "html-react-parser";
 
 export default function Dashboard(props) {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [category, setCategory] = useState("");
     const [isNotif, setIsNotif] = useState(false);
+    const [desc, setDesc] = useState("");
     const handleSubmit = () => {
         const data = {
             title,
@@ -38,7 +41,7 @@ export default function Dashboard(props) {
             errors={props.errors}
             header={
                 <h2 className="font-semibold text-xl text-gray-800 leading-tight">
-                    Berita Saya
+                    Berita Saya (Testing)
                 </h2>
             }
         >
@@ -75,6 +78,8 @@ export default function Dashboard(props) {
                         onChange={(title) => setTitle(title.target.value)}
                         value={title}
                     />
+                    <Tiptap setDesc={setDesc} />
+                    <div className="ProseMirror">{parser(desc)}</div>
                     <input
                         type="text"
                         placeholder="Deskripsi"

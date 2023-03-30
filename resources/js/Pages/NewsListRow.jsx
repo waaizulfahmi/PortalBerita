@@ -8,7 +8,7 @@ const ListNewsRow = () => {
                         <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6">
                             <img
                                 className="w-full"
-                                src="https://mdbootstrap.com/img/new/standard/city/059.jpg"
+                                src="https://akcdn.detik.net.id/visual/2023/03/28/kartika-sary-4_169.jpeg?w=900&q=90"
                                 alt="Gambar 1"
                             />
                             <a href="#!">

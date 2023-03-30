@@ -24,7 +24,7 @@ export default function Homepage(props) {
                 <NewsList news={props.news.data} />
             </div>
             <h1 className="text-black p-4 lg:text-2xl  sm:text-xl ml-14 mt-10">
-                Berita Olahraga jsajd
+                Berita Olahraga
             </h1>
             <Link to="ShowNews">
                 <button>sasa</button>

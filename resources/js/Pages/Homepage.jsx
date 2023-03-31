@@ -6,9 +6,9 @@ import Paginator from "@/Components/Homepage/Paginator";
 import Footer from "@/Components/Footer";
 import MainNews from "./MainNews";
 import ListNewsRow from "./NewsListRow";
-import NewNews from "./NewNews";
-import NewsProfile from "./NewsProfile";
-import Rekomendation from "./Rekomendation";
+import TravelsNews from "./TravelsNews";
+import RegionalNews from "./RegionalNews";
+import ProfileNews from "./ProfileNews";
 
 export default function Homepage(props) {
     console.log(props);
@@ -20,28 +20,13 @@ export default function Homepage(props) {
             {/* <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4 static">
                 <MainNews />
             </div> */}
+            <hr />
             <u>
-                <h1 className="text-black p-3 lg:text-2xl sm:text-xl font-bold ml-36">
-                    Rekomendasi Untuk Anda
-                </h1>
-            </u>
-            <div dir="rtl">
-                <u>
-                    <Link to="ShowNews">
-                        <button className="flex justify-center mr-36 p-0">
-                            Lihat Berita Lainnya
-                        </button>
-                    </Link>
-                </u>
-            </div>
-            <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center container">
-                <Rekomendation news={props.news.data} />
-            </div>
-
-            <u>
-                <h1 className="text-black p-3 lg:text-2xl sm:text-xl font-bold ml-36">
-                    Berita Kuliner
-                </h1>
+                <a href="">
+                    <h1 className="text-black p-3 lg:text-2xl sm:text-xl font-bold ml-36">
+                        Berita Wisata
+                    </h1>
+                </a>
             </u>
             <div dir="rtl">
                 <u>
@@ -53,12 +38,24 @@ export default function Homepage(props) {
                 </u>
             </div>
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
-                <NewNews news={props.news.data} />
+                <TravelsNews news={props.news.data} />
             </div>
 
+            <hr />
+            <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
+                <ProfileNews news={props.news.data} />
+            </div>
+            <hr />
+
+            <hr />
+            <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
+                <RegionalNews news={props.news.data} />
+            </div>
+
+            <hr />
             <u>
                 <h1 className="text-black p-3 lg:text-2xl sm:text-xl font-bold ml-36">
-                    Profile
+                    Berita Mancanegara
                 </h1>
             </u>
             <div dir="rtl">
@@ -70,29 +67,16 @@ export default function Homepage(props) {
                     </Link>
                 </u>
             </div>
-            <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
-                <NewsProfile news={props.news.data} />
-            </div>
-
-            <h1 className="text-black p-4 lg:text-2xl  sm:text-xl ml-36">
-                Berita Olahraga 1
-            </h1>
             <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4">
                 <NewsList news={props.news.data} />
             </div>
 
-            <h1 className="text-black p-4 lg:text-2xl  sm:text-xl ml-36 mt-10 font-bold">
-                Berita Olahraga
-            </h1>
-            <div dir="rtl">
-                <u>
-                    <Link to="ShowNews">
-                        <button className="flex justify-center mr-36 p-0">
-                            sasa
-                        </button>
-                    </Link>
-                </u>
-            </div>
+            <hr />
+            <u>
+                <h1 className="text-black p-5 lg:text-2xl sm:text-xl font-bold ml-36">
+                    Berita Nasional
+                </h1>
+            </u>
             <ListNewsRow />
             <div className="flex justify-center items-center gap-5">
                 <Paginator meta={props.news.meta} />

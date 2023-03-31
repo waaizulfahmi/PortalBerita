@@ -17,13 +17,10 @@ export default function ConfirmPassword() {
         };
     }, []);
 
-<<<<<<< HEAD
-=======
     const handleOnChange = (event) => {
         setData(event.target.name, event.target.value);
     };
 
->>>>>>> backend
     const submit = (e) => {
         e.preventDefault();
 
@@ -50,11 +47,7 @@ export default function ConfirmPassword() {
                         value={data.password}
                         className="mt-1 block w-full"
                         isFocused={true}
-<<<<<<< HEAD
-                        onChange={(e) => setData('password', e.target.value)}
-=======
                         onChange={handleOnChange}
->>>>>>> backend
                     />
 
                     <InputError message={errors.password} className="mt-2" />

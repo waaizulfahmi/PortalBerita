@@ -5,6 +5,7 @@ import NavLink from "@/Components/NavLink";
 import ResponsiveNavLink from "@/Components/ResponsiveNavLink";
 import { Head, Link } from "@inertiajs/react";
 import HeaderDashboard from "./dashboard-assets/HeaderDashboard";
+import { FaGithubSquare } from "react-icons/fa";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 // import { FaBeer } from "react-icons/fa";
@@ -12,14 +13,9 @@ import HeaderDashboard from "./dashboard-assets/HeaderDashboard";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 
-<<<<<<< HEAD
-export default function Authenticated({ user, header, children }) {
-    const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
-=======
 export default function Authenticated({ auth, header, children }) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] =
         useState(false);
->>>>>>> backend
 
     return (
         <div>
@@ -57,7 +53,7 @@ export default function Authenticated({ auth, header, children }) {
                             href="index.html"
                             className="text-white text-3xl font-semibold uppercase hover:text-gray-300"
                         >
-                            Dashboard Saya
+                            <FaGithubSquare />
                         </a>
                         <button className="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
                             <i className="fas fa-plus mr-3"></i> New Post
@@ -78,14 +74,14 @@ export default function Authenticated({ auth, header, children }) {
                         >
                             <i className="fas fa-sticky-note mr-3"></i>
                             {/* <FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon> */}
-                            Blank Page
+                            Buat Postingan
                         </a>
                         <a
                             href="#"
                             className="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
                         >
                             <i className="fas fa-table mr-3"></i>
-                            Tables
+                            Daftar Postingan
                         </a>
                         <a
                             href="#"
@@ -166,11 +162,6 @@ export default function Authenticated({ auth, header, children }) {
                                                 type="button"
                                                 className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150"
                                             >
-<<<<<<< HEAD
-                                                {user.name}
-
-                                                <svg
-=======
                                                 Hallo, {auth.user.name}
                                                 <label
                                                     tabIndex={0}
@@ -181,7 +172,6 @@ export default function Authenticated({ auth, header, children }) {
                                                     </div>
                                                 </label>
                                                 {/* <svg
->>>>>>> backend
                                                     className="ml-2 -mr-0.5 h-4 w-4"
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 20 20"
@@ -429,39 +419,6 @@ export default function Authenticated({ auth, header, children }) {
                         </footer>
                     </div>
                 </div>
-<<<<<<< HEAD
-
-                <div className={(showingNavigationDropdown ? 'block' : 'hidden') + ' sm:hidden'}>
-                    <div className="pt-2 pb-3 space-y-1">
-                        <ResponsiveNavLink href={route('dashboard')} active={route().current('dashboard')}>
-                            Dashboard
-                        </ResponsiveNavLink>
-                    </div>
-
-                    <div className="pt-4 pb-1 border-t border-gray-200">
-                        <div className="px-4">
-                            <div className="font-medium text-base text-gray-800">{user.name}</div>
-                            <div className="font-medium text-sm text-gray-500">{user.email}</div>
-                        </div>
-
-                        <div className="mt-3 space-y-1">
-                            <ResponsiveNavLink href={route('profile.edit')}>Profile</ResponsiveNavLink>
-                            <ResponsiveNavLink method="post" href={route('logout')} as="button">
-                                Log Out
-                            </ResponsiveNavLink>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            {header && (
-                <header className="bg-white shadow">
-                    <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">{header}</div>
-                </header>
-            )}
-
-            <main>{children}</main>
-=======
             </body>
             <script
                 crossOrigin
@@ -489,7 +446,6 @@ export default function Authenticated({ auth, header, children }) {
                 integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI="
                 crossOrigin="anonymous"
             ></script> */}
->>>>>>> backend
         </div>
 
         // LAMAAA

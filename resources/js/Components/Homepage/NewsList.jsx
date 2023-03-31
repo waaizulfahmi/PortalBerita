@@ -1,7 +1,7 @@
 import { Link } from "@inertiajs/react";
 import image from "./img-example.jpg";
 
-const isNews = (news) => { 
+const isNews = (news) => {
     return news.map((data, i) => {
         return (
             <div className="card w-full  lg:w-96 bg-base-100 shadow-xl" key={i}>
@@ -16,7 +16,7 @@ const isNews = (news) => {
                     </h2>
                     <p>{data.description}</p>
                     <div className="card-actions justify-end">
-                        <div className="badge badge-outline">
+                        <div className="badge badge-accent badge-outline">
                             {data.category}
                         </div>
                         <div className="badge badge-outline">{data.author}</div>

@@ -9,15 +9,9 @@ import { Head, Link, useForm } from "@inertiajs/react";
 
 export default function Login({ status, canResetPassword }) {
     const { data, setData, post, processing, errors, reset } = useForm({
-<<<<<<< HEAD
-        email: '',
-        password: '',
-        remember: false,
-=======
         email: "",
         password: "",
         remember: "",
->>>>>>> backend
     });
 
     useEffect(() => {
@@ -26,8 +20,6 @@ export default function Login({ status, canResetPassword }) {
         };
     }, []);
 
-<<<<<<< HEAD
-=======
     const handleOnChange = (event) => {
         setData(
             event.target.name,
@@ -37,7 +29,6 @@ export default function Login({ status, canResetPassword }) {
         );
     };
 
->>>>>>> backend
     const submit = (e) => {
         e.preventDefault();
 
@@ -66,11 +57,7 @@ export default function Login({ status, canResetPassword }) {
                         className="mt-1 block w-full"
                         autoComplete="username"
                         isFocused={true}
-<<<<<<< HEAD
-                        onChange={(e) => setData('email', e.target.value)}
-=======
                         onChange={handleOnChange}
->>>>>>> backend
                     />
 
                     <InputError message={errors.email} className="mt-2" />
@@ -86,11 +73,7 @@ export default function Login({ status, canResetPassword }) {
                         value={data.password}
                         className="mt-1 block w-full"
                         autoComplete="current-password"
-<<<<<<< HEAD
-                        onChange={(e) => setData('password', e.target.value)}
-=======
                         onChange={handleOnChange}
->>>>>>> backend
                     />
 
                     <InputError message={errors.password} className="mt-2" />
@@ -103,13 +86,9 @@ export default function Login({ status, canResetPassword }) {
                             value={data.remember}
                             onChange={handleOnChange}
                         />
-<<<<<<< HEAD
-                        <span className="ml-2 text-sm text-gray-600">Remember me</span>
-=======
                         <span className="ml-2 text-sm text-gray-600">
                             Remember me
                         </span>
->>>>>>> backend
                     </label>
                 </div>
 

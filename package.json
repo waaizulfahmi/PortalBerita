@@ -19,9 +19,6 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
-<<<<<<< HEAD
-        "daisyui": "^2.51.3"
-=======
         "@fortawesome/fontawesome-svg-core": "^6.4.0",
         "@fortawesome/free-regular-svg-icons": "^6.4.0",
         "@fortawesome/free-solid-svg-icons": "^6.4.0",
@@ -34,6 +31,5 @@
         "daisyui": "^2.51.3",
         "html-react-parser": "^3.0.15",
         "react-icons": "^4.8.0"
->>>>>>> backend
     }
 }

@@ -15,7 +15,7 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $news = new NewsCollection(News::OrderByDesc('id')->paginate(9));
+        $news = new NewsCollection(News::OrderByDesc('id')->paginate(5));
         // dd($news);
         return Inertia::render('Homepage', [
             'title' => 'Portal Berita',

@@ -10,6 +10,7 @@ import TravelsNews from "./TravelsNews";
 import RegionalNews from "./RegionalNews";
 import ProfileNews from "./ProfileNews";
 
+
 export default function Homepage(props) {
     console.log(props);
     return (
@@ -22,7 +23,7 @@ export default function Homepage(props) {
             </div> */}
             <hr />
             <u>
-                <a href=""><h1 className="text-black p-3 lg:text-2xl sm:text-xl font-bold ml-36">
+                <a href="Wisata"><h1 className="text-black p-3 lg:text-2xl sm:text-xl font-bold ml-36">
                     Berita Wisata
                 </h1></a>
             </u>
@@ -38,6 +39,7 @@ export default function Homepage(props) {
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
                 <TravelsNews news={props.news.data} />
             </div>
+
 
            <hr />
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">

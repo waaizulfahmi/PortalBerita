@@ -1,14 +1,14 @@
 const MainNews = () => {
-    return ( 
-        <div>  
-            <main className="max-w-7xl mx-auto "> 
+    return (
+        <div>
+            <main className="max-w-7xl mx-auto relative ">
                 <div className="box-border flex flex-wrap">
                     <article className="w-full h-full md:w-2/3  p-4">
                         <div className="p-1">
                             <u>
-                            <h1 className="text-black p-2 lg:text-2xl sm:text-xl font-bold">
-                                Berita Terkini
-                            </h1>
+                                <h1 className="text-black p-2 lg:text-2xl sm:text-xl font-bold">
+                                    Berita Terkini
+                                </h1>
                             </u>
                             <div
                                 className="relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg lg:ml-2 sm:ml-0 "
@@ -28,7 +28,8 @@ const MainNews = () => {
                                         <div className="flex justify-start items-end h-full">
                                             <div className="text-white m-6">
                                                 <h1 className="font-bold text-5xl mb-3">
-                                                    Kuliner Makanan Khas Indonesia
+                                                    Kuliner Makanan Khas
+                                                    Indonesia
                                                 </h1>
                                                 <p>
                                                     <small>
@@ -59,9 +60,9 @@ const MainNews = () => {
                     <aside className="w-full md:w-1/3 ">
                         <div className="p-4">
                             <u>
-                            <h1 className="text-black p-2 lg:text-2x5 sm:text-xl font-bold">
-                                Rekomendasi Untuk Anda
-                            </h1>
+                                <h1 className="text-black p-2 lg:text-2x5 sm:text-xl font-bold">
+                                    Rekomendasi Untuk Anda
+                                </h1>
                             </u>
                             <div className=" mx-auto mt-3">
                                 <section className="mb-32 text-gray-800 text-center md:text-left">
@@ -82,9 +83,11 @@ const MainNews = () => {
                                             </div>
                                         </div>
                                         <div className="grow-0 shrink-0 basis-auto w-full md:w-9/12 xl:w-7/12 px-3 mb-6 md:mb-0 mr-auto">
-                                            <a href=""><h5 className="text-lg font-bold mb-3">
-                                                Hello World
-                                            </h5></a>
+                                            <a href="">
+                                                <h5 className="text-lg font-bold mb-3">
+                                                    Hello World
+                                                </h5>
+                                            </a>
                                             <div className="mb-2 text-red-600 font-medium text-sm flex items-center justify-center md:justify-start">
                                                 <svg
                                                     className="w-4 h-4 mr-2"
@@ -129,9 +132,11 @@ const MainNews = () => {
                                             </div>
                                         </div>
                                         <div className="grow-0 shrink-0 basis-auto w-full md:w-9/12 xl:w-7/12 px-3 mb-6 md:mb-0 mr-auto">
-                                            <a href=""><h5 className="text-lg font-bold mb-3">
-                                                Hello World
-                                            </h5></a>
+                                            <a href="">
+                                                <h5 className="text-lg font-bold mb-3">
+                                                    Hello World
+                                                </h5>
+                                            </a>
                                             <div className="mb-2 text-red-600 font-medium text-sm flex items-center justify-center md:justify-start">
                                                 <svg
                                                     className="w-4 h-4 mr-2"
@@ -176,9 +181,11 @@ const MainNews = () => {
                                             </div>
                                         </div>
                                         <div className="grow-0 shrink-0 basis-auto w-full md:w-9/12 xl:w-7/12 px-3 mb-6 md:mb-0 mr-auto">
-                                            <a href=""><h5 className="text-lg font-bold mb-3">
-                                                Hidup Sederhana
-                                            </h5></a>
+                                            <a href="">
+                                                <h5 className="text-lg font-bold mb-3">
+                                                    Hidup Sederhana
+                                                </h5>
+                                            </a>
                                             <div className="mb-2 text-red-600 font-medium text-sm flex items-center justify-center md:justify-start">
                                                 <svg
                                                     className="w-4 h-4 mr-2"
@@ -223,9 +230,11 @@ const MainNews = () => {
                                             </div>
                                         </div>
                                         <div className="grow-0 shrink-0 basis-auto w-full md:w-9/12 xl:w-7/12 px-3 mb-6 md:mb-0 mr-auto">
-                                            <a href=""><h5 className="text-lg font-bold mb-3">
-                                                Awali Harimu dengan Semangat
-                                            </h5></a>
+                                            <a href="">
+                                                <h5 className="text-lg font-bold mb-3">
+                                                    Awali Harimu dengan Semangat
+                                                </h5>
+                                            </a>
                                             <div className="mb-2 text-red-600 font-medium text-sm flex items-center justify-center md:justify-start">
                                                 <svg
                                                     className="w-4 h-4 mr-2"

@@ -10,7 +10,7 @@ import SelectForm from "@/Layouts/dashboard-assets/SelectForm";
 export default function Dashboard(props) {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
-    const [category, setCategory] = useState("");
+    const [category, setCategory] = useState();
     const [isNotif, setIsNotif] = useState(false);
     const [desc, setDesc] = useState("");
     const handleSubmit = () => {
@@ -36,6 +36,11 @@ export default function Dashboard(props) {
         return;
     }, []);
     console.log("props last", props);
+
+    // const handleChangeSelect = (selectedOption) => {
+    //     setCategory(selectedOption);
+    //     console.log(`Option selected:`, selectedOption);
+    // };
 
     return (
         <AuthenticatedLayout
@@ -150,8 +155,8 @@ export default function Dashboard(props) {
                             onChange={(title) => setTitle(title.target.value)}
                             value={title}
                         />
-                        <Tiptap setDesc={setDesc} />
-                        <div className="ProseMirror">{parser(desc)}</div>
+
+                        {/* <div className="ProseMirror">{parser(desc)}</div> */}
                         <input
                             type="text"
                             placeholder="Deskripsi"
@@ -161,9 +166,10 @@ export default function Dashboard(props) {
                                 setDescription(description.target.value)
                             }
                         />
+                        <Tiptap setDesc={setDesc} />
 
-                        <input type="text" />
-                        <SelectForm />
+                        {/* <input type="text" /> */}
+                        {/* <SelectForm onChange={handleChangeSelect} /> */}
                         {/* <input
                             type="text"
                             placeholder="Kategori"
@@ -173,6 +179,24 @@ export default function Dashboard(props) {
                                 setCategory(category.target.value)
                             }
                         /> */}
+                        <select
+                            className="m-2 select select-info w-full max-w-xs"
+                            value={category}
+                            onChange={(e) => setCategory(e.target.value)}
+                        >
+                            <option disabled selected>
+                                <b>Pilih Kategori</b>
+                            </option>
+                            <option>Berita</option>
+                            <option>Olahraga</option>
+                            <option>Wisata</option>
+                            <option>Kuliner</option>
+                            <option>Profile</option>
+                            <option>Bisnis</option>
+                            <option>Daerah</option>
+                            <option>Nasional</option>
+                            <option>Mancanegara</option>
+                        </select>
                         <button
                             className="m-2 btn btn-primary"
                             onClick={() => handleSubmit()}

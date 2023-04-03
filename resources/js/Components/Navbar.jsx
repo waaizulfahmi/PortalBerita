@@ -6,34 +6,46 @@ const Navbar = ({ user }) => {
         <div>
             <div className="navbar bg-violet-900 p-10 ">
                 <div className="flex-1">
-                <h1 className="text-white text-5xl btn btn-ghost normal-case ">PanelWarta.id</h1>
+                    <h1 className="text-white text-5xl btn btn-ghost normal-case ">
+                        PanelWarta.id
+                    </h1>
                 </div>
-            <div className="flex-none gap-3">
-                <div className="form-control">
-                    <input
-                        type="text"
-                        placeholder="Search"
-                        className="input input-bordered"
-                    />
+                <div className="flex-none gap-3">
+                    <div className="form-control">
+                        <input
+                            type="text"
+                            placeholder="Search"
+                            className="input input-bordered"
+                        />
+                    </div>
+                    <div className="dropdown dropdown-end">
+                        <label
+                            tabIndex={0}
+                            className="btn btn-ghost btn-circle avatar"
+                        >
+                            <div className="w-10 rounded-full">
+                                <img src="https://www.hannibalsafari.com.au/wp-content/uploads/photo-1534528741775-53994a69daeb.jpg" />
+                            </div>
+                        </label>
+                        <ul
+                            tabIndex={0}
+                            className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52"
+                        >
+                            <li>
+                                <a className="justify-between">
+                                    Profile
+                                    <span className="badge">New</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>Login</a>
+                            </li>
+                            <li>
+                                <a>Setting</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            <div className="dropdown dropdown-end">
-                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-            <div className="w-10 rounded-full">
-                <img src="https://www.hannibalsafari.com.au/wp-content/uploads/photo-1534528741775-53994a69daeb.jpg" />
-            </div>
-            </label>
-            <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
-            <li>
-                <a className="justify-between">
-                Profile
-                <span className="badge">New</span>
-            </a>
-            </li>
-                <li><a>Login</a></li>
-                <li><a>Setting</a></li>
-            </ul>
-            </div>
-            </div>
             </div>
             <div className="drawer ">
                 <input
@@ -96,8 +108,7 @@ const Navbar = ({ user }) => {
                                 </li>
                             </ul>
                         </div>
-                        <div className="flex-none hidden lg:block">
-                        </div>
+                        <div className="flex-none hidden lg:block"></div>
                     </div>
                     <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4 static">
                         <MainNews />

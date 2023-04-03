@@ -25,7 +25,7 @@ export default function Authenticated({ auth, header, children }) {
                 name="viewport"
                 content="width=device-width, initial-scale=1.0"
             />
-            <title>Tailwind Admin Template</title>
+            {/* <title>{{ header }}</title> */}
             <meta name="author" content="David Grzyb" />
             <meta name="description" content />
             {/* Tailwind */}
@@ -60,14 +60,14 @@ export default function Authenticated({ auth, header, children }) {
                         </button>
                     </div>
                     <nav className="text-white text-base font-semibold pt-3">
-                        <a
-                            href="#home"
-                            className="flex items-center active-nav-link text-white py-4 pl-6 nav-item"
-                        >
-                            <i className="fas fa-tachometer-alt mr-3"></i>
-                            {/*  */}
-                            Dashboard
-                        </a>
+                        <Link to="/news/post">
+                            <a className="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
+                                <i className="fas fa-tachometer-alt mr-3"></i>
+                                {/*  */}
+                                Dashboard
+                            </a>
+                        </Link>
+
                         <a
                             href="#news"
                             className="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
@@ -432,20 +432,6 @@ export default function Authenticated({ auth, header, children }) {
                 crossOrigin
                 src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
             ></script>
-            {/* <script
-                src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
-                defer
-            ></script> */}
-            {/* <script
-                src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
-                integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs="
-                crossOrigin="anonymous"
-            ></script>
-            <script
-                src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
-                integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI="
-                crossOrigin="anonymous"
-            ></script> */}
         </div>
 
         // LAMAAA

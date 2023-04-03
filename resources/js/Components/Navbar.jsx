@@ -71,10 +71,10 @@ const Navbar = ({ user }) => {
                                     <a>Berita</a>
                                 </li>
                                 <li>
-                                    <a>Terbaru</a>
+                                    <a>Olahraga</a>
                                 </li>
                                 <li>
-                                    <a>Wisata</a>
+                                    <a href="Home/">Wisata</a>
                                 </li>
                                 <li>
                                     <a>Kuliner</a>
@@ -113,7 +113,7 @@ const Navbar = ({ user }) => {
                             <a>Berita</a>
                         </li>
                         <li>
-                            <a>Terbaru</a>
+                            <a>Olahraga</a>
                         </li>
                         <li>
                             <a>Wisata</a>

@@ -22,7 +22,7 @@ export default function Homepage(props) {
             </div> */}
             <hr />
             <u>
-                <a href="">
+                <a href="Wisata">
                     <h1 className="text-black p-3 lg:text-2xl sm:text-xl font-bold ml-36">
                         Berita Wisata
                     </h1>

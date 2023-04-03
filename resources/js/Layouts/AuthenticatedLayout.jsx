@@ -61,7 +61,7 @@ export default function Authenticated({ auth, header, children }) {
                     </div>
                     <nav className="text-white text-base font-semibold pt-3">
                         <a
-                            href="#"
+                            href="#home"
                             className="flex items-center active-nav-link text-white py-4 pl-6 nav-item"
                         >
                             <i className="fas fa-tachometer-alt mr-3"></i>
@@ -69,7 +69,7 @@ export default function Authenticated({ auth, header, children }) {
                             Dashboard
                         </a>
                         <a
-                            href="#"
+                            href="#news"
                             className="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
                         >
                             <i className="fas fa-sticky-note mr-3"></i>

@@ -1,15 +1,8 @@
-const MainNews = () => {
-    return ( 
-        <div>  
-            <main className="max-w-7xl mx-auto "> 
-                <div className="box-border flex flex-wrap">
-                    <article className="w-full h-full md:w-2/3  p-4">
+const Wisata = () => {
+    return (
+        <div class="grid grid-rows-3 grid-flow-col gap-4">
+            <article className="w-full h-full md:w-2/3  p-4">
                         <div className="p-1">
-                            <u>
-                            <h1 className="text-black p-2 lg:text-2xl sm:text-xl font-bold">
-                                Berita Terkini
-                            </h1>
-                            </u>
                             <div
                                 className="relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg lg:ml-2 sm:ml-0 "
                                 // style="background-position: 50%;"
@@ -35,17 +28,6 @@ const MainNews = () => {
                                                         Published{" "}
                                                         <u>28.03.2023</u> by
                                                         Freda Widya Artanti
-                                                        {/* <div className=" pt-4 pb-2">
-                                                            <span className="mr-2 mb-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
-                                                                #photography
-                                                            </span>
-                                                            <span className="mr-2 mb-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
-                                                                #travel
-                                                            </span>
-                                                            <span className="mr-2 mb-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
-                                                                #winter
-                                                            </span>
-                                                        </div> */}
                                                     </small>
                                                 </p>
                                             </div>
@@ -56,13 +38,24 @@ const MainNews = () => {
                         </div>
                     </article>
 
+                    <hr />
+
                     <aside className="w-full md:w-1/3 ">
                         <div className="p-4">
                             <u>
                             <h1 className="text-black p-2 lg:text-2x5 sm:text-xl font-bold">
-                                Rekomendasi Untuk Anda
+                                Berita Terbaru
                             </h1>
                             </u>
+                            <div dir="rtl">
+                <u>
+                    <Link to="ShowNews">
+                        <button className="flex justify-center mr-36 p-0">
+                            Lihat Semua
+                        </button>
+                    </Link>
+                </u>
+            </div>
                             <div className=" mx-auto mt-3">
                                 <section className="mb-32 text-gray-800 text-center md:text-left">
                                     <div className="flex flex-wrap mb-1">
@@ -257,10 +250,11 @@ const MainNews = () => {
                             </div>
                         </div>
                     </aside>
-                </div>
-            </main>
-        </div>
-    );
-};
 
-export default MainNews;
+                    <hr />
+                    
+        </div>
+    )
+}
+
+export default Wisata;

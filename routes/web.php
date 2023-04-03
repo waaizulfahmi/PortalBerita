@@ -17,6 +17,10 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// Route::inertia('/ShowNews', 'ShowNews');
+Route::get('/shownews', function () {
+    return Inertia::render('ShowNews');
+})->name('shownews');
 
 Route::get('/', [NewsController::class, 'index']);
 Route::post('/news', [NewsController::class, 'store'])->middleware(['auth', 'verified'])->name('create.news');

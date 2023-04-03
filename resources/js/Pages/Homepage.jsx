@@ -4,14 +4,22 @@ import Navbar from "@/Components/Navbar";
 import NewsList from "@/Components/Homepage/NewsList";
 import Paginator from "@/Components/Homepage/Paginator";
 import Footer from "@/Components/Footer";
+import { useNavigate } from "react-router-dom";
 import MainNews from "./MainNews";
 import ListNewsRow from "./NewsListRow";
 import TravelsNews from "./TravelsNews";
 import RegionalNews from "./RegionalNews";
 import ProfileNews from "./ProfileNews";
+// import ShowNews from "./ShowNews";
 
 export default function Homepage(props) {
     console.log(props);
+
+    // let navigate = useNavigate();
+    // const routeChange = () => {
+    //     let path = "./ShowNews";
+    //     navigate(path);
+    // };
     return (
         <div className=" min-h-screen bg-slate-50">
             <Head title={props.title} />
@@ -78,6 +86,14 @@ export default function Homepage(props) {
                 </h1>
             </u>
             <ListNewsRow />
+            {/* <button className="btn" onClick={routeChange}>
+                Link to ShowNews
+            </button> */}
+
+            <Link to="./ShowNews" className="btn btn-primary">
+                Sign up
+            </Link>
+
             <div className="flex justify-center items-center gap-5">
                 <Paginator meta={props.news.meta} />
             </div>

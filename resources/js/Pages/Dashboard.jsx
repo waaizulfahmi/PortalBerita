@@ -164,7 +164,7 @@ export default function Dashboard(props) {
 
                         <input type="text" />
                         <SelectForm />
-                        <input
+                        {/* <input
                             type="text"
                             placeholder="Kategori"
                             className="m-2 input input-bordered w-full "
@@ -172,7 +172,7 @@ export default function Dashboard(props) {
                             onChange={(category) =>
                                 setCategory(category.target.value)
                             }
-                        />
+                        /> */}
                         <button
                             className="m-2 btn btn-primary"
                             onClick={() => handleSubmit()}

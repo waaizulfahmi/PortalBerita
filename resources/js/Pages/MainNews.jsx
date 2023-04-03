@@ -1,6 +1,6 @@
 const MainNews = () => {
     return ( 
-        <div>
+        <div>  
             <main className="max-w-7xl mx-auto "> 
                 <div className="box-border flex flex-wrap">
                     <article className="w-full h-full md:w-2/3  p-4">

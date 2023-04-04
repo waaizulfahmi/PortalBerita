@@ -1,5 +1,6 @@
 import { Link } from "@inertiajs/react";
 import image from "./img-example.jpg";
+import parser from "html-react-parser";
 
 const isNews = (news) => {
     return news.map((data, i) => {
@@ -14,7 +15,7 @@ const isNews = (news) => {
                         {data.title}
                         <div className="badge badge-primary">New</div>
                     </h2>
-                    <p>{data.description}</p>
+                    <p>{parser(data.description)}</p>
                     <div className="card-actions justify-end">
                         <div className="badge badge-accent badge-outline">
                             {data.category}

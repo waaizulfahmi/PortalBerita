@@ -23,7 +23,7 @@ Route::get('/shownews', function () {
 })->name('shownews');
 
 // ROUTE DASHBOARD
-Route::get('/news/post', [NewsController::class, 'show'])->middleware(['auth', 'verified']);
+// Route::get('/news/post', [NewsController::class, 'show'])->middleware(['auth', 'verified']);
 Route::get('/', [NewsController::class, 'index']);
 Route::post('/news', [NewsController::class, 'store'])->middleware(['auth', 'verified'])->name('create.news');
 Route::get('/news', [NewsController::class, 'show'])->middleware(['auth', 'verified'])->name('my.news');

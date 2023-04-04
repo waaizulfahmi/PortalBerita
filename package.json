@@ -24,6 +24,7 @@
         "@fortawesome/free-solid-svg-icons": "^6.4.0",
         "@fortawesome/react-fontawesome": "^0.2.0",
         "@tiptap/extension-color": "^2.0.0-beta.220",
+        "@tiptap/extension-image": "^2.0.2",
         "@tiptap/extension-underline": "^2.0.0-beta.220",
         "@tiptap/pm": "^2.0.0-beta.220",
         "@tiptap/react": "^2.0.0-beta.220",

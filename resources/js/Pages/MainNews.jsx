@@ -29,7 +29,7 @@ const MainNews = () => {
                                             <div className="text-white m-6">
                                                 <h1 className="font-bold text-5xl mb-3">
                                                     Kuliner Makanan Khas Indonesia
-                                                </h1>
+                                                </h1> 
                                                 <p>
                                                     <small>
                                                         Published{" "}

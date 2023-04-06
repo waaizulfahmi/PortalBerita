@@ -18,8 +18,12 @@ use Inertia\Inertia;
 |
 */
 // Route::inertia('/ShowNews', 'ShowNews');
+Route::get('/readnews', function () {
+    return Inertia::render('ReadNews/ReadNews');
+})->name('readnews');
+
 Route::get('/shownews', function () {
-    return Inertia::render('ShowNews');
+    return Inertia::render('ShowNews/ShowNews');
 })->name('shownews');
 
 Route::get('/', [NewsController::class, 'index']);
@@ -40,4 +44,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

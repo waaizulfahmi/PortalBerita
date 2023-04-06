@@ -1,5 +1,5 @@
 const ListNewsRow = () => { 
-    return (  
+    return (    
         <div className="container my-5  mx-auto ml-0">
             <section className="mb-15 text-gray-800 text-center md:text-left">
                 {/* <h1>Berita Hot</h1> */}

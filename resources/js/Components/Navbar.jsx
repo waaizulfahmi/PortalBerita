@@ -100,7 +100,7 @@ const Navbar = ({ user }) => {
                         </div>
                     </div>
                     <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4 static">
-                        <MainNews />
+                        {/*<MainNews />*/}
                     </div>
                 </div>
                 <div className="drawer-side ">

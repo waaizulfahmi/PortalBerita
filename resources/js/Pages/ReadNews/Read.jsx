@@ -1,23 +1,37 @@
-const RegionalNews = () => {
+const Read = () => {
     return (
         <div>
-            <main className="max-w-7xl mx-auto "> 
-                <div class="grid grid-rows-3 grid-flow-col gap-3">
-                    <div class="row-start-1 row-span-2">
+            <main className="max-w-7xl mx-auto ">
+                <div className="box-border flex flex-wrap">
+                    <div className="row-span-3  container my-5  mx-auto ml-0 md:w-2/3">
+                        <h5 className="text-gray-500 mb-6">
+                            Nasional
+                        </h5>
+                        <h1 className="font-bold text-4xl mb-3">TIMNAS Indonesia U20 Gagal Lolos 4 Besar</h1>
+                        <p className="text-gray-500 mb-6">
+                                                <small>
+                                                    Freda Widya Artanti
+                                                    <u>6 April 2023</u>{" "}
+                                                </small>
+                                            </p>
+                    </div>
+
+
+                    <aside className="w-full md:w-1/3 ">
                         <div className="p-2">
                             <u>
-                            <a href=""><h1 className="text-black p-5 lg:text-2xl sm:text-xl font-bold">
-                                Berita Daerah
+                            <a href=""><h1 className="text-black p-3 lg:text-2xl sm:text-xl font-bold">
+                                Berita Terbaru
                             </h1></a>
                             </u>
                             <div className=" mx-auto mt-2">
-                                <section className="mb-32 text-gray-800 text-center md:text-left">
-                                    <div className="flex flex-wrap mb-3">
-                                        <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-3 mb-6 md:mb-0 ml-auto">
+                                <section className="mb-30 text-gray-800 text-center md:text-left">
+                                    <div className="flex flex-wrap mb-1">
+                                        <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-5 mb-6 md:mb-0 ml-auto">
                                             <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6">
                                                 <img
                                                     className="w-full"
-                                                    src="https://akcdn.detik.net.id/community/media/visual/2023/02/16/erick-thohir-terpilih-jadi-ketum-pssi-2.jpeg?w=700&q=90"
+                                                    src="https://mdbootstrap.com/img/new/standard/nature/044.jpg"
                                                     alt="Gambar 1"
                                                 />
                                                 <a href="#!">
@@ -53,12 +67,12 @@ const RegionalNews = () => {
                                             </p>
                                         </div>
                                     </div>
-                                    <div className="flex flex-wrap mb-3">
-                                        <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-3 mb-6 md:mb-0 ml-auto">
+                                    <div className="flex flex-wrap mb-1">
+                                        <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-5 mb-6 md:mb-0 ml-auto">
                                             <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6">
                                                 <img
                                                     className="w-full"
-                                                    src="https://akcdn.detik.net.id/community/media/visual/2023/02/01/samsung-galaxy-s23-ultra-6_169.jpeg?w=700&q=90"
+                                                    src="https://mdbootstrap.com/img/new/standard/nature/044.jpg"
                                                     alt="Gambar 1"
                                                 />
                                                 <a href="#!">
@@ -93,12 +107,12 @@ const RegionalNews = () => {
                                             </p>
                                         </div>
                                     </div>
-                                    <div className="flex flex-wrap mb-3">
-                                        <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-3 mb-6 md:mb-0 ml-auto">
+                                    <div className="flex flex-wrap mb-1">
+                                        <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-5 mb-6 md:mb-0 ml-auto">
                                             <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6">
                                                 <img
                                                     className="w-full"
-                                                    src="https://akcdn.detik.net.id/visual/2023/03/28/kartika-sary-4_169.jpeg?w=900&q=90"
+                                                    src="https://mdbootstrap.com/img/new/standard/nature/044.jpg"
                                                     alt="Gambar 1"
                                                 />
                                                 <a href="#!">
@@ -137,24 +151,21 @@ const RegionalNews = () => {
                                 </section>
                             </div>
                         </div>
-  </div>
-
-
-  <div class="row-end-3 row-span-2">
-  <div className="p-2">
+                        <hr />
+                        <div className="p-2">
                             <u>
-                            <a href=""><h1 className="text-black p-5 lg:text-2xl sm:text-xl font-bold">
-                                Olahraga
+                            <a href=""><h1 className="text-black p-3 lg:text-2xl sm:text-xl font-bold">
+                                Berita Wisata
                             </h1></a>
                             </u>
                             <div className=" mx-auto mt-2">
-                                <section className="mb-32 text-gray-800 text-center md:text-left">
-                                    <div className="flex flex-wrap mb-3">
-                                        <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-3 mb-6 md:mb-0 ml-auto">
+                                <section className="mb-30 text-gray-800 text-center md:text-left">
+                                    <div className="flex flex-wrap mb-1">
+                                        <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-5 mb-6 md:mb-0 ml-auto">
                                             <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6">
                                                 <img
                                                     className="w-full"
-                                                    src="https://akcdn.detik.net.id/community/media/visual/2023/02/16/erick-thohir-terpilih-jadi-ketum-pssi-2.jpeg?w=700&q=90"
+                                                    src="https://mdbootstrap.com/img/new/standard/nature/044.jpg"
                                                     alt="Gambar 1"
                                                 />
                                                 <a href="#!">
@@ -190,12 +201,12 @@ const RegionalNews = () => {
                                             </p>
                                         </div>
                                     </div>
-                                    <div className="flex flex-wrap mb-3">
-                                        <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-3 mb-6 md:mb-0 ml-auto">
+                                    <div className="flex flex-wrap mb-1">
+                                        <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-5 mb-6 md:mb-0 ml-auto">
                                             <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6">
                                                 <img
                                                     className="w-full"
-                                                    src="https://akcdn.detik.net.id/community/media/visual/2023/02/01/samsung-galaxy-s23-ultra-6_169.jpeg?w=700&q=90"
+                                                    src="https://mdbootstrap.com/img/new/standard/nature/044.jpg"
                                                     alt="Gambar 1"
                                                 />
                                                 <a href="#!">
@@ -230,12 +241,12 @@ const RegionalNews = () => {
                                             </p>
                                         </div>
                                     </div>
-                                    <div className="flex flex-wrap mb-3">
-                                        <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-3 mb-6 md:mb-0 ml-auto">
+                                    <div className="flex flex-wrap mb-1">
+                                        <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-5 mb-6 md:mb-0 ml-auto">
                                             <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6">
                                                 <img
                                                     className="w-full"
-                                                    src="https://akcdn.detik.net.id/visual/2023/03/28/kartika-sary-4_169.jpeg?w=900&q=90"
+                                                    src="https://mdbootstrap.com/img/new/standard/nature/044.jpg"
                                                     alt="Gambar 1"
                                                 />
                                                 <a href="#!">
@@ -274,24 +285,21 @@ const RegionalNews = () => {
                                 </section>
                             </div>
                         </div>
-  </div>
-
-
-  <div class="row-start-1 row-end-3">
-  <div className="p-2">
+                        <hr />
+                        <div className="p-2">
                             <u>
-                            <a href=""><h1 className="text-black p-5 lg:text-2xl sm:text-xl font-bold">
-                                Profile 
+                            <a href=""><h1 className="text-black p-3 lg:text-2xl sm:text-xl font-bold">
+                                Berita Kuliner
                             </h1></a>
                             </u>
                             <div className=" mx-auto mt-2">
-                                <section className="mb-32 text-gray-800 text-center md:text-left">
-                                    <div className="flex flex-wrap mb-3">
-                                        <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-3 mb-6 md:mb-0 ml-auto">
+                                <section className="mb-30 text-gray-800 text-center md:text-left">
+                                    <div className="flex flex-wrap mb-1">
+                                        <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-5 mb-6 md:mb-0 ml-auto">
                                             <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6">
                                                 <img
                                                     className="w-full"
-                                                    src="https://akcdn.detik.net.id/community/media/visual/2023/02/16/erick-thohir-terpilih-jadi-ketum-pssi-2.jpeg?w=700&q=90"
+                                                    src="https://mdbootstrap.com/img/new/standard/nature/044.jpg"
                                                     alt="Gambar 1"
                                                 />
                                                 <a href="#!">
@@ -327,12 +335,12 @@ const RegionalNews = () => {
                                             </p>
                                         </div>
                                     </div>
-                                    <div className="flex flex-wrap mb-3">
-                                        <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-3 mb-6 md:mb-0 ml-auto">
+                                    <div className="flex flex-wrap mb-1">
+                                        <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-5 mb-6 md:mb-0 ml-auto">
                                             <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6">
                                                 <img
                                                     className="w-full"
-                                                    src="https://akcdn.detik.net.id/community/media/visual/2023/02/01/samsung-galaxy-s23-ultra-6_169.jpeg?w=700&q=90"
+                                                    src="https://mdbootstrap.com/img/new/standard/nature/044.jpg"
                                                     alt="Gambar 1"
                                                 />
                                                 <a href="#!">
@@ -367,12 +375,12 @@ const RegionalNews = () => {
                                             </p>
                                         </div>
                                     </div>
-                                    <div className="flex flex-wrap mb-3">
-                                        <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-3 mb-6 md:mb-0 ml-auto">
+                                    <div className="flex flex-wrap mb-1">
+                                        <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-5 mb-6 md:mb-0 ml-auto">
                                             <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6">
                                                 <img
                                                     className="w-full"
-                                                    src="https://akcdn.detik.net.id/visual/2023/03/28/kartika-sary-4_169.jpeg?w=900&q=90"
+                                                    src="https://mdbootstrap.com/img/new/standard/nature/044.jpg"
                                                     alt="Gambar 1"
                                                 />
                                                 <a href="#!">
@@ -411,17 +419,11 @@ const RegionalNews = () => {
                                 </section>
                             </div>
                         </div>
-  </div>
-
-</div>
-
-
-
-                    
-             
+                        <hr />
+                    </aside>
+                </div>
             </main>
         </div>
     )
 }
-
-export default RegionalNews;
+export default Read;

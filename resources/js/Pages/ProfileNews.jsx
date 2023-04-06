@@ -1,6 +1,6 @@
 const ProfileNews = () => {
-    return (
-        <div>
+    return ( 
+        <div> 
             <main className="max-w-7xl mx-auto "> 
                 <div className="box-border flex flex-wrap">
                     <article className=" p-4">

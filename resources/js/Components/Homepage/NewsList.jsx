@@ -1,5 +1,5 @@
 import { Link } from "@inertiajs/react";
-import image from "./img-example.jpg";
+// import image from "./img-example.jpg";
 import parser from "html-react-parser";
 
 const isNews = (news) => {
@@ -8,7 +8,10 @@ const isNews = (news) => {
             <div className="card w-full  lg:w-60 bg-base-100 shadow-xl" key={i}>
                 {/* <Link href="/ShowNews"></Link> */}
                 <figure>
-                    <img src={image} alt="Shoes" />
+                    <img
+                        src={`http://localhost:8000/${data.image}`}
+                        alt="Shoes"
+                    />
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title">
@@ -25,6 +28,7 @@ const isNews = (news) => {
                 </div>
             </div>
         );
+        2;
     });
 };
 

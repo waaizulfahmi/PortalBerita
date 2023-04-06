@@ -12,18 +12,20 @@ export default function Dashboard(props) {
     const [description, setDescription] = useState("");
     const [category, setCategory] = useState();
     const [isNotif, setIsNotif] = useState(false);
-    // const [desc, setDesc] = useState("");
+    const [image, setImg] = useState();
     const handleSubmit = () => {
         const data = {
             title,
             description,
             category,
+            image,
         };
         router.post("/news", data);
         setIsNotif(true);
         setTitle("");
         setDescription("");
         setCategory("");
+        setImg("");
     };
 
     useEffect(() => {
@@ -166,6 +168,7 @@ export default function Dashboard(props) {
                                     setTitle(title.target.value)
                                 }
                                 value={title}
+                                required
                             />
                         </div>
 
@@ -195,6 +198,7 @@ export default function Dashboard(props) {
                                     onChange={(category) =>
                                         setDescription(category.target.value)
                                     }
+                                    required
                                 />
                             </div>
                         </div>
@@ -223,6 +227,7 @@ export default function Dashboard(props) {
                                 className="m-2 select select-info w-full max-w-xs"
                                 value={category}
                                 onChange={(e) => setCategory(e.target.value)}
+                                required
                             >
                                 <option disabled selected>
                                     <b>Pilih Kategori</b>
@@ -286,6 +291,10 @@ export default function Dashboard(props) {
                                     <input
                                         id="dropzone-file"
                                         type="file"
+                                        value={image}
+                                        onChange={(image) =>
+                                            setImg(image.target.value)
+                                        }
                                         className="file-input file-input-bordered file-input-info  visible"
                                         accept="image/*"
                                     />

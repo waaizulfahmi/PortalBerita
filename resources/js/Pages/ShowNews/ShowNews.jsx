@@ -5,6 +5,8 @@ import Navbar from "@/Components/Navbar";
 import NewsList from "@/Components/Homepage/NewsList";
 import Paginator from "@/Components/Homepage/Paginator";
 import Footer from "@/Components/Footer";
+import Wisata from "./Wisata";
+import News from "./News";
 
 const ShowNews = () => {
     return (
@@ -16,9 +18,12 @@ const ShowNews = () => {
                 {/* <MainNews /> */}
                 {/* <SideNews /> */}
             </div>
-            <h1 className="text-black p-4 lg:text-2xl  sm:text-xl ml-14">
-                Berita Sport
-            </h1>
+            <hr />
+        
+            <Wisata/>
+            <hr />
+            <News/>
+            <hr />
             <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4">
                 <NewsList />
             </div>

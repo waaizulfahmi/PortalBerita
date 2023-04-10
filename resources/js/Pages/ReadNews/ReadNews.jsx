@@ -6,6 +6,8 @@ import NewsList from "@/Components/Homepage/NewsList";
 import Paginator from "@/Components/Homepage/Paginator";
 import Footer from "@/Components/Footer";
 import Read from "./Read";
+import BeritaTerkait from "./BeritaTerkait";
+import BeritaRekomendasi from "./BeritaRekomendasi";
 
 
 const ReadNews = () => {
@@ -14,6 +16,17 @@ const ReadNews = () => {
             <Head />
             <Navbar />
             <Read/>
+            <hr />
+            <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
+            <BeritaTerkait/>
+            </div>
+
+            <hr />
+            
+            <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
+            <BeritaRekomendasi/>
+            </div>
+            
             <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4">
                 {/*<NewsList />*/}
             </div>

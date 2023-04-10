@@ -24,7 +24,7 @@ export default function Homepage(props) {
         <div className=" min-h-screen bg-slate-50">
             <Head title={props.title} />
             <Navbar user={props.auth.user} />
-           <MainNews />
+           {/*<MainNews />*/}
             {/* <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4 static">
                 <MainNews />
             </div> */}
@@ -90,9 +90,6 @@ export default function Homepage(props) {
                 Link to ShowNews
             </button> */}
 
-            <Link to="./ShowNews" className="btn btn-primary">
-                Sign up
-            </Link>
 
             <div className="flex justify-center items-center gap-5">
                 <Paginator meta={props.news.meta} />

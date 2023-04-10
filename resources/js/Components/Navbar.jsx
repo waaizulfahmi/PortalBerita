@@ -1,4 +1,4 @@
-// import MainNews from "@/Pages/MainNews";
+import MainNews from "@/Pages/MainNews";
 // import { Link } from "@inertiajs/react";
 
 const Navbar = () => {

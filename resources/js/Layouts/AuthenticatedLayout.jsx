@@ -73,7 +73,7 @@ export default function Authenticated({ auth, header, children }) {
                         </Link>
 
                         <Link
-                            href="/dashboard/post"
+                            href="/dashboard/post/new"
                             className="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
                         >
                             <i className="fas fa-sticky-note mr-3"></i>
@@ -81,7 +81,7 @@ export default function Authenticated({ auth, header, children }) {
                             Buat Postingan
                         </Link>
                         <Link
-                            href="/dashboard/list"
+                            href="/dashboard/list/show"
                             className="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
                         >
                             <i className="fas fa-table mr-3"></i>

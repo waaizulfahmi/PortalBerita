@@ -16,7 +16,7 @@ const Navbar = ({ user }) => {
                         className="input input-bordered"
                     />
                 </div>
-            <div className="dropdown dropdown-end">
+            <div className="dropdown dropdown-end"> 
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">
                 <img src="https://www.hannibalsafari.com.au/wp-content/uploads/photo-1534528741775-53994a69daeb.jpg" />
@@ -100,7 +100,7 @@ const Navbar = ({ user }) => {
                         </div>
                     </div>
                     <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4 static">
-                        {/*<MainNews />*/}
+                        <MainNews />
                     </div>
                 </div>
                 <div className="drawer-side ">

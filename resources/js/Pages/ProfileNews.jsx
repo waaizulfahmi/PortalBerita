@@ -8,7 +8,7 @@ const ProfileNews = () => {
                             <a href=""><h1 className="text-black p-5 lg:text-2xl sm:text-xl font-bold">
                                 Berita Kuliner
                             </h1></a>
-                            </u>
+                            </u> 
                         <div class="grid grid-cols-3 gap-6 place-content-start h-48">
                     <div>
   <div class="card w-60 bg-base-100">
@@ -124,7 +124,7 @@ const ProfileNews = () => {
   <hr />
                         </article>
 
-
+ 
                     <aside className="w-full md:w-1/3 ">
                         <div className="p-2">
                             <u>

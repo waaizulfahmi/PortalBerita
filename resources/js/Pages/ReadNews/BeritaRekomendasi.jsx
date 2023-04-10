@@ -1,12 +1,12 @@
-const ProfileNews = () => {
+const BeritaRekomendasi = () => {
     return ( 
         <div> 
             <main className="max-w-7xl mx-auto "> 
-                <div className="box-border flex flex-wrap">
+                <div className="box-border flex flex-wrap ">
                     <article className=" p-4">
                     <u>
                             <a href=""><h1 className="text-black p-5 lg:text-2xl sm:text-xl font-bold">
-                                Berita Kuliner
+                                Berita Rekomendasi
                             </h1></a>
                             </u> 
                         <div class="grid grid-cols-3 gap-6 place-content-start h-48">
@@ -126,20 +126,20 @@ const ProfileNews = () => {
 
  
                     <aside className="w-full md:w-1/3 ">
-                        <div className="p-2">
+                    <div className="p-2">
                             <u>
-                            <a href=""><h1 className="text-black p-5 lg:text-2xl sm:text-xl font-bold">
-                                Bisnis
+                            <a href=""><h1 className="text-black p-3 lg:text-2xl sm:text-xl font-bold">
+                                Berita Olahraga
                             </h1></a>
                             </u>
                             <div className=" mx-auto mt-2">
-                                <section className="mb-32 text-gray-800 text-center md:text-left">
+                                <section className="mb-30 text-gray-800 text-center md:text-left">
                                     <div className="flex flex-wrap mb-1">
-                                        <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-3 mb-6 md:mb-0 ml-auto">
+                                        <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-5 mb-6 md:mb-0 ml-auto">
                                             <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6">
                                                 <img
                                                     className="w-full"
-                                                    src="https://akcdn.detik.net.id/community/media/visual/2023/02/16/erick-thohir-terpilih-jadi-ketum-pssi-2.jpeg?w=700&q=90"
+                                                    src="https://mdbootstrap.com/img/new/standard/nature/044.jpg"
                                                     alt="Gambar 1"
                                                 />
                                                 <a href="#!">
@@ -176,11 +176,11 @@ const ProfileNews = () => {
                                         </div>
                                     </div>
                                     <div className="flex flex-wrap mb-1">
-                                        <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-3 mb-6 md:mb-0 ml-auto">
+                                        <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-5 mb-6 md:mb-0 ml-auto">
                                             <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6">
                                                 <img
                                                     className="w-full"
-                                                    src="https://akcdn.detik.net.id/community/media/visual/2023/02/01/samsung-galaxy-s23-ultra-6_169.jpeg?w=700&q=90"
+                                                    src="https://mdbootstrap.com/img/new/standard/nature/044.jpg"
                                                     alt="Gambar 1"
                                                 />
                                                 <a href="#!">
@@ -216,11 +216,11 @@ const ProfileNews = () => {
                                         </div>
                                     </div>
                                     <div className="flex flex-wrap mb-1">
-                                        <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-3 mb-6 md:mb-0 ml-auto">
+                                        <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-5 mb-6 md:mb-0 ml-auto">
                                             <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6">
                                                 <img
                                                     className="w-full"
-                                                    src="https://akcdn.detik.net.id/visual/2023/03/28/kartika-sary-4_169.jpeg?w=900&q=90"
+                                                    src="https://mdbootstrap.com/img/new/standard/nature/044.jpg"
                                                     alt="Gambar 1"
                                                 />
                                                 <a href="#!">
@@ -266,4 +266,4 @@ const ProfileNews = () => {
     )
 }
 
-export default ProfileNews;
+export default BeritaRekomendasi;

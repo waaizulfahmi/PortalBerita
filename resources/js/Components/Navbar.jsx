@@ -4,43 +4,76 @@
 const Navbar = () => {
     return (
         <div>
-            <body>
-                <nav className="bg-white border-gray-200 dark:bg-gray-900">
-                    <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                        <a
-                            href="https://flowbite.com/"
-                            className="flex items-center"
+            <div className="navbar bg-violet-900 p-10 ">
+                <div className="flex-1">
+                    <h1 className="text-white text-5xl btn btn-ghost normal-case ">
+                        PanelWarta.id
+                    </h1>
+                </div>
+                <div className="flex-none gap-3">
+                    <div className="form-control">
+                        <input
+                            type="text"
+                            placeholder="Search"
+                            className="input input-bordered"
+                        />
+                    </div>
+                    <div className="dropdown dropdown-end">
+                        <label
+                            tabIndex={0}
+                            className="btn btn-ghost btn-circle avatar"
                         >
-                            <img
-                                src="https://flowbite.com/docs/images/logo.svg"
-                                className="h-8 mr-3"
-                                alt="Flowbite Logo"
+                            <div className="w-10 rounded-full">
+                                <img src="https://www.hannibalsafari.com.au/wp-content/uploads/photo-1534528741775-53994a69daeb.jpg" />
+                            </div>
+                        </label>
+                        <ul
+                            tabIndex={0}
+                            className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52"
+                        >
+                            <li>
+                                <a className="justify-between">
+                                    Profile
+                                    <span className="badge">New</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>Login</a>
+                            </li>
+                            <li>
+                                <a>Setting</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div className="drawer ">
+                <input
+                    id="my-drawer-3"
+                    type="checkbox"
+                    className="drawer-toggle"
+                />
+                <div className="drawer-content flex flex-col">
+                    <div className="w-full h-full navbar bg-base-200">
+                        <div className="flex-none lg:hidden">
+                            <label
+                                htmlFor="my-drawer-3"
+                                className="btn btn-square btn-ghost"
                             />
-                            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                                Flowbite
-                            </span>
-                        </a>
-                        <div className="flex md:order-2">
-                            <button
-                                type="button"
-                                data-collapse-toggle="navbar-search"
-                                aria-controls="navbar-search"
-                                aria-expanded="false"
-                                className="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-1"
+                            <svg
+                                className="w-5 h-5"
+                                aria-hidden="true"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg"
                             >
-                                <svg
-                                    className="w-5 h-5"
-                                    aria-hidden="true"
-                                    fill="currentColor"
-                                    viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                                        clip-rule="evenodd"
-                                    ></path>
-                                </svg>
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                    clip-rule="evenodd"
+                                ></path>
+                            </svg>
+                            <button>
                                 <span className="sr-only">Search</span>
                             </button>
                             <div className="relative hidden md:block">
@@ -146,9 +179,46 @@ const Navbar = () => {
                             </ul>
                         </div>
                     </div>
-                </nav>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
-            </body>
+                    <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4 static">
+                        <MainNews />
+                    </div>
+                </div>
+                <div className="drawer-side ">
+                    <label
+                        htmlFor="my-drawer-3"
+                        className="drawer-overlay"
+                    ></label>
+                    <ul className="menu p-4 w-80 bg-base-100 ">
+                        <li>
+                            <a>Berita</a>
+                        </li>
+                        <li>
+                            <a>Olahraga</a>
+                        </li>
+                        <li>
+                            <a>Wisata</a>
+                        </li>
+                        <li>
+                            <a>Kuliner</a>
+                        </li>
+                        <li>
+                            <a>Profile</a>
+                        </li>
+                        <li>
+                            <a>Bisnis</a>
+                        </li>
+                        <li>
+                            <a>Daerah</a>
+                        </li>
+                        <li>
+                            <a>Nasional</a>
+                        </li>
+                        <li>
+                            <a>Mancanegara</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     );
 };

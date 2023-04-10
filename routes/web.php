@@ -29,16 +29,24 @@ Route::get('/shownews', function () {
 // ROUTE DASHBOARD
 // Route::get('/news/post', [NewsController::class, 'show'])->middleware(['auth', 'verified']);
 Route::get('/', [NewsController::class, 'index']);
-Route::post('/news', [NewsController::class, 'store'])->middleware(['auth', 'verified'])->name('create.news');
-Route::get('/news', [NewsController::class, 'show'])->middleware(['auth', 'verified'])->name('my.news');
-Route::get('/news/edit', [NewsController::class, 'edit'])->middleware(['auth', 'verified'])->name('edit.news');
-Route::post('/news/update', [NewsController::class, 'update'])->middleware(['auth', 'verified'])->name('update.news');
-Route::post('/news/delete', [NewsController::class, 'destroy'])->middleware(['auth', 'verified'])->name('delete.news');
+Route::post('/dashboard', [NewsController::class, 'store'])->middleware(['auth', 'verified'])->name('create.news');
+Route::get('/dashboard', [NewsController::class, 'show'])->middleware(['auth', 'verified'])->name('my.news');
+Route::get('/dashboard/edit', [NewsController::class, 'edit'])->middleware(['auth', 'verified'])->name('edit.news');
+Route::post('/dashboard/update', [NewsController::class, 'update'])->middleware(['auth', 'verified'])->name('update.news');
+Route::post('/dashboard/delete', [NewsController::class, 'destroy'])->middleware(['auth', 'verified'])->name('delete.news');
 
+// dashboardPages
+// Route::get('/dashboard', function () {
+//     return Inertia::render('DashboardPages/Dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard/post', function () {
+    return Inertia::render('DashboardPages/PostPage');
+})->middleware(['auth', 'verified'])->name('postpage');
+
+Route::get('/dashboard/list', function () {
+    return Inertia::render('DashboardPages/ListPage');
+})->middleware(['auth', 'verified'])->name('listpage');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

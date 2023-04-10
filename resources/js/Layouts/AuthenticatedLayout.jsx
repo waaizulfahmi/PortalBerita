@@ -1,11 +1,12 @@
 import { useState } from "react";
 import ApplicationLogo from "@/Components/ApplicationLogo";
 import Dropdown from "@/Components/Dropdown";
-import NavLink from "@/Components/NavLink";
+import { NavLink } from "react-router-dom";
 import ResponsiveNavLink from "@/Components/ResponsiveNavLink";
 import { Head, Link } from "@inertiajs/react";
 import HeaderDashboard from "./dashboard-assets/HeaderDashboard";
 import { FaGithubSquare } from "react-icons/fa";
+
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 // import { FaBeer } from "react-icons/fa";
@@ -60,30 +61,33 @@ export default function Authenticated({ auth, header, children }) {
                         </button>
                     </div>
                     <nav className="text-white text-base font-semibold pt-3">
-                        <Link to="/news/post">
-                            <a className="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
-                                <i className="fas fa-tachometer-alt mr-3"></i>
-                                {/*  */}
-                                Dashboard
-                            </a>
+                        <Link
+                            className={
+                                "flex items-center active-nav-link text-white py-4 pl-6 nav-item "
+                            }
+                            href="/dashboard"
+                        >
+                            <i className="fas fa-tachometer-alt mr-3"></i>
+                            {/*  */}
+                            Dashboard
                         </Link>
 
-                        <a
-                            href="#news"
+                        <Link
+                            href="/dashboard/post"
                             className="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
                         >
                             <i className="fas fa-sticky-note mr-3"></i>
                             {/* <FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon> */}
                             Buat Postingan
-                        </a>
-                        <a
-                            href="#"
+                        </Link>
+                        <Link
+                            href="/dashboard/list"
                             className="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
                         >
                             <i className="fas fa-table mr-3"></i>
                             Daftar Postingan
-                        </a>
-                        <a
+                        </Link>
+                        {/* <a
                             href="#"
                             className="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
                         >
@@ -103,7 +107,7 @@ export default function Authenticated({ auth, header, children }) {
                         >
                             <i className="fas fa-calendar mr-3"></i>
                             Calendar
-                        </a>
+                        </a> */}
                     </nav>
                     {/* <a
                     href="#"

@@ -54,7 +54,7 @@ class NewsController extends Controller
     public function show(News $news)
     {
         $myNews = $news::where('author', auth()->user()->email)->get();
-        return Inertia::render('Dashboard', [
+        return Inertia::render('DashboardPages/Dashboard', [
             'myNews' => $myNews,
 
         ]);
@@ -65,7 +65,7 @@ class NewsController extends Controller
      */
     public function edit(News $news, Request $request)
     {
-        return Inertia::render('EditNews', [
+        return Inertia::render('DashboardPages/EditNews', [
             'myNews' => $news->find($request->id)
         ]);
     }
@@ -80,7 +80,7 @@ class NewsController extends Controller
             'description' => $request->description,
             'category' => $request->category,
         ]);
-        return to_route('dashboard')->with('message', 'Updata Berita Berhasil');
+        return to_route('postpage')->with('message', 'Updata Berita Berhasil');
     }
 
     /**
@@ -90,6 +90,6 @@ class NewsController extends Controller
     {
         $news = News::find($request->id);
         $news->delete();
-        return to_route('dashboard')->with('message', 'Data Berhasil Dihapus !');
+        return to_route('postpage')->with('message', 'Data Berhasil Dihapus !');
     }
 }

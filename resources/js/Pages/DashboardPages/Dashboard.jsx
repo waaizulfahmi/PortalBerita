@@ -31,7 +31,7 @@ export default function Dashboard(props) {
     useEffect(() => {
         if (!props.myNews) {
             // router.get("/dashboard");
-            router.get("/news");
+            router.get("/dashboard");
         }
 
         console.log("props", props);

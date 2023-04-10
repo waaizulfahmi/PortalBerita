@@ -19,10 +19,10 @@ const ShowNews = () => {
                 {/* <SideNews /> */}
             </div>
             <hr />
-        
-            <Wisata/>
+
+            <Wisata />
             <hr />
-            <News/>
+            <News />
             <hr />
             <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4">
                 <NewsList />

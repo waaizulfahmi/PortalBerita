@@ -7,18 +7,17 @@ const isNews = (news) => {
         return (
             <div className="card w-full  lg:w-60 bg-base-100 shadow-xl" key={i}>
                 {/* <Link href="/ShowNews"></Link> */}
-                <figure>
-                    <img
-                        src={`http://localhost:8000/${data.image}`}
-                        alt="Shoes"
-                    />
-                </figure>
+                <Link href={route("readnews")} as="button">
+                    <img src={image} alt="Shoes" />
+                </Link>
                 <div className="card-body">
-                    <h2 className="card-title">
-                        {data.title}
-                        <div className="badge badge-primary">New</div>
-                    </h2>
-                    <p>{parser(data.description)}</p>
+                    <Link href={route("readnews")} as="button">
+                        <h2 className="card-title transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                            {data.title}
+                            <div className="badge badge-primary">New</div>
+                        </h2>
+                    </Link>
+                    <p>{data.description}</p>
                     <div className="card-actions justify-end">
                         <div className="badge badge-accent badge-outline">
                             {data.category}

@@ -7,13 +7,14 @@ import Paginator from "@/Components/Homepage/Paginator";
 import Footer from "@/Components/Footer";
 import Wisata from "./Wisata";
 import News from "./News";
+import MainNews from "../MainNews";
 
 const ShowNews = () => {
     return (
         <div className=" min-h-screen bg-slate-50">
             <Head />
             <Navbar />
-            {/* <MainNews /> */}
+            <MainNews />
             <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4">
                 {/* <MainNews /> */}
                 {/* <SideNews /> */}

@@ -18,7 +18,7 @@ const PostPage = (props) => {
             category,
             image,
         };
-        router.post("/news", data);
+        router.post("/dashboard/post", data);
         setIsNotif(true);
         setTitle("");
         setDescription("");
@@ -50,6 +50,9 @@ const PostPage = (props) => {
             <div>
                 <div className="py-12">
                     <div className="max-w-7xl mx-auto my-2 sm:px-6 lg:px-8">
+                        <h1 className="text-3xl text-black pb-6 mb-12">
+                            Tambahkan Postingan
+                        </h1>
                         <div>
                             {isNotif && (
                                 <div className="alert alert-info shadow-lg">
@@ -213,6 +216,7 @@ const PostPage = (props) => {
                                     <input
                                         id="dropzone-file"
                                         type="file"
+                                        name="image"
                                         value={image}
                                         onChange={(image) =>
                                             setImg(image.target.value)

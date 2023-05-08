@@ -20,7 +20,7 @@ export default function Authenticated({ auth, header, children }) {
 
     return (
         <div>
-            <Head title="DashBoard"></Head>
+            <Head title="Dashboard "></Head>
             <meta charSet="UTF-8" />
             <meta
                 name="viewport"
@@ -56,9 +56,11 @@ export default function Authenticated({ auth, header, children }) {
                         >
                             <FaGithubSquare />
                         </a>
-                        <button className="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
-                            <i className="fas fa-plus mr-3"></i> New Post
-                        </button>
+                        <Link href="/dashboard/post/new">
+                            <button className="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
+                                <i className="fas fa-plus mr-3"></i> New Post
+                            </button>
+                        </Link>
                     </div>
                     <nav className="text-white text-base font-semibold pt-3">
                         <Link
@@ -248,73 +250,32 @@ export default function Authenticated({ auth, header, children }) {
 
                         {/* <!-- Dropdown Nav --> */}
                         <nav className="flex flex-col pt-4">
-                            <a
-                                href="#"
-                                className="flex items-center active-nav-link text-white py-2 pl-4 nav-item"
+                            <Link
+                                className={
+                                    "flex items-center active-nav-link text-white py-4 pl-6 nav-item "
+                                }
+                                href="/dashboard"
                             >
                                 <i className="fas fa-tachometer-alt mr-3"></i>
+                                {/*  */}
                                 Dashboard
-                            </a>
-                            <a
-                                href="#"
-                                className="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"
+                            </Link>
+
+                            <Link
+                                href="/dashboard/post/new"
+                                className="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
                             >
                                 <i className="fas fa-sticky-note mr-3"></i>
-                                Blank Page
-                            </a>
-                            <a
-                                href="#"
-                                className="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"
+                                {/* <FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon> */}
+                                Buat Postingan
+                            </Link>
+                            <Link
+                                href="/dashboard/list/show"
+                                className="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
                             >
                                 <i className="fas fa-table mr-3"></i>
-                                Tables
-                            </a>
-                            <a
-                                href="#"
-                                className="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"
-                            >
-                                <i className="fas fa-align-left mr-3"></i>
-                                Forms
-                            </a>
-                            <a
-                                href="#"
-                                className="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"
-                            >
-                                <i className="fas fa-tablet-alt mr-3"></i>
-                                Tabbed Content
-                            </a>
-                            <a
-                                href="#"
-                                className="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"
-                            >
-                                <i className="fas fa-calendar mr-3"></i>
-                                Calendar
-                            </a>
-                            <a
-                                href="#"
-                                className="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"
-                            >
-                                <i className="fas fa-cogs mr-3"></i>
-                                Support
-                            </a>
-                            <a
-                                href="#"
-                                className="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"
-                            >
-                                <i className="fas fa-user mr-3"></i>
-                                My Account
-                            </a>
-                            <a
-                                href="#"
-                                className="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"
-                            >
-                                <i className="fas fa-sign-out-alt mr-3"></i>
-                                Sign Out
-                            </a>
-                            <button className="w-full bg-white cta-btn font-semibold py-2 mt-3 rounded-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
-                                <i className="fas fa-arrow-circle-up mr-3"></i>{" "}
-                                Upgrade to Pro!
-                            </button>
+                                Daftar Postingan
+                            </Link>
                         </nav>
                         {/* <!-- <button className="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
                 <i className="fas fa-plus mr-3"></i> New Report
@@ -323,9 +284,6 @@ export default function Authenticated({ auth, header, children }) {
 
                     <div className="w-full overflow-x-hidden border-t flex flex-col">
                         <div className="w-full flex-grow p-6">
-                            <h1 className="text-3xl text-black pb-6">
-                                Dashboard
-                            </h1>
                             <main>{children}</main>
                             {/* <div className="flex flex-wrap mt-6">
                                 <div className="w-full lg:w-1/2 pr-0 lg:pr-2">

@@ -8,29 +8,85 @@ const Read = () => {
                             Nasional
                         </h5>
                         <h1 className="font-bold text-4xl mb-3">TIMNAS Indonesia U20 Gagal Lolos 4 Besar</h1>
-                        <p className="text-gray-500 mb-6">
+                        <p className="text-gray-500 mb-2">
                                                 <small >
                                                     Freda Widya Artanti 
                                                     <u className="ml-3">6 April 2023</u>{" "}
                                                 </small>
                                             </p>
-                                            <div dir="rtl">
-                                            <button className="btn btn-active btn-ghost btn-sm mb-2">Salin Link</button>
+                                            <div className="flex justify-end space-x-2">
+                                            <div>
+                                                    <div className="avatar">
+                                                        <div className="w-8 rounded-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                                                            <a href="https://www.instagram.com/panelwarta/">
+                                                            <img src="https://cdn-icons-png.flaticon.com/512/10097/10097034.png"/>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div className="avatar">
+                                                        <div className="w-8 rounded-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                                                            <a href="">
+                                                            <img src="https://cdn-icons-png.flaticon.com/512/10091/10091734.png"/>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div className="avatar">
+                                                        <div className="w-8 rounded-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                                                            <a href="">
+                                                            <img src="https://cdn-icons-png.flaticon.com/512/10097/10097344.png"/>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div className="avatar">
+                                                        <div className="w-8 rounded-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                                                            <a href="">
+                                                            <img src="https://cdn-icons-png.flaticon.com/512/1599/1599019.png"/>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div className="avatar">
+                                                        <div className="w-8 rounded-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                                                            <a href="">
+                                                            <img src="https://cdn-icons-png.flaticon.com/512/10096/10096611.png"/>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button className="btn btn-active btn-ghost btn-sm mb-2">Salin Link</button>
+                                                </div>
                                             </div>
                                             <div>
                                 <img
                                     src="https://img.okezone.com/content/2022/07/09/51/2626628/timnas-indonesia-u-19-bisa-gagal-lolos-ke-semifinal-piala-aff-u-19-2022-meski-menang-atas-myanmar-begini-penjelasannya-5PbK8mXClu.JPG"
-                                    className="w-full p-1"
+                                    className="w-full p-3"
                                 />
                                 <a href="#!">
                                 </a>
                             </div>                       
-                    <div class="box-border h-80 w-50 p-1 border-2 mb-20 ...">
+                    <div class="box-border h-80 w-50 border-0 mb-10">
                     </div>
-                    <div className="text-gray-500 mb-6">
-                    <p class="font-bold text-bold text-2xl"><a href="">TAG</a></p>
-                    <button className="btn btn-active btn-ghost btn-sm ">Nasional</button>
+                    <div>
+                    <div className="text-gray-500 mb-6 flex justify-start">
+                        <div>
+                    <p class="font-bold text-bold text-2xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"><a href="">TAG</a></p>
                     </div>
+                    <div>
+                    <button className="btn btn-active btn-ghost btn-sm ml-6 mb-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">Nasional</button>
+                    </div>
+                    </div>
+
+                   
+                    </div>
+
                     </div>
 
 
@@ -43,11 +99,11 @@ const Read = () => {
                             </u>
                             <div className=" mx-auto mt-2">
                                 <section className="mb-30 text-gray-800 text-center md:text-left">
-                                    <div className="flex flex-wrap mb-1">
+                                    <div className="flex flex-wrap mb-1 ">
                                         <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-5 mb-6 md:mb-0 ml-auto">
-                                            <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6">
+                                            <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                                                 <img
-                                                    className="w-full"
+                                                    className="w-full "
                                                     src="https://mdbootstrap.com/img/new/standard/nature/044.jpg"
                                                     alt="Gambar 1"
                                                 />
@@ -86,7 +142,7 @@ const Read = () => {
                                     </div>
                                     <div className="flex flex-wrap mb-1">
                                         <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-5 mb-6 md:mb-0 ml-auto">
-                                            <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6">
+                                            <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                                                 <img
                                                     className="w-full"
                                                     src="https://mdbootstrap.com/img/new/standard/nature/044.jpg"
@@ -126,7 +182,7 @@ const Read = () => {
                                     </div>
                                     <div className="flex flex-wrap mb-1">
                                         <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-5 mb-6 md:mb-0 ml-auto">
-                                            <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6">
+                                            <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                                                 <img
                                                     className="w-full"
                                                     src="https://mdbootstrap.com/img/new/standard/nature/044.jpg"
@@ -179,7 +235,7 @@ const Read = () => {
                                 <section className="mb-30 text-gray-800 text-center md:text-left">
                                     <div className="flex flex-wrap mb-1">
                                         <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-5 mb-6 md:mb-0 ml-auto">
-                                            <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6">
+                                            <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                                                 <img
                                                     className="w-full"
                                                     src="https://mdbootstrap.com/img/new/standard/nature/044.jpg"
@@ -220,7 +276,7 @@ const Read = () => {
                                     </div>
                                     <div className="flex flex-wrap mb-1">
                                         <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-5 mb-6 md:mb-0 ml-auto">
-                                            <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6">
+                                            <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                                                 <img
                                                     className="w-full"
                                                     src="https://mdbootstrap.com/img/new/standard/nature/044.jpg"
@@ -260,7 +316,7 @@ const Read = () => {
                                     </div>
                                     <div className="flex flex-wrap mb-1">
                                         <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-5 mb-6 md:mb-0 ml-auto">
-                                            <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6">
+                                            <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                                                 <img
                                                     className="w-full"
                                                     src="https://mdbootstrap.com/img/new/standard/nature/044.jpg"
@@ -313,7 +369,7 @@ const Read = () => {
                                 <section className="mb-30 text-gray-800 text-center md:text-left">
                                     <div className="flex flex-wrap mb-1">
                                         <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-5 mb-6 md:mb-0 ml-auto">
-                                            <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6">
+                                            <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                                                 <img
                                                     className="w-full"
                                                     src="https://mdbootstrap.com/img/new/standard/nature/044.jpg"
@@ -354,7 +410,7 @@ const Read = () => {
                                     </div>
                                     <div className="flex flex-wrap mb-1">
                                         <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-5 mb-6 md:mb-0 ml-auto">
-                                            <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6">
+                                            <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                                                 <img
                                                     className="w-full"
                                                     src="https://mdbootstrap.com/img/new/standard/nature/044.jpg"
@@ -394,7 +450,7 @@ const Read = () => {
                                     </div>
                                     <div className="flex flex-wrap mb-1">
                                         <div className="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-5 mb-6 md:mb-0 ml-auto">
-                                            <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6">
+                                            <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                                                 <img
                                                     className="w-full"
                                                     src="https://mdbootstrap.com/img/new/standard/nature/044.jpg"

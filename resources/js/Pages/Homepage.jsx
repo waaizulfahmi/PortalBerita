@@ -10,6 +10,8 @@ import ListNewsRow from "./NewsListRow";
 import TravelsNews from "./TravelsNews";
 import RegionalNews from "./RegionalNews";
 import ProfileNews from "./ProfileNews";
+import NewNews from "./NewNews";
+import BeritaBisnis from "./BeritaBisnis";
 // import ShowNews from "./ShowNews";
 
 export default function Homepage(props) {
@@ -28,47 +30,46 @@ export default function Homepage(props) {
             {/* <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4 static">
                 <MainNews />
             </div> */}
+            <MainNews/>
+            <hr/>
+            <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
+                <NewNews news={props.news.data} />
+            </div>
             <hr />
             <u>
-                <a href="Wisata">
-                    <h1 className="text-black p-3 lg:text-2xl sm:text-xl font-bold ml-36">
+                    <h1 className="text-black p-3 lg:text-2xl sm:text-xl font-bold ml-32">
                         Berita Wisata
                     </h1>
-                </a>
-            </u>
             <div dir="rtl">
-                <u>
-                    <Link to="ShowNews">
-                        <button className="flex justify-center mr-36 p-0">
+                    <Link href={route('shownews')} as="button">
+                        <button className="flex justify-center mr-40 mb-3 p-0 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                             Lihat Berita Lainnya
                         </button>
                     </Link>
-                </u>
             </div>
+            </u>
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
                 <TravelsNews news={props.news.data} />
             </div>
 
-            <hr />
+            <hr/>
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
                 <ProfileNews news={props.news.data} />
             </div>
-            <hr />
-
+            {/* <BeritaBisnis/> */}
             <hr />
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
                 <RegionalNews news={props.news.data} />
             </div>
-
             <hr />
             <u>
-                <h1 className="text-black p-3 lg:text-2xl sm:text-xl font-bold ml-36">
+                <h1 className="text-black p-3 lg:text-2xl sm:text-xl font-bold ml-32 mt-3">
                     Berita Mancanegara
                 </h1>
             </u>
             <div dir="rtl">
                 <u>
-                    <Link to="ShowNews">
+                    <Link href={route('shownews')} as="button">
                         <button className="flex justify-center mr-36 p-0">
                             Lihat Berita Lainnya
                         </button>
@@ -81,9 +82,9 @@ export default function Homepage(props) {
 
             <hr />
             <u>
-                <h1 className="text-black p-5 lg:text-2xl sm:text-xl font-bold ml-36">
+                <Link href={route('readnews')} as="button"><h1 className="text-black p-5 lg:text-2xl sm:text-xl font-bold ml-32">
                     Berita Nasional
-                </h1>
+                </h1></Link>
             </u>
             <ListNewsRow />
             {/* <button className="btn" onClick={routeChange}>

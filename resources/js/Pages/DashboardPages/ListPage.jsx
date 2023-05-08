@@ -38,6 +38,58 @@ const ListPage = (props) => {
     }, []);
     console.log("props last", props);
 
+    let tb_data =
+        props.myNews && props.myNews.length > 0 ? (
+            props.myNews.map((news, i) => {
+                return (
+                    <tr key={i}>
+                        <td>{i + 1}</td>
+                        <td>{news.author}</td>
+                        <td>
+                            {news.title}
+                            <br />
+                            <span className="badge badge-info badge-sm text-white ">
+                                {news.category}
+                            </span>
+                        </td>
+                        <td>{parser(news.description.substring(0, 10))}</td>
+                        <td>
+                            <div className="btn btn-info btn-xs mx-2">
+                                <Link
+                                    href={route("edit.news")}
+                                    method="get"
+                                    data={{ id: news.id }}
+                                    as="button"
+                                >
+                                    <div>
+                                        {/* <i className="fa-light fa-pen-to-square"></i> */}
+                                        edit
+                                    </div>
+                                </Link>
+                            </div>
+                            <div className="btn btn-warning btn-xs">
+                                <Link
+                                    href={route("delete.news")}
+                                    method="post"
+                                    data={{ id: news.id }}
+                                    as="button"
+                                >
+                                    delete
+                                </Link>
+                            </div>
+                        </td>
+                        <th>
+                            <button className="btn btn-ghost btn-xs">
+                                details
+                            </button>
+                        </th>
+                    </tr>
+                );
+            })
+        ) : (
+            <p>Data Belum tersedia</p>
+        );
+
     return (
         <AuthenticatedLayout
             auth={props.auth}
@@ -48,61 +100,20 @@ const ListPage = (props) => {
                 </h2>
             }
         >
-            <div>
-                <div className="p-5">Berita Saya</div>
-                <div className="p-4">
-                    {props.myNews && props.myNews.length > 0 ? (
-                        props.myNews.map((news, i) => {
-                            return (
-                                <div
-                                    className="card w-full  lg:w-96 bg-base-100 shadow-xl m-3"
-                                    key={i}
-                                >
-                                    <figure>
-                                        {/* <img src= alt="Shoes" /> */}
-                                    </figure>
-                                    <div className="card-body">
-                                        <h2 className="card-title">
-                                            {news.title}
-                                            <div className="badge badge-secondary"></div>
-                                        </h2>
-                                        <p>{parser(news.description)}</p>
-                                        <div className="card-actions justify-end">
-                                            <div className="badge badge-outline">
-                                                {news.category}
-                                            </div>
-                                            <div className="badge badge-outline">
-                                                <Link
-                                                    href={route("edit.news")}
-                                                    method="get"
-                                                    data={{ id: news.id }}
-                                                    as="button"
-                                                >
-                                                    <div>
-                                                        <i className="fa-light fa-pen-to-square"></i>
-                                                        edit
-                                                    </div>
-                                                </Link>
-                                            </div>
-                                            <div className="badge badge-outline">
-                                                <Link
-                                                    href={route("delete.news")}
-                                                    method="post"
-                                                    data={{ id: news.id }}
-                                                    as="button"
-                                                >
-                                                    delete
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            );
-                        })
-                    ) : (
-                        <p>Data Belum tersedia</p>
-                    )}
-                </div>
+            <div className="overflow-x-auto w-full">
+                <table className="table w-full">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Penulis</th>
+                            <th>Judul</th>
+                            <th>Deskripsi</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    {/* head */}
+                    <tbody>{tb_data}</tbody>
+                </table>
             </div>
         </AuthenticatedLayout>
     );

@@ -42,7 +42,13 @@ class NewsController extends Controller
         $news->title = $request->title;
         $news->description = $request->description;
         $news->category = $request->category;
-        $news->image = $request->file('images');
+        //  = $request->file('images'); 
+        $news->image = $request->image->store('public/images');
+        // $fileName = $news->image->getClientOriginalName();
+        // $finalName = date('His') . $fileName;
+
+        // $request->file('image')->storeAs('images/', $finalName, 'public');
+
         $news->author = auth()->user()->email;
         $news->save();
         return redirect()->back()->with('message', 'Berita berhasil dibuat');

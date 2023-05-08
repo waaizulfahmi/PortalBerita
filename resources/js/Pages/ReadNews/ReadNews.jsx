@@ -8,6 +8,7 @@ import Footer from "@/Components/Footer";
 import Read from "./Read";
 import BeritaTerkait from "./BeritaTerkait";
 import BeritaRekomendasi from "./BeritaRekomendasi";
+import Coment from "./Coment";
 
 
 const ReadNews = () => {
@@ -17,14 +18,18 @@ const ReadNews = () => {
             <Navbar />
             <Read/>
             <hr />
-            <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
+            <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center mb-3">
             <BeritaTerkait/>
             </div>
 
             <hr />
             
-            <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
+            <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center mb-3">
             <BeritaRekomendasi/>
+            </div>
+            <hr />
+            <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center mt-6">
+            <Coment/>
             </div>
             
             <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4">

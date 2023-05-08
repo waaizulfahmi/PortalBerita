@@ -26,7 +26,7 @@ Route::get('/shownews', function () {
     return Inertia::render('ShowNews/ShowNews');
 })->name('shownews');
 
-Route::get('/', [NewsController::class, 'index']);
+Route::get('/', [NewsController::class, 'index'])->name('home');
 Route::post('/news', [NewsController::class, 'store'])->middleware(['auth', 'verified'])->name('create.news');
 Route::get('/news', [NewsController::class, 'show'])->middleware(['auth', 'verified'])->name('my.news');
 Route::get('/news/edit', [NewsController::class, 'edit'])->middleware(['auth', 'verified'])->name('edit.news');

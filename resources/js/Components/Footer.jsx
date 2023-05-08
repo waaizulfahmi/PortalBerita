@@ -16,11 +16,11 @@ const Footer = () => {
                 <p>
                     Panel Warta
                     <br />
-                    Providing reliable tech since 2023
+                    Hak Cipta NewKarma / terms Of Service / Indeks Berita
                 </p>
             </div>
             <div>
-                <span className="footer-title">Social</span>
+                <span className="footer-title">Ikuti Kami</span>
                 <div className="grid grid-flow-col gap-4">
                     <a>
                         <svg

@@ -18,15 +18,15 @@ const ReadNews = () => {
             <Navbar />
             <Read/>
             <hr />
-            <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center mb-3">
+            {/* <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center mb-3">
             <BeritaTerkait/>
-            </div>
+            </div> */}
 
             <hr />
             
-            <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center mb-3">
+            {/* <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center mb-3">
             <BeritaRekomendasi/>
-            </div>
+            </div> */}
             <hr />
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center mt-6">
             <Coment/>

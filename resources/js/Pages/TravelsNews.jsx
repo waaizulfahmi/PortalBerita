@@ -8,7 +8,7 @@ const TravelsNews = () => {
             <div className="card w-full  lg:w-52 mr-5">
              <Link href={route('readnews')} as="button"><img className="mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" src="https://www.pinhome.id/info-area/wp-content/uploads/2022/02/Ambalika-Kuliner-Kota.jpg" alt="Shoes" /></Link>
                 <Link href={route('readnews')} as="button"><h2 className="card-title text-lg mb-2">Hello Word</h2></Link>
-                <div className="mb-0 text-red-600update font-medium text-sm flex items-center justify-center md:justify-start">
+                <div className="mb-0 text-red-600updateupdate  font-medium text-sm flex items-center justify-center md:justify-start">
                             <svg
                                 className="w-3 h-3 mr-2" 
                                 xmlns="http://www.w3.org/2000/svg"

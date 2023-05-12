@@ -46,13 +46,16 @@ const ListPage = (props) => {
                         <td>{i + 1}</td>
                         <td>{news.author}</td>
                         <td>
-                            {news.title}
+                            {news.title.substring(0, 20) + "..."}
                             <br />
                             <span className="badge badge-info badge-sm text-white ">
                                 {news.category}
                             </span>
                         </td>
-                        <td>{parser(news.description.substring(0, 10))}</td>
+                        <td>
+                            {parser(news.description.substring(0, 50) + "...")}
+                        </td>
+                        <td>{news.slug}</td>
                         <td>
                             <div className="btn btn-info btn-xs mx-2">
                                 <Link
@@ -108,6 +111,7 @@ const ListPage = (props) => {
                             <th>Penulis</th>
                             <th>Judul</th>
                             <th>Deskripsi</th>
+                            <th>Slug</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>

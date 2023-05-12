@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\News>
@@ -16,11 +17,15 @@ class NewsFactory extends Factory
      */
     public function definition(): array
     {
+        $title = $this->faker->sentence;
+        $slug = Str::slug($title);
         return [
-            'title' => fake()->sentence(),
+            'title' => $title,
             'description' => fake()->paragraph(2, true),
             'category' => fake()->text(20),
-            'author' => fake()->email()
+            'author' => fake()->name(),
+            'image' => fake()->text(10),
+            'slug' => $slug
         ];
     }
 }

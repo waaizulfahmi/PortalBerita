@@ -6,7 +6,7 @@ import Paginator from "@/Components/Homepage/Paginator";
 import Footer from "@/Components/Footer";
 import { useNavigate } from "react-router-dom";
 import MainNews from "./MainNews";
-import ListNewsRow from "./NewsListRow";
+import NewsListRow from "./NewsListRow";
 import TravelsNews from "./TravelsNews";
 import RegionalNews from "./RegionalNews";
 import ProfileNews from "./ProfileNews";
@@ -59,7 +59,7 @@ export default function Homepage(props) {
             {/* <BeritaBisnis/> */}
             <hr />
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
-                <RegionalNews news={props.news.data} />
+                {/* <RegionalNews news={props.news.data} /> */}
             </div>
             <hr />
             <u>
@@ -88,7 +88,7 @@ export default function Homepage(props) {
                     </h1>
                 </Link>
             </u>
-            <ListNewsRow />
+            <NewsListRow news={props.news.data} />
             {/* <button className="btn" onClick={routeChange}>
                 Link to ShowNews
             </button> */}

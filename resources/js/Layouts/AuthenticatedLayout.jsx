@@ -369,13 +369,13 @@ export default function Authenticated({ auth, header, children }) {
                         </div>
 
                         <footer className="w-full bg-white text-right p-4">
-                            2023 | Built by{" "}
+                            2023 |{" "}
                             <a
                                 target="_blank"
                                 href="https://davidgrzyb.com"
                                 className="underline"
                             >
-                                David Grzyb
+                                Panel Warta
                             </a>
                             .
                         </footer>

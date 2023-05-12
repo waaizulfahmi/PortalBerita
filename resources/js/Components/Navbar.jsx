@@ -1,6 +1,16 @@
 import { Link } from "@inertiajs/react";
+// import Moment from "react-moment";
 
 const Navbar = () => {
+    const current = new Date();
+    const date = `${current.toLocaleString("id", {
+        weekday: "long",
+    })}, ${current.getDate()} ${current.toLocaleString("id", {
+        month: "long",
+    })} ${current.getFullYear()} | ${current.toLocaleTimeString("id", {
+        hour: "2-digit",
+        minute: "2-digit",
+    })}`;
     return (
         <div className="md:container md:mx-auto mt-5">
             <div className="navbar bg-violet-900 p-6">
@@ -169,7 +179,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <h4 className="font-bold text-lg">Jumat, 5 Mei 2023</h4>
+                    <h4 className="font-bold text-lg">{date}</h4>
                 </div>
             </div>
         </div>

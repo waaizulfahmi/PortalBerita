@@ -11,19 +11,23 @@ const PostPage = (props) => {
     const [category, setCategory] = useState();
     const [isNotif, setIsNotif] = useState(false);
     const [image, setImg] = useState();
+    // const [slug, setSlug] = useState();
+
     const handleSubmit = () => {
         const data = {
             title,
             description,
             category,
             image,
+            // slug,
         };
         router.post("/dashboard/post", data);
         setIsNotif(true);
         setTitle("");
         setDescription("");
         setCategory("");
-        setImg("");
+        setImg(null);
+        // setSlug("");
     };
 
     // useEffect(() => {
@@ -157,15 +161,15 @@ const PostPage = (props) => {
                                 <option disabled selected>
                                     <b>Pilih Kategori</b>
                                 </option>
-                                <option>Berita</option>
-                                <option>Olahraga</option>
-                                <option>Wisata</option>
-                                <option>Kuliner</option>
-                                <option>Profile</option>
-                                <option>Bisnis</option>
-                                <option>Daerah</option>
-                                <option>Nasional</option>
-                                <option>Mancanegara</option>
+                                <option value="Berita">Berita</option>
+                                <option value="Olahraga">Olahraga</option>
+                                <option value="Wisata">Wisata</option>
+                                <option value="Kuliner">Kuliner</option>
+                                <option value="Profile">Profile</option>
+                                <option value="Bisnis">Bisnis</option>
+                                <option value="Daerah">Daerah</option>
+                                <option value="Nasional">Nasional</option>
+                                <option value="Mancanegara">Mancanegara</option>
                             </select>
                         </div>
                         {/* <input
@@ -175,7 +179,7 @@ const PostPage = (props) => {
                         <div className=" w-full ">
                             <label className="label">
                                 <span className="label-text">
-                                    Tambahkan Judul Berita
+                                    Tambahkan Gambar Berita
                                 </span>
                                 <span className="label-text-alt text-error">
                                     *harus diisi
@@ -217,9 +221,9 @@ const PostPage = (props) => {
                                         id="dropzone-file"
                                         type="file"
                                         name="image"
-                                        value={image}
+                                        // value={image}
                                         onChange={(image) =>
-                                            setImg(image.target.value)
+                                            setImg(image.target.files[0])
                                         }
                                         className="file-input file-input-bordered file-input-info  visible"
                                         accept="image/*"

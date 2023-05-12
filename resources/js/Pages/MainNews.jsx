@@ -98,7 +98,7 @@ const MainNews = () => {
                                             <div className="flex justify-start items-end h-full">
                                                 <div className="text-white m-6">
                                                     <h1 className="font-bold text-4xl mb-3">
-                                                        Kuliner Makanan Khas
+                                                        Kuli Makanan Khas
                                                         Indonesia
                                                     </h1>
                                                     <p>

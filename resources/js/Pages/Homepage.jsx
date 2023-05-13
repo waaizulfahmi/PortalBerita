@@ -40,8 +40,21 @@ export default function Homepage(props) {
                 <h1 className="text-black p-3 lg:text-2xl sm:text-xl font-bold ml-32">
                     Berita Wisata
                 </h1>
-                <div dir="rtl">
-                    <Link href={route("shownews")} as="button">
+            </u>
+            <div dir="rtl">
+                <Link href={route("shownews")} as="button" />
+                <MainNews />
+                <hr />
+                {/* <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
+                <NewNews news={props.news.data} />
+            </div>
+            <hr /> */}
+                {/* <u>
+                    <h1 className="text-black p-3 lg:text-2xl sm:text-xl font-bold ml-32">
+                        Berita Wisata
+                    </h1>
+            <div dir="rtl">
+                    <Link href={route('shownews')} as="button">
                         <button className="flex justify-center mr-40 mb-3 p-0 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                             Lihat Berita Lainnya
                         </button>
@@ -50,24 +63,25 @@ export default function Homepage(props) {
             </u>
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
                 <TravelsNews news={props.news.data} />
-            </div>
+            </div> */}
 
-            <hr />
+                <hr />
+                {/* <hr/>
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
                 <ProfileNews news={props.news.data} />
-            </div>
-            {/* <BeritaBisnis/> */}
-            <hr />
+            </div> */}
+                {/* <BeritaBisnis/> */}
+                {/* <hr />
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
                 {/* <RegionalNews news={props.news.data} /> */}
             </div>
             <hr />
             <u>
-                <h1 className="text-black p-3 lg:text-2xl sm:text-xl font-bold ml-32 mt-3">
+                <h1 className="text-black mt-4 mb-3  lg:text-2xl sm:text-xl text-left font-bold ml-32">
                     Berita Mancanegara
                 </h1>
             </u>
-            <div dir="rtl">
+            {/* <div dir="rtl">
                 <u>
                     <Link href={route("shownews")} as="button">
                         <button className="flex justify-center mr-36 p-0">
@@ -75,11 +89,10 @@ export default function Homepage(props) {
                         </button>
                     </Link>
                 </u>
-            </div>
+            </div> */}
             <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4">
                 <NewsList news={props.news.data} />
             </div>
-
             <hr />
             <u>
                 <Link href={route("readnews")} as="button">
@@ -87,16 +100,17 @@ export default function Homepage(props) {
                         Berita Nasional
                     </h1>
                 </Link>
+                <h1 className="text-black mt-4 mb-3  lg:text-2xl sm:text-xl text-left font-bold ml-32">
+                    Berita Nasional
+                </h1>
             </u>
             <NewsListRow news={props.news.data} />
             {/* <button className="btn" onClick={routeChange}>
                 Link to ShowNews
             </button> */}
-
             <div className="flex justify-center items-center gap-5">
                 <Paginator meta={props.news.meta} />
             </div>
-
             <Footer />
         </div>
     );

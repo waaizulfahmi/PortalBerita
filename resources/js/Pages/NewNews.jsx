@@ -52,7 +52,7 @@ const NewNews = () => {
         </div>
         </article>
         <aside className="w-full md:w-2/4 ">
-                        <div className="p-4">
+                        <div className="p-4"> 
                             <div className="grid grid-rows-4 grid-flow-col gap-4 place-content-start ">
                                 <div className="mb-2">
                                 <div className="mx-auto flex items-center space-x-4">

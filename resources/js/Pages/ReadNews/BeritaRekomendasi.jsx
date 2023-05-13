@@ -1,3 +1,5 @@
+import { Link } from "@inertiajs/react";
+
 const BeritaRekomendasi = () => {
     return ( 
         <div> 
@@ -108,10 +110,10 @@ const BeritaRekomendasi = () => {
                                             </div>
                                         </div>
                                         <div className="grow-0 shrink-0 basis-auto w-full md:w-9/12 xl:w-7/12 px-3 mb-6 md:mb-0 mr-auto">
-                                            <a href="">
+                                            <Link href={route('readnews')} as="button">
                                             <h5 className="text-lg font-bold mb-3">
                                                 Hello World
-                                            </h5></a>
+                                            </h5></Link>
                                             <div className="mb-1 text-red-600 font-medium text-sm flex items-center justify-center md:justify-start">
                                                 <svg
                                                     className="w-4 h-4 mr-2"
@@ -149,9 +151,9 @@ const BeritaRekomendasi = () => {
                                             </div>
                                         </div>
                                         <div className="grow-0 shrink-0 basis-auto w-full md:w-9/12 xl:w-7/12 px-3 mb-6 md:mb-0 mr-auto">
-                                            <a href=""><h5 className="text-lg font-bold mb-3">
+                                            <Link href={route('readnews')} as="button"><h5 className="text-lg font-bold mb-3">
                                                 Hidup Sederhana
-                                            </h5></a>
+                                            </h5></Link>
                                             <div className="mb-1 text-red-600 font-medium text-sm flex items-center justify-center md:justify-start">
                                                 <svg
                                                     className="w-4 h-4 mr-2"
@@ -190,9 +192,9 @@ const BeritaRekomendasi = () => {
                                         </div>
                                         
                                         <div className="grow-0 shrink-0 basis-auto w-full md:w-9/12 xl:w-7/12 px-3 mb-6 md:mb-0 mr-auto">
-                                            <a href=""><h5 className="text-lg font-bold mb-3">
+                                            <Link href={route('readnews')} as="button"><h5 className="text-lg font-bold mb-3">
                                                 Awali Harimu dengan Semangat
-                                            </h5></a>
+                                            </h5></Link>
                                             <div className="mb-1 text-red-600 font-medium text-sm flex items-center justify-center md:justify-start">
                                                 <svg
                                                     className="w-4 h-4 mr-2"

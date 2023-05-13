@@ -14,17 +14,24 @@ const ShowNews = () => {
         <div className=" min-h-screen bg-slate-50">
             <Head />
             <Navbar />
-            <MainNews />
+            {/* <MainNews /> */}
             <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4">
                 {/* <MainNews /> */}
                 {/* <SideNews /> */}
             </div>
+<<<<<<< HEAD
             <hr />
 
             <Wisata />
             <hr />
             <News />
             <hr />
+=======
+            <div className="mb-8">
+                <Wisata />
+            </div>
+            {/* <News/> */}
+>>>>>>> 1d6993b197d20f6fc6dffdb1ba3a7c17474dfbee
             <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4">
                 <NewsList />
             </div>

@@ -17,6 +17,7 @@ const ReadNews = () => {
             <Navbar />
             <Read />
             <hr />
+<<<<<<< HEAD
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center mb-3">
                 <BeritaTerkait />
             </div>
@@ -26,6 +27,17 @@ const ReadNews = () => {
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center mb-3">
                 <BeritaRekomendasi />
             </div>
+=======
+            {/* <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center mb-3">
+            <BeritaTerkait/>
+            </div> */}
+
+            <hr />
+            
+            {/* <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center mb-3">
+            <BeritaRekomendasi/>
+            </div> */}
+>>>>>>> 1d6993b197d20f6fc6dffdb1ba3a7c17474dfbee
             <hr />
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center mt-6">
                 <Coment />

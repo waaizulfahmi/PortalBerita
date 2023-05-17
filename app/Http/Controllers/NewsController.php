@@ -115,7 +115,9 @@ class NewsController extends Controller
         ]);
 
         // $showNews = $news::where('slug', $slug)->first();
-        // return Inertia::render()
+        // return Inertia::render('ReadNews/Read', [
+        //     'myNews' => $showNews,
+        // ]);
         // return response()->json([
         //     'news' => $news 
         // ]);
@@ -186,7 +188,12 @@ class NewsController extends Controller
         // $news = News::find($request->id);
         // $news->delete();
         // return response()->json([
-        //     'news' => $news 
+        //     'news' => $news ```````````````````````````
         // ]);
     }
+    public function getDataBySlug($slug){
+        $news = News::where('slug',$slug)->firstOrFail();
+     
+        return redirect('/dashboard')->with('slug', $slug);
+     }
 }

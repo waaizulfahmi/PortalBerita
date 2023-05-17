@@ -19,28 +19,28 @@ const isNews = (news) => {
                     {/* <h1>Berita Hot</h1> */}
                     <div className="flex flex-wrap mb-1/2">
                         <div className="grow-0 shrink-0 basis-auto w-full md:w-3/12 px-3 mb-6 md:mb-0 ml-auto">
-                            <Link href={route("readnews")} as="button">
-                                <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-                                    <img
-                                        className="w-full"
-                                        src={"/storage/" + data.image}
-                                        alt="Gambar 1"
-                                    />
-                                    <a>
-                                        <div
-                                            className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
-                                            // style="background-color: rgba(251, 251, 251, 0.2)"
-                                        ></div>
-                                    </a>
-                                </div>
-                            </Link>
+                            {/* <Link href={route("readnews")} as="button"> */}
+                            <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                                <img
+                                    className="w-full"
+                                    src={"/storage/" + data.image}
+                                    alt="Gambar 1"
+                                />
+                                <a>
+                                    <div
+                                        className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
+                                        // style="background-color: rgba(251, 251, 251, 0.2)"
+                                    ></div>
+                                </a>
+                            </div>
+                            {/* </Link> */}
                         </div>
                         <div className="grow-0 shrink-0 basis-auto w-full md:w-9/12 xl:w-7/12 px-3 mb-6 md:mb-0 mr-auto">
-                            <Link href={route("readnews")} as="button">
-                                <h5 className="text-lg font-bold mb-3">
-                                    {data.title}
-                                </h5>
-                            </Link>
+                            {/* <Link href={route("readnews")} as="button"> */}
+                            <h5 className="text-lg font-bold mb-3">
+                                {data.title}
+                            </h5>
+                            {/* </Link> */}
                             <div className="mb-3 text-red-600 font-medium text-sm flex items-center justify-center md:justify-start">
                                 <svg
                                     className="w-4 h-4 mr-2"

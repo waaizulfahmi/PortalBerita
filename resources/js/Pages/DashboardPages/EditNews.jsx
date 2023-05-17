@@ -91,7 +91,7 @@ export default function EditNews(props) {
                                 value={props.myNews.value}
                                 // onChange={(e) =>
                                 //     this.setTitle({ title: e.target.value })
-                                // }
+                                // }lis
 
                                 // value={title}
                                 // required

@@ -30,20 +30,20 @@ export default function Homepage(props) {
             {/* <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4 static">
                 <MainNews />
             </div> */}
-            <MainNews />
+            {/* <MainNews /> */}
             <hr />
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
-                <NewNews news={props.news.data} />
+                {/* <NewNews news={props.news.data} /> */}
             </div>
             <hr />
-            <u>
+            {/* <u>
                 <h1 className="text-black p-3 lg:text-2xl sm:text-xl font-bold ml-32">
                     Berita Wisata
                 </h1>
-            </u>
+            </u> */}
             <div dir="rtl">
                 <Link href={route("shownews")} as="button" />
-                <MainNews />
+                {/* <MainNews /> */}
                 <hr />
                 {/* <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
                 <NewNews news={props.news.data} />
@@ -95,11 +95,11 @@ export default function Homepage(props) {
             </div>
             <hr />
             <u>
-                <Link href={route("readnews")} as="button">
+                {/* <Link href={route("readnews")} as="button">
                     <h1 className="text-black p-5 lg:text-2xl sm:text-xl font-bold ml-32">
                         Berita Nasional
                     </h1>
-                </Link>
+                </Link> */}
                 <h1 className="text-black mt-4 mb-3  lg:text-2xl sm:text-xl text-left font-bold ml-32">
                     Berita Nasional
                 </h1>

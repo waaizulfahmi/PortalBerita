@@ -54,7 +54,7 @@ export default function Authenticated({ auth, header, children }) {
                             href="index.html"
                             className="text-white text-3xl font-semibold uppercase hover:text-gray-300"
                         >
-                            <FaGithubSquare />
+                            PanelWarta
                         </a>
                         <Link href="/dashboard/post/new">
                             <button className="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">

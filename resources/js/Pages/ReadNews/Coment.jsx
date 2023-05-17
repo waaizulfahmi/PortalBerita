@@ -35,17 +35,6 @@ const Coment = () => {
                         </div>
                         <div className="box-content h-22 w-30 p-4 border-2 bg-violet-200">
                             <div class="comments py-8 px-8 bg-white rounded-xl shadow-lg space-y-8 sm:py-4 sm:flex sm:space-y-0 sm:space-x-6 mb-2">
-<<<<<<< HEAD
-                                <div class="text-center space-y-2 sm:text-left">
-                                    <div class="space-y-0.5">
-                                        <p class="text-lg text-black font-bold">
-                                            Person1
-                                        </p>
-                                        <time className="time text-sm">
-                                            12 April 2023
-                                        </time>
-                                        <p class="text-slate-500 font-medium">
-=======
                                 <div class="text-left space-y-2 sm:text-left">
                                     <div class="space-y-0.5">
                                         <p class="text-base text-black font-bold text-left">
@@ -55,7 +44,6 @@ const Coment = () => {
                                             12 April 2023
                                         </time>
                                         <p class="text-slate-500 text-sm text-left">
->>>>>>> 1d6993b197d20f6fc6dffdb1ba3a7c17474dfbee
                                             Lorem ipsum dolor, sit amet
                                             consectetur adipisicing elit.
                                         </p>
@@ -67,17 +55,6 @@ const Coment = () => {
                             </div>
 
                             <div className="comments child rounded py-8 px-8 bg-white ml-20 rounded-xl shadow-lg space-y-8 sm:py-4 sm:flex sm:space-y-0 sm:space-x-6 mb-2">
-<<<<<<< HEAD
-                                <div class="text-center space-y-2 sm:text-left">
-                                    <div class="space-y-0.5">
-                                        <p class="text-lg text-black font-bold">
-                                            Child1
-                                        </p>
-                                        <time className="time text-sm">
-                                            12 April 2024
-                                        </time>
-                                        <p class="text-slate-500 font-medium">
-=======
                                 <div class="text-left space-y-2 sm:text-left">
                                     <div class="space-y-0.5">
                                         <p class="text-lg text-black font-bold text-left">
@@ -87,7 +64,6 @@ const Coment = () => {
                                             12 April 2024
                                         </time>
                                         <p class="text-slate-500 text-sm text-left">
->>>>>>> 1d6993b197d20f6fc6dffdb1ba3a7c17474dfbee
                                             Lorem ipsum dolor, sit amet
                                             consectetur adipisicing elit.
                                         </p>
@@ -99,17 +75,6 @@ const Coment = () => {
                             </div>
 
                             <div class="py-8 px-8 bg-white rounded-xl shadow-lg space-y-8 sm:py-4 sm:flex sm:space-y-0 sm:space-x-6 mb-2">
-<<<<<<< HEAD
-                                <div class="text-center space-y-2 sm:text-left">
-                                    <div class="space-y-0.5">
-                                        <p class="text-lg text-black font-bold">
-                                            Person2
-                                        </p>
-                                        <time className="time text-sm">
-                                            12 April 2024
-                                        </time>
-                                        <p class="text-slate-500 font-medium">
-=======
                                 <div class="text-left space-y-2 sm:text-left">
                                     <div class="space-y-0.5">
                                         <p class="text-lg text-black font-bold text-left">
@@ -119,7 +84,6 @@ const Coment = () => {
                                             12 April 2024
                                         </time>
                                         <p class="text-slate-500 text-sm text-left">
->>>>>>> 1d6993b197d20f6fc6dffdb1ba3a7c17474dfbee
                                             Lorem ipsum dolor, sit amet
                                             consectetur adipisicing elit.
                                         </p>
@@ -131,17 +95,6 @@ const Coment = () => {
                             </div>
 
                             <div className="comments child rounded py-8 px-8 bg-white ml-20 rounded-xl shadow-lg space-y-8 sm:py-4 sm:flex sm:space-y-0 sm:space-x-6 mb-2">
-<<<<<<< HEAD
-                                <div class="text-center space-y-2 sm:text-left">
-                                    <div class="space-y-0.5">
-                                        <p class="text-lg text-black font-bold">
-                                            Child1
-                                        </p>
-                                        <time className="time text-sm">
-                                            27 April 2024
-                                        </time>
-                                        <p class="text-slate-500 font-medium">
-=======
                                 <div class="text-left space-y-2 sm:text-left">
                                     <div class="space-y-0.5">
                                         <p class="text-lg text-black font-bold text-left">
@@ -151,7 +104,6 @@ const Coment = () => {
                                             27 April 2024
                                         </time>
                                         <p class="text-slate-500 text-sm text-left">
->>>>>>> 1d6993b197d20f6fc6dffdb1ba3a7c17474dfbee
                                             Lorem ipsum dolor, sit amet
                                             consectetur adipisicing elit.
                                         </p>
@@ -162,17 +114,6 @@ const Coment = () => {
                                 </div>
                             </div>
                             <div className="comments child rounded py-8 px-8 bg-white ml-20 rounded-xl shadow-lg space-y-8 sm:py-4 sm:flex sm:space-y-0 sm:space-x-6 mb-2">
-<<<<<<< HEAD
-                                <div class="text-center space-y-2 sm:text-left">
-                                    <div class="space-y-0.5">
-                                        <p class="text-lg text-black font-bold">
-                                            Child2
-                                        </p>
-                                        <time className="time text-sm">
-                                            12 April 2024
-                                        </time>
-                                        <p class="text-slate-500 font-medium">
-=======
                                 <div class="text-left space-y-2 sm:text-left">
                                     <div class="space-y-0.5">
                                         <p class="text-lg text-black font-bold text-left">
@@ -182,7 +123,6 @@ const Coment = () => {
                                             12 April 2024
                                         </time>
                                         <p class="text-slate-500 text-sm text-left">
->>>>>>> 1d6993b197d20f6fc6dffdb1ba3a7c17474dfbee
                                             Lorem ipsum dolor, sit amet
                                             consectetur adipisicing elit.
                                         </p>
@@ -194,17 +134,6 @@ const Coment = () => {
                             </div>
 
                             <div class="py-8 px-8 bg-white rounded-xl shadow-lg space-y-8 sm:py-4 sm:flex sm:space-y-0 sm:space-x-6 mb-2">
-<<<<<<< HEAD
-                                <div class="text-center space-y-2 sm:text-left">
-                                    <div class="space-y-0.5">
-                                        <p class="text-lg text-black font-bold">
-                                            Person3
-                                        </p>
-                                        <time className="time text-sm">
-                                            22 April 2024
-                                        </time>
-                                        <p class="text-slate-500 font-medium">
-=======
                                 <div class="text-left space-y-2 sm:text-left">
                                     <div class="space-y-0.5">
                                         <p class="text-lg text-black font-bold text-left">
@@ -214,7 +143,6 @@ const Coment = () => {
                                             22 April 2024
                                         </time>
                                         <p class="text-slate-500 text-sm text-left">
->>>>>>> 1d6993b197d20f6fc6dffdb1ba3a7c17474dfbee
                                             Lorem ipsum dolor, sit amet
                                             consectetur adipisicing elit.
                                         </p>
@@ -228,21 +156,6 @@ const Coment = () => {
                     </div>
 
                     <aside className="w-full md:w-1/3 ">
-<<<<<<< HEAD
-                        <div className="p-2 ml-10">
-                            <a href="">
-                                <h1 className="text-black p-3 lg:text-2xl sm:text-xl font-bold text-center mb-3">
-                                    Ikuti Kami
-                                </h1>
-                            </a>
-                            <div className="flex justify-center space-x-2">
-                                <div>
-                                    <div className="avatar">
-                                        <div className="w-10 rounded-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-                                            <a href="https://www.instagram.com/panelwarta/">
-                                                <img src="https://cdn-icons-png.flaticon.com/512/10097/10097034.png" />
-                                            </a>
-=======
                         <div className="p-2 ml-4">
                             <h1 className="text-black p-3 lg:text-2xl sm:text-xl font-bold text-center mb-3">
                                 Ikuti Kami
@@ -254,67 +167,42 @@ const Coment = () => {
                                             <Link href="https://www.instagram.com/panelwarta/">
                                                 <img src="https://cdn-icons-png.flaticon.com/512/10097/10097034.png" />
                                             </Link>
->>>>>>> 1d6993b197d20f6fc6dffdb1ba3a7c17474dfbee
                                         </div>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="avatar">
                                         <div className="w-10 rounded-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-<<<<<<< HEAD
-                                            <a href="">
-                                                <img src="https://cdn-icons-png.flaticon.com/512/10091/10091734.png" />
-                                            </a>
-=======
                                             <Link href="">
                                                 <img src="https://cdn-icons-png.flaticon.com/512/10091/10091734.png" />
                                             </Link>
->>>>>>> 1d6993b197d20f6fc6dffdb1ba3a7c17474dfbee
                                         </div>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="avatar">
                                         <div className="w-10 rounded-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-<<<<<<< HEAD
-                                            <a href="">
-                                                <img src="https://cdn-icons-png.flaticon.com/512/10097/10097344.png" />
-                                            </a>
-=======
                                             <Link href="">
                                                 <img src="https://cdn-icons-png.flaticon.com/512/10097/10097344.png" />
                                             </Link>
->>>>>>> 1d6993b197d20f6fc6dffdb1ba3a7c17474dfbee
                                         </div>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="avatar">
                                         <div className="w-10 rounded-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-<<<<<<< HEAD
-                                            <a href="">
-                                                <img src="https://cdn-icons-png.flaticon.com/512/1599/1599019.png" />
-                                            </a>
-=======
                                             <Link href="">
                                                 <img src="https://cdn-icons-png.flaticon.com/512/1599/1599019.png" />
                                             </Link>
->>>>>>> 1d6993b197d20f6fc6dffdb1ba3a7c17474dfbee
                                         </div>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="avatar">
                                         <div className="w-10 rounded-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-<<<<<<< HEAD
-                                            <a href="">
-                                                <img src="https://cdn-icons-png.flaticon.com/512/10096/10096611.png" />
-                                            </a>
-=======
                                             <Link href="https://api.whatsapp.com/send?phone=<nomor WhatsApp>">
                                                 <img src="https://cdn-icons-png.flaticon.com/512/10096/10096611.png" />
                                             </Link>
->>>>>>> 1d6993b197d20f6fc6dffdb1ba3a7c17474dfbee
                                         </div>
                                     </div>
                                 </div>
@@ -572,11 +460,7 @@ const Coment = () => {
                                     <hr />
                                     <u>
                                         <a href="">
-<<<<<<< HEAD
-                                            <h1 className="text-black p-3 lg:text-2xl sm:text-xl font-bold mb-4">
-=======
                                             <h1 className="text-left text-black p-3 lg:text-2xl sm:text-xl font-bold mb-4">
->>>>>>> 1d6993b197d20f6fc6dffdb1ba3a7c17474dfbee
                                                 Berita Terpopuler
                                             </h1>
                                         </a>
@@ -592,15 +476,8 @@ const Coment = () => {
                                                     />
                                                 </div>
                                                 <div>
-<<<<<<< HEAD
-                                                    <div className="text-lg font-bold text-black mb-2">
-                                                        Nasdem Akan Beri Kejutan
-                                                        Soal Cawapres Anies
-                                                    </div>
-                                                    <div className="mb-0 text-red-600 font-medium text-sm flex items-center justify-center md:justify-start">
-=======
                                                     <Link
-                                                        href={route("readnews")}
+                                                        // href={route("readnews")}
                                                         as="button"
                                                     >
                                                         <div className="text-base text-left font-bold text-black mb-2">
@@ -610,7 +487,6 @@ const Coment = () => {
                                                         </div>
                                                     </Link>
                                                     <div className="mb-0 text-red-600 font-medium text-xs flex items-center justify-left md:justify-start">
->>>>>>> 1d6993b197d20f6fc6dffdb1ba3a7c17474dfbee
                                                         <svg
                                                             className="w-3 h-3 mr-2"
                                                             xmlns="http://www.w3.org/2000/svg"
@@ -638,15 +514,8 @@ const Coment = () => {
                                                     />
                                                 </div>
                                                 <div>
-<<<<<<< HEAD
-                                                    <div className="text-lg font-bold text-black mb-2">
-                                                        Nasdem Akan Beri Kejutan
-                                                        Soal Cawapres Anies
-                                                    </div>
-                                                    <div className="mb-0 text-red-600 font-medium text-sm flex items-center justify-center md:justify-start">
-=======
                                                     <Link
-                                                        href={route("readnews")}
+                                                        // href={route("readnews")}
                                                         as="button"
                                                     >
                                                         <div className="text-base text-left font-bold text-black mb-2">
@@ -656,7 +525,6 @@ const Coment = () => {
                                                         </div>
                                                     </Link>
                                                     <div className="mb-0 text-red-600 font-medium text-xs flex items-center justify-left md:justify-start">
->>>>>>> 1d6993b197d20f6fc6dffdb1ba3a7c17474dfbee
                                                         <svg
                                                             className="w-3 h-3 mr-2"
                                                             xmlns="http://www.w3.org/2000/svg"
@@ -684,15 +552,8 @@ const Coment = () => {
                                                     />
                                                 </div>
                                                 <div>
-<<<<<<< HEAD
-                                                    <div className="text-lg font-bold text-black mb-2">
-                                                        Nasdem Akan Beri Kejutan
-                                                        Soal Cawapres Anies
-                                                    </div>
-                                                    <div className="mb-0 text-red-600 font-medium text-sm flex items-center justify-center md:justify-start">
-=======
                                                     <Link
-                                                        href={route("readnews")}
+                                                        // href={route("readnews")}
                                                         as="button"
                                                     >
                                                         <div className="text-base text-left font-bold text-black mb-2">
@@ -702,7 +563,6 @@ const Coment = () => {
                                                         </div>
                                                     </Link>
                                                     <div className="mb-0 text-red-600 font-medium text-xs flex items-center justify-left md:justify-start">
->>>>>>> 1d6993b197d20f6fc6dffdb1ba3a7c17474dfbee
                                                         <svg
                                                             className="w-3 h-3 mr-2"
                                                             xmlns="http://www.w3.org/2000/svg"
@@ -730,15 +590,8 @@ const Coment = () => {
                                                     />
                                                 </div>
                                                 <div>
-<<<<<<< HEAD
-                                                    <div className="text-lg font-bold text-black mb-2">
-                                                        Nasdem Akan Beri Kejutan
-                                                        Soal Cawapres Anies
-                                                    </div>
-                                                    <div className="mb-0 text-red-600 font-medium text-sm flex items-center justify-center md:justify-start">
-=======
                                                     <Link
-                                                        href={route("readnews")}
+                                                        // href={route("readnews")}
                                                         as="button"
                                                     >
                                                         <div className="text-base text-left font-bold text-black mb-2">
@@ -748,7 +601,6 @@ const Coment = () => {
                                                         </div>
                                                     </Link>
                                                     <div className="mb-0 text-red-600 font-medium text-xs flex items-center justify-left md:justify-start">
->>>>>>> 1d6993b197d20f6fc6dffdb1ba3a7c17474dfbee
                                                         <svg
                                                             className="w-3 h-3 mr-2"
                                                             xmlns="http://www.w3.org/2000/svg"
@@ -776,15 +628,8 @@ const Coment = () => {
                                                     />
                                                 </div>
                                                 <div>
-<<<<<<< HEAD
-                                                    <div className="text-lg font-bold text-black mb-2">
-                                                        Nasdem Akan Beri Kejutan
-                                                        Soal Cawapres Anies
-                                                    </div>
-                                                    <div className="mb-0 text-red-600 font-medium text-sm flex items-center justify-center md:justify-start">
-=======
                                                     <Link
-                                                        href={route("readnews")}
+                                                        // href={route("readnews")}
                                                         as="button"
                                                     >
                                                         <div className="text-base text-left font-bold text-black mb-2">
@@ -794,7 +639,6 @@ const Coment = () => {
                                                         </div>
                                                     </Link>
                                                     <div className="mb-0 text-red-600 font-medium text-xs flex items-center justify-left md:justify-start">
->>>>>>> 1d6993b197d20f6fc6dffdb1ba3a7c17474dfbee
                                                         <svg
                                                             className="w-3 h-3 mr-2"
                                                             xmlns="http://www.w3.org/2000/svg"

@@ -19,20 +19,26 @@ const isNews = (news) => {
                 key={i}
             >
                 {/* <Link href="/ShowNews"></Link> */}
-                <Link href={route("readnews")} as="button">
+                <a
+                    href={route("readnews", { slug: data.slug })}
+                    // href={`/readnews/${data.slug}`}
+                    // href={route('readnews', ['slug' => data.slug])}
+                    as="button"
+                    // data={{ news: data.slug }}
+                >
                     <img
                         src={"/storage/" + data.image}
                         alt="Shoes"
                         height="50%"
                     />
-                </Link>
+                </a>
                 <div className="card-body">
-                    <Link href={route("readnews")} as="button">
-                        <h2 className="card-title ">
-                            {data.title}
-                            <div className="badge badge-primary">New</div>
-                        </h2>
-                    </Link>
+                    {/* <Link href={route("readnews")} as="button"> */}
+                    <h2 className="card-title ">
+                        {data.title.substring(0, 40) + "..."}
+                        <div className="badge badge-primary">New</div>
+                    </h2>
+                    {/* </Link> */}
                     <p>{parser(data.description.substring(0, 100) + "...")}</p>
                     <div className="card-actions justify-end">
                         <div className="mb-1 text-red-600 font-medium text-sm flex items-center justify-center md:justify-start">

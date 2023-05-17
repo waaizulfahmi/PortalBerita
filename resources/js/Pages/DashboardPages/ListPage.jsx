@@ -55,7 +55,7 @@ const ListPage = (props) => {
                         <td>
                             {parser(news.description.substring(0, 50) + "...")}
                         </td>
-                        <td>{news.slug}</td>
+                        <td>{news.slug.substring(0, 30) + "..."}</td>
                         <td>
                             <div className="btn btn-info btn-xs mx-2">
                                 <Link

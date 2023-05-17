@@ -20,13 +20,12 @@ use Inertia\Inertia;
 */
 // Route::inertia('/ShowNews', 'ShowNews');
 // Route::get('/readnews/{slug}', [ShowNewsController::class, 'show'])->name('readnews');
-Route::get('/readnews', function () {
-    return Inertia::render('ReadNews/ReadNews');
-})->name('readnews');
 
 Route::get('/shownews', function () {
     return Inertia::render('ShowNews/ShowNews');
 })->name('shownews');
+
+
 // ROUTE DASHBOARD
 // Route::get('/news/post', [NewsController::class, 'show'])->middleware(['auth', 'verified']);
 Route::get('/', [NewsController::class, 'index']);
@@ -35,6 +34,10 @@ Route::get('/dashboard/list/show', [NewsController::class, 'show'])->middleware(
 Route::get('/dashboard/edit', [NewsController::class, 'edit'])->middleware(['auth', 'verified'])->name('edit.news');
 Route::post('/dashboard/update', [NewsController::class, 'update'])->middleware(['auth', 'verified'])->name('update.news');
 Route::post('/dashboard/delete', [NewsController::class, 'destroy'])->middleware(['auth', 'verified'])->name('delete.news');
+Route::get('/readnews/{slug}', [ShowNewsController::class, 'show'],  function ($slug) {
+
+    return $slug;
+})->name('readnews')->withoutScopedBindings();
 
 Route::get('/', [NewsController::class, 'index'])->name('home');
 // Route::post('/news', [NewsController::class, 'store'])->middleware(['auth', 'verified'])->name('create.news');

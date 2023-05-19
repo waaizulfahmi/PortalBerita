@@ -5,7 +5,7 @@ const Navbar = () => {
         <div className="md:container md:mx-auto mt-5">
             <div className="navbar bg-violet-900 p-6">
                 <div className="flex-1">
-                    <Link href={route('home')} as="button" className="btn btn-ghost normal-case text-4xl text-white">Panelwarta.id</Link>
+                    <Link href={route('home')} as="button" className="btn btn-ghost normal-case text-xl sm:text-2xl  md:text:3xl lg:text-4xl text-white">Panelwarta.<span className="text-orange-400">id</span></Link>
                 </div>
             <div className="flex-none gap-3">
                 <div className="form-control">

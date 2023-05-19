@@ -18,6 +18,14 @@ use Inertia\Inertia;
 |
 */
 // Route::inertia('/ShowNews', 'ShowNews');
+Route::get('/newgrid', function () {
+    return Inertia::render('NewGrid/NewGrid');
+})->name('newgrid');
+
+Route::get('/newdesain', function () {
+    return Inertia::render('NewDesain/NewDesain');
+})->name('newdesain');
+
 Route::get('/readnews', function () {
     return Inertia::render('ReadNews/ReadNews');
 })->name('readnews');

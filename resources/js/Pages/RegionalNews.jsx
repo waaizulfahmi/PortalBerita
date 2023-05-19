@@ -1,14 +1,16 @@
 const RegionalNews = () => {
     return (
         <div>
-            <main className="max-w-7xl mx-auto "> 
+            <main className="max-w-7xl mx-auto ">
                 <div class="grid grid-rows-2 grid-flow-col gap-2">
                     <div class="row-start-1 row-span-2">
                         <div className="p-2">
                             <u>
-                            <a href=""><h1 className="text-black p-5 lg:text-2xl sm:text-xl font-bold">
-                                Berita Daerah
-                            </h1></a>
+                                <a href="">
+                                    <h1 className="text-black p-5 lg:text-2xl sm:text-xl font-bold">
+                                        Berita Daerah
+                                    </h1>
+                                </a>
                             </u>
                             <div className=" mx-auto mt-2">
                                 <section className="mb-32 text-gray-800 text-center md:text-left">
@@ -30,9 +32,11 @@ const RegionalNews = () => {
                                         </div>
                                         <div className="grow-0 shrink-0 basis-auto w-full md:w-9/12 xl:w-7/12 px-3 mb-6 md:mb-0 mr-auto">
                                             <a href="">
-                                            <h5 className="font-bold mb-2">
-                                                Hello World Welcome To My Webside News
-                                            </h5></a>
+                                                <h5 className="font-bold mb-2">
+                                                    Hello World Welcome To My
+                                                    Webside News
+                                                </h5>
+                                            </a>
                                             <div className="text-red-600 font-medium text-sm flex items-center justify-center md:justify-start">
                                                 <svg
                                                     className="w-4 h-4 mr-2"
@@ -70,9 +74,11 @@ const RegionalNews = () => {
                                             </div>
                                         </div>
                                         <div className="grow-0 shrink-0 basis-auto w-full md:w-9/12 xl:w-7/12 px-3 mb-6 md:mb-0 mr-auto">
-                                            <a href=""><h5 className="font-bold mb-2">
-                                                Hidup Sederhana
-                                            </h5></a>
+                                            <a href="">
+                                                <h5 className="font-bold mb-2">
+                                                    Hidup Sederhana
+                                                </h5>
+                                            </a>
                                             <div className="text-red-600 font-medium text-sm flex items-center justify-center md:justify-start">
                                                 <svg
                                                     className="w-4 h-4 mr-2"
@@ -88,7 +94,7 @@ const RegionalNews = () => {
                                             </div>
                                             <p className="text-gray-500 mb-6">
                                                 <small>
-                                                <u>13.01.2022</u>{" "}
+                                                    <u>13.01.2022</u>{" "}
                                                 </small>
                                             </p>
                                         </div>
@@ -109,11 +115,13 @@ const RegionalNews = () => {
                                                 </a>
                                             </div>
                                         </div>
-                                        
+
                                         <div className="grow-0 shrink-0 basis-auto w-full md:w-9/12 xl:w-7/12 px-3 mb-6 md:mb-0 mr-auto">
-                                            <a href=""><h5 className="font-bold mb-2">
-                                                Awali Harimu dengan Semangat
-                                            </h5></a>
+                                            <a href="">
+                                                <h5 className="font-bold mb-2">
+                                                    Awali Harimu dengan Semangat
+                                                </h5>
+                                            </a>
                                             <div className="text-red-600 font-medium text-sm flex items-center justify-center md:justify-start">
                                                 <svg
                                                     className="w-4 h-4 mr-2"
@@ -129,7 +137,7 @@ const RegionalNews = () => {
                                             </div>
                                             <p className="text-gray-500 mb-6">
                                                 <small>
-                                                <u>13.01.2022</u>{" "}
+                                                    <u>13.01.2022</u>{" "}
                                                 </small>
                                             </p>
                                         </div>
@@ -137,15 +145,16 @@ const RegionalNews = () => {
                                 </section>
                             </div>
                         </div>
-  </div>
+                    </div>
 
-
-  <div class="row-end-3 row-span-2">
-  <div className="p-2">
+                    <div class="row-end-3 row-span-2">
+                        <div className="p-2">
                             <u>
-                            <a href=""><h1 className="text-black p-5 lg:text-2xl sm:text-xl font-bold">
-                                Olahraga
-                            </h1></a>
+                                <a href="">
+                                    <h1 className="text-black p-5 lg:text-2xl sm:text-xl font-bold">
+                                        Olahraga
+                                    </h1>
+                                </a>
                             </u>
                             <div className=" mx-auto mt-2">
                                 <section className="mb-32 text-gray-800 text-center md:text-left">
@@ -167,9 +176,10 @@ const RegionalNews = () => {
                                         </div>
                                         <div className="grow-0 shrink-0 basis-auto w-full md:w-9/12 xl:w-7/12 px-3 mb-6 md:mb-0 mr-auto">
                                             <a href="">
-                                            <h5 className="font-bold mb-2">
-                                                Hello World
-                                            </h5></a>
+                                                <h5 className="font-bold mb-2">
+                                                    Hello World
+                                                </h5>
+                                            </a>
                                             <div className="text-red-600 font-medium text-sm flex items-center justify-center md:justify-start">
                                                 <svg
                                                     className="w-4 h-4 mr-2"
@@ -207,9 +217,11 @@ const RegionalNews = () => {
                                             </div>
                                         </div>
                                         <div className="grow-0 shrink-0 basis-auto w-full md:w-9/12 xl:w-7/12 px-3 mb-6 md:mb-0 mr-auto">
-                                            <a href=""><h5 className="font-bold mb-2">
-                                                Hidup Sederhana
-                                            </h5></a>
+                                            <a href="">
+                                                <h5 className="font-bold mb-2">
+                                                    Hidup Sederhana
+                                                </h5>
+                                            </a>
                                             <div className="mb-1 text-red-600 font-medium text-sm flex items-center justify-center md:justify-start">
                                                 <svg
                                                     className="w-4 h-4 mr-2"
@@ -225,7 +237,7 @@ const RegionalNews = () => {
                                             </div>
                                             <p className="text-gray-500 mb-6">
                                                 <small>
-                                                <u>13.01.2022</u>{" "}
+                                                    <u>13.01.2022</u>{" "}
                                                 </small>
                                             </p>
                                         </div>
@@ -246,11 +258,13 @@ const RegionalNews = () => {
                                                 </a>
                                             </div>
                                         </div>
-                                        
+
                                         <div className="grow-0 shrink-0 basis-auto w-full md:w-9/12 xl:w-7/12 px-3 mb-6 md:mb-0 mr-auto">
-                                            <a href=""><h5 className="font-bold mb-2">
-                                                Awali Harimu dengan Semangat
-                                            </h5></a>
+                                            <a href="">
+                                                <h5 className="font-bold mb-2">
+                                                    Awali Harimu dengan Semangat
+                                                </h5>
+                                            </a>
                                             <div className="mb-1 text-red-600 font-medium text-sm flex items-center justify-center md:justify-start">
                                                 <svg
                                                     className="w-4 h-4 mr-2"
@@ -266,7 +280,7 @@ const RegionalNews = () => {
                                             </div>
                                             <p className="text-gray-500 mb-6">
                                                 <small>
-                                                <u>13.01.2022</u>{" "}
+                                                    <u>13.01.2022</u>{" "}
                                                 </small>
                                             </p>
                                         </div>
@@ -274,15 +288,16 @@ const RegionalNews = () => {
                                 </section>
                             </div>
                         </div>
-  </div>
+                    </div>
 
-
-  <div class="row-start-1 row-end-3">
-  <div className="p-2">
+                    <div class="row-start-1 row-end-3">
+                        <div className="p-2">
                             <u>
-                            <a href=""><h1 className="text-black p-5 lg:text-2xl sm:text-xl font-bold">
-                                Profile 
-                            </h1></a>
+                                <a href="">
+                                    <h1 className="text-black p-5 lg:text-2xl sm:text-xl font-bold">
+                                        Profile
+                                    </h1>
+                                </a>
                             </u>
                             <div className=" mx-auto mt-2">
                                 <section className="mb-32 text-gray-800 text-center md:text-left">
@@ -304,9 +319,10 @@ const RegionalNews = () => {
                                         </div>
                                         <div className="grow-0 shrink-0 basis-auto w-full md:w-9/12 xl:w-7/12 px-3 mb-6 md:mb-0 mr-auto">
                                             <a href="">
-                                            <h5 className="font-bold mb-2">
-                                                Hello World
-                                            </h5></a>
+                                                <h5 className="font-bold mb-2">
+                                                    Hello World
+                                                </h5>
+                                            </a>
                                             <div className="mb-1 text-red-600 font-medium text-sm flex items-center justify-center md:justify-start">
                                                 <svg
                                                     className="w-4 h-4 mr-2"
@@ -344,9 +360,11 @@ const RegionalNews = () => {
                                             </div>
                                         </div>
                                         <div className="grow-0 shrink-0 basis-auto w-full md:w-9/12 xl:w-7/12 px-3 mb-6 md:mb-0 mr-auto">
-                                            <a href=""><h5 className="font-bold mb-2">
-                                                Hidup Sederhana
-                                            </h5></a>
+                                            <a href="">
+                                                <h5 className="font-bold mb-2">
+                                                    Hidup Sederhana
+                                                </h5>
+                                            </a>
                                             <div className="mb-1 text-red-600 font-medium text-sm flex items-center justify-center md:justify-start">
                                                 <svg
                                                     className="w-4 h-4 mr-2"
@@ -362,7 +380,7 @@ const RegionalNews = () => {
                                             </div>
                                             <p className="text-gray-500 mb-6">
                                                 <small>
-                                                <u>13.01.2022</u>{" "}
+                                                    <u>13.01.2022</u>{" "}
                                                 </small>
                                             </p>
                                         </div>
@@ -383,11 +401,13 @@ const RegionalNews = () => {
                                                 </a>
                                             </div>
                                         </div>
-                                        
+
                                         <div className="grow-0 shrink-0 basis-auto w-full md:w-9/12 xl:w-7/12 px-3 mb-6 md:mb-0 mr-auto">
-                                            <a href=""><h5 className="font-bold mb-2">
-                                                Awali Harimu dengan Semangat
-                                            </h5></a>
+                                            <a href="">
+                                                <h5 className="font-bold mb-2">
+                                                    Awali Harimu dengan Semangat
+                                                </h5>
+                                            </a>
                                             <div className="mb-1 text-red-600 font-medium text-sm flex items-center justify-center md:justify-start">
                                                 <svg
                                                     className="w-4 h-4 mr-2"
@@ -403,7 +423,7 @@ const RegionalNews = () => {
                                             </div>
                                             <p className="text-gray-500 mb-6">
                                                 <small>
-                                                <u>13.01.2022</u>{" "}
+                                                    <u>13.01.2022</u>{" "}
                                                 </small>
                                             </p>
                                         </div>
@@ -411,17 +431,11 @@ const RegionalNews = () => {
                                 </section>
                             </div>
                         </div>
-  </div>
-
-</div>
-
-
-
-                    
-             
+                    </div>
+                </div>
             </main>
         </div>
-    )
-}
+    );
+};
 
 export default RegionalNews;

@@ -358,7 +358,7 @@ const Read = () => {
                                 <section className="mb-30 text-gray-800 text-center md:text-left">
                                     <div className="flex flex-wrap mb-4 ">
                                         <div className="mb-2">
-                                            <div className=" mx-auto flex items-center space-x-4">
+                                            <div className=" mx-auto flex space-x-4">
                                                 <div className="shrink-0 ml-4">
                                                     <Link
                                                         href={route("readnews")}
@@ -403,7 +403,7 @@ const Read = () => {
 
                                     <div className="flex flex-wrap mb-4 ">
                                         <div className="mb-2">
-                                            <div className=" mx-auto flex items-center space-x-4">
+                                            <div className=" mx-auto flex space-x-4">
                                                 <div className="shrink-0 ml-4">
                                                     <Link
                                                         href={route("readnews")}
@@ -447,7 +447,7 @@ const Read = () => {
                                     </div>
                                     <div className="flex flex-wrap mb-4 ">
                                         <div className="mb-2">
-                                            <div className=" mx-auto flex items-center space-x-4">
+                                            <div className=" mx-auto flex space-x-4">
                                                 <div className="shrink-0 ml-4">
                                                     <Link
                                                         href={route("readnews")}
@@ -505,7 +505,7 @@ const Read = () => {
                                 <section className="mb-30 text-gray-800 text-center md:text-left">
                                     <div className="flex flex-wrap mb-4 ">
                                         <div className="mb-2">
-                                            <div className=" mx-auto flex items-center space-x-4">
+                                            <div className=" mx-auto flex space-x-4">
                                                 <div className="shrink-0 ml-4">
                                                     <Link
                                                         href={route("readnews")}
@@ -550,7 +550,7 @@ const Read = () => {
 
                                     <div className="flex flex-wrap mb-4 ">
                                         <div className="mb-2">
-                                            <div className=" mx-auto flex items-center space-x-4">
+                                            <div className=" mx-auto flex space-x-4">
                                                 <div className="shrink-0 ml-4">
                                                     <Link
                                                         href={route("readnews")}
@@ -594,7 +594,7 @@ const Read = () => {
                                     </div>
                                     <div className="flex flex-wrap mb-4 ">
                                         <div className="mb-2">
-                                            <div className=" mx-auto flex items-center space-x-4">
+                                            <div className=" mx-auto flex space-x-4">
                                                 <div className="shrink-0 ml-4">
                                                     <Link
                                                         href={route("readnews")}
@@ -652,7 +652,7 @@ const Read = () => {
                                 <section className="mb-30 text-gray-800 text-center md:text-left">
                                     <div className="flex flex-wrap mb-4 ">
                                         <div className="mb-2">
-                                            <div className=" mx-auto flex items-center space-x-4">
+                                            <div className=" mx-auto flex space-x-4">
                                                 <div className="shrink-0 ml-4">
                                                     <Link
                                                         href={route("readnews")}
@@ -697,7 +697,7 @@ const Read = () => {
 
                                     <div className="flex flex-wrap mb-4 ">
                                         <div className="mb-2">
-                                            <div className=" mx-auto flex items-center space-x-4">
+                                            <div className=" mx-auto flex space-x-4">
                                                 <div className="shrink-0 ml-4">
                                                     <Link
                                                         href={route("readnews")}
@@ -741,7 +741,7 @@ const Read = () => {
                                     </div>
                                     <div className="flex flex-wrap mb-4 ">
                                         <div className="mb-2">
-                                            <div className=" mx-auto flex items-center space-x-4">
+                                            <div className=" mx-auto flex space-x-4">
                                                 <div className="shrink-0 ml-4">
                                                     <Link
                                                         href={route("readnews")}
@@ -801,7 +801,7 @@ const Read = () => {
                                 <section className="mb-30 text-gray-800 text-center md:text-left">
                                     <div className="flex flex-wrap mb-4 ">
                                         <div className="mb-2">
-                                            <div className=" mx-auto flex items-center space-x-4">
+                                            <div className=" mx-auto flex space-x-4">
                                                 <div className="shrink-0 ml-4">
                                                     <Link
                                                         href={route("readnews")}
@@ -846,7 +846,7 @@ const Read = () => {
 
                                     <div className="flex flex-wrap mb-4 ">
                                         <div className="mb-2">
-                                            <div className=" mx-auto flex items-center space-x-4">
+                                            <div className=" mx-auto flex space-x-4">
                                                 <div className="shrink-0 ml-4">
                                                     <Link
                                                         href={route("readnews")}
@@ -890,7 +890,7 @@ const Read = () => {
                                     </div>
                                     <div className="flex flex-wrap mb-4 ">
                                         <div className="mb-2">
-                                            <div className=" mx-auto flex items-center space-x-4">
+                                            <div className=" mx-auto flex space-x-4">
                                                 <div className="shrink-0 ml-4">
                                                     <Link
                                                         href={route("readnews")}
@@ -950,7 +950,7 @@ const Read = () => {
                                 <section className="mb-30 text-gray-800 text-center md:text-left">
                                     <div className="flex flex-wrap mb-4 ">
                                         <div className="mb-2">
-                                            <div className=" mx-auto flex items-center space-x-4">
+                                            <div className=" mx-auto flex space-x-4">
                                                 <div className="shrink-0 ml-4">
                                                     <Link
                                                         href={route("readnews")}
@@ -995,7 +995,7 @@ const Read = () => {
 
                                     <div className="flex flex-wrap mb-4 ">
                                         <div className="mb-2">
-                                            <div className=" mx-auto flex items-center space-x-4">
+                                            <div className=" mx-auto flex space-x-4">
                                                 <div className="shrink-0 ml-4">
                                                     <Link
                                                         href={route("readnews")}
@@ -1039,7 +1039,7 @@ const Read = () => {
                                     </div>
                                     <div className="flex flex-wrap mb-4 ">
                                         <div className="mb-2">
-                                            <div className=" mx-auto flex items-center space-x-4">
+                                            <div className=" mx-auto flex space-x-4">
                                                 <div className="shrink-0 ml-4">
                                                     <Link
                                                         href={route("readnews")}

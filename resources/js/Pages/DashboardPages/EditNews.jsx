@@ -3,7 +3,7 @@ import { Link, Head, router } from "@inertiajs/react";
 import Navbar from "@/Components/Navbar";
 import NewsList from "@/Components/Homepage/NewsList";
 import Paginator from "@/Components/Homepage/Paginator";
-import Tiptap from "@/Layouts/dashboard-assets/Tiptap";
+import TiptapEdit from "@/Layouts/dashboard-assets/TiptapEdit";
 
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
 
@@ -14,6 +14,9 @@ export default function EditNews(props) {
     const [category, setCategory] = useState("");
     const [isNotif, setIsNotif] = useState(false);
     const [image, setImage] = useState("");
+
+    const image2 = props.myNews.image;
+    console.log(image2);
 
     const handleSubmit = () => {
         const data = {
@@ -31,18 +34,17 @@ export default function EditNews(props) {
         setImage("");
         data.preventDefault();
     };
+    useEffect(() => {
+        setTitle(props.myNews.title);
+        setCategory(props.myNews.category);
+        setDescription(props.myNews.description);
+        setImage(props.myNews.image);
+    }, []);
     return (
-        <AuthenticatedLayout
-            auth={props.auth}
-            errors={props.errors}
-            header={
-                <h2 className="font-semibold text-xl text-gray-800 leading-tight">
-                    Berita Saya (Testing)
-                </h2>
-            }
-        >
+        <AuthenticatedLayout auth={props.auth} errors={props.errors}>
             {/* <Head>Post</Head> */}
             <div>
+                <Head title="Edit Postingan"></Head>
                 <div className="py-12">
                     <div className="max-w-7xl mx-auto my-2 sm:px-6 lg:px-8">
                         <h1 className="text-3xl text-black pb-6 mb-12">
@@ -83,12 +85,13 @@ export default function EditNews(props) {
                             <input
                                 type="text"
                                 placeholder="Judul"
+                                name="title"
                                 className="m-2 input input-info w-full "
                                 defaultValue={props.myNews.title}
                                 onChange={(title) =>
                                     setTitle(title.target.value)
                                 }
-                                value={props.myNews.value}
+                                value={title}
                                 // onChange={(e) =>
                                 //     this.setTitle({ title: e.target.value })
                                 // }lis
@@ -118,14 +121,12 @@ export default function EditNews(props) {
                                 </span>
                             </label>
                             <div className="m-2 w-full">
-                                <Tiptap
-                                    setDesc={setDescription}
-                                    // value={category}
-
+                                <TiptapEdit
+                                    desc={props.myNews.description}
                                     onChange={(description) =>
                                         setDescription(description.target.value)
                                     }
-                                    setContent={props.myNews.description}
+                                    value={description}
                                     required
                                 />
                             </div>
@@ -179,7 +180,7 @@ export default function EditNews(props) {
                         <div className=" w-full ">
                             <label className="label">
                                 <span className="label-text">
-                                    Tambahkan Judul Berita
+                                    Tambahkan Gambar Berita
                                 </span>
                                 <span className="label-text-alt text-error">
                                     *harus diisi
@@ -221,10 +222,13 @@ export default function EditNews(props) {
                                         id="dropzone-file"
                                         type="file"
                                         name="image"
+                                        // src={("/storage/", props.myNews.image)}
                                         onChange={(image) =>
                                             setImage(image.target.files[0])
                                         }
                                         className="file-input file-input-bordered file-input-info  visible"
+                                        defaultValue={image}
+                                        // value={("/storage/", image)}
                                         accept="image/*"
                                     />
                                 </label>

@@ -1,7 +1,7 @@
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
-import Tiptap from "@/Layouts/dashboard-assets/Tiptap";
+import TiptapPost from "@/Layouts/dashboard-assets/TiptapPost";
 import { useState, useEffect } from "react";
-import { router } from "@inertiajs/react";
+import { router, Head } from "@inertiajs/react";
 import parser from "html-react-parser";
 import { BiEdit } from "react-icons/bi";
 
@@ -50,6 +50,7 @@ const PostPage = (props) => {
                 </h2>
             }
         >
+            <Head title="Buat Postingan"></Head>
             {/* <Head>Post</Head> */}
             <div>
                 <div className="py-12">
@@ -121,7 +122,7 @@ const PostPage = (props) => {
                                 </span>
                             </label>
                             <div className="m-2 w-full">
-                                <Tiptap
+                                <TiptapPost
                                     setDesc={setDescription}
                                     value={category}
                                     onChange={(category) =>

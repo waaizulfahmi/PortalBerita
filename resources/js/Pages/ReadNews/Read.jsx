@@ -13,6 +13,15 @@ const Read = (props) => {
         };
         return new Date(dateString).toLocaleDateString("id", options);
     };
+    const Copy = () => {
+        var Url = document.getElementById("url");
+        Url.innerHTML = window.location.href;
+        console.log(Url.innerHTML);
+        const url2 = Url.select();
+        navigator.clipboard.writeText(url2.value);
+        alert("Text copied");
+        // document.execCommand("copy", true, Url);
+    };
 
     // const title = [];
     // title = Object.values(news);
@@ -84,9 +93,12 @@ const Read = (props) => {
                                 </div>
                             </div>
                             <div>
-                                <button className="btn btn-active btn-ghost btn-sm mb-2 mr-3">
-                                    Salin Link
-                                </button>
+                                <input
+                                    type="button"
+                                    className="btn btn-active btn-ghost btn-sm mb-2 mr-3"
+                                    value="Copy Url"
+                                    onclick={Copy}
+                                />
                             </div>
                         </div>
                         <div>

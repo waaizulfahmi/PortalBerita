@@ -12,10 +12,13 @@ import Coment from "./Coment";
 
 const ReadNews = (props) => {
     console.log(props.myNews);
+    const str = props.myNews.title;
+    const str2 = str.charAt(0).toUpperCase() + str.slice(1);
+    console.log(str2);
 
     return (
         <div className=" min-h-screen bg-slate-50">
-            <Head />
+            <Head title={str2} />
             <Navbar />
             <Read news={props.myNews} />
 

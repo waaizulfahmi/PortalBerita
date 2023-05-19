@@ -1,5 +1,5 @@
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
-import Tiptap from "@/Layouts/dashboard-assets/Tiptap";
+import Tiptap from "@/Layouts/dashboard-assets/TiptapEdit";
 import { useState, useEffect } from "react";
 import { router } from "@inertiajs/react";
 import parser from "html-react-parser";
@@ -66,7 +66,7 @@ const ListPage = (props) => {
                                 >
                                     <div>
                                         {/* <i className="fa-light fa-pen-to-square"></i> */}
-                                        edit
+                                        EDIT
                                     </div>
                                 </Link>
                             </div>
@@ -77,14 +77,17 @@ const ListPage = (props) => {
                                     data={{ id: news.id }}
                                     as="button"
                                 >
-                                    delete
+                                    DELETE
                                 </Link>
                             </div>
                         </td>
                         <th>
-                            <button className="btn btn-ghost btn-xs">
+                            <a
+                                href={route("read", { slug: news.slug })}
+                                className="btn btn-ghost btn-xs"
+                            >
                                 details
-                            </button>
+                            </a>
                         </th>
                     </tr>
                 );
@@ -103,6 +106,7 @@ const ListPage = (props) => {
                 </h2>
             }
         >
+            <Head title="Daftar Postingan"></Head>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
                     <thead>

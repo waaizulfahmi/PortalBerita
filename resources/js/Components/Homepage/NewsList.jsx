@@ -18,14 +18,14 @@ const isNews = (news) => {
                 className="card w-full  lg:w-60 bg-base-100 shadow-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                 key={i}
             >
-                {/* <Link href="/ShowNews"></Link> */}
                 <a
-                    href={route("readnews", { slug: data.slug })}
+                    href={route("read", { slug: data.slug })}
                     // href={`/readnews/${data.slug}`}
                     // href={route('readnews', ['slug' => data.slug])}
                     as="button"
                     // data={{ news: data.slug }}
                 >
+                    {/* <Link href="/ShowNews"></Link> */}
                     <img
                         src={"/storage/" + data.image}
                         alt="Shoes"

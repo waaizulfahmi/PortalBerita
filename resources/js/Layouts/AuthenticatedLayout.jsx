@@ -6,6 +6,7 @@ import ResponsiveNavLink from "@/Components/ResponsiveNavLink";
 import { Head, Link } from "@inertiajs/react";
 import HeaderDashboard from "./dashboard-assets/HeaderDashboard";
 import { FaGithubSquare } from "react-icons/fa";
+import { useEffect } from "react";
 
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faCoffee } from "@fortawesome/free-solid-svg-icons";
@@ -17,6 +18,22 @@ import { FaGithubSquare } from "react-icons/fa";
 export default function Authenticated({ auth, header, children }) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] =
         useState(false);
+    const current = new Date();
+    const date = `${current.toLocaleString("id", {
+        weekday: "long",
+    })}, ${current.getDate()} ${current.toLocaleString("id", {
+        month: "long",
+    })} ${current.getFullYear()}  ${current.toLocaleTimeString("id", {
+        hour: "2-digit",
+        minute: "2-digit",
+    })} WIB`;
+
+    const [titlePage, setTitle] = useState("");
+
+    useEffect(() => {
+        setTitle(document.title);
+    });
+    console.log(titlePage);
 
     return (
         <div>
@@ -29,6 +46,7 @@ export default function Authenticated({ auth, header, children }) {
             {/* <title>{{ header }}</title> */}
             <meta name="author" content="David Grzyb" />
             <meta name="description" content />
+            {/* <title>"Dashboard</title> */}
             {/* Tailwind */}
             <link
                 href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
@@ -64,8 +82,12 @@ export default function Authenticated({ auth, header, children }) {
                     </div>
                     <nav className="text-white text-base font-semibold pt-3">
                         <Link
+                            // className={`flex items-center  text-white py-4 pl-6 nav-item `}
                             className={
-                                "flex items-center active-nav-link text-white py-4 pl-6 nav-item "
+                                "flex items-center  text-white py-4 pl-6 nav-item  " +
+                                (titlePage == "Dashboard - Laravel"
+                                    ? "active-nav-link"
+                                    : " ")
                             }
                             href="/dashboard"
                         >
@@ -76,7 +98,12 @@ export default function Authenticated({ auth, header, children }) {
 
                         <Link
                             href="/dashboard/post/new"
-                            className="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
+                            className={
+                                "flex items-center  text-white py-4 pl-6 nav-item  " +
+                                (titlePage == "Buat Postingan - Laravel"
+                                    ? "active-nav-link"
+                                    : " ")
+                            }
                         >
                             <i className="fas fa-sticky-note mr-3"></i>
                             {/* <FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon> */}
@@ -84,7 +111,12 @@ export default function Authenticated({ auth, header, children }) {
                         </Link>
                         <Link
                             href="/dashboard/list/show"
-                            className="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
+                            className={
+                                "flex items-center  text-white py-4 pl-6 nav-item  " +
+                                (titlePage == "Daftar Postingan - Laravel"
+                                    ? "active-nav-link"
+                                    : " ")
+                            }
                         >
                             <i className="fas fa-table mr-3"></i>
                             Daftar Postingan
@@ -123,6 +155,13 @@ export default function Authenticated({ auth, header, children }) {
                 <div className="w-full flex flex-col h-screen overflow-y-hidden">
                     {/* <!-- Desktop Header --> */}
                     <header className="w-full items-center bg-white py-2 px-6 hidden sm:flex">
+                        <img
+                            width="25"
+                            height="25"
+                            src="https://img.icons8.com/ios/50/calendar--v1.png"
+                            alt="calendar--v1"
+                        />
+                        <h6 className="text-sm mt-5 ml-2">{date}</h6>
                         <div className="w-1/2"></div>
                         <div className="relative w-1/2 flex justify-end mx-3 ">
                             <button className="btn btn-ghost btn-circle mt-2">

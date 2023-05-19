@@ -20,7 +20,7 @@ class NewsController extends Controller
         // // dd($news);
         // $news = News::all();
         return Inertia::render('Homepage', [
-            'title' => 'Portal Berita',
+            'title' => 'PanelWarta.id',
             'description' => "Selamat datang di portal berita",
             'news' => $news,
 

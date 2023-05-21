@@ -27,15 +27,18 @@ class ShowNewsController extends Controller
         // $myNews = $news::where('author', auth()->user()->name)->get();
 
     }
-    public function index()
+    public function index(News $news, $category)
     {
-        $news = new NewsCollection(News::OrderByDesc('id')->paginate(5));
+        // $showCategory = new NewsCollection(News::OrderByDesc('category', $category)->paginate(10));
         // // dd($news);
         // $news = News::all();
+        $showCategory = $news::where('category', $category)->orderByDesc('id')->get();
+        
+        // dd($showCategory);
         return Inertia::render('ShowNews/ShowNews', [
-            'title' => 'Category',
+            'title' =>  $category ,
             'description' => "Selamat datang di portal berita",
-            'news' => $news,
+            'news' => $showCategory,
 
         ]);
 

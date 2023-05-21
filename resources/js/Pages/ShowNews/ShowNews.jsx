@@ -7,7 +7,7 @@ import Paginator from "@/Components/Homepage/Paginator";
 import Footer from "@/Components/Footer";
 import NewsListRow from "../NewsListRow";
 // import NewsListRow from "@Components/Homepage/NewsListRow";
-import Wisata from "./Category";
+import Category from "./Category";
 import News from "./News";
 import MainNews from "../MainNews";
 
@@ -23,7 +23,7 @@ const ShowNews = (props) => {
                 {/* <SideNews /> */}
             </div>
             <div className="mb-8">
-                <Wisata news={props.news.data} />
+                <Category news={props.news} />
             </div>
             {/* <News/> */}
             <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4">

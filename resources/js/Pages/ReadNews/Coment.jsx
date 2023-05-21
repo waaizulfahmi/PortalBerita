@@ -7,7 +7,7 @@ const Coment = () => {
                 <div className="box-border flex flex-wrap ">
                     <div className="box-border md:w-2/3 box-content">
                         <div className="box-content h-22 w-30 p-4 border-2 bg-violet-200">
-                            <p className="font-bold text-2xl mb-3">Komentar</p>
+                            <p className="font-bold text-xl mb-2">Komentar</p>
                             <div>
                                 <input
                                     type="text"
@@ -57,7 +57,7 @@ const Coment = () => {
                             <div className="comments child rounded py-8 px-8 bg-white ml-20 rounded-xl shadow-lg space-y-8 sm:py-4 sm:flex sm:space-y-0 sm:space-x-6 mb-2">
                                 <div class="text-left space-y-2 sm:text-left">
                                     <div class="space-y-0.5">
-                                        <p class="text-lg text-black font-bold text-left">
+                                        <p class="text-base text-black font-bold text-left">
                                             Child1
                                         </p>
                                         <time className="time text-xs text-left">
@@ -77,7 +77,7 @@ const Coment = () => {
                             <div class="py-8 px-8 bg-white rounded-xl shadow-lg space-y-8 sm:py-4 sm:flex sm:space-y-0 sm:space-x-6 mb-2">
                                 <div class="text-left space-y-2 sm:text-left">
                                     <div class="space-y-0.5">
-                                        <p class="text-lg text-black font-bold text-left">
+                                        <p class="text-base text-black font-bold text-left">
                                             Person2
                                         </p>
                                         <time className="time text-xs text-left">
@@ -97,7 +97,7 @@ const Coment = () => {
                             <div className="comments child rounded py-8 px-8 bg-white ml-20 rounded-xl shadow-lg space-y-8 sm:py-4 sm:flex sm:space-y-0 sm:space-x-6 mb-2">
                                 <div class="text-left space-y-2 sm:text-left">
                                     <div class="space-y-0.5">
-                                        <p class="text-lg text-black font-bold text-left">
+                                        <p class="text-base text-black font-bold text-left">
                                             Child1
                                         </p>
                                         <time className="time text-xs text-left">
@@ -116,7 +116,7 @@ const Coment = () => {
                             <div className="comments child rounded py-8 px-8 bg-white ml-20 rounded-xl shadow-lg space-y-8 sm:py-4 sm:flex sm:space-y-0 sm:space-x-6 mb-2">
                                 <div class="text-left space-y-2 sm:text-left">
                                     <div class="space-y-0.5">
-                                        <p class="text-lg text-black font-bold text-left">
+                                        <p class="text-base text-black font-bold text-left">
                                             Child2
                                         </p>
                                         <time className="time text-xs text-left">
@@ -136,7 +136,7 @@ const Coment = () => {
                             <div class="py-8 px-8 bg-white rounded-xl shadow-lg space-y-8 sm:py-4 sm:flex sm:space-y-0 sm:space-x-6 mb-2">
                                 <div class="text-left space-y-2 sm:text-left">
                                     <div class="space-y-0.5">
-                                        <p class="text-lg text-black font-bold text-left">
+                                        <p class="text-base text-black font-bold text-left">
                                             Person3
                                         </p>
                                         <time className="time text-xs text-left">
@@ -157,7 +157,7 @@ const Coment = () => {
 
                     <aside className="w-full md:w-1/3 ">
                         <div className="p-2 ml-4">
-                            <h1 className="text-black p-3 lg:text-2xl sm:text-xl font-bold text-center mb-3">
+                            <h1 className="text-black p-3 lg:text-2xl sm:text-xl font-bold text-center">
                                 Ikuti Kami
                             </h1>
                             <div className="flex justify-center space-x-2 mb-2">
@@ -207,7 +207,7 @@ const Coment = () => {
                                     </div>
                                 </div>
                             </div>
-                            <hr />
+                            
                             <div className=" mx-auto mt-4">
                                 <section className="mb-30 text-gray-800 text-center md:text-left">
                                     <div className="flex flex-wrap mb-1">

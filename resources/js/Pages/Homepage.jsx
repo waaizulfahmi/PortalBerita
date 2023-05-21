@@ -12,6 +12,8 @@ import RegionalNews from "./RegionalNews";
 import ProfileNews from "./ProfileNews";
 import NewNews from "./NewNews";
 import BeritaBisnis from "./BeritaBisnis";
+import NewDesain from "./NewDesain";
+import NewGrid from "./NewGrid";
 // import ShowNews from "./ShowNews";
 
 export default function Homepage(props) {
@@ -26,12 +28,17 @@ export default function Homepage(props) {
         <div className=" min-h-screen bg-slate-50">
             <Head title={props.title} />
             <Navbar user={props.auth.user} />
-
+            <NewNews />
             {/*<MainNews />*/}
             {/* <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4 static">
                 <MainNews />
             </div> */}
-            {/* <MainNews /> */}
+            <u>
+                <h1 className="text-black mt-4 lg:mb-8 mb-4 lg:text-2xl sm:text-xl text-left font-bold lg:ml-28 ml-3 sm:ml-12 md:ml-9">
+                    Berita Terbaru
+                </h1>
+            </u>
+            <NewDesain />
             <hr />
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
                 {/* <NewNews news={props.news.data} /> */}
@@ -42,8 +49,16 @@ export default function Homepage(props) {
                     Berita Wisata
                 </h1>
             </u> */}
+            <u>
+                <a href="">
+                    <h1 className="text-black text-lg mb-5 mt-4 ml-3 md:ml-28 lg:ml-30 lg:text-2xl md:text-xl font-bold">
+                        Berita Olahraga
+                    </h1>
+                </a>
+            </u>
+            <NewGrid />
             <div dir="rtl">
-                <Link href={route("shownews")} as="button" />
+                {/* <Link href={route("shownews")} as="button" /> */}
                 {/* <MainNews /> */}
                 <hr />
                 {/* <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
@@ -64,7 +79,7 @@ export default function Homepage(props) {
             </u>
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
                 <TravelsNews news={props.news.data} />
-            </div> */}
+            </div>
 
                 <hr />
                 {/* <hr/>

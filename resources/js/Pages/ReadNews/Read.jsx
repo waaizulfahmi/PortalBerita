@@ -104,7 +104,7 @@ const Read = (props) => {
                         <div>
                             <img
                                 src={"/storage/" + props.news.image}
-                                className="w-full p-3"
+                                className="w-full p-3 mb-6"
                             />
                             <a href="#!"></a>
                         </div>
@@ -124,9 +124,15 @@ const Read = (props) => {
                                     </p>
                                 </div>
                                 <div>
-                                    <button className="btn btn-active btn-ghost btn-sm ml-6 mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-                                        {props.news.category}
-                                    </button>
+                                    <Link
+                                        href={route("shownews", {
+                                            category: props.news.category,
+                                        })}
+                                    >
+                                        <button className="btn btn-active btn-ghost btn-sm ml-6 mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                                            {props.news.category}
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -352,7 +358,7 @@ const Read = (props) => {
                                 <section className="mb-30 text-gray-800 text-center md:text-left">
                                     <div className="flex flex-wrap mb-4 ">
                                         <div className="mb-2">
-                                            <div className=" mx-auto flex items-center space-x-4">
+                                            <div className=" mx-auto flex space-x-4">
                                                 <div className="shrink-0 ml-4">
                                                     <Link as="button">
                                                         <img
@@ -391,7 +397,7 @@ const Read = (props) => {
 
                                     <div className="flex flex-wrap mb-4 ">
                                         <div className="mb-2">
-                                            <div className=" mx-auto flex items-center space-x-4">
+                                            <div className=" mx-auto flex space-x-4">
                                                 <div className="shrink-0 ml-4">
                                                     <Link as="button">
                                                         <img
@@ -429,7 +435,7 @@ const Read = (props) => {
                                     </div>
                                     <div className="flex flex-wrap mb-4 ">
                                         <div className="mb-2">
-                                            <div className=" mx-auto flex items-center space-x-4">
+                                            <div className=" mx-auto flex space-x-4">
                                                 <div className="shrink-0 ml-4">
                                                     <Link as="button">
                                                         <img
@@ -481,7 +487,7 @@ const Read = (props) => {
                                 <section className="mb-30 text-gray-800 text-center md:text-left">
                                     <div className="flex flex-wrap mb-4 ">
                                         <div className="mb-2">
-                                            <div className=" mx-auto flex items-center space-x-4">
+                                            <div className=" mx-auto flex space-x-4">
                                                 <div className="shrink-0 ml-4">
                                                     <Link as="button">
                                                         <img
@@ -520,7 +526,7 @@ const Read = (props) => {
 
                                     <div className="flex flex-wrap mb-4 ">
                                         <div className="mb-2">
-                                            <div className=" mx-auto flex items-center space-x-4">
+                                            <div className=" mx-auto flex space-x-4">
                                                 <div className="shrink-0 ml-4">
                                                     <Link as="button">
                                                         <img
@@ -558,7 +564,7 @@ const Read = (props) => {
                                     </div>
                                     <div className="flex flex-wrap mb-4 ">
                                         <div className="mb-2">
-                                            <div className=" mx-auto flex items-center space-x-4">
+                                            <div className=" mx-auto flex space-x-4">
                                                 <div className="shrink-0 ml-4">
                                                     <Link as="button">
                                                         <img
@@ -610,7 +616,7 @@ const Read = (props) => {
                                 <section className="mb-30 text-gray-800 text-center md:text-left">
                                     <div className="flex flex-wrap mb-4 ">
                                         <div className="mb-2">
-                                            <div className=" mx-auto flex items-center space-x-4">
+                                            <div className=" mx-auto flex space-x-4">
                                                 <div className="shrink-0 ml-4">
                                                     <Link as="button">
                                                         <img
@@ -649,7 +655,7 @@ const Read = (props) => {
 
                                     <div className="flex flex-wrap mb-4 ">
                                         <div className="mb-2">
-                                            <div className=" mx-auto flex items-center space-x-4">
+                                            <div className=" mx-auto flex space-x-4">
                                                 <div className="shrink-0 ml-4">
                                                     <Link as="button">
                                                         <img
@@ -687,7 +693,7 @@ const Read = (props) => {
                                     </div>
                                     <div className="flex flex-wrap mb-4 ">
                                         <div className="mb-2">
-                                            <div className=" mx-auto flex items-center space-x-4">
+                                            <div className=" mx-auto flex space-x-4">
                                                 <div className="shrink-0 ml-4">
                                                     <Link as="button">
                                                         <img
@@ -739,7 +745,7 @@ const Read = (props) => {
                                 <section className="mb-30 text-gray-800 text-center md:text-left">
                                     <div className="flex flex-wrap mb-4 ">
                                         <div className="mb-2">
-                                            <div className=" mx-auto flex items-center space-x-4">
+                                            <div className=" mx-auto flex space-x-4">
                                                 <div className="shrink-0 ml-4">
                                                     <Link as="button">
                                                         <img
@@ -778,7 +784,7 @@ const Read = (props) => {
 
                                     <div className="flex flex-wrap mb-4 ">
                                         <div className="mb-2">
-                                            <div className=" mx-auto flex items-center space-x-4">
+                                            <div className=" mx-auto flex space-x-4">
                                                 <div className="shrink-0 ml-4">
                                                     <Link as="button">
                                                         <img
@@ -816,7 +822,7 @@ const Read = (props) => {
                                     </div>
                                     <div className="flex flex-wrap mb-4 ">
                                         <div className="mb-2">
-                                            <div className=" mx-auto flex items-center space-x-4">
+                                            <div className=" mx-auto flex space-x-4">
                                                 <div className="shrink-0 ml-4">
                                                     <Link as="button">
                                                         <img

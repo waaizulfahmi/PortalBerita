@@ -9,6 +9,9 @@ const isNews = (news) => {
                 year: "numeric",
                 month: "long",
                 day: "numeric",
+                weekday: "long",
+                hour: "2-digit",
+                minute: "2-digit",
             };
             return new Date(dateString).toLocaleDateString("id", options);
         };
@@ -17,16 +20,15 @@ const isNews = (news) => {
             <div className="container my-5  mx-auto ml-0" key={i}>
                 <section className="mb-15 text-gray-800 text-center md:text-left">
                     {/* <h1>Berita Hot</h1> */}
-                    <a
+                    <Link
                         href={route("read", {
                             slug: data.slug,
                         })}
                         // href={`/readnews/${data.slug}`}
                         // href={route('readnews', ['slug' => data.slug])}
-                        as="button"
                         // data={{ news: data.slug }}
                     >
-                        <div className="flex flex-wrap mb-1/2">
+                        <div className="flex flex-wrap mb-1/2 ">
                             <div className="grow-0 shrink-0 basis-auto w-full md:w-3/12 px-3 mb-6 md:mb-0 ml-auto">
                                 {/* <Link href={route("readnews")} as="button"> */}
                                 <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
@@ -69,7 +71,8 @@ const isNews = (news) => {
                                 </div>
                                 <p className="text-gray-500 mb-6">
                                     <small>
-                                        Dipublikasi {formatDate(dateString)}{" "}
+                                        Dipublikasi {formatDate(dateString)}
+                                        {" WIB "}
                                         oleh
                                         <a href="" className="text-gray-900">
                                             &nbsp;{data.author}
@@ -84,7 +87,7 @@ const isNews = (news) => {
                                 </p>
                             </div>
                         </div>
-                    </a>
+                    </Link>
                 </section>
             </div>
         );

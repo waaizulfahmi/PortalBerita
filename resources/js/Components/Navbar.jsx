@@ -85,42 +85,82 @@ const Navbar = () => {
                                 </Link>
                             </li>
                             <li>
-                                <Link href={route("shownews")} as="button">
+                                <Link
+                                    href={route("shownews", {
+                                        category: "Olahraga",
+                                    })}
+                                    as="button"
+                                >
                                     Olahraga
                                 </Link>
                             </li>
                             <li>
-                                <Link href={route("shownews")} as="button">
+                                <Link
+                                    href={route("shownews", {
+                                        category: "Wisata",
+                                    })}
+                                    as="button"
+                                >
                                     Wisata
                                 </Link>
                             </li>
                             <li>
-                                <Link href={route("shownews")} as="button">
+                                <Link
+                                    href={route("shownews", {
+                                        category: "Kuliner",
+                                    })}
+                                    as="button"
+                                >
                                     Kuliner
                                 </Link>
                             </li>
                             <li>
-                                <Link href={route("shownews")} as="button">
+                                <Link
+                                    href={route("shownews", {
+                                        category: "Profile",
+                                    })}
+                                    as="button"
+                                >
                                     Profile
                                 </Link>
                             </li>
                             <li>
-                                <Link href={route("shownews")} as="button">
+                                <Link
+                                    href={route("shownews", {
+                                        category: "Bisnis",
+                                    })}
+                                    as="button"
+                                >
                                     Bisnis
                                 </Link>
                             </li>
                             <li>
-                                <Link href={route("shownews")} as="button">
+                                <Link
+                                    href={route("shownews", {
+                                        category: "Daerah",
+                                    })}
+                                    as="button"
+                                >
                                     Daerah
                                 </Link>
                             </li>
                             <li>
-                                <Link href={route("shownews")} as="button">
+                                <Link
+                                    href={route("shownews", {
+                                        category: "Nasional",
+                                    })}
+                                    as="button"
+                                >
                                     Nasional
                                 </Link>
                             </li>
                             <li>
-                                <Link href={route("shownews")} as="button">
+                                <Link
+                                    href={route("shownews", {
+                                        category: "Mancanegara",
+                                    })}
+                                    as="button"
+                                >
                                     Mancanegara
                                 </Link>
                             </li>
@@ -135,42 +175,82 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link href={route("shownews")} as="button">
+                            <Link
+                                href={route("shownews", {
+                                    category: "Olahraga",
+                                })}
+                                as="button"
+                            >
                                 Olahraga
                             </Link>
                         </li>
                         <li>
-                            <Link href={route("shownews")} as="button">
+                            <Link
+                                href={route("shownews", {
+                                    category: "Wisata",
+                                })}
+                                as="button"
+                            >
                                 Wisata
                             </Link>
                         </li>
                         <li>
-                            <Link href={route("shownews")} as="button">
+                            <Link
+                                href={route("shownews", {
+                                    category: "Kuliner",
+                                })}
+                                as="button"
+                            >
                                 Kuliner
                             </Link>
                         </li>
                         <li>
-                            <Link href={route("shownews")} as="button">
+                            <Link
+                                href={route("shownews", {
+                                    category: "Profile",
+                                })}
+                                as="button"
+                            >
                                 Profile
                             </Link>
                         </li>
                         <li>
-                            <Link href={route("shownews")} as="button">
+                            <Link
+                                href={route("shownews", {
+                                    category: "Bisnis",
+                                })}
+                                as="button"
+                            >
                                 Bisnis
                             </Link>
                         </li>
                         <li>
-                            <Link href={route("shownews")} as="button">
+                            <Link
+                                href={route("shownews", {
+                                    category: "Daerah",
+                                })}
+                                as="button"
+                            >
                                 Daerah
                             </Link>
                         </li>
                         <li>
-                            <Link href={route("shownews")} as="button">
+                            <Link
+                                href={route("shownews", {
+                                    category: "Nasional",
+                                })}
+                                as="button"
+                            >
                                 Nasional
                             </Link>
                         </li>
                         <li>
-                            <Link href={route("shownews")} as="button">
+                            <Link
+                                href={route("shownews", {
+                                    category: "Mancanegara",
+                                })}
+                                as="button"
+                            >
                                 Mancanegara
                             </Link>
                         </li>

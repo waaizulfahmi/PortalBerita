@@ -470,6 +470,152 @@ const MainNews = () => {
                     <aside className="w-full md:w-2/5 ">
                         <div className="p-2">
                             <u>
+                                <p className="text-black p-2 mt-3 lg:text-2x5 sm:text-xl font-bold">
+                                    Rekomendasi Untuk Anda
+                                </p>
+                            </u>
+                            <div className="p-2">
+                                <div className="grid grid-cols-2 gap-2">
+                                    <div className="card w-full  lg:w-60">
+                                        <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-2">
+                                            <img
+                                                className="w-full"
+                                                src="https://kulinerkota.com/wp-content/uploads/2021/01/gubug-makan-mang-engking.jpg"
+                                                alt="Gambar 1"
+                                            />
+                                            <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed">
+                                                <div className="flex justify-start items-end h-full">
+                                                    <div className="text-white m-3">
+                                                        <Link
+                                                            href={route(
+                                                                "readnews"
+                                                            )}
+                                                            as="button"
+                                                        >
+                                                            <h4 className="text-left text-base text-white font-bold ">
+                                                                Kuliner
+                                                                Purwokerto Yang
+                                                                Wajib Dicoba!
+                                                            </h4>
+                                                        </Link>
+                                                        <p className="text-xs">
+                                                            10 Mei 2023
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="card w-full  lg:w-60">
+                                        <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-2">
+                                            <img
+                                                className="w-full"
+                                                src="https://kulinerkota.com/wp-content/uploads/2021/01/gubug-makan-mang-engking.jpg"
+                                                alt="Gambar 1"
+                                            />
+                                            <a href="#!">
+                                                <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed">
+                                                    <div className="flex justify-start items-end h-full">
+                                                        <div className="text-white m-3">
+                                                            <Link
+                                                                href={route(
+                                                                    "readnews"
+                                                                )}
+                                                                as="button"
+                                                            >
+                                                                <h4 className="text-left text-base text-white font-bold ">
+                                                                    Kuliner
+                                                                    Purwokerto
+                                                                    Yang Wajib
+                                                                    Dicoba!
+                                                                </h4>
+                                                            </Link>
+                                                            <p className="text-xs">
+                                                                10 Mei 2023
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div className="card w-full  lg:w-60">
+                                        <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-2">
+                                            <img
+                                                className="w-full"
+                                                src="https://kulinerkota.com/wp-content/uploads/2021/01/gubug-makan-mang-engking.jpg"
+                                                alt="Gambar 1"
+                                            />
+                                            <a href="#!">
+                                                <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed">
+                                                    <div className="flex justify-start items-end h-full">
+                                                        <div className="text-white m-3">
+                                                            <Link
+                                                                href={route(
+                                                                    "readnews"
+                                                                )}
+                                                                as="button"
+                                                            >
+                                                                <h4 className="text-left text-base text-white font-bold ">
+                                                                    Kuliner
+                                                                    Purwokerto
+                                                                    Yang Wajib
+                                                                    Dicoba!
+                                                                </h4>
+                                                            </Link>
+                                                            <p className="text-xs">
+                                                                10 Mei 2023
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div className="card w-full  lg:w-60">
+                                        <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-2">
+                                            <img
+                                                className="w-full"
+                                                src="https://kulinerkota.com/wp-content/uploads/2021/01/gubug-makan-mang-engking.jpg"
+                                                alt="Gambar 1"
+                                            />
+                                            <a href="#!">
+                                                <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed">
+                                                    <div className="flex justify-start items-end h-full">
+                                                        <div className="text-white m-3">
+                                                            <Link
+                                                                href={route(
+                                                                    "readnews"
+                                                                )}
+                                                                as="button"
+                                                            >
+                                                                <h4 className="text-left text-base text-white font-bold ">
+                                                                    Kuliner
+                                                                    Purwokerto
+                                                                    Yang Wajib
+                                                                    Dicoba!
+                                                                </h4>
+                                                            </Link>
+                                                            <p className="text-xs">
+                                                                10 Mei 2023
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr />
+
+                        <div className="p-2">
+                            <u>
                                 <p className="text-black p-3 ml-3 lg:text-2xl sm:text-xl font-bold">
                                     Berita Kuliner
                                 </p>

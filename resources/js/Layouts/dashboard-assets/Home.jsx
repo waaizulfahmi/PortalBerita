@@ -1,0 +1,5 @@
+const Home = () => {
+    return <div>Ini Home</div>;
+};
+
+export default Home;

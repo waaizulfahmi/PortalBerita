@@ -3,6 +3,8 @@ import ListItem from "@tiptap/extension-list-item";
 import TextStyle from "@tiptap/extension-text-style";
 import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
+import { useState, useEffect } from "react";
+
 import React from "react";
 import Underline from "@tiptap/extension-underline";
 import {
@@ -143,15 +145,23 @@ const MenuBar = ({ editor }) => {
     );
 };
 
-const Tiptap = ({ setDesc }) => {
+const TiptapPost = ({ setDesc }) => {
+    // const describe = desc;
+    // console.log(describe);
     const editor = useEditor({
         extensions: [StarterKit, Underline],
         content: ``,
+        // setContent: describe,
         onUpdate: ({ editor }) => {
             const html = editor.getHTML();
             setDesc(html);
         },
     });
+    // useEffect(() => {
+    //     // this is just an example. do whatever you want to do here
+    //     // to retrieve your editors content from somewhere
+    //     editor.commands.setContent(describe);
+    // }, [editor]);
 
     return (
         <div className="text-editor">
@@ -161,4 +171,4 @@ const Tiptap = ({ setDesc }) => {
     );
 };
 
-export default Tiptap;
+export default TiptapPost;

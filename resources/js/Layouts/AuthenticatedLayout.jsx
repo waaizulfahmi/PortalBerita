@@ -1,11 +1,13 @@
 import { useState } from "react";
 import ApplicationLogo from "@/Components/ApplicationLogo";
 import Dropdown from "@/Components/Dropdown";
-import NavLink from "@/Components/NavLink";
+import { NavLink } from "react-router-dom";
 import ResponsiveNavLink from "@/Components/ResponsiveNavLink";
 import { Head, Link } from "@inertiajs/react";
 import HeaderDashboard from "./dashboard-assets/HeaderDashboard";
 import { FaGithubSquare } from "react-icons/fa";
+import { useEffect } from "react";
+
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 // import { FaBeer } from "react-icons/fa";
@@ -16,18 +18,35 @@ import { FaGithubSquare } from "react-icons/fa";
 export default function Authenticated({ auth, header, children }) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] =
         useState(false);
+    const current = new Date();
+    const date = `${current.toLocaleString("id", {
+        weekday: "long",
+    })}, ${current.getDate()} ${current.toLocaleString("id", {
+        month: "long",
+    })} ${current.getFullYear()}  ${current.toLocaleTimeString("id", {
+        hour: "2-digit",
+        minute: "2-digit",
+    })} WIB`;
+
+    const [titlePage, setTitle] = useState("");
+
+    useEffect(() => {
+        setTitle(document.title);
+    });
+    console.log(titlePage);
 
     return (
         <div>
-            <Head title="DashBoard"></Head>
+            <Head title="Dashboard "></Head>
             <meta charSet="UTF-8" />
             <meta
                 name="viewport"
                 content="width=device-width, initial-scale=1.0"
             />
-            <title>Tailwind Admin Template</title>
+            {/* <title>{{ header }}</title> */}
             <meta name="author" content="David Grzyb" />
             <meta name="description" content />
+            {/* <title>"Dashboard</title> */}
             {/* Tailwind */}
             <link
                 href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
@@ -53,37 +72,56 @@ export default function Authenticated({ auth, header, children }) {
                             href="index.html"
                             className="text-white text-3xl font-semibold uppercase hover:text-gray-300"
                         >
-                            <FaGithubSquare />
+                            PanelWarta
                         </a>
-                        <button className="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
-                            <i className="fas fa-plus mr-3"></i> New Post
-                        </button>
+                        <Link href="/dashboard/post/new">
+                            <button className="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
+                                <i className="fas fa-plus mr-3"></i> New Post
+                            </button>
+                        </Link>
                     </div>
                     <nav className="text-white text-base font-semibold pt-3">
-                        <a
-                            href="#home"
-                            className="flex items-center active-nav-link text-white py-4 pl-6 nav-item"
+                        <Link
+                            // className={`flex items-center  text-white py-4 pl-6 nav-item `}
+                            className={
+                                "flex items-center  text-white py-4 pl-6 nav-item  " +
+                                (titlePage == "Dashboard - Laravel"
+                                    ? "active-nav-link"
+                                    : " ")
+                            }
+                            href="/dashboard"
                         >
                             <i className="fas fa-tachometer-alt mr-3"></i>
                             {/*  */}
                             Dashboard
-                        </a>
-                        <a
-                            href="#news"
-                            className="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
+                        </Link>
+
+                        <Link
+                            href="/dashboard/post/new"
+                            className={
+                                "flex items-center  text-white py-4 pl-6 nav-item  " +
+                                (titlePage == "Buat Postingan - Laravel"
+                                    ? "active-nav-link"
+                                    : " ")
+                            }
                         >
                             <i className="fas fa-sticky-note mr-3"></i>
                             {/* <FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon> */}
                             Buat Postingan
-                        </a>
-                        <a
-                            href="#"
-                            className="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
+                        </Link>
+                        <Link
+                            href="/dashboard/list/show"
+                            className={
+                                "flex items-center  text-white py-4 pl-6 nav-item  " +
+                                (titlePage == "Daftar Postingan - Laravel"
+                                    ? "active-nav-link"
+                                    : " ")
+                            }
                         >
                             <i className="fas fa-table mr-3"></i>
                             Daftar Postingan
-                        </a>
-                        <a
+                        </Link>
+                        {/* <a
                             href="#"
                             className="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
                         >
@@ -103,7 +141,7 @@ export default function Authenticated({ auth, header, children }) {
                         >
                             <i className="fas fa-calendar mr-3"></i>
                             Calendar
-                        </a>
+                        </a> */}
                     </nav>
                     {/* <a
                     href="#"
@@ -117,6 +155,13 @@ export default function Authenticated({ auth, header, children }) {
                 <div className="w-full flex flex-col h-screen overflow-y-hidden">
                     {/* <!-- Desktop Header --> */}
                     <header className="w-full items-center bg-white py-2 px-6 hidden sm:flex">
+                        <img
+                            width="25"
+                            height="25"
+                            src="https://img.icons8.com/ios/50/calendar--v1.png"
+                            alt="calendar--v1"
+                        />
+                        <h6 className="text-sm mt-5 ml-2">{date}</h6>
                         <div className="w-1/2"></div>
                         <div className="relative w-1/2 flex justify-end mx-3 ">
                             <button className="btn btn-ghost btn-circle mt-2">
@@ -244,73 +289,32 @@ export default function Authenticated({ auth, header, children }) {
 
                         {/* <!-- Dropdown Nav --> */}
                         <nav className="flex flex-col pt-4">
-                            <a
-                                href="#"
-                                className="flex items-center active-nav-link text-white py-2 pl-4 nav-item"
+                            <Link
+                                className={
+                                    "flex items-center active-nav-link text-white py-4 pl-6 nav-item "
+                                }
+                                href="/dashboard"
                             >
                                 <i className="fas fa-tachometer-alt mr-3"></i>
+                                {/*  */}
                                 Dashboard
-                            </a>
-                            <a
-                                href="#"
-                                className="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"
+                            </Link>
+
+                            <Link
+                                href="/dashboard/post/new"
+                                className="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
                             >
                                 <i className="fas fa-sticky-note mr-3"></i>
-                                Blank Page
-                            </a>
-                            <a
-                                href="#"
-                                className="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"
+                                {/* <FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon> */}
+                                Buat Postingan
+                            </Link>
+                            <Link
+                                href="/dashboard/list/show"
+                                className="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
                             >
                                 <i className="fas fa-table mr-3"></i>
-                                Tables
-                            </a>
-                            <a
-                                href="#"
-                                className="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"
-                            >
-                                <i className="fas fa-align-left mr-3"></i>
-                                Forms
-                            </a>
-                            <a
-                                href="#"
-                                className="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"
-                            >
-                                <i className="fas fa-tablet-alt mr-3"></i>
-                                Tabbed Content
-                            </a>
-                            <a
-                                href="#"
-                                className="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"
-                            >
-                                <i className="fas fa-calendar mr-3"></i>
-                                Calendar
-                            </a>
-                            <a
-                                href="#"
-                                className="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"
-                            >
-                                <i className="fas fa-cogs mr-3"></i>
-                                Support
-                            </a>
-                            <a
-                                href="#"
-                                className="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"
-                            >
-                                <i className="fas fa-user mr-3"></i>
-                                My Account
-                            </a>
-                            <a
-                                href="#"
-                                className="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"
-                            >
-                                <i className="fas fa-sign-out-alt mr-3"></i>
-                                Sign Out
-                            </a>
-                            <button className="w-full bg-white cta-btn font-semibold py-2 mt-3 rounded-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
-                                <i className="fas fa-arrow-circle-up mr-3"></i>{" "}
-                                Upgrade to Pro!
-                            </button>
+                                Daftar Postingan
+                            </Link>
                         </nav>
                         {/* <!-- <button className="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
                 <i className="fas fa-plus mr-3"></i> New Report
@@ -319,9 +323,6 @@ export default function Authenticated({ auth, header, children }) {
 
                     <div className="w-full overflow-x-hidden border-t flex flex-col">
                         <div className="w-full flex-grow p-6">
-                            <h1 className="text-3xl text-black pb-6">
-                                Dashboard
-                            </h1>
                             <main>{children}</main>
                             {/* <div className="flex flex-wrap mt-6">
                                 <div className="w-full lg:w-1/2 pr-0 lg:pr-2">
@@ -407,13 +408,13 @@ export default function Authenticated({ auth, header, children }) {
                         </div>
 
                         <footer className="w-full bg-white text-right p-4">
-                            2023 | Built by{" "}
+                            2023 |{" "}
                             <a
                                 target="_blank"
                                 href="https://davidgrzyb.com"
                                 className="underline"
                             >
-                                David Grzyb
+                                Panel Warta
                             </a>
                             .
                         </footer>
@@ -432,20 +433,6 @@ export default function Authenticated({ auth, header, children }) {
                 crossOrigin
                 src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
             ></script>
-            {/* <script
-                src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
-                defer
-            ></script> */}
-            {/* <script
-                src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
-                integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs="
-                crossOrigin="anonymous"
-            ></script>
-            <script
-                src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
-                integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI="
-                crossOrigin="anonymous"
-            ></script> */}
         </div>
 
         // LAMAAA

@@ -196,4 +196,18 @@ class NewsController extends Controller
      
         return redirect('/dashboard')->with('slug', $slug);
      }
+
+     public function search(Request $request){
+        if($request->has('search')){
+            $newsResult = News::where('author', auth()->user()->name)->where('title', 'LIKE', '%'.$request->search.'%')->get();
+        }
+        else{
+            $newsResult = News::where('author', auth()->user()->name)->get();
+        }
+        return Inertia::render('DashboardPages/ListPage', [
+            'myNews' => $newsResult,
+
+        ]);
+
+     }
 }

@@ -36,6 +36,7 @@ Route::get('/dashboard/list/show', [NewsController::class, 'show'])->middleware(
 Route::get('/dashboard/edit', [NewsController::class, 'edit'])->middleware(['auth', 'verified'])->name('edit.news');
 Route::post('/dashboard/update', [NewsController::class, 'update'])->middleware(['auth', 'verified'])->name('update.news');
 Route::post('/dashboard/delete', [NewsController::class, 'destroy'])->middleware(['auth', 'verified'])->name('delete.news');
+Route::get('/dashboard/search', [NewsController::class, 'search'])->middleware(['auth', 'verified'])->name('search.news');
 
 Route::get('/', [NewsController::class, 'index'])->name('home');
 // Route::post('/news', [NewsController::class, 'store'])->middleware(['auth', 'verified'])->name('create.news');

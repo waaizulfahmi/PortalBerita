@@ -20,12 +20,12 @@ const NewNews = () => {
                                             {/* <h1 className="mb-5 text-5xl font-bold">
                                                 Hello there
                                             </h1> */}
-                                            <h4 className="mb-3 ml-7 sm:ml-10 lg:ml-24">
+                                            <Link href={route("readnews")} as="button"><h4 className="text-left mb-3 ml-7 sm:ml-10 lg:ml-24">
                                             Eksklusif! Nadiem Jawab
                                                     Tudingan Soal Organisasi
                                                     Bayangan Kemendikbudristek Eksklusif!
-                                            </h4>
-                                            <h5 className="ml-7 lg:ml-24 sm:ml-10 text-sm md:text-lg lg:text-xl">
+                                            </h4></Link>
+                                            <h5 className="text-left ml-7 lg:ml-24 sm:ml-10 text-sm md:text-lg lg:text-xl">
                                             Nasional | 13.01.2023
                                             </h5>
                                         </div>
@@ -62,11 +62,11 @@ const NewNews = () => {
                                             {/* <h1 className="mb-5 text-5xl font-bold">
                                                 Hello there
                                             </h1> */}
-                                            <h4 className="mb-3 ml-7 sm:ml-10 lg:ml-24">
+                                            <Link href={route("readnews")} as="button"><h4 className="text-left mb-3 ml-7 sm:ml-10 lg:ml-24">
                                             Eksklusif! Nadiem Jawab
                                                     Tudingan Soal Organisasi
                                                     Bayangan Kemendikbudristek Eksklusif!
-                                            </h4>
+                                            </h4></Link>
                                             <h5 className="ml-7 lg:ml-24 sm:ml-10 text-sm md:text-lg lg:text-xl">
                                             Nasional | 13.01.2023
                                             </h5>
@@ -104,11 +104,11 @@ const NewNews = () => {
                                             {/* <h1 className="mb-5 text-5xl font-bold">
                                                 Hello there
                                             </h1> */}
-                                            <h4 className="mb-3 ml-7 sm:ml-10 lg:ml-24">
+                                            <Link href={route("readnews")} as="button"><h4 className="text-left mb-3 ml-7 sm:ml-10 lg:ml-24">
                                             Eksklusif! Nadiem Jawab
                                                     Tudingan Soal Organisasi
                                                     Bayangan Kemendikbudristek Eksklusif!
-                                            </h4>
+                                            </h4></Link>
                                             <h5 className="ml-7 lg:ml-24 sm:ml-10 text-sm md:text-lg lg:text-xl">
                                             Nasional | 13.01.2023
                                             </h5>
@@ -146,11 +146,11 @@ const NewNews = () => {
                                             {/* <h1 className="mb-5 text-5xl font-bold">
                                                 Hello there
                                             </h1> */}
-                                            <h4 className="mb-3 ml-7 sm:ml-10 lg:ml-24">
+                                            <Link href={route("readnews")} as="button"><h4 className="text-left mb-3 ml-7 sm:ml-10 lg:ml-24">
                                             Eksklusif! Nadiem Jawab
                                                     Tudingan Soal Organisasi
                                                     Bayangan Kemendikbudristek Eksklusif!
-                                            </h4>
+                                            </h4></Link>
                                             <h5 className="ml-7 lg:ml-24 sm:ml-10 text-sm md:text-lg lg:text-xl">
                                             Nasional | 13.01.2023
                                             </h5>

@@ -36,7 +36,7 @@ export default function Homepage(props) {
                 <NewNews news={props.news.data} />
             </div>
             <hr className="my-3 border-3" />
-           
+
             <u>
                 <h1 className="text-black mt-4 lg:mb-8 mb-4 lg:text-2xl sm:text-xl text-left font-bold lg:ml-28 ml-3 sm:ml-12 md:ml-9">
                     Berita Terbaru
@@ -47,20 +47,22 @@ export default function Homepage(props) {
                 <Paginator meta={props.news.meta} />
             </div>
             <hr className="mt-4 md:mt-6 lg:mt-6" />
-            <u>
-                <a href="">
+            <Link href={route("shownews")} as="button">
+                <u>
                     <h1 className="text-black text-lg mb-5 mt-4 ml-3 md:ml-28 lg:ml-30 lg:text-2xl md:text-xl font-bold">
                         Berita Olahraga
                     </h1>
-                </a>
-            </u>
+                </u>
+            </Link>
             <NewGrid />
-            <hr className="mt-4 md:mt-6 lg:mt-6"/>
-            <u>
-                <h1 className="text-black mt-4 mb-3  lg:text-2xl sm:text-xl text-left font-bold ml-4 md:ml-6 lg:ml-28">
-                    Berita Mancanegara
-                </h1>
-            </u>
+            <hr className="mt-4 md:mt-6 lg:mt-6" />
+            <Link href={route("shownews")} as="button">
+                <u>
+                    <h1 className="text-black mt-4 mb-3  lg:text-2xl sm:text-xl text-left font-bold ml-4 md:ml-6 lg:ml-28">
+                        Berita Mancanegara
+                    </h1>
+                </u>
+            </Link>
             <div dir="rtl">
                 <Link href={route("shownews")} as="button">
                     <u>
@@ -73,12 +75,14 @@ export default function Homepage(props) {
             <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4">
                 <NewsList news={props.news.data} />
             </div>
-            <hr className="mt-4 md:mt-6 lg:mt-6"/>
-            <u>
-                <h1 className="text-black mt-4 mb-6  lg:text-2xl sm:text-xl text-left font-bold ml-4 md:ml-6 lg:ml-28">
-                    Berita Wisata
-                </h1>
-            </u>
+            <hr className="mt-4 md:mt-6 lg:mt-6" />
+            <Link href={route("shownews")} as="button">
+                <u>
+                    <h1 className="text-black mt-4 mb-6  lg:text-2xl sm:text-xl text-left font-bold ml-4 md:ml-6 lg:ml-28">
+                        Berita Wisata
+                    </h1>
+                </u>
+            </Link>
             <ListNewsRow />
             {/* <MainNews/> */}
             {/* <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
@@ -114,8 +118,6 @@ export default function Homepage(props) {
             </div>
             <hr /> */}
 
-            
-             
             {/* <button className="btn" onClick={routeChange}>
                 Link to ShowNews
             </button> */}

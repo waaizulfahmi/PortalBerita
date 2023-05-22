@@ -1,7 +1,7 @@
 import { Link } from "@inertiajs/react";
 
 const NewDesain = () => {
-    return (
+    return ( 
         <div className="container mx-auto">
             <div className="box-border gap-4">
                 <div className="grid lg:grid-cols-2 lg:grid-rows-4 gap-4">

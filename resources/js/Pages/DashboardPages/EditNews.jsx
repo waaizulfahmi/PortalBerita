@@ -16,7 +16,12 @@ export default function EditNews(props) {
     const [image, setImage] = useState("");
 
     const image2 = props.myNews.image;
-    console.log(image2);
+    const myArray = image2.split("/");
+    const image3 = myArray[1];
+
+    // document.getElementById("demo").innerHTML = myArray[1];
+    console.log(myArray);
+    console.log(image3);
 
     const handleSubmit = () => {
         const data = {
@@ -120,6 +125,7 @@ export default function EditNews(props) {
                                     *harus diisi
                                 </span>
                             </label>
+
                             <div className="m-2 w-full">
                                 <TiptapEdit
                                     desc={props.myNews.description}
@@ -227,8 +233,8 @@ export default function EditNews(props) {
                                             setImage(image.target.files[0])
                                         }
                                         className="file-input file-input-bordered file-input-info  visible"
-                                        defaultValue={image}
-                                        // value={("/storage/", image)}
+                                        // defaultValue={image3}
+                                        // value={image3}
                                         accept="image/*"
                                     />
                                 </label>

@@ -22,7 +22,7 @@ class ShowNewsController extends Controller
         ]);
         dd($tampilkan);
 
-        // return route('readnews')->with('tampilkan', $tampilkan);
+    // return route('readnews')->with('tampilkan', $tampilkan);
 
         // $myNews = $news::where('author', auth()->user()->name)->get();
 

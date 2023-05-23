@@ -66,27 +66,11 @@ class NewsController extends Controller
         // $path = '';
         if($request->hasFile('image')) {
             $file = $request->file('image')->store('post-images');
-            // Get the Image Name
-            // $fileName = $file->getClientOriginalName().'.'.$file->getClientOriginalExtension();
-            // // Set the Filepath
-            // $path = 'uploads/'.$fileName;
-            // // Move the file to the upload Folder
-            // $file = $file->move($path, $fileName);
-            // dd($path);
+
         }
 
-        // $news->image = time().'.'.$request->file->extension(); 
-        // $request->file->move(public_path('uploads'), $news->image);
-
-        // $fileName = time().'.'.$request->file->extension();  
-        //  = $request->file('images'); 
-        // $news->image = $request->image->store('public/images');
-        // $fileName = $news->image->getClientOriginalName();
-        // $finalName = date('His') . $fileName;
-
-        // $request->file('image')->storeAs('images/', $finalName, 'public');
-
         $news->image = $file;
+
        
 
         $news->save();
@@ -141,29 +125,16 @@ class NewsController extends Controller
      */
     public function update(Request $request, News $news)
     {
-        // $news->update($request->all());
-
-        // return response()->json([
-        //     'status' => true,
-        //     'message' => "Post Updated successfully!",
-        //     'post' => $news
-        // ], 200);
-        // if($request->hasFile('image')) {
-        //     $file = $request->file('image')->store('post-images');
-        //     // Get the Image Name
-        //     // $fileName = $file->getClientOriginalName().'.'.$file->getClientOriginalExtension();
-        //     // // Set the Filepath
-        //     // $path = 'uploads/'.$fileName;
-        //     // // Move the file to the upload Folder
-        //     // $file = $file->move($path, $fileName);
-        //     // dd($path);
-        // }
+        $setImage = $request->input('image');
+        // dd($setImage);
+    //   dd($news::where('image', $request->input('image'))->first());
+        
 
         News::where('id', $request->id)->update([
             'title' => $request->title,
             'description' => $request->description,
             'category' => $request->category,
-            'image' => $request->file('image')->store('post-images'), 
+            'image' => $request->hasFile('image') ? $request->file('image')->store('post-images') : $setImage, 
             'slug' => Str::slug($request->title)
         ]);
         return to_route('my.news')->with('message', 'Updata Berita Berhasil');
@@ -191,11 +162,7 @@ class NewsController extends Controller
         //     'news' => $news ```````````````````````````
         // ]);
     }
-    public function getDataBySlug($slug){
-        $news = News::where('slug',$slug)->firstOrFail();
-     
-        return redirect('/dashboard')->with('slug', $slug);
-     }
+
 
      public function search(Request $request){
         if($request->has('search')){

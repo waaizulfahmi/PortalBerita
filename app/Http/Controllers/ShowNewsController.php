@@ -58,7 +58,9 @@ class ShowNewsController extends Controller
         else{
             $newsResult = News::all();
         }
+        $mencari = "Mencari ";
         return Inertia::render('ShowNews/ShowNews', [
+            'title' => $mencari.$request->search,
             'news' => $newsResult,
 
         ]);

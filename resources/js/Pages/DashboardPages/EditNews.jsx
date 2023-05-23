@@ -23,6 +23,10 @@ export default function EditNews(props) {
     console.log(myArray);
     console.log(image3);
 
+    const sendDesc = (data) => {
+        setDescription(data);
+    };
+
     const handleSubmit = () => {
         const data = {
             id: props.myNews.id,
@@ -132,7 +136,8 @@ export default function EditNews(props) {
                                     onChange={(description) =>
                                         setDescription(description.target.value)
                                     }
-                                    value={description}
+                                    setNewDesc={sendDesc}
+                                    // value={description}
                                     required
                                 />
                             </div>

@@ -61,7 +61,7 @@ const ListPage = (props) => {
                                 <Link
                                     href={route("edit.news")}
                                     method="get"
-                                    data={{ id: news.id, image: news.image }}
+                                    data={{ id: news.id }}
                                     as="button"
                                 >
                                     <div>

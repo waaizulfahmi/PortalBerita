@@ -164,7 +164,7 @@ export default function Authenticated({ auth, header, children }) {
                         <h6 className="text-sm mt-5 ml-2">{date}</h6>
                         <div className="w-1/2"></div>
                         <div className="relative w-1/2 flex justify-end mx-3 ">
-                            <button className="btn btn-ghost btn-circle mt-2">
+                            {/* <button className="btn btn-ghost btn-circle mt-2">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     className="h-5 w-5"
@@ -179,7 +179,7 @@ export default function Authenticated({ auth, header, children }) {
                                         d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                                     />
                                 </svg>
-                            </button>
+                            </button> */}
                             <button className="btn btn-ghost btn-circle mt-2">
                                 <div className="indicator">
                                     <svg

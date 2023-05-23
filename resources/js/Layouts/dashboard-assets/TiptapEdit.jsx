@@ -147,7 +147,7 @@ const MenuBar = ({ editor }) => {
 
 // const { onChange } = props;
 
-const TiptapEdit = ({ desc }) => {
+const TiptapEdit = ({ desc, setNewDesc }) => {
     const describe = desc;
     console.log(describe);
     const editor = useEditor({
@@ -155,8 +155,8 @@ const TiptapEdit = ({ desc }) => {
         content: describe,
         // setContent: describe,
         onUpdate: ({ editor }) => {
-            const html = editor.getHTML();
-            desc(html);
+            setNewDesc(editor?.getHTML());
+            //console.log(newPostRichText);
         },
     });
     // editor.on("update", onUpdate);

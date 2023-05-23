@@ -32,7 +32,24 @@ const Read = (props) => {
             <main className="max-w-7xl mx-auto ">
                 <div className="box-border flex flex-wrap">
                     <div className="row-span-3  container my-5  mx-auto ml-0 md:w-2/3">
-                        <h5 className="text-gray-500 mb-4 ml-3">
+                        <div className="text-sm breadcrumbs ml-3">
+                            <ul>
+                                <li>
+                                    <Link href="/">Beranda</Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        href={
+                                            ("/category/", props.news.category)
+                                        }
+                                    >
+                                        {props.news.category}
+                                    </Link>
+                                </li>
+                                <li>{props.news.title}</li>
+                            </ul>
+                        </div>
+                        <h5 className="text-gray-500 mb-4 ml-3 mt-6">
                             {props.news.category}
                         </h5>
                         <h1 className="font-bold text-4xl mb-3 ml-3">

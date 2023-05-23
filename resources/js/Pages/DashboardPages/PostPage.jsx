@@ -53,9 +53,9 @@ const PostPage = (props) => {
             <Head title="Buat Postingan"></Head>
             {/* <Head>Post</Head> */}
             <div>
-                <div className="py-12">
+                <div className="py-4">
                     <div className="max-w-7xl mx-auto my-2 sm:px-6 lg:px-8">
-                        <h1 className="text-3xl text-black pb-6 mb-12">
+                        <h1 className="text-3xl text-black pb-6 mb-10">
                             Tambahkan Postingan
                         </h1>
                         <div>

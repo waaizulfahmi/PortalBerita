@@ -54,9 +54,9 @@ export default function EditNews(props) {
             {/* <Head>Post</Head> */}
             <div>
                 <Head title="Edit Postingan"></Head>
-                <div className="py-12">
+                <div className="py-6">
                     <div className="max-w-7xl mx-auto my-2 sm:px-6 lg:px-8">
-                        <h1 className="text-3xl text-black pb-6 mb-12">
+                        <h1 className="text-3xl text-black pb-6 mb-10">
                             Edit Postingan
                         </h1>
                         <div>

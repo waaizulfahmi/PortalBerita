@@ -50,4 +50,18 @@ class ShowNewsController extends Controller
         //     'news' => $news 
         // ]);
     }
+
+   public function search(Request $request){
+        if($request->has('search')){
+            $newsResult = News::where('title', 'LIKE', '%'.$request->search.'%')->get();
+        }
+        else{
+            $newsResult = News::all();
+        }
+        return Inertia::render('ShowNews/ShowNews', [
+            'news' => $newsResult,
+
+        ]);
+
+     }
 }

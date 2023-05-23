@@ -23,11 +23,14 @@ const Navbar = () => {
                 </div>
                 <div className="flex-none gap-3">
                     <div className="form-control">
-                        <input
-                            type="text"
-                            placeholder="Search"
-                            className="input input-bordered"
-                        />
+                        <form action="/search" method="get">
+                            <input
+                                type="search"
+                                name="search"
+                                placeholder="Cari..."
+                                className="input input-bordered"
+                            />
+                        </form>
                     </div>
                     <div className="dropdown dropdown-end">
                         <label

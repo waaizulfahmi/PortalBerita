@@ -26,6 +26,7 @@ Route::get('/read/{slug}', [ShowNewsController::class, 'show'],  function ($slug
 })->name('read')->withoutScopedBindings();
 
 Route::get('/category/{category}', [ShowNewsController::class, 'index'])->name('shownews');
+Route::get('/search', [ShowNewsController::class, 'search'])->name('search.data');
 
 
 // ROUTE DASHBOARD

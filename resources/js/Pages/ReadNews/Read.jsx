@@ -31,6 +31,21 @@ const Read = (props) => {
         <div className="container mx-auto ">
             <div className="box-border flex flex-wrap ">
                 <div className="row-span-3 my-5 md:w-3/5">
+                    <div className="text-sm breadcrumbs ml-3">
+                        <ul>
+                            <li>
+                                <Link href="/">Beranda</Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href={("/category/", props.news.category)}
+                                >
+                                    {props.news.category}
+                                </Link>
+                            </li>
+                            <li>{props.news.title}</li>
+                        </ul>
+                    </div>
                     <h5 className="text-gray-500 mb-4 ml-2">
                         {props.news.category}
                     </h5>
@@ -238,11 +253,11 @@ const Read = (props) => {
                     </div>
                     <hr />
                 </div>
-                <aside className="w-full md:w-2/5 ">
-                    <div className="container mx-auto">
+                <aside className="w-full md:w-2/5 mt-5">
+                    <div className="container mx-auto rounded-sm">
                         <div class="flex items-center justify-center">
-                            <div class="flex flex-col bg-violet-100 lg:ml-10 p-4 mt-0 w-full max-w-lg">
-                                <div class="font-bold text-xl">Indonesia</div>
+                            <div class="flex flex-col bg-violet-100 lg:ml-10 p-4 mt-0 w-full max-w-lg rounded-xl">
+                                <div class="font-bold text-xl">Purwokerto</div>
                                 <div class="text-sm text-gray-500">
                                     Thursday 10 May 2020
                                 </div>

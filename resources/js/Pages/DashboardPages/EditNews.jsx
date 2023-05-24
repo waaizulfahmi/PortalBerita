@@ -110,16 +110,6 @@ export default function EditNews(props) {
                             />
                         </div>
 
-                        {/* <div className="ProseMirror">{parser(desc)}</div> */}
-                        {/* <input
-                        type="text"
-                        placeholder="Deskripsi"
-                        className="m-2 input input-bordered w-full "
-                        value={description}
-                        onChange={(description) =>
-                            setDescription(description.target.value)
-                        }
-                    /> */}
                         <div className=" w-full mb-5">
                             <label className="label">
                                 <span className="label-text">
@@ -143,17 +133,6 @@ export default function EditNews(props) {
                             </div>
                         </div>
 
-                        {/* <input type="text" /> */}
-                        {/* <SelectForm onChange={handleChangeSelect} /> */}
-                        {/* <input
-                        type="text"
-                        placeholder="Kategori"
-                        className="m-2 input input-bordered w-full "
-                        value={category}
-                        onChange={(category) =>
-                            setCategory(category.target.value)
-                        }
-                    /> */}
                         <div className=" form-control w-full max-w-xs mb-5 ">
                             <label className="label">
                                 <span className="label-text">

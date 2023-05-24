@@ -33,31 +33,31 @@ export default function Homepage(props) {
             {/* <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4 static">
                 <MainNews />
             </div> */}
-            <u>
+            {/* <u>
                 <h1 className="text-black mt-4 lg:mb-8 mb-4 lg:text-2xl sm:text-xl text-left font-bold lg:ml-28 ml-3 sm:ml-12 md:ml-9">
                     Berita Terbaru
                 </h1>
             </u>
             <NewDesain />
             <hr />
-            <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
+            <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center"> */}
                 {/* <NewNews news={props.news.data} /> */}
-            </div>
-            <hr />
+            {/* </div>
+            <hr /> */}
             {/* <u>
                 <h1 className="text-black p-3 lg:text-2xl sm:text-xl font-bold ml-32">
                     Berita Wisata
                 </h1>
             </u> */}
-            <u>
+            {/* <u>
                 <a href="">
                     <h1 className="text-black text-lg mb-5 mt-4 ml-3 md:ml-28 lg:ml-30 lg:text-2xl md:text-xl font-bold">
                         Berita Olahraga
                     </h1>
                 </a>
             </u>
-            <NewGrid />
-            <div dir="rtl">
+            <NewGrid /> */}
+            {/* <div dir="rtl"> */}
                 {/* <Link href={route("shownews")} as="button" /> */}
                 {/* <MainNews /> */}
                 <hr />
@@ -90,11 +90,10 @@ export default function Homepage(props) {
                 {/* <hr />
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
                 {/* <RegionalNews news={props.news.data} /> */}
-            </div>
-            <hr />
+            {/* </div> */}
             <u>
-                <h1 className="text-black mt-4 mb-3  lg:text-2xl sm:text-xl text-left font-bold ml-32">
-                    Berita Mancanegara
+                <h1 className="text-black mt-4 lg:mt-6 mb-2 lg:mb-3  lg:text-2xl text-xl text-left font-bold lg:ml-28 ml-4">
+                    Berita Terbaru
                 </h1>
             </u>
             {/* <div dir="rtl">
@@ -106,27 +105,27 @@ export default function Homepage(props) {
                     </Link>
                 </u>
             </div> */}
-            <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4">
+            <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch lg:gap-10 gap-5 items-center">
                 <NewsList news={props.news.data} />
             </div>
-            <hr />
-            <u>
-                {/* <Link href={route("readnews")} as="button">
+            
+            {/* <u>
+                <Link href={route("readnews")} as="button">
                     <h1 className="text-black p-5 lg:text-2xl sm:text-xl font-bold ml-32">
                         Berita Nasional
                     </h1>
-                </Link> */}
+                </Link>
                 <h1 className="text-black mt-4 mb-3  lg:text-2xl sm:text-xl text-left font-bold ml-32">
                     Berita Nasional
                 </h1>
             </u>
-            <NewsListRow news={props.news.data} />
+            <NewsListRow news={props.news.data} /> */}
             {/* <button className="btn" onClick={routeChange}>
                 Link to ShowNews
             </button> */}
             <div className="flex justify-center items-center gap-5">
-                <Paginator meta={props.news.meta} />
-            </div>
+               <Paginator meta={props.news.meta} />
+            </div> 
             <Footer />
         </div>
     );

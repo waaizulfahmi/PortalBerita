@@ -16,7 +16,7 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $news = new NewsCollection(News::OrderByDesc('id')->paginate(5));
+        $news = new NewsCollection(News::OrderByDesc('id')->paginate(12));
         // // dd($news);
         // $news = News::all();
         return Inertia::render('Homepage', [
@@ -48,14 +48,14 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-    //     $news = News::create(
-    //         $request->all()
-                       
-    //     );
-    //     'description' => $request->description,
-    //     'category' => $request->category,
-    //     'image' => $request->image,
-    
+        //     $news = News::create(
+        //         $request->all()
+
+        //     );
+        //     'description' => $request->description,
+        //     'category' => $request->category,
+        //     'image' => $request->image,
+
         $news = new News();
         $news->title = $request->title;
         $news->description = $request->description;
@@ -64,7 +64,7 @@ class NewsController extends Controller
         $news->slug = Str::slug($request->title);
 
         // $path = '';
-        if($request->hasFile('image')) {
+        if ($request->hasFile('image')) {
             $file = $request->file('image')->store('post-images');
 
         }
@@ -116,7 +116,7 @@ class NewsController extends Controller
             'myNews' => $news->find($request->id)
         ]);
         return response()->json([
-            'news' => $news 
+            'news' => $news
         ]);
     }
 
@@ -150,7 +150,7 @@ class NewsController extends Controller
     {
         $news = News::find($request->id);
         $news->delete();
-        
+
         return to_route('my.news')->with('message', 'Data Berhasil Dihapus !');
         // return response()->json([
         //     'status' => true,
@@ -163,18 +163,16 @@ class NewsController extends Controller
         // ]);
     }
 
-
-     public function search(Request $request){
-        if($request->has('search')){
-            $newsResult = News::where('author', auth()->user()->name)->where('title', 'LIKE', '%'.$request->search.'%')->get();
-        }
-        else{
+    public function search(Request $request)
+    {
+        if ($request->has('search')) {
+            $newsResult = News::where('author', auth()->user()->name)->where('title', 'LIKE', '%' . $request->search . '%')->get();
+        } else {
             $newsResult = News::where('author', auth()->user()->name)->get();
         }
         return Inertia::render('DashboardPages/ListPage', [
             'myNews' => $newsResult,
 
         ]);
-
-     }
+    }
 }

@@ -11,6 +11,7 @@ import Category from "./Category";
 import News from "./News";
 import MainNews from "../MainNews";
 
+
 const ShowNews = (props) => {
     console.log(props);
     return (
@@ -24,7 +25,10 @@ const ShowNews = (props) => {
             </div>
             <div className="mb-8">
                 <Category news={props.news} />
+                <aside/>
             </div>
+
+
             {/* <News/> */}
             <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4">
                 {/* <NewsListRow /> */}

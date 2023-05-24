@@ -18,7 +18,7 @@ const Navbar = () => {
                         as="button"
                         className="btn btn-ghost normal-case text-4xl text-white"
                     >
-                        Panelwarta.id
+                        Panelwarta.<span className="text-orange-400">id</span>
                     </Link>
                 </div>
                 <div className="flex-none gap-3">

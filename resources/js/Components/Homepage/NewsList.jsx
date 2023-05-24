@@ -16,7 +16,8 @@ const isNews = (news) => {
         };
         return (
             <div
-                className="card w-full  lg:w-60 bg-base-100 shadow-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+                className="card w-full  lg:w-72 rounded-md bg-base-100 shadow-sm transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+                // transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300
                 key={i}
             >
                 <Link
@@ -29,20 +30,20 @@ const isNews = (news) => {
                     <img
                         src={"/storage/" + data.image}
                         alt="Shoes"
-                        height="50%"
+                        className="items-center w-full h-44 lg:w-58 lg:h-50 rounded-md"
                     />
-                    <div className="card-body">
+                    <div className="body">
                         {/* <Link href={route("readnews")} as="button"> */}
-                        <h2 className="card-title ">
+                        <h2 className="card-title lg:text-xl text-lg ml-2 lg:ml-2 mb-3 mt-2">
                             {data.title.substring(0, 40) + "..."}
-                            <div className="badge badge-primary">New</div>
+                            {/* <div className="badge badge-primary">New</div> */}
                         </h2>
                         {/* </Link> */}
-                        <p>
+                        <p className="ml-2 mb-6 lg:text-base text-sm lg:text-base text-gray-500 lg:text-gray-500">
                             {parser(data.description.substring(0, 100) + "...")}
                         </p>
-                        <div className="card-actions justify-end">
-                            <div className="mb-1 text-red-600 font-medium text-sm flex items-center justify-center md:justify-start">
+                        <div className="card-actions justify-end mb-2 lg:mb-2">
+                            {/* <div className="mb-1 text-red-600 font-medium text-sm flex items-center justify-center md:justify-start">
                                 <svg
                                     className="w-3 h-3 mr-2"
                                     xmlns="http://www.w3.org/2000/svg"
@@ -54,13 +55,14 @@ const isNews = (news) => {
                                     />
                                 </svg>
                                 {data.category}
-                            </div>
+                            </div> */}
                             {/* <div className="badge badge-accent badge-outline"></div> */}
                             <div>
-                                <h6>{data.author}</h6>
+                                <h6 className="text-xs">{data.author}</h6>
                             </div>
+                            <div className="text-xs">|</div>
                             <div>
-                                <h6 className="text-sm">
+                                <h6 className="text-xs mr-2">
                                     {formatDate(dateString)}
                                 </h6>
                             </div>
@@ -68,6 +70,7 @@ const isNews = (news) => {
                     </div>
                 </Link>
             </div>
+
         );
         2;
     });

@@ -16,8 +16,11 @@ class ShowNewsController extends Controller
     {
         // return $news;
         $tampilkan = $news::where('slug', $slug)->first();
+        $news = new NewsCollection(News::inRandomOrder('id')->paginate(3));
+
         return Inertia::render('ReadNews/ReadNews', [
             'myNews' => $tampilkan,
+            'recommend' => $news
             
         ]);
         dd($tampilkan);
@@ -64,6 +67,27 @@ class ShowNewsController extends Controller
             'news' => $newsResult,
 
         ]);
+
+     }
+   public function count(){
+        $count = News::table('')->count();
+        return Inertia::render('DashboardPages/Dashboard', [
+            'artikel' => $count,
+        ]);
+
+     }
+
+   public function recommend(){
+        $news = new NewsCollection(News::OrderByDesc('id')->paginate(3));
+        // // dd($news);
+        // $news = News::all();
+        return Inertia::render('ReadNews/BeritaRekomendasi', [
+            'title' => 'PanelWarta.id',
+            'description' => "Selamat datang di portal berita",
+            'myNews' => $news,
+
+        ]);
+
 
      }
 }

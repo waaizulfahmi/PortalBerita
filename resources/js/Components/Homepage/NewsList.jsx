@@ -22,7 +22,7 @@ const isNews = (news) => {
             >
                 <Link
                     href={route("read", { slug: data.slug })}
-                    // href={`/readnews/${data.slug}`}
+                    // href={`/read/${data.id}/${data.slug}`}
                     // href={route('readnews', ['slug' => data.slug])}
                     // data={{ news: data.slug }}
                 >
@@ -66,6 +66,11 @@ const isNews = (news) => {
                                     {formatDate(dateString)}
                                 </h6>
                             </div>
+                        </div>
+                        <div>
+                            <h6 className="card-actions justify-end mb-2 lg:mb-2">
+                                dilihat sebanyak {data.views} kali
+                            </h6>
                         </div>
                     </div>
                 </Link>

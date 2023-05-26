@@ -62,6 +62,7 @@ class NewsController extends Controller
         $news->category = $request->category;
         $news->author = auth()->user()->name;
         $news->slug = Str::slug($request->title);
+        $news->views = 0;
 
         // $path = '';
         if ($request->hasFile('image')) {
@@ -135,7 +136,8 @@ class NewsController extends Controller
             'description' => $request->description,
             'category' => $request->category,
             'image' => $request->hasFile('image') ? $request->file('image')->store('post-images') : $setImage, 
-            'slug' => Str::slug($request->title)
+            'slug' => Str::slug($request->title),
+            'views' => 0
         ]);
         return to_route('my.news')->with('message', 'Updata Berita Berhasil');
         // return response()->json([

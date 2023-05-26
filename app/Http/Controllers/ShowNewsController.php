@@ -15,15 +15,22 @@ class ShowNewsController extends Controller
     public function show(News $news,  $slug)
     {
         // return $news;
-        $tampilkan = $news::where('slug', $slug)->first();
+        $post = $news::where('slug', $slug)->first();
+        // $post->increment('views');
         $news = new NewsCollection(News::inRandomOrder()->paginate(3));
+        // $post = News::find($id);
+        // $post::update([
+            //     'views' => $post->views + 1
+            // ]);
+        $count = News::where('slug', $slug)->first();
+        $count->views = $count->views + 1;
+        $count->save();
 
         return Inertia::render('ReadNews/ReadNews', [
-            'myNews' => $tampilkan,
+            'myNews' => $post,
             'recommend' => $news
             
         ]);
-        dd($tampilkan);
 
     // return route('readnews')->with('tampilkan', $tampilkan);
 

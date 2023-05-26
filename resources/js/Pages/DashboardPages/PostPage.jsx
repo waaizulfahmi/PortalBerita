@@ -166,7 +166,6 @@ const PostPage = (props) => {
                                 <option value="Olahraga">Olahraga</option>
                                 <option value="Wisata">Wisata</option>
                                 <option value="Kuliner">Kuliner</option>
-                                <option value="Profile">Profile</option>
                                 <option value="Bisnis">Bisnis</option>
                                 <option value="Daerah">Daerah</option>
                                 <option value="Nasional">Nasional</option>

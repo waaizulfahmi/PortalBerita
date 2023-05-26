@@ -16,7 +16,7 @@ class ShowNewsController extends Controller
     {
         // return $news;
         $tampilkan = $news::where('slug', $slug)->first();
-        $news = new NewsCollection(News::inRandomOrder('id')->paginate(3));
+        $news = new NewsCollection(News::inRandomOrder()->paginate(3));
 
         return Inertia::render('ReadNews/ReadNews', [
             'myNews' => $tampilkan,

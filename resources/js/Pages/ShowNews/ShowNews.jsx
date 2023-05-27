@@ -23,11 +23,13 @@ const ShowNews = (props) => {
                 {/* <MainNews /> */}
                 {/* <SideNews /> */}
             </div>
-            <div className="mb-8">
+            <div>
+                <u><h5 className="font-bold text-xl mb-3 ml-2 lg:mb-8 lg:ml-28 lg:text-3xl">Berita Mancanegara</h5></u>
+            </div>
+            <div className="container mx-auto grid lg:grid-cols-2 lg:gap-10 gap-5">
                 <Category news={props.news} />
                 <aside/>
             </div>
-
 
             {/* <News/> */}
             <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4">

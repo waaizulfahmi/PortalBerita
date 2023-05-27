@@ -14,7 +14,7 @@ const isNews = (news) => {
             };
             return new Date(dateString).toLocaleDateString("id", options);
         };
-        return (
+        return ( 
             <div
                 className="card w-full  lg:w-72 rounded-sm bg-base-100 shadow-sm transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                 // transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300

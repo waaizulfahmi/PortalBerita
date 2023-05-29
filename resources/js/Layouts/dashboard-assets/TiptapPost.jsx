@@ -147,10 +147,11 @@ const MenuBar = ({ editor }) => {
 
 const TiptapPost = ({ setDesc }) => {
     // const describe = desc;
+    const watermark = "<b>PanelWarta.id - </b>";
     // console.log(describe);
     const editor = useEditor({
         extensions: [StarterKit, Underline],
-        content: ``,
+        content: watermark,
         // setContent: describe,
         onUpdate: ({ editor }) => {
             const html = editor.getHTML();

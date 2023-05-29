@@ -20,13 +20,16 @@ use Inertia\Inertia;
 */
 // Route::inertia('/ShowNews', 'ShowNews');
 // Route::get('/readnews/{slug}', [ShowNewsController::class, 'show'])->name('readnews');
-Route::get('/read/{slug}', [ShowNewsController::class, 'show'],  function ($slug) {
+Route::get('/read/{slug}', [ShowNewsController::class, 'show'],  function ($slug, $id) {
 
-    return $slug;
+    return [$slug,$id];
 })->name('read')->withoutScopedBindings();
+
+// Route::get('/read', [ShowNewsController::class, 'recommend'])->name('recommend.news');
 
 Route::get('/category/{category}', [ShowNewsController::class, 'index'])->name('shownews');
 Route::get('/search', [ShowNewsController::class, 'search'])->name('search.data');
+Route::post('/read/postComment ', [ShowNewsController::class, 'addComment'])->name('comment.data');
 
 
 // ROUTE DASHBOARD

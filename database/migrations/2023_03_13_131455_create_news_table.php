@@ -19,8 +19,11 @@ return new class extends Migration
             $table->string('author');
             $table->string('image');
             $table->string('slug');
+            $table->integer('views');
             $table->timestamps();
         });
+
+
     }
 
     /**

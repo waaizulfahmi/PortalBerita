@@ -163,16 +163,7 @@ const Navbar = () => {
                                     Kuliner
                                 </Link>
                             </li>
-                            <li>
-                                <Link
-                                    href={route("shownews", {
-                                        category: "Profile",
-                                    })}
-                                    as="button"
-                                >
-                                    Profile
-                                </Link>
-                            </li>
+
                             <li>
                                 <Link
                                     href={route("shownews", {

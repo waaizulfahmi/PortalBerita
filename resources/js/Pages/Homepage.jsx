@@ -41,7 +41,7 @@ export default function Homepage(props) {
             <NewDesain />
             <hr />
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center"> */}
-                {/* <NewNews news={props.news.data} /> */}
+            {/* <NewNews news={props.news.data} /> */}
             {/* </div>
             <hr /> */}
             {/* <u>
@@ -58,14 +58,14 @@ export default function Homepage(props) {
             </u>
             <NewGrid /> */}
             {/* <div dir="rtl"> */}
-                {/* <Link href={route("shownews")} as="button" /> */}
-                {/* <MainNews /> */}
-                <hr />
-                {/* <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
+            {/* <Link href={route("shownews")} as="button" /> */}
+            {/* <MainNews /> */}
+            {/* <hr /> */}
+            {/* <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
                 <NewNews news={props.news.data} />
             </div>
             <hr /> */}
-                {/* <u>
+            {/* <u>
                     <h1 className="text-black p-3 lg:text-2xl sm:text-xl font-bold ml-32">
                         Berita Wisata
                     </h1>
@@ -86,8 +86,8 @@ export default function Homepage(props) {
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
                 <ProfileNews news={props.news.data} />
             </div> */}
-                {/* <BeritaBisnis/> */}
-                {/* <hr />
+            {/* <BeritaBisnis/> */}
+            {/* <hr />
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
                 {/* <RegionalNews news={props.news.data} /> */}
             {/* </div> */}
@@ -105,11 +105,10 @@ export default function Homepage(props) {
                     </Link>
                 </u>
             </div> */}
-            
-            <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch lg:gap-10 gap-5 items-center">
+            <div className="container p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch lg:gap-12 gap-6 items-center">
                 <NewsList news={props.news.data} />
             </div>
-        
+
             {/* <u>
                 <Link href={route("readnews")} as="button">
                     <h1 className="text-black p-5 lg:text-2xl sm:text-xl font-bold ml-32">
@@ -125,8 +124,8 @@ export default function Homepage(props) {
                 Link to ShowNews
             </button> */}
             <div className="flex justify-center items-center gap-5">
-               <Paginator meta={props.news.meta} />
-            </div> 
+                <Paginator meta={props.news.meta} />
+            </div>
             <Footer />
         </div>
     );

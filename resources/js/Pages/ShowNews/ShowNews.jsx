@@ -10,7 +10,6 @@ import NewsListRow from "../NewsListRow";
 import Category from "./Category";
 import News from "./News";
 import MainNews from "../MainNews";
-import Page from "./page";
 
 const ShowNews = (props) => {
     console.log(props);
@@ -21,23 +20,16 @@ const ShowNews = (props) => {
             {/* <MainNews /> */}
             <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4">
                 {/* <MainNews /> */}
+                <h1 className="justify-left text-left text-xl pt-8 pb-5">
+                    Menampilkan Artikel dengan Kategori : {props.title}
+                </h1>
+                <div className="container grid grid-cols-1 gap-8 mt-8 md:mt-8 md:grid-cols-2">
+                    <Category news={props.news} />
+                </div>
                 {/* <SideNews /> */}
             </div>
-            <div>
-                <u>
-                    <h5 className="font-bold text-xl mb-3 ml-2 lg:mb-8 lg:ml-28 lg:text-2xl">
-                        Berita Mancanegara
-                    </h5>
-                </u>
-            </div>
-            <div className="container mx-auto grid lg:grid-cols-2 lg:gap-10 gap-5">
-                <Category news={props.news} />
-                <aside />
-            </div>
-            <div className="flex justify-center items-center gap-5 mt-4">
-                <Page />
-            </div>
 
+            {/* <News/> */}
             <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4">
                 {/* <NewsListRow /> */}
             </div>

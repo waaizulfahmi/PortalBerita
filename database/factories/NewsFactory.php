@@ -25,7 +25,8 @@ class NewsFactory extends Factory
             'category' => fake()->text(20),
             'author' => fake()->name(),
             'image' => fake()->text(10),
-            'slug' => $slug
+            'slug' => $slug,
+            'views' => fake()->numberBetween(1, 1000)
         ];
     }
 }

@@ -42,6 +42,8 @@ export default function Dashboard(props) {
     // const handleChangeSelect = (selectedOption) => {
     //     setCategory(selectedOption);
     //     console.log(`Option selected:`, selectedOption);
+
+    console.log(props);
     // };
 
     return (
@@ -65,7 +67,7 @@ export default function Dashboard(props) {
                     referrerpolicy="no-referrer"
                 />
                 <div className="stats shadow items-center">
-                    <div className="stat">
+                    {/* <div className="stat">
                         <div className="stat-figure text-primary">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -124,7 +126,7 @@ export default function Dashboard(props) {
                         <div className="stat-desc text-secondary">
                             31 tasks remaining
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </section>
 
@@ -134,7 +136,7 @@ export default function Dashboard(props) {
                         <div class="w-72 bg-white max-w-xs mx-auto rounded-sm overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 transform hover:scale-100 cursor-pointer">
                             <div class="h-20 bg-red-400 flex items-center justify-between">
                                 <p class="mr-0 text-white text-lg pl-5">
-                                    BT SUBSCRIBERS
+                                    ARTIKEL YANG TELAH DIBUAT
                                 </p>
                             </div>
                             <div class="flex justify-between px-5 pt-6 mb-2 text-sm text-gray-600">
@@ -147,7 +149,7 @@ export default function Dashboard(props) {
                         <div class="w-72 bg-white max-w-xs mx-auto rounded-sm overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 transform hover:scale-100 cursor-pointer">
                             <div class="h-20 bg-blue-500 flex items-center justify-between">
                                 <p class="mr-0 text-white text-lg pl-5">
-                                    BT ACTIVE SUBSCRIBERS
+                                    PENULIS TERDAFTAR
                                 </p>
                             </div>
                             <div class="flex justify-between px-5 pt-6 mb-2 text-sm text-gray-600">
@@ -160,7 +162,7 @@ export default function Dashboard(props) {
                         <div class="w-72 bg-white max-w-xs mx-auto rounded-sm overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 transform hover:scale-100 cursor-pointer">
                             <div class="h-20 bg-purple-400 flex items-center justify-between">
                                 <p class="mr-0 text-white text-lg pl-5">
-                                    BT OPT OUTS
+                                    JUMLAH PEMBACA
                                 </p>
                             </div>
                             <div class="flex justify-between pt-6 px-5 mb-2 text-sm text-gray-600">

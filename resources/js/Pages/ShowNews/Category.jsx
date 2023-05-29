@@ -17,7 +17,7 @@ const isNews = (news) => {
         return (
                         <div className="lg:flex md-flex">
                             <img
-                                className="object-cover h-48 w-full rounded-md lg:w-64"
+                                className="object-cover h-48 w-full rounded-md lg:w-64 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 src={"/storage/" + data.image}
                                 alt="Gambar Berita"
                             />
@@ -30,12 +30,12 @@ const isNews = (news) => {
                                     {data.title}
                                 </Link>
                                 <p className="ml-4">{data.category}</p>
-                                <span className="ml-4 text-xs text-gray-500 dark:text-gray-300">
+                                <div className="ml-4 text-xs text-gray-500 dark:text-gray-300">
                                     {data.author}
-                                </span>
-                                <span className="text-xs ml-4 text-gray-500 dark:text-gray-300">
+                                </div>
+                                <div className="text-xs ml-4 text-gray-500 dark:text-gray-300">
                                     {formatDate(dateString)}
-                                </span>
+                                </div>
                             </div>
                         </div>
         );

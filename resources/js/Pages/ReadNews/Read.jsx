@@ -251,12 +251,11 @@ const Read = (props) => {
                             </p>
                         </div>
                     </div>
-                    <hr />
                 </div>
                 <aside className="w-full md:w-2/5 mt-5">
                     <div className="container mx-auto rounded-sm">
                         <div class="flex items-center justify-center">
-                            <div class="flex flex-col bg-violet-100 lg:ml-10 p-4 mt-0 w-full max-w-lg rounded-xl">
+                            <div class="flex flex-col bg-violet-100 lg:ml-10 p-4 mt-0 w-full max-w-lg">
                                 <div class="font-bold text-xl">Purwokerto</div>
                                 <div class="text-sm text-gray-500">
                                     Thursday 10 May 2020
@@ -327,8 +326,28 @@ const Read = (props) => {
                                 </div>
                             </div>
                         </div>
-                        {/* <div className="mb-4 ml-8">
-                        <h5 className="font-bold text-lg uppercase text-gray-700 px-1 mb-2">
+
+                    
+                    
+                        <div className="lg:ml-10 mt-1">
+                            <div className="box-border bg-violet-200">
+                                <div dir="rtl">
+                                    <h5 className="text-sm font-bold mr-3">
+                                        Advertisement
+                                    </h5>
+                                </div>
+                                <a href="https://www.traveloka.com/en-id/">
+                                    <img
+                                        src="https://ik.imagekit.io/tvlk/image/imageResource/2022/07/06/1657108950693-92e1295540ba7b6a941c2b3bdd2cf030.jpeg?tr=q-75"
+                                        alt=""
+                                        className="p-5"
+                                    />
+                                </a>
+                            </div>
+                        </div>
+
+                        <div className="mt-1 p-4 bg-violet-100 lg:ml-10">
+                        <h5 className="font-bold text-lg uppercase bg-violet-300 text-gray-700 px-1 mb-2">
                             {" "}
                             Popular Topics{" "}
                         </h5>
@@ -339,7 +358,7 @@ const Read = (props) => {
                                     className="flex items-center text-gray-600 cursor-pointer"
                                 >
                                     <span className="inline-block h-4 w-4 bg-green-300 mr-3"></span>
-                                    Nutrition
+                                    Olahraga
                                     <span className="text-gray-500 ml-auto">
                                         23 articles
                                     </span>
@@ -352,7 +371,7 @@ const Read = (props) => {
                                     className="flex items-center text-gray-600 cursor-pointer"
                                 >
                                     <span className="inline-block h-4 w-4 bg-indigo-300 mr-3"></span>
-                                    Food & Diet
+                                    Wisata
                                     <span className="text-gray-500 ml-auto">
                                         18 articles
                                     </span>
@@ -365,7 +384,7 @@ const Read = (props) => {
                                     className="flex items-center text-gray-600 cursor-pointer"
                                 >
                                     <span className="inline-block h-4 w-4 bg-yellow-300 mr-3"></span>
-                                    Workouts
+                                    Kuliner
                                     <span className="text-gray-500 ml-auto">
                                         34 articles
                                     </span>
@@ -378,7 +397,7 @@ const Read = (props) => {
                                     className="flex items-center text-gray-600 cursor-pointer"
                                 >
                                     <span className="inline-block h-4 w-4 bg-blue-300 mr-3"></span>
-                                    Immunity
+                                    Daerah
                                     <span className="text-gray-500 ml-auto">
                                         9 articles
                                     </span>
@@ -386,23 +405,8 @@ const Read = (props) => {
                                 </a>
                             </li>
                         </ul>
-                    </div> */}
-                        <div className="lg:ml-10 mt-1">
-                            <div className="box-border bg-violet-200">
-                                <div dir="rtl">
-                                    <h5 className="text-sm font-bold mr-3">
-                                        Advertisement
-                                    </h5>
-                                </div>
-                                <a href="https://www.traveloka.com/en-id/">
-                                    <img
-                                        src="https://ik.imagekit.io/tvlk/image/imageResource/2022/07/06/1657108950693-92e1295540ba7b6a941c2b3bdd2cf030.jpeg?tr=q-75"
-                                        alt=""
-                                        className="p-3"
-                                    />
-                                </a>
-                            </div>
-                        </div>
+                    </div>
+
                         <div className="lg:ml-10 mt-1">
                             <div className="box-border bg-violet-200">
                                 <div dir="rtl">
@@ -414,7 +418,7 @@ const Read = (props) => {
                                     <img
                                         src="https://i.ytimg.com/vi/5iGBYuxnBnk/maxresdefault.jpg"
                                         alt=""
-                                        className="p-3"
+                                        className="p-5"
                                     />
                                 </a>
                             </div>

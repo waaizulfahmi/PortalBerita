@@ -105,10 +105,11 @@ export default function Homepage(props) {
                     </Link>
                 </u>
             </div> */}
+            
             <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch lg:gap-10 gap-5 items-center">
                 <NewsList news={props.news.data} />
             </div>
-            
+        
             {/* <u>
                 <Link href={route("readnews")} as="button">
                     <h1 className="text-black p-5 lg:text-2xl sm:text-xl font-bold ml-32">

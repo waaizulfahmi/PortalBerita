@@ -11,17 +11,17 @@ const Navbar = () => {
     `;
     return (
         <div className="md:container md:mx-auto mt-5">
-            <div className="navbar bg-violet-900 p-6">
-                <div className="flex-1">
+            <div className="navbar bg-violet-900 lg:p-6 p-4">
+                <div className="flex-1 mr-3">
                     <Link
                         href={route("home")}
                         as="button"
-                        className="btn btn-ghost normal-case text-4xl text-white"
+                        className="btn btn-ghost normal-case lg:text-4xl text-2xl text-white"
                     >
                         Panelwarta.<span className="text-orange-400">id</span>
                     </Link>
                 </div>
-                <div className="flex-none gap-3">
+                <div className=" flex lg:flex-none gap-3">
                     <div className="form-control">
                         <form
                             class="flex items-center"
@@ -58,7 +58,7 @@ const Navbar = () => {
                             </div>
                             <button
                                 type="submit"
-                                class="p-2.5 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                class="p-2.5 ml-2 text-sm font-medium text-white bg-violet-500 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                             >
                                 <svg
                                     class="w-5 h-5"

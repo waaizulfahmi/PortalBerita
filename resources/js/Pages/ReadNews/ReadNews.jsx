@@ -36,11 +36,24 @@ const ReadNews = (props) => {
 
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center mt-6">
                 <InputComment news={props.myNews} />
-                <Coment comments={props.comments} news={props.myNews} />
+                <div className="container mx-auto">
+                    <div className="comment md:w-3/5">
+                        <div className="rounded-md bg-base-200 p-3">
+                            <div class="antialiased mx-auto ml-3 mr-3 max-w-screen ">
+                                <div className="space-y-2">
+                                    <Coment
+                                        comments={props.comments}
+                                        news={props.myNews}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center mb-3">
-                <div className="container">
-                    <h1 className="text-black lg:mt-3 lg:ml-3 ml-2  lg:mb-3 mb-3 lg:text-2xl text-base md:text-xl font-bold">
+                <div className="container mt-10 m-5">
+                    <h1 className="text-black lg:mt-3 lg:ml-3 ml-2  lg:mb-3 mb-3 lg:text-2xl text-base md:text-xl font-bold mt-6">
                         Artikel Rekomendasi
                     </h1>
                     <div class="grid grid-cols-3 lg:gap-3 gap-2 place-content-start lg:mr-2 lg:ml-3 ml-2 mr-2 ">

@@ -14,17 +14,17 @@ const InputComment = (props) => {
         };
         router.post(route("comment.data", { slug: props.news.slug }), data);
         setComment("");
-        setSlugPost(news.slug);
         setUsername("");
+        setSlugPost(props.news.slug);
     };
 
     return (
         <div className="container mx-auto">
             <div className="comment md:w-3/5">
                 {" "}
-                <div className="comment h-22 w-30 p-3 rounded-md bg-base-200 mb-5">
-                    <p className="font-bold lg:text-xl text-base mb-2">
-                        Komentar
+                <div className="comment h-22 w-30 p-5 rounded-md bg-base-200 mb-5 ">
+                    <p className="font-bold lg:text-xl text-base mb-4">
+                        Tinggalkan Komentar Anda Disini
                     </p>
                     {/* <form
                         action={route("comment.data", {
@@ -41,7 +41,7 @@ const InputComment = (props) => {
                             }
                             value={comment}
                             placeholder="Tuliskan Komentar Anda"
-                            className="input input-bordered text-sm lg:text-base h-10 w-18 lg:h-16 lg:w-50 w-full mb-2"
+                            className="input input-bordered text-sm lg:text-base h-10 w-18 lg:h-16 lg:w-50 w-full mb-5"
                         />
                     </div>
                     <div>
@@ -59,7 +59,8 @@ const InputComment = (props) => {
                     <div dir="rtl">
                         <input
                             type="submit"
-                            className="btn btn-active btn-ghost lg:btn-sm btn-xs"
+                            value="KIRIM"
+                            className="mt-5 btn btn-active btn-info lg:btn-sm btn-xs"
                             onClick={handleSubmit}
                         />
                     </div>

@@ -1,8 +1,16 @@
 import { Link } from "@inertiajs/react";
 import parser from "html-react-parser";
+import { useState, useEffect } from "react";
 
 const Read = (props) => {
     // console.log(Object.keys(news));
+    const [copySuccess, setCopySuccess] = useState("");
+
+    async function copyToClip() {
+        await navigator.clipboard.writeText(location.href);
+        setCopySuccess("Copied");
+    }
+
     console.log(props.news);
     const dateString = props.news.created_at;
     const formatDate = (dateString) => {
@@ -12,15 +20,6 @@ const Read = (props) => {
             day: "numeric",
         };
         return new Date(dateString).toLocaleDateString("id", options);
-    };
-    const Copy = () => {
-        var Url = document.getElementById("url");
-        Url.innerHTML = window.location.href;
-        console.log(Url.innerHTML);
-        const url2 = Url.select();
-        navigator.clipboard.writeText(url2.value);
-        alert("Text copied");
-        // document.execCommand("copy", true, Url);
     };
 
     // const title = [];
@@ -113,7 +112,7 @@ const Read = (props) => {
                                 type="button"
                                 className="btn btn-active btn-ghost btn-xs lg:btn-sm mr-3"
                                 value="Copy Url"
-                                onclick={Copy}
+                                onClick={copyToClip}
                             />
                         </div>
                     </div>
@@ -228,8 +227,6 @@ const Read = (props) => {
                             </div>
                         </div>
 
-                    
-                    
                         <div className="lg:ml-10 mt-1">
                             <div className="box-border bg-violet-200">
                                 <div dir="rtl">
@@ -248,65 +245,65 @@ const Read = (props) => {
                         </div>
 
                         <div className="mt-1 p-4 bg-violet-100 lg:ml-10">
-                        <h5 className="font-bold text-lg uppercase bg-violet-300 text-gray-700 px-1 mb-2">
-                            {" "}
-                            Popular Topics{" "}
-                        </h5>
-                        <ul>
-                            <li className="px-1 py-4 border-b border-t border-white hover:border-gray-200 transition duration-300">
-                                <a
-                                    href="#"
-                                    className="flex items-center text-gray-600 cursor-pointer"
-                                >
-                                    <span className="inline-block h-4 w-4 bg-green-300 mr-3"></span>
-                                    Olahraga
-                                    <span className="text-gray-500 ml-auto">
-                                        23 articles
-                                    </span>
-                                    <i className="text-gray-500 bx bx-right-arrow-alt ml-1"></i>
-                                </a>
-                            </li>
-                            <li className="px-1 py-4 border-b border-t border-white hover:border-gray-200 transition duration-300">
-                                <a
-                                    href="#"
-                                    className="flex items-center text-gray-600 cursor-pointer"
-                                >
-                                    <span className="inline-block h-4 w-4 bg-indigo-300 mr-3"></span>
-                                    Wisata
-                                    <span className="text-gray-500 ml-auto">
-                                        18 articles
-                                    </span>
-                                    <i className="text-gray-500 bx bx-right-arrow-alt ml-1"></i>
-                                </a>
-                            </li>
-                            <li className="px-1 py-4 border-b border-t border-white hover:border-gray-200 transition duration-300">
-                                <a
-                                    href="#"
-                                    className="flex items-center text-gray-600 cursor-pointer"
-                                >
-                                    <span className="inline-block h-4 w-4 bg-yellow-300 mr-3"></span>
-                                    Kuliner
-                                    <span className="text-gray-500 ml-auto">
-                                        34 articles
-                                    </span>
-                                    <i className="text-gray-500 bx bx-right-arrow-alt ml-1"></i>
-                                </a>
-                            </li>
-                            <li className="px-1 py-4 border-b border-t border-white hover:border-gray-200 transition duration-300">
-                                <a
-                                    href="#"
-                                    className="flex items-center text-gray-600 cursor-pointer"
-                                >
-                                    <span className="inline-block h-4 w-4 bg-blue-300 mr-3"></span>
-                                    Daerah
-                                    <span className="text-gray-500 ml-auto">
-                                        9 articles
-                                    </span>
-                                    <i className="text-gray-500 bx bx-right-arrow-alt ml-1"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                            <h5 className="font-bold text-lg uppercase bg-violet-300 text-gray-700 px-1 mb-2">
+                                {" "}
+                                Popular Topics{" "}
+                            </h5>
+                            <ul>
+                                <li className="px-1 py-4 border-b border-t border-white hover:border-gray-200 transition duration-300">
+                                    <a
+                                        href="#"
+                                        className="flex items-center text-gray-600 cursor-pointer"
+                                    >
+                                        <span className="inline-block h-4 w-4 bg-green-300 mr-3"></span>
+                                        Olahraga
+                                        <span className="text-gray-500 ml-auto">
+                                            23 articles
+                                        </span>
+                                        <i className="text-gray-500 bx bx-right-arrow-alt ml-1"></i>
+                                    </a>
+                                </li>
+                                <li className="px-1 py-4 border-b border-t border-white hover:border-gray-200 transition duration-300">
+                                    <a
+                                        href="#"
+                                        className="flex items-center text-gray-600 cursor-pointer"
+                                    >
+                                        <span className="inline-block h-4 w-4 bg-indigo-300 mr-3"></span>
+                                        Wisata
+                                        <span className="text-gray-500 ml-auto">
+                                            18 articles
+                                        </span>
+                                        <i className="text-gray-500 bx bx-right-arrow-alt ml-1"></i>
+                                    </a>
+                                </li>
+                                <li className="px-1 py-4 border-b border-t border-white hover:border-gray-200 transition duration-300">
+                                    <a
+                                        href="#"
+                                        className="flex items-center text-gray-600 cursor-pointer"
+                                    >
+                                        <span className="inline-block h-4 w-4 bg-yellow-300 mr-3"></span>
+                                        Kuliner
+                                        <span className="text-gray-500 ml-auto">
+                                            34 articles
+                                        </span>
+                                        <i className="text-gray-500 bx bx-right-arrow-alt ml-1"></i>
+                                    </a>
+                                </li>
+                                <li className="px-1 py-4 border-b border-t border-white hover:border-gray-200 transition duration-300">
+                                    <a
+                                        href="#"
+                                        className="flex items-center text-gray-600 cursor-pointer"
+                                    >
+                                        <span className="inline-block h-4 w-4 bg-blue-300 mr-3"></span>
+                                        Daerah
+                                        <span className="text-gray-500 ml-auto">
+                                            9 articles
+                                        </span>
+                                        <i className="text-gray-500 bx bx-right-arrow-alt ml-1"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
 
                         <div className="lg:ml-10 mt-1">
                             <div className="box-border bg-violet-200">

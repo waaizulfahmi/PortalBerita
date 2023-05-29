@@ -38,7 +38,9 @@ const Read = (props) => {
                             </li>
                             <li>
                                 <Link
-                                    href={("/category/", props.news.category)}
+                                    href={route("shownews", {
+                                        category: props.news.category,
+                                    })}
                                 >
                                     {props.news.category}
                                 </Link>

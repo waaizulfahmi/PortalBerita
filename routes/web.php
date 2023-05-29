@@ -29,7 +29,7 @@ Route::get('/read/{slug}', [ShowNewsController::class, 'show'],  function ($slug
 
 Route::get('/category/{category}', [ShowNewsController::class, 'index'])->name('shownews');
 Route::get('/search', [ShowNewsController::class, 'search'])->name('search.data');
-Route::get('/dashboard', [ShowNewsController::class, 'count'])->name('count.data');
+Route::post('/read/postComment ', [ShowNewsController::class, 'addComment'])->name('comment.data');
 
 
 // ROUTE DASHBOARD

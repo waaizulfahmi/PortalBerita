@@ -6,18 +6,21 @@ use App\Http\Controllers\Controller;
 use App\Models\News;
 use Illuminate\Http\Request;
 use App\Http\Resources\NewsCollection;
-
+use App\Models\Comments;
 use Inertia\Inertia;
 
 
 class ShowNewsController extends Controller
 {
-    public function show(News $news,  $slug)
+    public function show(News $news, Comments $comments,  $slug)
     {
         // return $news;
         $post = $news::where('slug', $slug)->first();
+        $comment = $comments::get();
         // $post->increment('views');
         $news = new NewsCollection(News::inRandomOrder()->paginate(3));
+
+        $comment = $comments::where('slug_post', $slug)->get();
         // $post = News::find($id);
         // $post::update([
             //     'views' => $post->views + 1
@@ -28,13 +31,28 @@ class ShowNewsController extends Controller
 
         return Inertia::render('ReadNews/ReadNews', [
             'myNews' => $post,
-            'recommend' => $news
+            'recommend' => $news,
+            'comments' => $comment
             
         ]);
 
     // return route('readnews')->with('tampilkan', $tampilkan);
 
         // $myNews = $news::where('author', auth()->user()->name)->get();
+
+    }
+
+    public function addComment(Request $request, $slug){
+
+        $comment = new Comments();
+        $comment->comment = $request->comment;
+        $comment->username = $request->username; 
+        $comment->slug_post = $request->slug;
+        $comment->save();
+        
+        return to_route('read', ['slug' => $slug]);
+
+
 
     }
     public function index(News $news, $category)

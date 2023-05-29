@@ -16,8 +16,8 @@ const isNews = (news) => {
             <div className="card w-full  lg:w-50 mr-4" key={i}>
                 <Link href={route("read", data.slug)}>
                     <img
-                        className="rounded-md lg:mb-3 mb-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-102 duration-100"
-                        src="https://www.pinhome.id/info-area/wp-content/uploads/2022/02/Ambalika-Kuliner-Kota.jpg"
+                        className="rounded-md lg:mb-3 mb-2 w-full h-48 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-102 duration-100"
+                        src={"/storage/"+ data.image}
                         alt="Shoes"
                     />
                 </Link>

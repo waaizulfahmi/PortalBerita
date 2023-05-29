@@ -105,7 +105,7 @@ export default function Homepage(props) {
                     </Link>
                 </u>
             </div> */}
-            <div className="container p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch lg:gap-12 gap-6 items-center">
+            <div className="container mx-auto flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch lg:gap-10 gap-6  items-center">
                 <NewsList news={props.news.data} />
             </div>
 

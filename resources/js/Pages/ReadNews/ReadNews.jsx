@@ -36,12 +36,12 @@ const ReadNews = (props) => {
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center mt-6">
                 <Coment comment={props.comments} />
             </div>
-            <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center mb-3">
-                <div className="container">
+            <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-left mb-3">
+                <div className="container mx-auto">
                     <h1 className="text-black lg:mt-3 lg:ml-3 ml-2  lg:mb-3 mb-3 lg:text-2xl text-base md:text-xl font-bold">
                         Artikel Rekomendasi
                     </h1>
-                    <div class="grid grid-cols-3 lg:gap-3 gap-2 place-content-start lg:mr-2 lg:ml-3 ml-2 mr-2 ">
+                    <div class="grid grid-cols-5 gap-2 items-left justify-left lg:mr-2 ml-2 mr-2 ">
                         <BeritaRekomendasi news={props.recommend.data} />
                     </div>
                 </div>

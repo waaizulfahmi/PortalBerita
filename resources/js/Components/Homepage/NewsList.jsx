@@ -34,12 +34,12 @@ const isNews = (news) => {
                     />
                     <div className="body">
                         {/* <Link href={route("readnews")} as="button"> */}
-                        <h2 className="card-title lg:text-xl text-lg ml-2 lg:ml-2 mb-3 mt-2">
+                        <h2 className="card-title lg:text-lg text-lg mb-3 mt-2">
                             {data.title.substring(0, 40) + "..."}
                             {/* <div className="badge badge-primary">New</div> */}
                         </h2>
                         {/* </Link> */}
-                        <p className="ml-2 mb-6 lg:text-base text-sm lg:text-base text-gray-500 lg:text-gray-500">
+                        <p className=" mb-6 lg:text-sm text-sm lg:text-base text-gray-500 lg:text-gray-500">
                             {parser(data.description.substring(0, 100) + "...")}
                         </p>
                         <div className="card-actions justify-end mb-2 lg:mb-2">
@@ -62,13 +62,13 @@ const isNews = (news) => {
                             </div>
                             <div className="text-xs">|</div>
                             <div>
-                                <h6 className="text-xs mr-2">
+                                <h6 className="text-xs">
                                     {formatDate(dateString)}
                                 </h6>
                             </div>
                         </div>
                         <div>
-                            <h6 className="card-actions justify-end mb-2 lg:mb-2">
+                            <h6 className="card-actions lg:text-xs text-xs justify-end mb-2 lg:mb-2">
                                 dilihat sebanyak {data.views} kali
                             </h6>
                         </div>

@@ -1,84 +1,67 @@
 import { Link } from "@inertiajs/react";
 import { useState, useEffect } from "react";
 import { router, Head } from "@inertiajs/react";
+import Disqus from "disqus-react";
 
-const Coment = (props) => {
+const isComment = (comments, news) => {
+    // console.log(props.comments);
+    console.log(news);
     const [comment, setComment] = useState("");
     const [username, setUsername] = useState("");
+    const [slug, setSlugPost] = useState("");
 
     const handleSubmit = () => {
         const data = {
             comment,
             username,
+            slug,
         };
-        router.post("/read/postComment", data);
+        router.post(route("comment.data", { slug: news.slug }), data);
         setComment("");
+        setSlugPost(news.slug);
+
         setUsername("");
     };
-    return (
-        <div className="container mx-auto">
-            <div className="comment md:w-3/5">
-                <div className="comment h-22 w-30 p-3 rounded-md bg-base-200 mb-5">
-                    <p className="font-bold lg:text-xl text-base mb-2">
-                        Komentar
-                    </p>
-                    <form action={route("comment.data")} method="post">
-                        <div>
-                            <input
-                                type="text"
-                                name="comment"
-                                onChange={(comment) =>
-                                    setComment(comment.target.value)
-                                }
-                                value={comment}
-                                placeholder="Tuliskan Komentar Anda"
-                                className="input input-bordered text-sm lg:text-base h-10 w-18 lg:h-16 lg:w-50 w-full mb-2"
-                            />
-                        </div>
-                        <div>
-                            <input
-                                type="text"
-                                name="username"
-                                placeholder="Nama"
-                                onChange={(username) =>
-                                    setUsername(username.target.value)
-                                }
-                                value={username}
-                                className="input input-bordered text-sm lg:text-base h-8 w-50 w-full mb-2"
-                            />
-                        </div>
-                        <div dir="rtl">
-                            <input
-                                type="submit"
-                                className="btn btn-active btn-ghost lg:btn-sm btn-xs"
-                            />
-                        </div>
-                    </form>
-                </div>
-                <div className="rounded-md bg-base-200">
-                    <div class="antialiased mx-auto ml-3 mr-3 max-w-screen">
-                        <div className="space-y-4">
-                            <div className="flex">
-                                <div className="flex-shrink-0 mr-3">
-                                    <img
-                                        className="mt-2 rounded-full w-8 h-8 sm:w-10 sm:h-10"
-                                        src="https://images.unsplash.com/photo-1604426633861-11b2faead63c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200&q=80"
-                                        alt=""
-                                    />
+    return comments.map((data, i) => {
+        const dateString = data.created_at;
+        const formatDate = (dateString) => {
+            const options = {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+                weekday: "long",
+            };
+            return new Date(dateString).toLocaleDateString("id", options);
+        };
+        return (
+            <div className="container mx-auto">
+                <div className="comment md:w-3/5">
+                    <div className="rounded-md bg-base-200" key={i}>
+                        <div class="antialiased mx-auto ml-3 mr-3 max-w-screen">
+                            <div className="space-y-4">
+                                <div className="flex">
+                                    <div className="flex-shrink-0 mr-3">
+                                        <img
+                                            className="mt-2 rounded-full w-8 h-8 sm:w-10 sm:h-10"
+                                            src="https://images.unsplash.com/photo-1604426633861-11b2faead63c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200&q=80"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div className="flex-1 border rounded-lg px-4 py-2 sm:px-6 sm:py-4 leading-relaxed bg-white">
+                                        <strong>{data.username}</strong>{" "}
+                                        <span className="text-xs text-gray-400 ">
+                                            20 Mei 2023
+                                        </span>
+                                        <p className="text-sm">
+                                            {data.comment}
+                                        </p>
+                                        <h4 className="my-5 uppercase tracking-wide text-gray-400 font-bold text-xs">
+                                            Balas
+                                        </h4>
+                                    </div>
                                 </div>
-                                <div className="flex-1 border rounded-lg px-4 py-2 sm:px-6 sm:py-4 leading-relaxed bg-white">
-                                    <strong>sjaisjaij</strong>{" "}
-                                    <span className="text-xs text-gray-400 ">
-                                        20 Mei 2023
-                                    </span>
-                                    <p className="text-sm">asasa</p>
-                                    <h4 className="my-5 uppercase tracking-wide text-gray-400 font-bold text-xs">
-                                        Balas
-                                    </h4>
-                                </div>
-                            </div>
 
-                            {/* <div className="flex">
+                                {/* <div className="flex">
                                 <div className="flex-shrink-0 mr-3">
                                     <img
                                         className="mt-2 rounded-full w-8 h-8 sm:w-10 sm:h-10"
@@ -150,12 +133,12 @@ const Coment = (props) => {
                                     </div>
                                 </div>
                             </div> */}
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            {/* <aside className="w-full md:w-1/4 ">
+                {/* <aside className="w-full md:w-1/4 ">
                 <div className="p-2 ml-4">
                     <h1 className="text-black p-3 lg:text-2xl sm:text-xl font-bold text-center">
                         Ikuti Kami
@@ -211,7 +194,7 @@ const Coment = (props) => {
                     <div className=" mx-auto mt-4">
                         <section className="mb-30 text-gray-800 text-center md:text-left"> */}
 
-            {/* <div className="carousel w-full"> 
+                {/* <div className="carousel w-full"> 
                                     <div id="slide1" className="flex flex-wrap mb-2 carousel-item relative w-full">
                                         <div className="grow-0 shrink-0 basis-auto w-full md:w-8/6 mb-1 ml-auto">
                                             <div className="relative  overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-2">
@@ -444,7 +427,7 @@ const Coment = (props) => {
                                         </div>
                                     </div> */}
 
-            {/* <hr />
+                {/* <hr />
                             <u>
                                 <a href="">
                                     <h1 className="text-left text-black p-3 lg:text-2xl sm:text-xl font-bold mb-4">
@@ -816,8 +799,57 @@ const Coment = (props) => {
                     </div>
                 </div>
             </aside> */}
+            </div>
+        );
+        2;
+    });
+};
+const input_comment = () => {
+    <div className="comment h-22 w-30 p-3 rounded-md bg-base-200 mb-5">
+        <p className="font-bold lg:text-xl text-base mb-2">Komentar</p>
+        {/* <form
+                        action={route("comment.data", {
+                            slug: props.news.slug,
+                        })}
+                        method="post"
+                    > */}
+        <div>
+            <input
+                type="text"
+                name="comment"
+                onChange={(comment) => setComment(comment.target.value)}
+                value={comment}
+                placeholder="Tuliskan Komentar Anda"
+                className="input input-bordered text-sm lg:text-base h-10 w-18 lg:h-16 lg:w-50 w-full mb-2"
+            />
         </div>
-    );
+        <div>
+            <input
+                type="text"
+                name="username"
+                placeholder="Nama"
+                onChange={(username) => setUsername(username.target.value)}
+                value={username}
+                className="input input-bordered text-sm lg:text-base h-8 w-50 w-full mb-2"
+            />
+        </div>
+        <div dir="rtl">
+            <input
+                type="submit"
+                className="btn btn-active btn-ghost lg:btn-sm btn-xs"
+                onClick={handleSubmit}
+            />
+        </div>
+        {/* </form> */}
+    </div>;
+};
+
+const noNews = () => {
+    return <div>Saat Ini Belum ada Beritanya </div>;
+};
+
+const Coment = ({ comments }) => {
+    return !comments ? noNews() : isComment(comments);
 };
 
 export default Coment;

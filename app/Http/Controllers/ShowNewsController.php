@@ -36,21 +36,18 @@ class ShowNewsController extends Controller
             
         ]);
 
-    // return route('readnews')->with('tampilkan', $tampilkan);
-
-        // $myNews = $news::where('author', auth()->user()->name)->get();
+  
 
     }
 
-    public function addComment(Request $request, $slug){
-
-        $comment = new Comments();
+    public function addComment(Request $request, Comments $comment, $slug){
+      
         $comment->comment = $request->comment;
         $comment->username = $request->username; 
-        $comment->slug_post = $request->slug;
+        $comment->slug_post = $slug;
         $comment->save();
         
-        return to_route('read', ['slug' => $slug]);
+        return redirect()->route('read', ['slug' => $slug]);
 
 
 

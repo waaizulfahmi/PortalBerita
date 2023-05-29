@@ -9,6 +9,7 @@ import Read from "./Read";
 import BeritaTerkait from "./BeritaTerkait";
 import BeritaRekomendasi from "./BeritaRekomendasi";
 import Coment from "./Coment";
+import InputComment from "./InputComment";
 
 const ReadNews = (props) => {
     console.log(props.recommend);
@@ -34,7 +35,8 @@ const ReadNews = (props) => {
             </div>
 
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center mt-6">
-                <Coment comment={props.comments} />
+                <InputComment news={props.myNews} />
+                <Coment comments={props.comments} news={props.myNews} />
             </div>
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center mb-3">
                 <div className="container">

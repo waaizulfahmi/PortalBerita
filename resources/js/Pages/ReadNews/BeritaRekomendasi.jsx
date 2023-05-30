@@ -13,16 +13,16 @@ const isNews = (news) => {
             return new Date(dateString).toLocaleDateString("id", options);
         };
         return (
-            <div className="card w-full  lg:w-50 mr-4" key={i}>
+            <div className="card w-full h-50 lg:w-50 mr-4" key={i}>
                 <Link href={route("read", data.slug)}>
                     <img
-                        className="rounded-md lg:mb-3 mb-2 w-full h-48 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-102 duration-100"
+                        className="rounded-md lg:mb-3 lg:h-44 md:h-40 mb-2 w-full h-32 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-102 duration-100"
                         src={"/storage/"+ data.image}
                         alt="Shoes"
                     />
                 </Link>
                 <Link href={route("read", data.slug)}>
-                    <h2 className="card-title lg:text-base text-sm md:text-sm mb-2">
+                    <h2 className="card-title lg:text-base text-sm md:text-base mb-2">
                         {data.title}
                     </h2>
                 </Link>

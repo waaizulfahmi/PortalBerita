@@ -20,9 +20,9 @@ const InputComment = (props) => {
 
     return (
         <div className="container mx-auto">
-            <div className="comment md:w-3/5">
+            <div className="comment md:p-0 lg:p-0 p-0 lg:w-3/5 lg:mb-0">
                 {" "}
-                <div className="comment h-22 w-30 p-3 rounded-md bg-base-200 mb-5">
+                <div className="comment md:h-48 lg:h-52 lg:w-full h-22 w-30 p-3 lg:p-2 bg-violet-200">
                     <p className="font-bold lg:text-xl text-base mb-2">
                         Komentar
                     </p>

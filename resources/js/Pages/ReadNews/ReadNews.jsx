@@ -34,7 +34,7 @@ const ReadNews = (props) => {
                 </u>
             </div>
 
-            <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center mt-6">
+            <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center items-strech mt-6 p-2">
                 <InputComment news={props.myNews} />
                 <Coment comments={props.comments} news={props.myNews} />
             </div>
@@ -43,7 +43,7 @@ const ReadNews = (props) => {
                     <h1 className="text-black lg:mt-3 lg:ml-3 ml-2  lg:mb-3 mb-3 lg:text-2xl text-base md:text-xl font-bold">
                         Artikel Rekomendasi
                     </h1>
-                    <div class="grid grid-cols-5 gap-2 items-left justify-left lg:mr-2 ml-2 mr-2 ">
+                    <div class="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 sm:grid-cols-2 gap-2 items-left justify-left lg:mr-2 ml-2 mr-2 ">
                         <BeritaRekomendasi news={props.recommend.data} />
                     </div>
                 </div>

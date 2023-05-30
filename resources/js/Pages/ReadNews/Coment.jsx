@@ -1,7 +1,6 @@
 import { Link } from "@inertiajs/react";
 import { useState, useEffect } from "react";
 import { router, Head } from "@inertiajs/react";
-import Disqus from "disqus-react";
 
 const isComment = (comments, news) => {
     // console.log(props.comments);
@@ -34,12 +33,12 @@ const isComment = (comments, news) => {
             return new Date(dateString).toLocaleDateString("id", options);
         };
         return (
-            <div className="container mx-auto">
-                <div className="comment md:w-3/5">
-                    <div className="rounded-md bg-base-200" key={i}>
+            <div className="container mx-auto ">
+                <div className="comment p-0 md:bg-white lg:w-3/5 lg:p-0">
+                    <div className=" bg-violet-200" key={i}>
                         <div class="antialiased mx-auto ml-3 mr-3 max-w-screen">
                             <div className="space-y-4">
-                                <div className="flex">
+                                <div className="flex p-2 md:p-2">
                                     <div className="flex-shrink-0 mr-3">
                                         <img
                                             className="mt-2 rounded-full w-8 h-8 sm:w-10 sm:h-10"

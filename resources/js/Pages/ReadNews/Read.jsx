@@ -29,9 +29,9 @@ const Read = (props) => {
     // console.log(news);
     return (
         <div className="container mx-auto ">
-            <div className="box-border flex flex-wrap ">
-                <div className="row-span-3 my-5 md:w-3/5">
-                    <div className="text-sm breadcrumbs ml-3">
+            <div className="box-border flex-wrap lg:flex ">
+                <div className="row-span-3 my-5 lg:w-3/5">
+                    <div className="text-sm breadcrumbs ml-3 lg:ml-1">
                         <ul>
                             <li>
                                 <Link href="/">Beranda</Link>
@@ -48,13 +48,13 @@ const Read = (props) => {
                             <li>{props.news.title}</li>
                         </ul>
                     </div>
-                    <h5 className="text-gray-500 mb-4 ml-2">
+                    <h5 className="text-gray-500 mb-4 ml-3 lg:ml-1">
                         {props.news.category}
                     </h5>
-                    <h1 className="font-bold lg:text-4xl text-2xl lg:mb-3 mb-2 ml-2">
+                    <h1 className="font-bold lg:text-4xl md:text-3xl text-2xl lg:mb-3 mb-2 ml-3 lg:ml-1">
                         {props.news.title}
                     </h1>
-                    <p className="text-gray-500 lg:mb-5 mb-3 ml-2">
+                    <p className="text-gray-500 lg:mb-5 mb-3 ml-3 lg:ml-1">
                         <small>
                             {props.news.author}
                             <u className="ml-3">
@@ -111,7 +111,7 @@ const Read = (props) => {
                         <div>
                             <input
                                 type="button"
-                                className="btn btn-active btn-ghost btn-xs lg:btn-sm mr-3"
+                                className="btn btn-active btn-ghost btn-xs lg:btn-sm mr-3 lg:mr-1"
                                 value="Copy Url"
                                 onclick={Copy}
                             />
@@ -120,22 +120,22 @@ const Read = (props) => {
                     <div>
                         <img
                             src={"/storage/" + props.news.image}
-                            className="p-2 h-56 w-full lg:h-96 lg:w-full lg:mb-4 mb-3"
+                            className="p-3 lg:p-1 h-64 w-full md:h-96 lg:h-96 lg:w-full lg:mb-4 mb-3"
                         />
                         <a href="#!"></a>
                     </div>
                     {/* <div class="box-border h-80 w-50 border-0 mb-10">
                     </div> */}
-                    <p className="lg:text-lg text-sm lg:ml-3 ml-2 lg:mb-14 mb-8 lg:mr-3 mr-2">
+                    <p className="lg:text-lg md:text-base text-sm lg:ml-1 ml-3 lg:mb-12 mb-8 lg:mr-3 mr-2">
                         {/* <a className="font-bold">
                                 PanelWarta, Purwokerto -{" "}
                             </a>{" "} */}
                         {parser(props.news.description)}
                     </p>
                     <div>
-                        <div className="text-gray-500 mb-6 flex justify-start">
+                        <div className="text-gray-500 mb-6 lg:mb-4 flex justify-start">
                             <div>
-                                <p class="font-bold lg:text-2xl md:text-xl text-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ml-4">
+                                <p class="font-bold lg:text-2xl md:text-xl text-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ml-3 lg:ml-1">
                                     <a href="">TAG</a>
                                 </p>
                             </div>
@@ -145,7 +145,7 @@ const Read = (props) => {
                                         category: props.news.category,
                                     })}
                                 >
-                                    <button className="btn btn-active btn-ghost btn-sm ml-6 mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                                    <button className="btn btn-active btn-ghost btn-sm ml-5 mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                                         {props.news.category}
                                     </button>
                                 </Link>
@@ -153,10 +153,10 @@ const Read = (props) => {
                         </div>
                     </div>
                 </div>
-                <aside className="w-full md:w-2/5 mt-5">
-                    <div className="container mx-auto rounded-sm">
-                        <div class="flex items-center justify-center">
-                            <div class="flex flex-col bg-violet-100 lg:ml-10 p-4 mt-0 w-full max-w-lg">
+                <aside className="w-full mt-5 lg:w-2/5">
+                    <div className="container mx-auto rounded-sm p-2 md:p-0 lg:p-0">
+                        <div class="flex items-center justify-center md:p-0">
+                            <div class="flex flex-col bg-violet-200 lg:ml-10 p-4 lg:p-8 mt-0 w-full h-full max-w-2xl md:max-w-3xl md:p-5">
                                 <div class="font-bold text-xl">Purwokerto</div>
                                 <div class="text-sm text-gray-500">
                                     Thursday 10 May 2020
@@ -230,7 +230,7 @@ const Read = (props) => {
 
                     
                     
-                        <div className="lg:ml-10 mt-1">
+                        <div className="lg:ml-10 mt-1 p-0">
                             <div className="box-border bg-violet-200">
                                 <div dir="rtl">
                                     <h5 className="text-sm font-bold mr-3">
@@ -241,14 +241,14 @@ const Read = (props) => {
                                     <img
                                         src="https://ik.imagekit.io/tvlk/image/imageResource/2022/07/06/1657108950693-92e1295540ba7b6a941c2b3bdd2cf030.jpeg?tr=q-75"
                                         alt=""
-                                        className="p-5"
+                                        className="p-4"
                                     />
                                 </a>
                             </div>
                         </div>
-
-                        <div className="mt-1 p-4 bg-violet-100 lg:ml-10">
-                        <h5 className="font-bold text-lg uppercase bg-violet-300 text-gray-700 px-1 mb-2">
+                        <div className="p-0">
+                        <div className="mt-1 p-8 lg:p-8 md:p-10 bg-violet-200 lg:ml-10">
+                        <h5 className="font-bold text-lg uppercase bg-violet-300 text-gray-700 px-1 p-1 mb-2">
                             {" "}
                             Popular Topics{" "}
                         </h5>
@@ -307,8 +307,9 @@ const Read = (props) => {
                             </li>
                         </ul>
                     </div>
+                    </div>
 
-                        <div className="lg:ml-10 mt-1">
+                        <div className="lg:ml-10 mt-1 md:p-1">
                             <div className="box-border bg-violet-200">
                                 <div dir="rtl">
                                     <h5 className="text-sm font-bold mr-3">
@@ -319,7 +320,7 @@ const Read = (props) => {
                                     <img
                                         src="https://i.ytimg.com/vi/5iGBYuxnBnk/maxresdefault.jpg"
                                         alt=""
-                                        className="p-5"
+                                        className="p-4"
                                     />
                                 </a>
                             </div>

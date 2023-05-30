@@ -38,7 +38,7 @@ const isNews = (news) => {
                             <span className="text-sm text-gray-500 dark:text-gray-300">
                                 {formatDate(dateString)}
                             </span>
-                            <p>dilihat sebanyak {data.views} kali</p>
+                            <p className="text-sm">dilihat sebanyak {data.views} kali</p>
                         </div>
                     </div>
                 </div>

@@ -1,7 +1,6 @@
 import { Link } from "@inertiajs/react";
 import { useState, useEffect } from "react";
 import { router, Head } from "@inertiajs/react";
-import Disqus from "disqus-react";
 
 const isComment = (comments, news) => {
     // console.log(props.comments);

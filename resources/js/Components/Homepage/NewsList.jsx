@@ -16,7 +16,7 @@ const isNews = (news) => {
         };
         return ( 
             <div
-                className="card w-full  lg:w-72 rounded-sm bg-base-100 shadow-sm transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+                className="card w-full p-4 md:p-0 lg:p-0 lg:w-72 rounded-sm bg-base-100 shadow-sm "
                 // transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300
                 key={i}
             >
@@ -30,16 +30,16 @@ const isNews = (news) => {
                     <img
                         src={"/storage/" + data.image}
                         alt="Shoes"
-                        className="items-center w-full h-44 lg:w-58 lg:h-50 rounded-md"
+                        className="items-center w-full h-60 md:h-56 lg:w-58 lg:h-48 rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                     />
-                    <div className="body">
+                    <div className="body rounded-sm">
                         {/* <Link href={route("readnews")} as="button"> */}
-                        <h2 className="card-title lg:text-xl text-lg ml-2 lg:ml-2 mb-3 mt-2">
+                        <h2 className="card-title ml-1  lg:text-lg text-lg md:text-lg mb-3 mt-2">
                             {data.title.substring(0, 40) + "..."}
                             {/* <div className="badge badge-primary">New</div> */}
                         </h2>
                         {/* </Link> */}
-                        <p className="ml-2 mb-6 lg:text-base text-sm lg:text-base text-gray-500 lg:text-gray-500">
+                        <p className=" mb-6 ml-1 text-sm md:text-sm lg:text-base text-gray-500 lg:text-gray-500">
                             {parser(data.description.substring(0, 100) + "...")}
                         </p>
                         <div className="card-actions justify-end mb-2 lg:mb-2">
@@ -62,13 +62,13 @@ const isNews = (news) => {
                             </div>
                             <div className="text-xs">|</div>
                             <div>
-                                <h6 className="text-xs mr-2">
+                                <h6 className="text-xs mr-1">
                                     {formatDate(dateString)}
                                 </h6>
                             </div>
                         </div>
                         <div>
-                            <h6 className="card-actions justify-end mb-2 lg:mb-2">
+                            <h6 className="card-actions mr-1 lg:text-xs text-xs justify-end mb-2 lg:mb-2">
                                 dilihat sebanyak {data.views} kali
                             </h6>
                         </div>

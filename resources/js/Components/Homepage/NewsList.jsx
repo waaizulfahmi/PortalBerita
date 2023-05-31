@@ -16,7 +16,7 @@ const isNews = (news) => {
         };
         return ( 
             <div
-                className="card w-full p-4 md:p-0 lg:p-0 lg:w-72 rounded-sm bg-base-100 shadow-sm "
+                className="card w-full p-4 md:p-0 lg:p-0 lg:w-72 rounded bg-violet-100 shadow-sm "
                 // transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300
                 key={i}
             >
@@ -30,7 +30,7 @@ const isNews = (news) => {
                     <img
                         src={"/storage/" + data.image}
                         alt="Shoes"
-                        className="items-center w-full h-60 md:h-56 lg:w-58 lg:h-48 rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+                        className="items-center w-full h-60 md:h-56 lg:w-58 lg:h-48 rounded-t transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                     />
                     <div className="body rounded-sm">
                         {/* <Link href={route("readnews")} as="button"> */}

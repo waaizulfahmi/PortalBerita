@@ -11,7 +11,7 @@ const Navbar = () => {
     `;
     return (
         <div className="md:container md:mx-auto mt-5">
-            <div className="navbar bg-violet-900 lg:p-6 p-4">
+            <div className="navbar rounded-t bg-violet-900 lg:p-6 p-4">
                 <div className="flex-1 mr-3">
                     <Link
                         href={route("home")}
@@ -78,34 +78,35 @@ const Navbar = () => {
                             </button>
                         </form>
                     </div>
-                    {/* <div className="dropdown dropdown-end">
+                    <div className="dropdown dropdown-end">
                         <label
                             tabIndex={0}
                             className="btn btn-ghost btn-circle avatar"
                         >
-                            <div className="w-10 rounded-full">
-                                <img src="https://www.hannibalsafari.com.au/wp-content/uploads/photo-1534528741775-53994a69daeb.jpg" />
+                            <div className="w-12 rounded-full">
+                                <img src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" />
                             </div>
                         </label>
                         <ul
                             tabIndex={0}
                             className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52"
                         >
-                            <li>
-                                <a className="justify-between">Profile</a>
-                            </li>
-                            <li>
-                                <a>Settings</a>
-                            </li>
-                            <li>
-                                <a>Logout</a>
-                            </li>
+                            <Link href={route("login")} as="button">
+                                <li>
+                                    <a className="justify-between">Login</a>
+                                </li>
+                            </Link>
+                            <Link href={route("register")} as="button">
+                                <li>
+                                    <a>Register</a>
+                                </li>
+                            </Link>
                         </ul>
-                    </div> */}
+                    </div>
                 </div>
             </div>
 
-            <div className="navbar bg-violet-200">
+            <div className="navbar bg-violet-200 rounded-b">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">

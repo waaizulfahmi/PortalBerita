@@ -6,7 +6,7 @@ const NewNews = () => {
             <section className="dark:bg-gray-800 dark:text-gray-100">
 	
 		<a href="#" className="max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-900">
-			<img src="https://source.unsplash.com/random/480x360" alt="" className="object-cover p-2 lg:p-0 md:p-0 w-full h-96 lg:col-span-7 dark:bg-gray-500" />
+			<img src="https://source.unsplash.com/random/480x360" alt="" className="object-cover rounded p-2 lg:p-0 md:p-0 w-full h-96 lg:col-span-7 dark:bg-gray-500" />
 			<div className="p-6 md:p-2 md:mt-4 space-y-2 lg:col-span-5">
 				<h3 className="text-2xl font-semibold md:text-3xl sm:text-4xl lg:mb-6 hover:underline">Dampak Teknologi Informasi Di Bidang Pendidikan</h3>
                 <h4 className="lg:text-base text-sm">Freda Widya Artanti |<span className="lg:text-base text-sm dark:text-gray-400">February 19, 2021</span></h4>

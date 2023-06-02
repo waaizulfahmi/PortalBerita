@@ -142,7 +142,23 @@ export default function Dashboard(props) {
                             <div class="flex justify-between px-5 pt-6 mb-2 text-sm text-gray-600">
                                 <p>TOTAL</p>
                             </div>
-                            <p class="py-4 text-3xl ml-5">20,456</p>
+                            <p class="py-4 text-3xl ml-5">{props.total_post}</p>
+                        </div>
+                    </div>
+
+                    <div class="container mx-auto pr-4">
+                        <div class="w-72 bg-white max-w-xs mx-auto rounded-sm overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 transform hover:scale-100 cursor-pointer">
+                            <div class="h-20 bg-purple-400 flex items-center justify-between">
+                                <p class="mr-0 text-white text-lg pl-5">
+                                    JUMLAH PEMBACA
+                                </p>
+                            </div>
+                            <div class="flex justify-between pt-6 px-5 mb-2 text-sm text-gray-600">
+                                <p>TOTAL</p>
+                            </div>
+                            <p class="py-4 text-3xl ml-5">
+                                {props.total_views}
+                            </p>
                         </div>
                     </div>
                     <div class="container mx-auto pr-4">
@@ -158,22 +174,9 @@ export default function Dashboard(props) {
                             <p class="py-4 text-3xl ml-5">19,694</p>
                         </div>
                     </div>
-                    <div class="container mx-auto pr-4">
-                        <div class="w-72 bg-white max-w-xs mx-auto rounded-sm overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 transform hover:scale-100 cursor-pointer">
-                            <div class="h-20 bg-purple-400 flex items-center justify-between">
-                                <p class="mr-0 text-white text-lg pl-5">
-                                    JUMLAH PEMBACA
-                                </p>
-                            </div>
-                            <div class="flex justify-between pt-6 px-5 mb-2 text-sm text-gray-600">
-                                <p>TOTAL</p>
-                            </div>
-                            <p class="py-4 text-3xl ml-5">711</p>
-                        </div>
-                    </div>
                 </div>
 
-                <div class="flex justify-center bg-gray-100 py-10 p-5">
+                {/* <div class="flex justify-center bg-gray-100 py-10 p-5">
                     <div class="container mr-5 ml-2 mx-auto bg-white shadow-xl">
                         <div class="w-11/12 mx-auto">
                             <div class="bg-white my-6">
@@ -355,7 +358,7 @@ export default function Dashboard(props) {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </section>
         </AuthenticatedLayout>
     );

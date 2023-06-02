@@ -39,7 +39,7 @@ export default function Register() {
         <div className="h-screen md:flex">
             <div className="relative overflow-hidden md:flex w-1/2 bg-gradient-to-tr from-blue-800 to-purple-700 i justify-around items-center hidden">
                 <div>
-                <h1 className="text-white font-bold text-5xl font-sans">
+                    <h1 className="text-white font-bold text-5xl font-sans">
                         Panelwarta.<span className="text-orange-500">id</span>
                     </h1>
                 </div>
@@ -67,7 +67,7 @@ export default function Register() {
                             />
                         </svg>
                         <InputLabel htmlFor="name" value="Name" />
-                            <TextInput
+                        <TextInput
                             className="pl-2 outline-none border-2 ml-20"
                             name="name"
                             id="name"
@@ -76,8 +76,8 @@ export default function Register() {
                             isFocused={true}
                             onChange={handleOnChange}
                             required
-                            />
-                            <InputError message={errors.name} className="mt-2" />
+                        />
+                        <InputError message={errors.name} className="mt-2" />
                     </div>
                     <div className="flex items-center border-2 py-2 px-3 rounded-2xl mb-4">
                         <svg
@@ -95,7 +95,7 @@ export default function Register() {
                             />
                         </svg>
                         <InputLabel htmlFor="email" value="Email" />
-                            <TextInput
+                        <TextInput
                             className="pl-2 outline-none border-2 ml-20"
                             type="email"
                             name="email"
@@ -104,8 +104,8 @@ export default function Register() {
                             autoComplete="username"
                             onChange={handleOnChange}
                             required
-                            />
-                            <InputError message={errors.email} className="mt-2" />
+                        />
+                        <InputError message={errors.email} className="mt-2" />
                     </div>
                     <div className="flex items-center border-2 py-2 px-3 rounded-2xl mb-4">
                         <svg
@@ -121,7 +121,7 @@ export default function Register() {
                             />
                         </svg>
                         <InputLabel htmlFor="password" value="Password" />
-                            <TextInput
+                        <TextInput
                             className="pl-2 outline-none border-2 ml-16"
                             id="password"
                             type="password"
@@ -130,8 +130,11 @@ export default function Register() {
                             autoComplete="new-password"
                             onChange={handleOnChange}
                             required
-                            />
-                            <InputError message={errors.password} className="mt-2" />
+                        />
+                        <InputError
+                            message={errors.password}
+                            className="mt-2"
+                        />
                     </div>
                     <div className="flex items-center border-2 py-2 px-3 rounded-2xl mb-4">
                         <svg
@@ -147,36 +150,39 @@ export default function Register() {
                             />
                         </svg>
                         <InputLabel
-                        htmlFor="password_confirmation"
-                        value="Confirm Password"
-                    />
-                            <TextInput
+                            htmlFor="password_confirmation"
+                            value="Confirm Password"
+                        />
+                        <TextInput
                             className="pl-2 outline-none border-2 ml-3"
                             id="password_confirmation"
-                        type="password"
-                        name="password_confirmation"
-                        value={data.password_confirmation}
-                        autoComplete="new-password"
-                        onChange={handleOnChange}
-                        required
-                            />
-                            <InputError
-                        message={errors.password_confirmation}
-                        className="mt-2"
-                    />
+                            type="password"
+                            name="password_confirmation"
+                            value={data.password_confirmation}
+                            autoComplete="new-password"
+                            onChange={handleOnChange}
+                            required
+                        />
+                        <InputError
+                            message={errors.password_confirmation}
+                            className="mt-2"
+                        />
                     </div>
                     <div className="flex items-center justify-end mt-4">
-                    <Link
-                        href={route("login")}
-                        className="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                    >
-                        Already registered?
-                    </Link>
+                        <Link
+                            href={route("login")}
+                            className="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                        >
+                            Already registered?
+                        </Link>
 
-                    <PrimaryButton className="ml-4 bg-violet-800 w-26 justify-center" disabled={processing}>
-                        Register
-                    </PrimaryButton>
-                </div>
+                        <PrimaryButton
+                            className="ml-4 bg-violet-800 w-26 justify-center"
+                            disabled={processing}
+                        >
+                            Register
+                        </PrimaryButton>
+                    </div>
                 </form>
             </div>
         </div>

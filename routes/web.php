@@ -43,6 +43,8 @@ Route::get('/dashboard/edit', [NewsController::class, 'edit'])->middleware(['aut
 Route::post('/dashboard/update', [NewsController::class, 'update'])->middleware(['auth', 'verified'])->name('update.news');
 Route::post('/dashboard/delete', [NewsController::class, 'destroy'])->middleware(['auth', 'verified'])->name('delete.news');
 Route::get('/dashboard/search', [NewsController::class, 'search'])->middleware(['auth', 'verified'])->name('search.news');
+Route::get('/dashboard/list/comment', [NewsController::class, 'comment'])->middleware(['auth', 'verified'])->name('list.comment');
+Route::post('/dashboard/list/comment/del', [NewsController::class, 'delete_comment'])->middleware(['auth', 'verified'])->name('delete.comment');
 
 Route::get('/', [NewsController::class, 'index'])->name('home');
 // Route::post('/news', [NewsController::class, 'store'])->middleware(['auth', 'verified'])->name('create.news');
@@ -56,9 +58,7 @@ Route::get('/', [NewsController::class, 'index'])->name('home');
 // Route::get('/dashboard', function () {
 //     return Inertia::render('DashboardPages/Dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/dashboard', function () {
-    return Inertia::render('DashboardPages/Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboardpage');
+Route::get('/dashboard', [NewsController::class, 'stats'])->middleware(['auth', 'verified'])->name('dashboardpage');
 
 Route::get('/dashboard/post/new', function () {
     return Inertia::render('DashboardPages/PostPage');

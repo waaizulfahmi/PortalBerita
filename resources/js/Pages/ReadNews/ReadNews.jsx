@@ -10,6 +10,7 @@ import BeritaTerkait from "./BeritaTerkait";
 import BeritaRekomendasi from "./BeritaRekomendasi";
 import Coment from "./Coment";
 import InputComment from "./InputComment";
+import AsideRead from "./AsideRead";
 
 const ReadNews = (props) => {
     console.log(props.recommend);
@@ -23,8 +24,16 @@ const ReadNews = (props) => {
         <div className=" min-h-screen bg-slate-50">
             <Head title={str2} />
             <Navbar />
-            <Read news={props.myNews} />
-
+            <div className="container mx-auto ">
+                <div className="box-border flex-wrap lg:flex ">
+                    <div className="row-span-3 my-1 lg:w-3/5">
+                        <Read news={props.myNews} />
+                    </div>
+                    <aside className="w-full mt-5 lg:w-2/5">
+                        <AsideRead category={props.total_category} />
+                    </aside>
+                </div>
+            </div>
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center mb-3">
                 {/* <BeritaTerkait /> */}
             </div>
@@ -33,7 +42,6 @@ const ReadNews = (props) => {
                     <a href="#"></a>
                 </u>
             </div>
-
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center items-strech mt-6 p-2">
                 <InputComment news={props.myNews} />
                 <div className="container mx-auto">
@@ -61,7 +69,6 @@ const ReadNews = (props) => {
                     </div>
                 </div>
             </div>
-
             <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4">
                 {/*<NewsList />*/}
             </div>

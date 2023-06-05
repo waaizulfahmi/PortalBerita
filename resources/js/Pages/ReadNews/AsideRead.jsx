@@ -1,29 +1,20 @@
 import { Link, Head } from "@inertiajs/react";
 // import axios from "axios";
 import { useState, useEffect } from "react";
+import CuacaPanel from "./CuacaPanel";
 // import { Request } from "request";
 // // import request from "request";
 // import { Fetch } from "react-request";
 
 const AsideRead = (props) => {
     console.log(props);
-    const [weather, setWeather] = useState([]);
 
-    const fetchUserData = () => {
-        fetch(
-            "https://api.openweathermap.org/data/2.5/weather?q=purwokerto&units=imperial&appid=4ad9126a1f97c33e5930db5297993398"
-        )
-            .then((response) => {
-                return response.json();
-            })
-            .then((data) => {
-                setWeather(data);
-            });
-    };
-    useEffect(() => {
-        fetchUserData();
-    }, []);
-    console.log(weather);
+    // const sys2 = [];
+    // sys2.push(sys[0].country);
+    // console.log(sys2);
+
+    // const sys3 = sys2.country;
+    // console.log(sys3);
 
     const categoryList = () => {
         let entries = Object.entries(props.category);
@@ -59,96 +50,8 @@ const AsideRead = (props) => {
     return (
         <div className="container mx-auto rounded-sm p-2 md:p-0 lg:p-0">
             <div class="flex items-center justify-center md:p-0">
-                <div class="flex flex-col bg-violet-200 lg:ml-10 p-4 lg:p-8 mt-0 w-full h-full max-w-2xl md:max-w-3xl md:p-5">
-                    {/* {users.length > 0 && (
-                        <ul>
-                            {users.map((user) => (
-                                // <li key={user.id}>{user.name}</li>
-
-                            ))}
-                        </ul>
-                    )} */}
-                    <div class="font-bold text-xl">{weather.name}</div>
-                    <div class="text-sm text-gray-500">
-                        Thursday 10 May 2020
-                    </div>
-                    <div class="mt-6 text-6xl self-center inline-flex items-center justify-center rounded-lg text-indigo-400 h-24 w-24">
-                        <svg
-                            class="w-32 h-32"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 22 22"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
-                            ></path>
-                        </svg>
-                    </div>
-                    {/* <Fetch url="https://api.openweathermap.org/data/2.5/weather?q=purwokerto&units=imperial&appid=31fe25f0f1ac5fbfc79f7fbfce65960e">
-                        {({ fetching, failed, data }) => {
-                            if (fetching) {
-                                return <div>Loading data...</div>;
-                            }
-
-                            if (failed) {
-                                return <div>The request did not succeed.</div>;
-                            }
-
-                            if (data) {
-                                return (
-                                    <div>
-                                        <div>Post ID: {data.id}</div>
-                                        <div>Post Title: {data.title}</div>
-                                    </div>
-                                );
-                            }
-
-                            return null;
-                        }}
-                    </Fetch> */}
-                    <div class="flex flex-row items-center justify-center mt-6">
-                        <div class="font-medium text-6xl">24°</div>
-                        <div class="flex flex-col items-center ml-6">
-                            <div>{weather.id}</div>
-                            <div class="mt-1">
-                                <span class="text-sm">
-                                    <i class="far fa-long-arrow-up"></i>
-                                </span>
-                                <span class="text-sm font-light text-gray-500">
-                                    28°C
-                                </span>
-                            </div>
-                            <div>
-                                <span class="text-sm">
-                                    <i class="far fa-long-arrow-down"></i>
-                                </span>
-                                <span class="text-sm font-light text-gray-500">
-                                    20°C
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex flex-row justify-between mt-6">
-                        <div class="flex flex-col items-center">
-                            <div class="font-medium text-sm">Wind</div>
-                            <div class="text-sm text-gray-500">9k/h</div>
-                        </div>
-                        <div class="flex flex-col items-center">
-                            <div class="font-medium text-sm">Humidity</div>
-                            <div class="text-sm text-gray-500">68%</div>
-                        </div>
-                        <div class="flex flex-col items-center">
-                            <div class="font-medium text-sm">Visibility</div>
-                            <div class="text-sm text-gray-500">10km</div>
-                        </div>
-                    </div>
-                </div>
+                <CuacaPanel />
             </div>
-
             <div className="lg:ml-10 mt-1">
                 <div className="box-border bg-violet-200">
                     <div dir="rtl">

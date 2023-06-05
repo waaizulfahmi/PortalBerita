@@ -2,32 +2,9 @@ import { Link } from "@inertiajs/react";
 import parser from "html-react-parser";
 import { useState, useEffect } from "react";
 import { render } from "react-dom";
-import axios from "axios";
 
 const Read = (props) => {
     // GET CUACA BMKG
-    const [dataXML, setdata] = useState({});
-    const getData = async () => {
-        try {
-            const response = await axios.get(
-                "http://data.bmkg.go.id/DataMKG/MEWS/DigitalForecast/DigitalForecast-JawaTengah.xml",
-
-                {
-                    "Content-Type": "application/xml; charset=utf-8",
-                }
-            );
-
-            setdata(response.data[0]);
-        } catch (error) {
-            console.log(error);
-        }
-    };
-
-    useEffect(() => {
-        getData();
-    }, []);
-
-    console.log(dataXML);
 
     // console.log(Object.keys(news));
     // GET URL COPY

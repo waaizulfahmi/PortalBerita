@@ -344,7 +344,7 @@ export default function Authenticated({ auth, header, children }) {
                                         className={
                                             "flex items-center  text-white py-4 pl-6 nav-item  " +
                                             (titlePage ==
-                                            "Daftar Postingan - Laravel"
+                                            "Daftar Komentar - Laravel"
                                                 ? "active-nav-link"
                                                 : " ")
                                         }

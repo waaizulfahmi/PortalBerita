@@ -52,34 +52,12 @@ class ShowNewsController extends Controller
         );
 
         arsort($total_category, SORT_NUMERIC);
-        // dd($total_category);
-
-        // $sortedData = [];
-        // foreach($total_category as $key => $val)
-        // {
-        //     array_push($sortedData, $key, $val);
-        //     // echo "Key=" . $x . ", Value=" . $x_value;
-        //     // echo "<br>";
-        // }
-
-        // dd($sortedData);
-
-        
 
         return Inertia::render('ReadNews/ReadNews', [
             'myNews' => $post,
             'recommend' => $news,
             'comments' => $comment, 
-            'total_category' => $total_category
-                // 'Berita' =>  $total_news, 
-                // 'Olahraga' => $total_sport,
-                // 'Wisata' => $total_wisata,
-                // 'Kuliner' => $total_kuliner, 
-                // 'Bisnis' => $total_bisnis, 
-                // 'Profile' => $total_profile, 
-                // 'Nasional' => $total_nasional, 
-                // 'Mancanegara' => $total_mancanegara
-            
+            'total_category' => $total_category        
         ]);
 
   

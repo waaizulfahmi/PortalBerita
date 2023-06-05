@@ -1,7 +1,30 @@
 import { Link, Head } from "@inertiajs/react";
+// import axios from "axios";
+import { useState, useEffect } from "react";
+// import { Request } from "request";
+// // import request from "request";
+// import { Fetch } from "react-request";
 
 const AsideRead = (props) => {
     console.log(props);
+    const [weather, setWeather] = useState([]);
+
+    const fetchUserData = () => {
+        fetch(
+            "https://api.openweathermap.org/data/2.5/weather?q=purwokerto&units=imperial&appid=4ad9126a1f97c33e5930db5297993398"
+        )
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                setWeather(data);
+            });
+    };
+    useEffect(() => {
+        fetchUserData();
+    }, []);
+    console.log(weather);
+
     const categoryList = () => {
         let entries = Object.entries(props.category);
         let sortedData = entries.sort(
@@ -37,7 +60,15 @@ const AsideRead = (props) => {
         <div className="container mx-auto rounded-sm p-2 md:p-0 lg:p-0">
             <div class="flex items-center justify-center md:p-0">
                 <div class="flex flex-col bg-violet-200 lg:ml-10 p-4 lg:p-8 mt-0 w-full h-full max-w-2xl md:max-w-3xl md:p-5">
-                    <div class="font-bold text-xl">Purwokerto</div>
+                    {/* {users.length > 0 && (
+                        <ul>
+                            {users.map((user) => (
+                                // <li key={user.id}>{user.name}</li>
+
+                            ))}
+                        </ul>
+                    )} */}
+                    <div class="font-bold text-xl">{weather.name}</div>
                     <div class="text-sm text-gray-500">
                         Thursday 10 May 2020
                     </div>
@@ -57,10 +88,32 @@ const AsideRead = (props) => {
                             ></path>
                         </svg>
                     </div>
+                    {/* <Fetch url="https://api.openweathermap.org/data/2.5/weather?q=purwokerto&units=imperial&appid=31fe25f0f1ac5fbfc79f7fbfce65960e">
+                        {({ fetching, failed, data }) => {
+                            if (fetching) {
+                                return <div>Loading data...</div>;
+                            }
+
+                            if (failed) {
+                                return <div>The request did not succeed.</div>;
+                            }
+
+                            if (data) {
+                                return (
+                                    <div>
+                                        <div>Post ID: {data.id}</div>
+                                        <div>Post Title: {data.title}</div>
+                                    </div>
+                                );
+                            }
+
+                            return null;
+                        }}
+                    </Fetch> */}
                     <div class="flex flex-row items-center justify-center mt-6">
                         <div class="font-medium text-6xl">24°</div>
                         <div class="flex flex-col items-center ml-6">
-                            <div>Cloudy</div>
+                            <div>{weather.id}</div>
                             <div class="mt-1">
                                 <span class="text-sm">
                                     <i class="far fa-long-arrow-up"></i>

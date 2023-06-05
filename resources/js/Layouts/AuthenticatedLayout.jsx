@@ -241,6 +241,13 @@ export default function Authenticated({ auth, header, children }) {
                                         <i className="fas fa-table mr-3"></i>
                                         Daftar Postingan
                                     </Link>
+                                    <Link
+                                        href="/dashboard/list/show"
+                                        className="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
+                                    >
+                                        <i className="fas fa-table mr-3"></i>
+                                        Daftar Postingan
+                                    </Link>
                                 </nav>
                                 {/* <!-- <button className="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
                 <i className="fas fa-plus mr-3"></i> New Report
@@ -331,6 +338,19 @@ export default function Authenticated({ auth, header, children }) {
                                     >
                                         <i className="fas fa-table mr-3"></i>
                                         Daftar Postingan
+                                    </Link>
+                                    <Link
+                                        href="/dashboard/list/comment"
+                                        className={
+                                            "flex items-center  text-white py-4 pl-6 nav-item  " +
+                                            (titlePage ==
+                                            "Daftar Komentar - Laravel"
+                                                ? "active-nav-link"
+                                                : " ")
+                                        }
+                                    >
+                                        <i className="fas fa-table mr-3"></i>
+                                        Daftar Komentar
                                     </Link>
                                 </nav>
                             </aside>

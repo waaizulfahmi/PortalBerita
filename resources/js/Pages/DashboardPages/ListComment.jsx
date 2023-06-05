@@ -6,72 +6,36 @@ import parser from "html-react-parser";
 import { Head, Link } from "@inertiajs/react";
 import { BiEdit } from "react-icons/bi";
 
-const ListPage = (props) => {
-    const [title, setTitle] = useState("");
-    const [description, setDescription] = useState("");
-    const [category, setCategory] = useState();
-    const [isNotif, setIsNotif] = useState(false);
-    const [image, setImg] = useState();
-    const handleSubmit = () => {
-        const data = {
-            title,
-            description,
-            category,
-            image,
-        };
-        router.post("/news", data);
-        setIsNotif(true);
-        setTitle("");
-        setDescription("");
-        setCategory("");
-        setImg("");
-    };
-
-    const deleteButton = () => {};
-
+const ListComment = (props) => {
     useEffect(() => {
-        if (!props.myNews) {
+        if (!props.comments) {
             // router.get("/dashboard");
-            router.get("/dashboard/list/show");
+            router.get("/dashboard/list/comment");
         }
 
         console.log("props", props);
         return;
     }, []);
     console.log("props last", props);
-
+    console.log(props.comments);
     let tb_data =
-        props.myNews && props.myNews.length > 0 ? (
-            props.myNews.map((news, i) => {
+        props.comments && props.comments.length > 0 ? (
+            props.comments.map((comment, i) => {
                 return (
                     <tr key={i}>
                         <td>{i + 1}</td>
-                        <td>{news.author}</td>
+                        <td>{comment.slug_post}</td>
                         <td>
-                            {news.title.substring(0, 20) + "..."}
+                            {comment.username.substring(0, 20) + "..."}
                             <br />
-                            <span className="badge badge-info badge-sm text-white ">
-                                {news.category}
-                            </span>
+                            {/* <span className="badge badge-info badge-sm text-white ">
+                                {comment.category}
+                            </span> */}
                         </td>
+                        <td>{comment.comment}</td>
+                        {/* <td>{comment.slug.substring(0, 30) + "..."}</td> */}
                         <td>
-                            {parser(news.description.substring(0, 50) + "...")}
-                        </td>
-                        <td>{news.slug.substring(0, 30) + "..."}</td>
-                        <td>
-                            <div className="btn btn-info btn-xs mx-2">
-                                <Link
-                                    href={route("edit.news")}
-                                    method="get"
-                                    data={{ id: news.id }}
-                                    as="button"
-                                >
-                                    <div>
-                                        {/* <i className="fa-light fa-pen-to-square"></i> */}
-                                        EDIT
-                                    </div>
-                                </Link>
-                            </div>
+                            {/* <div className="btn btn-info btn-xs mx-2"></div> */}
                             <label
                                 htmlFor="my-modal-3"
                                 className="btn btn-warning btn-xs"
@@ -101,9 +65,11 @@ const ListPage = (props) => {
                                     </p>
                                     <div className="modal-action">
                                         <Link
-                                            href={route("delete.news")}
+                                            href={route("delete.comment")}
                                             method="post"
-                                            data={{ id: news.id }}
+                                            data={{
+                                                id: comment.id,
+                                            }}
                                             className="btn btn-warning"
                                         >
                                             Hapus
@@ -123,12 +89,12 @@ const ListPage = (props) => {
                             {/* </div> */}
                         </td>
                         <th>
-                            <a
-                                href={route("read", { slug: news.slug })}
+                            {/* <a
+                                href={route("read", { slug: comment.slug })}
                                 className="btn btn-ghost btn-xs"
                             >
                                 details
-                            </a>
+                            </a> */}
                         </th>
                     </tr>
                 );
@@ -136,7 +102,6 @@ const ListPage = (props) => {
         ) : (
             <p>Data Belum tersedia</p>
         );
-
     return (
         <AuthenticatedLayout
             auth={props.auth}
@@ -147,7 +112,7 @@ const ListPage = (props) => {
                 </h2>
             }
         >
-            <Head title="Daftar Postingan"></Head>
+            <Head title="Daftar Komentar"></Head>
             <form
                 class="flex items-center"
                 method="get"
@@ -207,10 +172,9 @@ const ListPage = (props) => {
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Penulis</th>
-                            <th>Judul</th>
-                            <th>Deskripsi</th>
-                            <th>Slug</th>
+                            <th>Topik</th>
+                            <th>Username</th>
+                            <th>Komentar</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -220,13 +184,13 @@ const ListPage = (props) => {
             </div>
             {/* The button to open modal */}
             {/* <label htmlFor="my-modal-3" className="btn">
-                open modal
-            </label>
+        open modal
+    </label>
 
-            {/* Put this part before </body> tag */}
+    {/* Put this part before </body> tag */}
             {/* <input type="checkbox" id="my-modal-3" className="modal-toggle" /> */}{" "}
         </AuthenticatedLayout>
     );
 };
 
-export default ListPage;
+export default ListComment;

@@ -124,7 +124,7 @@ const PostPage = (props) => {
                             <div className="m-2 w-full">
                                 <TiptapPost
                                     setDesc={setDescription}
-                                    value={category}
+                                    // value={category}
                                     onChange={(category) =>
                                         setDescription(category.target.value)
                                     }

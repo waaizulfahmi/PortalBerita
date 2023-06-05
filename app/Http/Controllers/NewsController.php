@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\News;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\NewsCollection;
+use App\Models\Comments;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Illuminate\Support\Str;
@@ -174,6 +175,37 @@ class NewsController extends Controller
         }
         return Inertia::render('DashboardPages/ListPage', [
             'myNews' => $newsResult,
+
+        ]);
+    }
+
+    public function comment(){
+      
+
+        $comment = Comments::all();
+        return Inertia::render('DashboardPages/ListComment', [
+            'comments' => $comment,
+        ]);
+    }
+
+
+    public function delete_comment(Request $request, Comments $comment){
+        $comment= Comments::find($request->id);
+        $comment->delete();
+
+        return to_route('list.comment')->with('message', 'Data Berhasil Dihapus !');
+
+    }
+
+    public function stats () {
+        $total_posts = News::count();
+        $total_views = News::sum('views');
+        $total_author = News::count('author');
+        
+        return Inertia::render('DashboardPages/Dashboard', [
+            'total_post' => $total_posts,
+            'total_views' => $total_views,
+            'total_author' => $total_author,
 
         ]);
     }

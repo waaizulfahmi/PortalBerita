@@ -29,11 +29,35 @@ class ShowNewsController extends Controller
         $count->views = $count->views + 1;
         $count->save();
 
+        // COUNT CATEGORY 
+        $total_category = [];
+        $total_news = News::where('category', 'Berita')->count();
+        $total_sport = News::where('category', 'Olahraga')->count();
+        $total_wisata = News::where('category', 'Wisata')->count();
+        $total_kuliner = News::where('category', 'Kuliner')->count();
+        $total_bisnis = News::where('category', 'Bisnis')->count();
+        $total_profile = News::where('category', 'Profile')->count();
+        $total_nasional = News::where('category', 'Nasional')->count();
+        $total_mancanegara = News::where('category', 'Mancanegara')->count();
+
+        $total_category = array( 
+             'Berita' => $total_news, 
+             'Olahraga' => $total_sport,
+             'Wisata' => $total_wisata,
+             'Kuliner' => $total_kuliner, 
+             'Bisnis' =>$total_bisnis, 
+             'Profile' =>$total_profile, 
+             'Nasional' => $total_nasional, 
+             'Mancanegara' => $total_mancanegara,
+        );
+
+        arsort($total_category, SORT_NUMERIC);
+
         return Inertia::render('ReadNews/ReadNews', [
             'myNews' => $post,
             'recommend' => $news,
-            'comments' => $comment
-            
+            'comments' => $comment, 
+            'total_category' => $total_category        
         ]);
 
   

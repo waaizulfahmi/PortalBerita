@@ -158,6 +158,7 @@ const TiptapPost = ({ setDesc }) => {
             setDesc(html);
         },
     });
+    // editor.commands.clearContent(true);
     // useEffect(() => {
     //     // this is just an example. do whatever you want to do here
     //     // to retrieve your editors content from somewhere

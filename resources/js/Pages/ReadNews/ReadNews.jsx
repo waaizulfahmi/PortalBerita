@@ -10,6 +10,7 @@ import BeritaTerkait from "./BeritaTerkait";
 import BeritaRekomendasi from "./BeritaRekomendasi";
 import Coment from "./Coment";
 import InputComment from "./InputComment";
+import AsideRead from "./AsideRead";
 
 const ReadNews = (props) => {
     console.log(props.recommend);
@@ -23,8 +24,16 @@ const ReadNews = (props) => {
         <div className=" min-h-screen bg-slate-50">
             <Head title={str2} />
             <Navbar />
-            <Read news={props.myNews} />
-
+            <div className="container mx-auto ">
+                <div className="box-border flex-wrap lg:flex ">
+                    <div className="row-span-3 my-1 lg:w-3/5">
+                        <Read news={props.myNews} />
+                    </div>
+                    <aside className="w-full mt-5 lg:w-2/5">
+                        <AsideRead category={props.total_category} />
+                    </aside>
+                </div>
+            </div>
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center mb-3">
                 {/* <BeritaTerkait /> */}
             </div>
@@ -33,14 +42,26 @@ const ReadNews = (props) => {
                     <a href="#"></a>
                 </u>
             </div>
-
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center items-strech mt-6 p-2">
                 <InputComment news={props.myNews} />
-                <Coment comments={props.comments} news={props.myNews} />
-            </div>
-            <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-left mb-3">
                 <div className="container mx-auto">
-                    <h1 className="text-black lg:mt-3 lg:ml-3 ml-2  lg:mb-3 mb-3 lg:text-2xl text-base md:text-xl font-bold">
+                    <div className="comment md:w-3/5">
+                        <div className="rounded-md bg-base-200 p-3">
+                            <div class="antialiased mx-auto ml-3 mr-3 max-w-screen ">
+                                <div className="space-y-2">
+                                    <Coment
+                                        comments={props.comments}
+                                        news={props.myNews}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center mb-3">
+                <div className="container mt-10 m-5">
+                    <h1 className="text-black lg:mt-3 lg:ml-3 ml-2  lg:mb-3 mb-3 lg:text-2xl text-base md:text-xl font-bold mt-6">
                         Artikel Rekomendasi
                     </h1>
                     <div class="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 sm:grid-cols-2 gap-2 items-left justify-left lg:mr-2 ml-2 mr-2 ">
@@ -48,7 +69,6 @@ const ReadNews = (props) => {
                     </div>
                 </div>
             </div>
-
             <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4">
                 {/*<NewsList />*/}
             </div>

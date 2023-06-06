@@ -28,7 +28,12 @@ export default function Homepage(props) {
         <div className=" min-h-screen bg-slate-50">
             <Head title={props.title} />
             <Navbar user={props.auth.user} />
-            <NewNews />
+            <u>
+                <h1 className="text-black mt-4 lg:mt-6 mb-2 lg:mb-3 md:text-2xl  lg:text-2xl text-xl text-left font-bold lg:ml-28 ml-4">
+                    Berita Populer
+                </h1>
+            </u>
+            <NewNews news={props.top_news.data} />
             {/*<MainNews />*/}
             {/* <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4 static">
                 <MainNews />
@@ -91,7 +96,7 @@ export default function Homepage(props) {
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
                 {/* <RegionalNews news={props.news.data} /> */}
             {/* </div> */}
-            
+
             {/* <div dir="rtl">
                 <u>
                     <Link href={route("shownews")} as="button">

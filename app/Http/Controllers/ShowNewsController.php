@@ -82,12 +82,14 @@ class ShowNewsController extends Controller
         // // dd($news);
         // $news = News::all();
         $showCategory = $news::where('category', $category)->orderByDesc('id')->get();
+        $showCategoryTotal = $news::where('category', $category)->count();
         
         // dd($showCategory);
         return Inertia::render('ShowNews/ShowNews', [
-            'title' =>  $category ,
+            'title' =>  "Kategori " . $category ,
             'description' => "Selamat datang di portal berita",
             'news' => $showCategory,
+            'total_cat' => $showCategoryTotal
 
         ]);
 
@@ -103,14 +105,16 @@ class ShowNewsController extends Controller
    public function search(Request $request){
         if($request->has('search')){
             $newsResult = News::where('title', 'LIKE', '%'.$request->search.'%')->get();
+            $newsResultTotal = News::where('title', 'LIKE', '%'.$request->search.'%')->count();
         }
         else{
             $newsResult = News::all();
         }
-        $mencari = "Mencari ";
+        $mencari = "Pencarian ";
         return Inertia::render('ShowNews/ShowNews', [
             'title' => $mencari.$request->search,
             'news' => $newsResult,
+            'newsTotal' => $newsResultTotal
 
         ]);
 

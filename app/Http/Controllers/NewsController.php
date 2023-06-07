@@ -9,6 +9,7 @@ use App\Models\Comments;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Illuminate\Support\Str;
+use PharIo\Manifest\Author;
 
 class NewsController extends Controller
 {
@@ -182,10 +183,14 @@ class NewsController extends Controller
         ]);
     }
 
-    public function comment(){
-      
+    public function comment( News $news){
+        $user = $news::select('author')->where('author',  auth()->user()->name)->get()->pluck('author')->first();
+        // $get_user = $user->pluck();
+        // echo $user;
+        // dd($user);
+        $comment = Comments::join('news', 'comments.slug_post' ,'=', 'news.slug')->where('news.author', '=', $user)->get(['comment', 'username', 'slug_post']);
 
-        $comment = Comments::all();
+        // dd($comment);
         return Inertia::render('DashboardPages/ListComment', [
             'comments' => $comment,
         ]);

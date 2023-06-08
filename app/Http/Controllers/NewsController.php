@@ -6,6 +6,7 @@ use App\Models\News;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\NewsCollection;
 use App\Models\Comments;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Illuminate\Support\Str;
@@ -97,20 +98,14 @@ class NewsController extends Controller
      */
     public function show(News $news)
     {
-        // $slug = $news->slug;
+     
         $myNews = $news::where('author', auth()->user()->name)->get();
         return Inertia::render('DashboardPages/ListPage', [
             'myNews' => $myNews,
 
         ]);
 
-        // $showNews = $news::where('slug', $slug)->first();
-        // return Inertia::render('ReadNews/Read', [
-        //     'myNews' => $showNews,
-        // ]);
-        // return response()->json([
-        //     'news' => $news 
-        // ]);
+     
     }
 
     /**
@@ -132,8 +127,7 @@ class NewsController extends Controller
     public function update(Request $request, News $news)
     {
         $setImage = $request->input('image');
-        // dd($setImage);
-    //   dd($news::where('image', $request->input('image'))->first());
+
         
 
         News::where('id', $request->id)->update([
@@ -159,15 +153,7 @@ class NewsController extends Controller
         $news->delete();
 
         return to_route('my.news')->with('message', 'Data Berhasil Dihapus !');
-        // return response()->json([
-        //     'status' => true,
-        //     'message' => "Post Deleted successfully!",
-        // ], 200);
-        // $news = News::find($request->id);
-        // $news->delete();
-        // return response()->json([
-        //     'news' => $news ```````````````````````````
-        // ]);
+      
     }
 
     public function search(Request $request)
@@ -185,12 +171,10 @@ class NewsController extends Controller
 
     public function comment( News $news){
         $user = $news::select('author')->where('author',  auth()->user()->name)->get()->pluck('author')->first();
-        // $get_user = $user->pluck();
-        // echo $user;
-        // dd($user);
+  
         $comment = Comments::join('news', 'comments.slug_post' ,'=', 'news.slug')->where('news.author', '=', $user)->get(['comment', 'username', 'slug_post']);
 
-        // dd($comment);
+
         return Inertia::render('DashboardPages/ListComment', [
             'comments' => $comment,
         ]);
@@ -208,7 +192,7 @@ class NewsController extends Controller
     public function stats () {
         $total_posts = News::count();
         $total_views = News::sum('views');
-        $total_author = News::count('author');
+        $total_author = User::count('id');
         
         return Inertia::render('DashboardPages/Dashboard', [
             'total_post' => $total_posts,

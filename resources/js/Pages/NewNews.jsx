@@ -1,4 +1,5 @@
 import { Link } from "@inertiajs/react";
+import Marquee from "react-fast-marquee";
 
 const NewNews = (props) => {
     // const dateString = pro;
@@ -11,6 +12,7 @@ const NewNews = (props) => {
         };
         return new Date(dateString).toLocaleDateString("id", options);
     };
+
     console.log(props);
     const img1 = "/storage/" + props.news[0].image;
     console.log(img1);
@@ -58,6 +60,7 @@ const NewNews = (props) => {
         // </div>
 
         <div className="container mx-auto">
+            {/* <marquee>top_news</marquee> */}
             <div className="carousel w-full h-80">
                 <div id="slide1" className="carousel-item relative w-full">
                     <div

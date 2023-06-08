@@ -28,13 +28,11 @@ export default function Homepage(props) {
         <div className=" min-h-screen bg-slate-50">
             <Head title={props.title} />
             <Navbar user={props.auth.user} />
-            <u>
-                <h1 className="text-black mt-4 lg:mt-6 mb-2 lg:mb-3 md:text-2xl  lg:text-2xl text-xl text-left font-bold lg:ml-28 ml-4">
-                    Berita Populer
-                </h1>
-            </u>
+            <h1 className="text-black mt-10 lg:mt-15 mb-2 lg:mb-3 md:text-2xl  lg:text-2xl text-xl text-left font-bold lg:ml-28 ml-4 ">
+                Berita Populer
+            </h1>
             <NewNews news={props.top_news.data} />
-            {/*<MainNews />*/}
+            {/* <MainNews /> */}
             {/* <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4 static">
                 <MainNews />
             </div> */}
@@ -71,11 +69,11 @@ export default function Homepage(props) {
             </div>
             <hr /> */}
             {/* <u>
-                    <h1 className="text-black p-3 lg:text-2xl sm:text-xl font-bold ml-32">
-                        Berita Wisata
-                    </h1>
-            <div dir="rtl">
-                    <Link href={route('shownews')} as="button">
+                <h1 className="text-black p-3 lg:text-2xl sm:text-xl font-bold ml-32">
+                    Berita Wisata
+                </h1>
+                <div dir="rtl">
+                    <Link as="button">
                         <button className="flex justify-center mr-40 mb-3 p-0 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                             Lihat Berita Lainnya
                         </button>
@@ -86,17 +84,16 @@ export default function Homepage(props) {
                 <TravelsNews news={props.news.data} />
             </div>
 
-                <hr />
-                {/* <hr/>
+            <hr /> */}
+            {/* <hr/>
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
                 <ProfileNews news={props.news.data} />
-            </div> */}
+            </div>
             {/* <BeritaBisnis/> */}
             {/* <hr />
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
                 {/* <RegionalNews news={props.news.data} /> */}
             {/* </div> */}
-
             {/* <div dir="rtl">
                 <u>
                     <Link href={route("shownews")} as="button">
@@ -106,17 +103,16 @@ export default function Homepage(props) {
                     </Link>
                 </u>
             </div> */}
-            <u>
-                <h1 className="text-black mt-4 lg:mt-6 mb-2 lg:mb-3 md:text-2xl  lg:text-2xl text-xl text-left font-bold lg:ml-28 ml-4">
-                    Berita Terbaru
-                </h1>
-            </u>
+
+            <h1 className="text-black mt-10 lg:mt-15 mb-2 lg:mb-3 md:text-2xl  lg:text-2xl text-xl text-left font-bold lg:ml-28 ml-4">
+                Berita Terbaru
+            </h1>
+
             <div className="container mx-auto flex lg:flex justify-center md:grid md:grid-cols-2 flex-col lg:flex-row lg:flex-wrap lg:items-stretch lg:gap-10 gap-6  items-center">
                 <NewsList news={props.news.data} />
             </div>
-
             {/* <u>
-                <Link href={route("readnews")} as="button">
+                <Link as="button">
                     <h1 className="text-black p-5 lg:text-2xl sm:text-xl font-bold ml-32">
                         Berita Nasional
                     </h1>
@@ -126,9 +122,7 @@ export default function Homepage(props) {
                 </h1>
             </u>
             <NewsListRow news={props.news.data} /> */}
-            {/* <button className="btn" onClick={routeChange}>
-                Link to ShowNews
-            </button> */}
+            {/* <button className="btn">Link to ShowNews</button> */}
             <div className="flex justify-center items-center gap-5">
                 <Paginator meta={props.news.meta} />
             </div>

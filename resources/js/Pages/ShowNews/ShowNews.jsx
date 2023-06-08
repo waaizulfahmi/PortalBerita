@@ -23,7 +23,7 @@ const ShowNews = (props) => {
                 <h1 className="justify-left text-left text-xl pt-8 pb-5">
                     Menampilkan Artikel dengan Kategori : {props.title}
                 </h1>
-                <div className="container grid grid-cols-1 gap-8 mt-8 md:mt-8 md:grid-cols-2">
+                <div className=" lg:container xl:container grid grid-cols-1 sm:grid-cols-2 sm:gap-3 gap-8 mt-8 md:mt-8 md:grid-cols-2">
                     <Category news={props.news} />
                 </div>
                 {/* <SideNews /> */}

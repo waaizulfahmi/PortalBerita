@@ -91,7 +91,7 @@ export default function Homepage(props) {
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center">
                 {/* <RegionalNews news={props.news.data} /> */}
             {/* </div> */}
-            
+
             {/* <div dir="rtl">
                 <u>
                     <Link href={route("shownews")} as="button">
@@ -101,13 +101,16 @@ export default function Homepage(props) {
                     </Link>
                 </u>
             </div> */}
-            <u>
-                <h1 className="text-black mt-4 lg:mt-6 mb-2 lg:mb-3 md:text-2xl  lg:text-2xl text-xl text-left font-bold lg:ml-28 ml-4">
+            
+            <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center mb-8">
+                <div>
+                <h1 className="text-black underline mt-4 lg:mt-6 mb-2 lg:mb-3 xl:mt-6 xl:mb-4 sm:text-2xl md:text-2xl xl:text-2xl lg:text-2xl text-xl text-left font-bold sm:ml-3 md:ml-3 md:mb-4 xl:ml-4 lg:ml-4 ml-3">
                     Berita Terbaru
                 </h1>
-            </u>
-            <div className="container mx-auto flex lg:flex justify-center md:grid md:grid-cols-2 flex-col lg:flex-row lg:flex-wrap lg:items-stretch lg:gap-10 gap-6  items-center">
+                <div className="grid sm:grid sm:grid-cols-2 sm:ml-3 sm:mr-3 sm:gap-5 md:grid md:grid-cols-2 md:gap-8 md:ml-3 md:mr-3 lg:grid-cols-3 xl:grid-cols-4 lg:items-stretch xl:gap-11 lg:gap-8 gap-6">
                 <NewsList news={props.news.data} />
+                </div>
+                </div>
             </div>
 
             {/* <u>

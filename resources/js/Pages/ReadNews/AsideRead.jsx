@@ -57,9 +57,9 @@ const AsideRead = (props) => {
     };
     // categoryList();
     return (
-        <div className="container mx-auto rounded-sm p-2 md:p-0 lg:p-0">
-            <div class="flex items-center justify-center md:p-0">
-                <div class="flex flex-col bg-violet-200 lg:ml-10 p-4 lg:p-8 mt-0 w-full h-full max-w-2xl md:max-w-3xl md:p-5">
+        <div className="mx-auto rounded-sm p-0 md:p-0 lg:p-0">
+            <div class="flex items-center justify-center md:p-0 p-3 sm:p-3 md:p-4 lg:p-0 xl:p-0">
+                <div class="flex flex-col bg-violet-200 lg:ml-14 lg:mr-4 xl:ml-16 xl:mr-0 p-4 sm:p-5 lg:p-8 mt-0 w-full h-full rounded-sm md:p-5">
                     {/* {users.length > 0 && (
                         <ul>
                             {users.map((user) => (
@@ -149,10 +149,10 @@ const AsideRead = (props) => {
                 </div>
             </div>
 
-            <div className="lg:ml-10 mt-1">
-                <div className="box-border bg-violet-200">
+            <div className="lg:ml-10 p-3 sm:p-3 md:p-4 lg:p-4 xl:p-0 xl:ml-16 xl:mt-2">
+                <div className="box-border bg-violet-200 rounded-sm">
                     <div dir="rtl">
-                        <h5 className="text-sm font-bold mr-3">
+                        <h5 className="text-sm font-bold mr-4">
                             Advertisement
                         </h5>
                     </div>
@@ -166,14 +166,15 @@ const AsideRead = (props) => {
                 </div>
             </div>
 
-            <div className="mt-1 p-4 bg-violet-100 lg:ml-10">
-                <h5 className="font-bold text-lg uppercase bg-violet-300 text-gray-700 px-1 mb-2">
+
+            <div className="mt-0 p-6 bg-violet-200 xl:ml-16 xl:mr-0 xl:mt-2 lg:ml-14 ml-3 mr-3 rounded-sm sm:ml-3 sm:mr-3 md:ml-4 md:mr-4">
+                <h5 className="font-bold text-lg uppercase bg-violet-300 text-gray-700 px-2 mb-2">
                     {" "}
                     Popular Topics{" "}
                 </h5>
 
                 <ul>
-                    <div className="mt-4">{categoryList()}</div>
+                    <div className="mt-4 p-2">{categoryList()}</div>
                     {/* <li className="px-1 py-4 border-b border-t border-white hover:border-gray-200 transition duration-300">
                         <a
                             href="#"
@@ -229,8 +230,8 @@ const AsideRead = (props) => {
                 </ul>
             </div>
 
-            <div className="lg:ml-10 mt-1 md:p-1">
-                <div className="box-border bg-violet-200">
+            <div className="lg:ml-10 mt-0 md:p-1 p-3 sm:p-3 md:p-4 lg:p-4 xl:p-0 xl:ml-16 xl:mt-2">
+                <div className="box-border bg-violet-200 rounded-sm">
                     <div dir="rtl">
                         <h5 className="text-sm font-bold mr-3">
                             Advertisement

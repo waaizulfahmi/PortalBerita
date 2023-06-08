@@ -2,17 +2,17 @@ import { Link } from "@inertiajs/react";
 
 const NewNews = () => {
     return (
-        <div className="container mx-auto">
+        <div className="mx-auto xl:container xs:container">
             <section className="dark:bg-gray-800 dark:text-gray-100">
 	
 		<a href="#" className="max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-900">
-			<img src="https://source.unsplash.com/random/480x360" alt="" className="object-cover rounded p-2 lg:p-0 md:p-0 w-full h-96 lg:col-span-7 dark:bg-gray-500" />
-			<div className="p-6 md:p-2 md:mt-4 space-y-2 lg:col-span-5">
-				<h3 className="text-2xl font-semibold md:text-3xl sm:text-4xl lg:mb-6 hover:underline">Dampak Teknologi Informasi Di Bidang Pendidikan</h3>
-                <h4 className="lg:text-base text-sm">Freda Widya Artanti |<span className="lg:text-base text-sm dark:text-gray-400">February 19, 2021</span></h4>
+			<img src="https://source.unsplash.com/random/480x360" alt="" className="object-cover rounded p-0 w-full h-72  sm:p-0 sm:w-full sm:h-72 xl:p-0 lg:p-0 lg:w-full lg:h-80 xl:p-0 xl:h-96 xl:w-full md:p-0 md:w-full md:h-96 lg:col-span-7 xl:col-span-7 xl:ml-0 lg:ml-4 dark:bg-gray-500" />
+			<div className="p-3 sm:p-3 lg:p-2 md:p-2 md:mt-4 space-y-2 lg:col-span-5">
+				<h3 className="text-xl font-semibold sm:text-xl sm:mb-3 md:text-3xl lg:text-3xl xl:text-3xl xs:text-sm lg:mb-6 hover:underline ml-0 md:ml-1">Dampak Teknologi Informasi Di Bidang Pendidikan</h3>
+                <h4 className="lg:text-sm xl:text-base md:text-sm sm:text-xs text-xs ml-0 md:ml-1">Freda Widya Artanti |<span className="lg:text-base text-sm dark:text-gray-400">February 19, 2021</span></h4>
 				
-				<p className="text-gray-500 lg:text-base text-sm lg:mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus esse minima nam odit incidunt sequi suscipit libero, repudiandae dolore rerum beatae consequuntur porro ab magnam? Dolorum, corrupti. Ab, quibusdam odit.</p>
-                <a href="#" className="link">Baca Selengkapnya</a>
+				<p className="text-gray-500 sm:text-sm md:text-sm lg:text-sm xl:text-base text-xs lg:mb-10 md:ml-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus esse minima nam odit incidunt sequi suscipit libero, repudiandae dolore rerum beatae consequuntur porro ab magnam? Dolorum, corrupti. Ab, quibusdam odit.</p>
+                <a href="#" className="link md:ml-1 xl:text-lg">Baca Selengkapnya</a>
             </div>
 		</a>
 </section>

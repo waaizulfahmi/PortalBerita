@@ -19,11 +19,11 @@ const InputComment = (props) => {
     };
 
     return (
-        <div className="container mx-auto">
-            <div className="comment md:p-0 lg:p-0 p-0 lg:w-3/5 lg:mb-0">
+        <div className="sm:ml-1 sm:mr-1 md:ml-3 md:mr-3 lg:w-3/5 xl:w-3/5">
+            <div className="comment md:p-0 lg:p-0 p-1 lg:mb-0">
                 {" "}
-                <div className="comment h-22 w-30 p-5 rounded-md bg-base-200 mb-5 ">
-                    <p className="font-bold lg:text-xl text-base mb-4">
+                <div className="comment h-22 w-30 sm:h-38 sm:w-full p-4 rounded-md bg-orange-500 mb-0 ">
+                    <p className="font-bold xl:text-2xl lg:text-xl text-base sm:text-lg md:text-lg mb-4">
                         Tinggalkan Komentar Anda Disini
                     </p>
                     {/* <form
@@ -41,7 +41,7 @@ const InputComment = (props) => {
                             }
                             value={comment}
                             placeholder="Tuliskan Komentar Anda"
-                            className="input input-bordered text-sm lg:text-base h-10 w-18 lg:h-16 lg:w-50 w-full mb-5"
+                            className="input input-bordered text-sm lg:text-base h-10 w-18 lg:h-14 lg:w-50 w-full mb-3"
                         />
                     </div>
                     <div>
@@ -60,7 +60,7 @@ const InputComment = (props) => {
                         <input
                             type="submit"
                             value="KIRIM"
-                            className="mt-5 btn btn-active btn-info lg:btn-sm btn-xs"
+                            className="mt-3 btn btn-active btn-info lg:btn-sm sm:btn-sm md:btn-sm btn-xs"
                             onClick={handleSubmit}
                         />
                     </div>

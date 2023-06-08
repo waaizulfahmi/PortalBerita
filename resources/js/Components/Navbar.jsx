@@ -10,7 +10,7 @@ const Navbar = () => {
     })} ${current.getFullYear()} 
     `;
     return (
-        <div className="md:container md:mx-auto mt-5">
+        <div className=" xl:container md:mx-auto mt-5">
             <div className="navbar rounded-t bg-violet-900 lg:p-6 p-4">
                 <div className="flex-1 mr-3">
                     <Link

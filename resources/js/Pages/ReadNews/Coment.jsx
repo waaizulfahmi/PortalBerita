@@ -19,7 +19,7 @@ const isComment = (comments, news) => {
             return new Date(dateString).toLocaleDateString("id", options);
         };
         return (
-            <div className="space-y-2">
+            <div className="space-y-2 ">
                 <div className="flex m-2" key={i}>
                     <div className="flex-shrink-0 mr-3">
                         <img

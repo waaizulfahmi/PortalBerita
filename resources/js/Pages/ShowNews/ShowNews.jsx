@@ -30,8 +30,8 @@ const ShowNews = (props) => {
                     Artikel dengan &nbsp;
                     {props.title}
                 </h1>
-                <div className="container grid grid-cols-1 gap-8 mt-8 md:mt-8 md:grid-cols-2">
-                    <Category news={props.news} total={props.total_cat} />
+                <div className=" lg:container xl:container grid grid-cols-1 sm:grid-cols-2 sm:gap-3 gap-8 mt-8 md:mt-8 md:grid-cols-2">
+                    <Category news={props.news} />
                 </div>
                 {/* <SideNews /> */}
             </div>

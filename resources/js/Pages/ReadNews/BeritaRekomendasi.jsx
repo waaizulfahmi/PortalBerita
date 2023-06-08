@@ -13,22 +13,22 @@ const isNews = (news) => {
             return new Date(dateString).toLocaleDateString("id", options);
         };
         return (
-            <div className="card w-full h-50 lg:w-50 mr-4" key={i}>
+            <div className="card w-full h-60 sm:h-72 lg:w-50 mr-4" key={i}>
                 <Link href={route("read", data.slug)}>
                     <img
-                        className="rounded-md lg:mb-3 lg:h-44 md:h-40 mb-2 w-full h-32 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-102 duration-100"
+                        className="rounded-md lg:mb-3 lg:h-48 xl:h-40 sm:h-42 md:h-40 mb-2 w-full h-36 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-102 duration-100"
                         src={"/storage/"+ data.image}
                         alt="Shoes"
                     />
                 </Link>
                 <Link href={route("read", data.slug)}>
-                    <h2 className="card-title lg:text-base text-sm md:text-base mb-2">
+                    <h2 className="card-title lg:text-base text-sm sm:text-base md:text-base mb-2">
                         {data.title}
                     </h2>
                 </Link>
-                <div className="mb-0 text-red-600 font-medium text-xs md:text-sm lg:text-sm flex items-center justify-left md:justify-start">
+                <div className="mb-0 text-red-600 font-medium text-xs md:text-sm sm:text-xs lg:text-sm flex items-center justify-left md:justify-start">
                     <svg
-                        className="lg:w-3 lg:h-3 w-2 h-2 mr-2"
+                        className="lg:w-3 lg:h-3 md:w-3 md:h-3 w-2 h-2 mr-2"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 496 512"
                     >
@@ -39,7 +39,7 @@ const isNews = (news) => {
                     </svg>
                     {data.category}
                 </div>
-                <p className="text-gray-500 text-xs md:text-sm lf:text-sm mb-2">
+                <p className="text-gray-500 text-xs lg:text-sm md:text-sm sm:text-xs lf:text-sm mb-2">
                     {formatDate(dateString)}{" "}
                 </p>
             </div>

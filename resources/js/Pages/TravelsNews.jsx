@@ -6,14 +6,14 @@ const TravelsNews = () => {
             <div className="col-start-1 col-end-3 mb-6">
                 <div className="grid grid-cols-5 gap-5">
                     <div className="card w-full  lg:w-52 mr-5">
-                        <Link href={route("readnews")} as="button">
+                        <Link as="button">
                             <img
                                 className="mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 src="https://www.pinhome.id/info-area/wp-content/uploads/2022/02/Ambalika-Kuliner-Kota.jpg"
                                 alt="Shoes"
                             />
                         </Link>
-                        <Link href={route("readnews")} as="button">
+                        <Link as="button">
                             <h2 className="card-title text-lg mb-2">
                                 Hello Word
                             </h2>
@@ -37,14 +37,14 @@ const TravelsNews = () => {
                     </div>
 
                     <div className="card w-full  lg:w-52">
-                        <Link href={route("readnews")} as="button">
+                        <Link as="button">
                             <img
                                 className="mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 src="https://www.pinhome.id/info-area/wp-content/uploads/2022/02/Ambalika-Kuliner-Kota.jpg"
                                 alt="Shoes"
                             />
                         </Link>
-                        <Link href={route("readnews")} as="button">
+                        <Link as="button">
                             <h2 className="card-title text-lg mb-2">
                                 Hello Word
                             </h2>
@@ -68,14 +68,14 @@ const TravelsNews = () => {
                     </div>
 
                     {/* <div className="card w-full  lg:w-52">
-                        <Link href={route("readnews")} as="button">
+                        <Link  as="button">
                             <img
                                 className="mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 src="https://www.pinhome.id/info-area/wp-content/uploads/2022/02/Ambalika-Kuliner-Kota.jpg"
                                 alt="Shoes"
                             />
                         </Link>
-                        <Link href={route("readnews")} as="button">
+                        <Link  as="button">
                             <h2 className="card-title text-lg mb-2">
                                 Hello Word
                             </h2>
@@ -99,14 +99,14 @@ const TravelsNews = () => {
                     </div>
 
                     <div className="card w-full  lg:w-52">
-                        <Link href={route("readnews")} as="button">
+                        <Link  as="button">
                             <img
                                 className="mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 src="https://www.pinhome.id/info-area/wp-content/uploads/2022/02/Ambalika-Kuliner-Kota.jpg"
                                 alt="Shoes"
                             />
                         </Link>
-                        <Link href={route("readnews")} as="button">
+                        <Link  as="button">
                             <h2 className="card-title text-lg mb-2">
                                 Hello Word
                             </h2>
@@ -130,14 +130,14 @@ const TravelsNews = () => {
                     </div>
 
                     <div className="card w-full  lg:w-52">
-                        <Link href={route("readnews")} as="button">
+                        <Link  as="button">
                             <img
                                 className="mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 src="https://www.pinhome.id/info-area/wp-content/uploads/2022/02/Ambalika-Kuliner-Kota.jpg"
                                 alt="Shoes"
                             />
                         </Link>
-                        <Link href={route("readnews")} as="button">
+                        <Link  as="button">
                             <h2 className="card-title text-lg mb-2">
                                 Hello Word
                             </h2>
@@ -161,14 +161,14 @@ const TravelsNews = () => {
                     </div>
 
                     <div className="card w-full  lg:w-52">
-                        <Link href={route("readnews")} as="button">
+                        <Link  as="button">
                             <img
                                 className="mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                                 src="https://www.pinhome.id/info-area/wp-content/uploads/2022/02/Ambalika-Kuliner-Kota.jpg"
                                 alt="Shoes"
                             />
                         </Link>
-                        <Link href={route("readnews")} as="button">
+                        <Link  as="button">
                             <h2 className="card-title text-lg mb-2">
                                 Hello Word
                             </h2>

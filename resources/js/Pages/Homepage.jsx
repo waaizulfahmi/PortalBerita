@@ -32,6 +32,7 @@ export default function Homepage(props) {
                 Berita Populer
             </h1>
             <NewNews news={props.top_news.data} />
+
             {/* <MainNews /> */}
             {/* <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4 static">
                 <MainNews />

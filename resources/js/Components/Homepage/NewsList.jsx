@@ -22,7 +22,9 @@ const isNews = (news) => {
                 key={i}
             >
                 <Link
-                    href={route("read", { slug: data.slug })}
+                    href={route("read", {
+                        slug: data.slug,
+                    })}
                     // href={`/read/${data.id}/${data.slug}`}
                     // href={route('readnews', ['slug' => data.slug])}
                     // data={{ news: data.slug }}

@@ -16,9 +16,11 @@ class ShowNewsController extends Controller
     {
         // return $news;
         $post = $news::where('slug', $slug)->first();
+        $cat = $news::select('category')->where('slug', $slug)->pluck('category');
+        // dd($cat);
         $comment = $comments::get();
         // $post->increment('views');
-        $news_recommend  = new NewsCollection(News::inRandomOrder()->paginate(3));
+        $news_recommend  = new NewsCollection(News::where('category', $cat)->inRandomOrder()->paginate(3));
 
         $comment = $comments::where('slug_post', $slug)->get();
         // $post = News::find($id);
@@ -41,7 +43,9 @@ class ShowNewsController extends Controller
         $total_mancanegara = News::where('category', 'Mancanegara')->count();
 
         // TRENDS 
-        $trends = new NewsCollection(News::OrderByDesc('views')->paginate(3));
+        $date = \Carbon\Carbon::today()->subDays(30);
+
+        $trends = News::where('created_at','>=',$date)->OrderByDesc('views')->get();
         // dd($trends);
 
         $total_category = array( 

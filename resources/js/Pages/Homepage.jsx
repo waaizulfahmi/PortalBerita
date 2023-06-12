@@ -41,7 +41,7 @@ export default function Homepage(props) {
                     Berita Terbaru
                 </h1>
             </u>
-            <NewDesain />
+            // <NewDesain />
             <hr />
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center"> */}
             {/* <NewNews news={props.news.data} /> */}

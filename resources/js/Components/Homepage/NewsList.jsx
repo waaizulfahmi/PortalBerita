@@ -16,7 +16,8 @@ const isNews = (news) => {
         };
         return (
             <div
-                className="card w-full p-3 sm:p-0 md:p-0 lg:p-0 xl:p-0 lg:w-74 xl:w-72 rounded bg-base-100 shadow-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+                data-aos="zoom-in"
+                className=" card w-full p-3 sm:p-0 md:p-0 lg:p-0 xl:p-0 lg:w-74 xl:w-72 rounded bg-base-100 shadow-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-104 duration-300"
                 // transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300
                 key={i}
             >

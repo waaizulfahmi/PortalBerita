@@ -18,7 +18,7 @@ class ShowNewsController extends Controller
         $post = $news::where('slug', $slug)->first();
         $comment = $comments::get();
         // $post->increment('views');
-        $news = new NewsCollection(News::inRandomOrder()->paginate(3));
+        $news_recommend  = new NewsCollection(News::inRandomOrder()->paginate(3));
 
         $comment = $comments::where('slug_post', $slug)->get();
         // $post = News::find($id);
@@ -40,6 +40,10 @@ class ShowNewsController extends Controller
         $total_nasional = News::where('category', 'Nasional')->count();
         $total_mancanegara = News::where('category', 'Mancanegara')->count();
 
+        // TRENDS 
+        $trends = new NewsCollection(News::OrderByDesc('views')->paginate(3));
+        // dd($trends);
+
         $total_category = array( 
              'Berita' => $total_news, 
              'Olahraga' => $total_sport,
@@ -55,9 +59,10 @@ class ShowNewsController extends Controller
 
         return Inertia::render('ReadNews/ReadNews', [
             'myNews' => $post,
-            'recommend' => $news,
+            'recommend' => $news_recommend,
             'comments' => $comment, 
-            'total_category' => $total_category        
+            'total_category' => $total_category,   
+            'trends' => $trends     
         ]);
 
   

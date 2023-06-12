@@ -16,6 +16,7 @@ const ReadNews = (props) => {
     console.log(props.recommend);
     console.log(props.myNews);
     console.log(props.comments);
+    console.log(props.trends);
     const str = props.myNews.title;
     const str2 = str.charAt(0).toUpperCase() + str.slice(1);
     console.log(str2);
@@ -32,7 +33,7 @@ const ReadNews = (props) => {
                     <aside className="w-full mt-5 md:1/4 lg:w-2/5">
                         <AsideRead category={props.total_category} />
                     </aside>
-                </div> 
+                </div>
             </div>
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center mb-3">
                 {/* <BeritaTerkait /> */}

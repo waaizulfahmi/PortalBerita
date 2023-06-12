@@ -19,7 +19,7 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $topNews = new NewsCollection(News::OrderByDesc('views')->paginate(4));
+        $topNews = new NewsCollection(News::OrderByDesc('created_at')->paginate(4));
         $news = new NewsCollection(News::OrderByDesc('id')->paginate(12));
         // // dd($news);
         // $news = News::all();

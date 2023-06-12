@@ -15,14 +15,14 @@ use Inertia\Inertia;
 |
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
+| contains the "web" middleware group. Now create something greant!
 |
 */
 // Route::inertia('/ShowNews', 'ShowNews');
 // Route::get('/readnews/{slug}', [ShowNewsController::class, 'show'])->name('readnews');
-Route::get('/read/{slug}', [ShowNewsController::class, 'show'],  function ($slug, $id) {
+Route::get('/read/{slug}', [ShowNewsController::class, 'show'],  function ($slug) {
 
-    return [$slug,$id];
+    return $slug;
 })->name('read')->withoutScopedBindings();
 
 // Route::get('/read', [ShowNewsController::class, 'recommend'])->name('recommend.news');
@@ -32,6 +32,9 @@ Route::get('/search', [ShowNewsController::class, 'search'])->name('search.data'
 Route::post('/read/{slug} ', [ShowNewsController::class, 'addComment'], function($slug){
     return $slug;
 })->name('comment.data');
+// Route::post('/read/{slug} ', [ShowNewsController::class, 'recommend'], function($category){
+//     return $category;
+// })->name('recommend.data');
 
 
 // ROUTE DASHBOARD

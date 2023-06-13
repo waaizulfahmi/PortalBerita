@@ -21,10 +21,17 @@ const ShowNews = (props) => {
             <div className="p-4 flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4">
                 {/* <MainNews /> */}
                 <h1 className="justify-left text-left text-xl pt-8 pb-5">
-                    Menampilkan Artikel dengan Kategori : {props.title}
+                    Menampilkan Sebanyak{" "}
+                    <b>
+                        {!props.total_cat
+                            ? props.newsTotal | 0
+                            : props.total_cat}{" "}
+                    </b>{" "}
+                    Artikel dengan &nbsp;
+                    {props.title}
                 </h1>
-                <div className=" lg:container xl:container grid grid-cols-1 sm:grid-cols-2 sm:gap-3 gap-8 mt-8 md:mt-8 md:grid-cols-2">
-                    <Category news={props.news} />
+                <div className="container grid grid-cols-1 gap-8 mt-8 md:mt-8 md:grid-cols-2">
+                    <Category news={props.news} total={props.total_cat} />
                 </div>
                 {/* <SideNews /> */}
             </div>

@@ -38,7 +38,9 @@ const isNews = (news) => {
                             <span className="text-xs sm:text-xs text-gray-500 dark:text-gray-300 mb-1 xl:mb-3">
                                 {formatDate(dateString)}
                             </span>
-                            <p className="text-xs sm:text-xs">dilihat sebanyak {data.views} kali</p>
+                            <p className="text-sm">
+                                dilihat sebanyak {data.views} kali
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -49,10 +51,33 @@ const isNews = (news) => {
 };
 
 const noNews = () => {
-    return <div>Saat Ini Belum ada Beritanya </div>;
+    return (
+        <div className=" min-h-screen bg-slate-50">
+            <div className="p-4 items-center justify-center ">
+                <div className="alert  text-xl mx-auto justify-center">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        className="stroke-current shrink-0 w-6 h-6"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        ></path>
+                    </svg>
+                    <span>
+                        Maaf, Artikel dengan Kategori yang Anda Pilih belum ada.
+                    </span>
+                </div>
+            </div>
+        </div>
+    );
 };
 
 const Category = ({ news }) => {
-    return !news ? noNews() : isNews(news);
+    return news == 0 ? noNews() : isNews(news);
 };
 export default Category;

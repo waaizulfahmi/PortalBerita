@@ -76,7 +76,7 @@ const Read = (props) => {
             <h5 className="text-gray-500 mb-4 ml-3 md:ml-4 lg:ml-2 xl:ml-1">
                 {props.news.category}
             </h5>
-            <h1 className="font-bold lg:text-3xl xl:text-4xl md:text-xl sm:text-3xl text-2xl lg:mb-3 mb-2 ml-3 md:ml-4 lg:ml-2  xl:ml-1">
+            <h1 className="font-bold lg:text-3xl xl:text-4xl md:text-3xl sm:text-3xl text-2xl lg:mb-3 mb-2 ml-3 md:ml-4 lg:ml-2  xl:ml-1">
                 {props.news.title}
             </h1>
             <p className="text-gray-500 lg:mb-5 mb-3 ml-3 md:ml-4 lg:ml-2 xl:ml-1">

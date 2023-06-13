@@ -14,9 +14,9 @@ const isNews = (news) => {
             };
             return new Date(dateString).toLocaleDateString("id", options);
         };
-        return ( 
+        return (
             <div
-                className="card w-full p-3 sm:p-0 md:p-0 lg:p-0 xl:p-0 lg:w-74 xl:w-72 rounded bg-base-100 shadow-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+                className="card w-full p-3 sm:p-0 md:p-0 lg:p-0 xl:p-0 lg:w-74 xl:w-72 rounded shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                 // transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300
                 key={i}
             >
@@ -32,17 +32,19 @@ const isNews = (news) => {
                         alt="Shoes"
                         className="items-center w-full h-64 sm:w-full sm:h-56 md:h-56 lg:w-58 lg:h-48 rounded-t "
                     />
-                    <div className="body rounded-sm">
+                    <div className="body xl:h-40 h-32 sm:h-36 mb-2">
                         {/* <Link href={route("readnews")} as="button"> */}
-                        <h2 className="card-title ml-1 sm:text-lg md:text-xl lg:text-lg text-lg md:text-lg mb-3 mt-2">
+                        <h2 className="card-title ml-1 sm:text-lg md:text-xl lg:text-lg xl:mb-3 xl:ml-3 text-lg md:text-lg mb-3 mt-2">
                             {data.title.substring(0, 40) + "..."}
                             {/* <div className="badge badge-primary">New</div> */}
                         </h2>
                         {/* </Link> */}
-                        <p className=" mb-6 ml-1 text-sm sm:text-sm md:text-sm lg:text-sm text-gray-500 lg:text-gray-500">
+                        <p className=" mb-6 ml-1 text-sm sm:text-sm md:text-sm lg:text-sm text-gray-700  xl:ml-3 xl:mr-2">
                             {parser(data.description.substring(0, 100) + "...")}
                         </p>
-                        <div className="card-actions justify-end mb-2 lg:mb-2">
+                        {/* <h4 className="text-xs ml-3">Baca selengkapnya...</h4> */}
+                        </div>
+                        <div className="card-actions justify-end mb-2 lg:mb-0 xl:mr-2">
                             {/* <div className="mb-1 text-red-600 font-medium text-sm flex items-center justify-center md:justify-start">
                                 <svg
                                     className="w-3 h-3 mr-2"
@@ -58,21 +60,14 @@ const isNews = (news) => {
                             </div> */}
                             {/* <div className="badge badge-accent badge-outline"></div> */}
                             <div>
-                                <h6 className="text-xs">{data.author}</h6>
-                            </div>
-                            <div className="text-xs">|</div>
-                            <div>
-                                <h6 className="text-xs mr-1">
-                                    {formatDate(dateString)}
-                                </h6>
+                                <h6 className="text-xs">{data.author} | {formatDate(dateString)}</h6>
                             </div>
                         </div>
                         <div>
-                            <h6 className="card-actions mr-1 lg:text-xs text-xs justify-end mb-2 lg:mb-2">
-                                dilihat sebanyak {data.views} kali
-                            </h6>
-                        </div>
-                    </div>
+                                <h6 className="card-actions mr-2 lg:text-xs text-xs justify-end mb-2 lg:mb-2">
+                                    dilihat sebanyak {data.views} kali
+                                </h6>
+                            </div>
                 </Link>
             </div>
         );

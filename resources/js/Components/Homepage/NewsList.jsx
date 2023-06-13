@@ -16,7 +16,7 @@ const isNews = (news) => {
         };
         return (
             <div
-                className="card w-full p-3 sm:p-0 md:p-0 lg:p-0 xl:p-0 lg:w-74 xl:w-72 rounded shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+                className="card w-full p-3 sm:p-0 md:p-0 lg:p-0 xl:p-0 lg:w-74 xl:w-72 rounded shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-103 duration-300"
                 // transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300
                 key={i}
             >

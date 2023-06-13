@@ -30,7 +30,7 @@ export default function Homepage(props) {
             <Navbar user={props.auth.user} />
             <div className="flex justify-left flex-col lg:flex-row lg:flex-wrap  mb-4">
                 <div>
-                    <h1 className="text-black underline sm:w-52 sm:h-10 mt-4 lg:mt-6 mb-0 lg:mb-3 xl:mt-6 xl:mb-0 sm:text-2xl md:text-2xl xl:text-2xl lg:text-2xl text-xl text-left font-bold sm:ml-3 md:ml-3 md:mb-0 xl:ml-28 lg:ml-4 ml-3">
+                    <h1 className="text-black sm:w-52 sm:h-10 mt-4 lg:mt-6 mb-0 lg:mb-3 xl:mt-6 xl:mb-0 sm:text-2xl md:text-2xl xl:text-2xl lg:text-2xl text-xl text-left font-bold sm:ml-3 md:ml-3 md:mb-0 xl:ml-28 lg:ml-4 ml-3">
                         Berita Terbaru
                     </h1>
                     {/* <div className="xl:container mx-auto">
@@ -38,7 +38,7 @@ export default function Homepage(props) {
                     </div> */}
                 </div>
             </div>
-            <div className="xl:container mx-auto">      
+            <div className="xl:container mx-auto">
                 <NewNews news={props.top_news.data} />
             </div>
             {/*<MainNews />*/}
@@ -115,22 +115,22 @@ export default function Homepage(props) {
 
             <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap item-center mb-8">
                 <div>
-                    <h1 className="text-black underline sm:w-52 sm:h-10 mt-4 lg:mt-6 mb-2 lg:mb-3 xl:mt-6 xl:mb-4 sm:text-2xl md:text-2xl xl:text-2xl lg:text-2xl text-xl text-left font-bold sm:ml-3 md:ml-3 md:mb-4 xl:ml-4 lg:ml-4 ml-3">
-                        Berita Terbaru
+                    <h1 className="text-black sm:w-52 sm:h-10 mt-4 lg:mt-6 mb-2 lg:mb-3 xl:mt-6 xl:mb-4 sm:text-2xl md:text-2xl xl:text-2xl lg:text-2xl text-xl text-left font-bold sm:ml-3 md:ml-3 md:mb-4 xl:ml-4 lg:ml-4 ml-3">
+                        Berita Populer
                     </h1>
                     <div className="grid sm:grid sm:grid-cols-2 sm:ml-3 sm:mr-3 sm:gap-5 md:grid md:grid-cols-2 md:gap-8 md:ml-3 md:mr-3 lg:grid-cols-3 xl:grid-cols-4 lg:items-stretch xl:gap-11 lg:gap-8 gap-6">
                         <NewsList news={props.news.data} />
                     </div>
                 </div>
             </div>
-
+            {/* 
             <h1 className="text-black mt-10 lg:mt-15 mb-2 lg:mb-3 md:text-2xl  lg:text-2xl text-xl text-left font-bold lg:ml-28 ml-4">
                 Berita Terbaru
             </h1>
 
             <div className="container mx-auto flex lg:flex justify-center md:grid md:grid-cols-2 flex-col lg:flex-row lg:flex-wrap lg:items-stretch lg:gap-10 gap-6  items-center">
                 <NewsList news={props.news.data} />
-            </div>
+            </div> */}
             {/* <u>
                 <Link as="button">
                     <h1 className="text-black p-5 lg:text-2xl sm:text-xl font-bold ml-32">

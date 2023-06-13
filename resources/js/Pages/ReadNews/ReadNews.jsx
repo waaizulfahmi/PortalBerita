@@ -31,7 +31,10 @@ const ReadNews = (props) => {
                         <Read news={props.myNews} />
                     </div>
                     <aside className="invisible lg:visible w-full mt-5 md:1/4 lg:w-2/5">
-                        <AsideRead category={props.total_category} />
+                        <AsideRead
+                            category={props.total_category}
+                            trends={props.trends}
+                        />
                     </aside>
                 </div>
             </div>

@@ -10,18 +10,18 @@ const Navbar = () => {
     })} ${current.getFullYear()} 
     `;
     return (
-        <div className=" xl:container md:mx-auto mt-5">
-            <div className="navbar rounded-t bg-violet-900 lg:p-6 p-4">
+        <div className="mt-5">
+            <div className="navbar rounded-lg bg-violet-900 lg:p-4 p-4">
                 <div className="flex-1 mr-3">
                     <Link
                         href={route("home")}
                         as="button"
-                        className="btn btn-ghost normal-case lg:text-4xl text-2xl text-white"
+                        className="btn btn-ghost normal-case lg:text-4xl xl:ml-20 text-2xl text-white"
                     >
                         Panelwarta.<span className="text-orange-400">id</span>
                     </Link>
                 </div>
-                <div className=" flex lg:flex-none gap-3">
+                <div className=" flex lg:flex-none gap-3 xl:mr-20">
                     <div className="form-control">
                         <form
                             class="flex items-center"
@@ -106,7 +106,8 @@ const Navbar = () => {
                 </div>
             </div>
 
-            <div className="navbar bg-violet-200 rounded-b">
+            <div className="xl:container md:mx-auto">
+            <div className="navbar bg-violet-200 rounded-lg mt-2">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -300,6 +301,7 @@ const Navbar = () => {
                 <div className="navbar-end">
                     <h4 className="font-bold text-lg mr-2">{date}</h4>
                 </div>
+            </div>
             </div>
         </div>
     );

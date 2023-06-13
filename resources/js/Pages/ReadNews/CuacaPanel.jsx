@@ -36,7 +36,7 @@ const CuacaPanel = () => {
     `;
 
     return (
-        <div class="flex flex-col bg-violet-200 lg:ml-10 p-4 lg:p-8 mt-0 w-full h-full max-w-2xl md:max-w-3xl md:p-5">
+        <div class="flex flex-col bg-violet-200 lg:ml-12 xl:ml-12 xl:mr-0 lg:mr-1 p-4 lg:p-8 mt-0 w-full h-full max-w-3xl sm:ml-1 sm:mr-1 md:max-w-3xl md:p-5">
             <div class="font-bold text-xl">{weather.name}</div>
             <div class="text-sm text-gray-500">{date}</div>
             <div class="mt-6 text-6xl self-center inline-flex items-center justify-center rounded-lg text-indigo-400 h-24 w-24">

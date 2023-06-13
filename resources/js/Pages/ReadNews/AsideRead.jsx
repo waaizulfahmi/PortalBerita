@@ -48,12 +48,12 @@ const AsideRead = (props) => {
     };
     // categoryList();
     return (
-        <div className="container mx-auto rounded-sm p-2 md:p-0 lg:p-0">
-            <div class="flex items-center justify-center md:p-0">
+        <div className="lg:container md:container xl:container mx-auto rounded-sm p-2 md:p-0 lg:p-0">
+            <div class="flex items-center justify-center mb-3 lg:mb-2 ml-1 mr-1 sm:mb-3 md:p-0 md:ml-3 md:mr-3 xl:mr-0 xl:ml-4 lg:ml-2 md:mb-3">
                 <CuacaPanel />
             </div>
-            <div className="lg:ml-10 mt-1">
-                <div className="box-border bg-violet-200">
+            <div className="lg:ml-14 ml-1 mr-1 xl:mr-0 xl:ml-16 lg:mr-4 lg:p-0 lg:mb-2 mb-3 md:mb-3 md:ml-3 md:mr-3 sm:mb-3 sm:p-1">
+                <div className="box-border bg-violet-200 lg:mb-1">
                     <div dir="rtl">
                         <h5 className="text-sm font-bold mr-4">
                             Advertisement
@@ -69,8 +69,65 @@ const AsideRead = (props) => {
                 </div>
             </div>
 
-            <div className="mt-0 p-6 bg-violet-200 xl:ml-16 xl:mr-0 xl:mt-2 lg:ml-14 ml-3 mr-3 rounded-sm sm:ml-3 sm:mr-3 md:ml-4 md:mr-4">
-                <h5 className="font-bold text-lg uppercase bg-violet-300 text-gray-700 px-2 mb-2">
+            <div className="mt-0 p-4 bg-violet-200 xl:ml-16 xl:mr-0 xl:mt-2 lg:mb-2 lg:ml-14 ml-1 mr-1 mb-2 rounded-sm sm:mb-2 sm:ml-2 sm:mr-2 md:ml-4 md:mr-4">
+                <h5 className="font-bold mb-6 text-lg uppercase bg-violet-300 text-gray-700 px-2 mb-0">
+                    {" "}
+                    Tranding Topics{" "}
+                </h5>
+                <div className="flex flex-wrap mb-3 ml-2 lg:ml-0 md:ml-0 sm:ml-0 space-x-2">
+                    <div className="flex ">
+                        <div className="shrink-0 ml-3">
+                            <Link as="button">
+                                <h1 className="font-bold text-5xl">1</h1>
+                            </Link>
+                        </div>
+                        <div className="px-7 text-left">
+                            <Link as="button">
+                                <h5 className="text-sm md:text-base lg:text-base font-bold text-left">
+                                    Nasdem Akan Beri Kejutan Soal Cawapres Anies{" "}
+                                </h5>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+                <hr className="mb-3 border-2 border-gray-400" />
+                <div className="flex flex-wrap mb-3 ml-2 lg:ml-0 md:ml-0 sm:ml-0 space-x-2">
+                    <div className="flex ">
+                        <div className="shrink-0 ml-3">
+                            <Link as="button">
+                                <h1 className="font-bold text-5xl">2</h1>
+                            </Link>
+                        </div>
+                        <div className="px-7 text-left">
+                            <Link as="button">
+                                <h5 className="text-sm md:text-base lg:text-base font-bold text-left">
+                                    Nasdem Akan Beri Kejutan Soal Cawapres Anies{" "}
+                                </h5>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+                <hr className="mb-3 border-2 border-gray-400" />
+                <div className="flex flex-wrap mb-1 ml-2 lg:ml-0 md:ml-0 sm:ml-0 space-x-2">
+                    <div className="flex ">
+                        <div className="shrink-0 ml-3">
+                            <Link as="button">
+                                <h1 className="font-bold text-5xl">3</h1>
+                            </Link>
+                        </div>
+                        <div className="px-7 text-left">
+                            <Link as="button">
+                                <h5 className="text-sm md:text-base lg:text-base font-bold text-left mb-2">
+                                    Nasdem Akan Beri Kejutan Soal Cawapres Anies{" "}
+                                </h5>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="mt-0 p-6 bg-violet-200 xl:ml-16 xl:mr-0 xl:mt-2 lg:mb-0 lg:ml-14 ml-1 mr-1 mb-2 rounded-sm sm:mb-2 sm:ml-2 sm:mr-2 md:ml-4 md:mr-4">
+                <h5 className="font-bold text-lg uppercase bg-violet-300 text-gray-700 px-2 mb-0">
                     {" "}
                     Popular Topics{" "}
                 </h5>
@@ -132,7 +189,7 @@ const AsideRead = (props) => {
                 </ul>
             </div>
 
-            <div className="lg:ml-10 mt-0 md:p-1 p-3 sm:p-3 md:p-4 lg:p-4 xl:p-0 xl:ml-16 xl:mt-2">
+            <div className="lg:ml-10 mt-0 md:p-1 p-1 sm:p-2 md:p-4 lg:p-4 xl:p-0 xl:ml-16 xl:mt-2">
                 <div className="box-border bg-violet-200 rounded-sm">
                     <div dir="rtl">
                         <h5 className="text-sm font-bold mr-3">

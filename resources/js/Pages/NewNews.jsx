@@ -59,32 +59,31 @@ const NewNews = (props) => {
         //     </section>
         // </div>
 
-        <div className="container mx-auto">
-            {/* <marquee>top_news</marquee> */}
-            <div className="carousel w-full h-80">
+        <div className="xl:container mx-auto rounded-md">
+            <div className="carousel rounded-md w-full xl:h-80 h-60 sm:h-64 md:h-72 lg:h-80">
                 <div id="slide1" className="carousel-item relative w-full">
                     <div
-                        className="hero h-80"
+                        className="hero xl:h-80"
                         style={{
                             backgroundImage: `url(${img1})`,
                         }}
                         // src={img1}
                     >
-                        <div className="hero-overlay"></div>
+                        <div className="hero-overlay sm:bg-opacity-20 bg-opacity-60"></div>
                         <Link
                             href={route("read", {
                                 slug: props.news[0].slug,
                             })}
                         >
                             <div className="hero-content justify-center text-neutral-content ">
-                                <div className=" text-lg sm:text-3xl md:text-2xl lg:text-4xl font-bold absolute bottom-5">
+                                <div className="text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold absolute bottom-5 sm:bottom-8 lg:bottom-8 xl:bottom-2 md:bottom-10 left-0 h-16 w-full ml-0 sm:ml-6 md:ml-3 lg:ml-7 mb-2 xl:mb-10 xl:ml-20">
                                     {/* <h1 className="mb-5 text-5xl font-bold">
                                             Hello there
                                         </h1> */}
-                                    <h4 className="mb-3 ml-7 sm:ml-10 lg:ml-24">
+                                    <h4 className="mb-1 ml-4 sm:ml-10 xl:ml-0">
                                         {props.news[0].title}
                                     </h4>
-                                    <h5 className="ml-7 lg:ml-24 sm:ml-10 text-sm md:text-lg lg:text-xl">
+                                    <h5 className="ml-4 sm:ml-10 xl:ml-0 text-xs md:text-lg lg:text-xl">
                                         {props.news[0].category} |{" "}
                                         {formatDate(props.news[0].created_at)}
                                     </h5>
@@ -93,10 +92,16 @@ const NewNews = (props) => {
                         </Link>
                     </div>
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide4" className="btn btn-circle">
+                        <a
+                            href="#slide4"
+                            className="btn btn-circle btn-sm md:btn-md"
+                        >
                             ❮
                         </a>
-                        <a href="#slide2" className="btn btn-circle">
+                        <a
+                            href="#slide2"
+                            className="btn btn-circle btn-sm md:btn-md"
+                        >
                             ❯
                         </a>
                     </div>
@@ -115,14 +120,14 @@ const NewNews = (props) => {
                             })}
                         >
                             <div className="hero-content justify-center text-neutral-content ">
-                                <div className=" text-lg sm:text-3xl md:text-2xl lg:text-4xl font-bold absolute bottom-5">
+                                <div className="text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold absolute bottom-5 sm:bottom-8 lg:bottom-8 xl:bottom-2 md:bottom-10 left-0 h-16 w-full ml-0 sm:ml-6 md:ml-3 lg:ml-7 mb-2 xl:mb-10 xl:ml-20">
                                     {/* <h1 className="mb-5 text-5xl font-bold">
                                             Hello there
                                         </h1> */}
-                                    <h4 className="mb-3 ml-7 sm:ml-10 lg:ml-24">
+                                    <h4 className="mb-1 ml-4 sm:ml-10 xl:ml-0">
                                         {props.news[1].title}
                                     </h4>
-                                    <h5 className="ml-7 lg:ml-24 sm:ml-10 text-sm md:text-lg lg:text-xl">
+                                    <h5 className="ml-4 sm:ml-10 xl:ml-0 text-xs md:text-lg lg:text-xl">
                                         {props.news[1].category} |{" "}
                                         {formatDate(props.news[1].created_at)}
                                     </h5>
@@ -131,10 +136,16 @@ const NewNews = (props) => {
                         </Link>
                     </div>
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide1" className="btn btn-circle">
+                        <a
+                            href="#slide1"
+                            className="btn btn-circle btn-sm md:btn-md"
+                        >
                             ❮
                         </a>
-                        <a href="#slide3" className="btn btn-circle">
+                        <a
+                            href="#slide3"
+                            className="btn btn-circle btn-sm md:btn-md"
+                        >
                             ❯
                         </a>
                     </div>
@@ -153,14 +164,14 @@ const NewNews = (props) => {
                             })}
                         >
                             <div className="hero-content justify-center text-neutral-content ">
-                                <div className=" text-lg sm:text-3xl md:text-2xl lg:text-4xl font-bold absolute bottom-5">
+                                <div className="text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold absolute bottom-5 sm:bottom-8 lg:bottom-8 xl:bottom-2 md:bottom-10 left-0 h-16 w-full ml-0 sm:ml-6 md:ml-3 lg:ml-7 mb-2 xl:mb-10 xl:ml-20">
                                     {/* <h1 className="mb-5 text-5xl font-bold">
                                             Hello there
                                         </h1> */}
-                                    <h4 className="mb-3 ml-7 sm:ml-10 lg:ml-24">
+                                    <h4 className="mb-1 ml-4 sm:ml-10 xl:ml-0">
                                         {props.news[2].title}
                                     </h4>
-                                    <h5 className="ml-7 lg:ml-24 sm:ml-10 text-sm md:text-lg lg:text-xl">
+                                    <h5 className="ml-4 sm:ml-10 xl:ml-0 text-xs md:text-lg lg:text-xl">
                                         {props.news[2].category} |{" "}
                                         {formatDate(props.news[2].created_at)}
                                     </h5>
@@ -169,10 +180,16 @@ const NewNews = (props) => {
                         </Link>
                     </div>
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide2" className="btn btn-circle">
+                        <a
+                            href="#slide2"
+                            className="btn btn-circle btn-sm md:btn-md"
+                        >
                             ❮
                         </a>
-                        <a href="#slide4" className="btn btn-circle">
+                        <a
+                            href="#slide4"
+                            className="btn btn-circle btn-sm md:btn-md"
+                        >
                             ❯
                         </a>
                     </div>
@@ -191,14 +208,14 @@ const NewNews = (props) => {
                             })}
                         >
                             <div className="hero-content justify-center text-neutral-content ">
-                                <div className=" text-lg sm:text-3xl md:text-2xl lg:text-4xl font-bold absolute bottom-5">
+                                <div className="text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold absolute bottom-5 sm:bottom-8 lg:bottom-8 xl:bottom-2 md:bottom-10 left-0 h-16 w-full ml-0 sm:ml-6 md:ml-3 lg:ml-7 mb-2 xl:mb-10 xl:ml-20">
                                     {/* <h1 className="mb-5 text-5xl font-bold">
                                             Hello there
                                         </h1> */}
-                                    <h4 className="mb-3 ml-7 sm:ml-10 lg:ml-24">
+                                    <h4 className="mb-1 ml-4 sm:ml-10 xl:ml-0">
                                         {props.news[3].title}
                                     </h4>
-                                    <h5 className="ml-7 lg:ml-24 sm:ml-10 text-sm md:text-lg lg:text-xl">
+                                    <h5 className="ml-4 sm:ml-10 xl:ml-0 text-xs md:text-lg lg:text-xl">
                                         {props.news[3].category} |{" "}
                                         {formatDate(props.news[3].created_at)}
                                     </h5>
@@ -207,10 +224,16 @@ const NewNews = (props) => {
                         </Link>
                     </div>
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide3" className="btn btn-circle">
+                        <a
+                            href="#slide3"
+                            className="btn btn-circle btn-sm md:btn-md"
+                        >
                             ❮
                         </a>
-                        <a href="#slide1" className="btn btn-circle">
+                        <a
+                            href="#slide1"
+                            className="btn btn-circle btn-sm md:btn-md"
+                        >
                             ❯
                         </a>
                     </div>

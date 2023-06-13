@@ -87,6 +87,7 @@ const AsideRead = (props) => {
                                     Nasdem Akan Beri Kejutan Soal Cawapres Anies{" "}
                                 </h5>
                             </Link>
+                            <h5 className="text-xs">Nasional | 13 Juni 2023</h5>
                         </div>
                     </div>
                 </div>
@@ -104,6 +105,7 @@ const AsideRead = (props) => {
                                     Nasdem Akan Beri Kejutan Soal Cawapres Anies{" "}
                                 </h5>
                             </Link>
+                            <h5 className="text-xs">Nasional | 13 Juni 2023</h5>
                         </div>
                     </div>
                 </div>
@@ -121,6 +123,7 @@ const AsideRead = (props) => {
                                     Nasdem Akan Beri Kejutan Soal Cawapres Anies{" "}
                                 </h5>
                             </Link>
+                            <h5 className="text-xs">Nasional | 13 Juni 2023</h5>
                         </div>
                     </div>
                 </div>

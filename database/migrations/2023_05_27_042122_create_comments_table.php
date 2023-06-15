@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('slug_post');
             $table->string('username')->nullable();
             $table->longText('comment')->nullable();
+            $table->string('sentiment')->nullable();
             $table->timestamps();
          
         });

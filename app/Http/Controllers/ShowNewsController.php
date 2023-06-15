@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use App\Http\Resources\NewsCollection;
 use App\Models\Comments;
 use Inertia\Inertia;
+use Symfony\Component\Process\Process;
+use Symfony\Component\Process\Exception\ProcessFailedException;
 
 
 class ShowNewsController extends Controller
@@ -61,6 +63,8 @@ class ShowNewsController extends Controller
 
         arsort($total_category, SORT_NUMERIC);
 
+        
+
         return Inertia::render('ReadNews/ReadNews', [
             'myNews' => $post,
             'recommend' => $news_recommend,
@@ -74,9 +78,30 @@ class ShowNewsController extends Controller
     }
 
     public function addComment(Request $request, Comments $comment, $slug){
-      
+
+        // SENTIMENT ANALYZER
+        $text = $request->comment;
+        $command = escapeshellcmd("py F:/PROJECT/portal-berita/app/Http/Controllers/sentimen/project-capstone/app.py $text" );
+        $output = shell_exec($command);
+        // dd($output);
+
+
+        // $process = new Process(['python3 F:/PROJECT/portal-berita/app/Http/Controllers/app.py']);
+        // $process->run();
+
+        // // executes after the command finishes
+        // if (!$process->isSuccessful()) {
+        //     throw new ProcessFailedException($process); 
+        // }
+
+        // $data = $process->getOutput();
+
+        // dd($data);
+
+
         $comment->comment = $request->comment;
         $comment->username = $request->username; 
+        $comment->sentiment = $output;
         $comment->slug_post = $slug;
         $comment->save();
         

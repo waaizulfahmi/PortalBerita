@@ -156,63 +156,11 @@ const AsideRead = (props) => {
             <div className="mt-0 p-6 bg-violet-200 xl:ml-16 xl:mr-0 xl:mt-2 lg:mb-0 lg:ml-14 ml-1 mr-1 mb-2 rounded-sm sm:mb-2 sm:ml-2 sm:mr-2 md:ml-4 md:mr-4">
                 <h5 className="font-bold text-lg uppercase bg-violet-300 text-gray-700 px-2 mb-0">
                     {" "}
-                    Popular Topics{" "}
+                    Explore Category{" "}
                 </h5>
 
                 <ul>
                     <div className="mt-4 p-2">{categoryList()}</div>
-                    {/* <li className="px-1 py-4 border-b border-t border-white hover:border-gray-200 transition duration-300">
-                        <a
-                            href="#"
-                            className="flex items-center text-gray-600 cursor-pointer"
-                        >
-                            <span className="inline-block h-4 w-4 bg-green-300 mr-3"></span>
-                            Olahraga
-                            <span className="text-gray-500 ml-auto">
-                                {props.category.total_sport} articles
-                            </span>
-                            <i className="text-gray-500 bx bx-right-arrow-alt ml-1"></i>
-                        </a>
-                    </li>
-                    <li className="px-1 py-4 border-b border-t border-white hover:border-gray-200 transition duration-300">
-                        <a
-                            href="#"
-                            className="flex items-center text-gray-600 cursor-pointer"
-                        >
-                            <span className="inline-block h-4 w-4 bg-indigo-300 mr-3"></span>
-                            Wisata
-                            <span className="text-gray-500 ml-auto">
-                                {props.category.total_wisata} articles
-                            </span>
-                            <i className="text-gray-500 bx bx-right-arrow-alt ml-1"></i>
-                        </a>
-                    </li>
-                    <li className="px-1 py-4 border-b border-t border-white hover:border-gray-200 transition duration-300">
-                        <a
-                            href="#"
-                            className="flex items-center text-gray-600 cursor-pointer"
-                        >
-                            <span className="inline-block h-4 w-4 bg-yellow-300 mr-3"></span>
-                            Kuliner
-                            <span className="text-gray-500 ml-auto">
-                                {props.category.total_kuliner} articles
-                            </span>
-                            <i className="text-gray-500 bx bx-right-arrow-alt ml-1"></i>
-                        </a>
-                    </li>
-                    <li className="px-1 py-4 border-b border-t border-white hover:border-gray-200 transition duration-300">
-                        <a
-                            href="#"
-                            className="flex items-center text-gray-600 cursor-pointer"
-                        >
-                            <span className="inline-block h-4 w-4 bg-blue-300 mr-3"></span>
-                            Bisnis
-                            <span className="text-gray-500 ml-auto">
-                                {props.category.total_bisnis} articles
-                            </span>
-                            <i className="text-gray-500 bx bx-right-arrow-alt ml-1"></i>
-                        </a>
-                    </li> */}
                 </ul>
             </div>
 

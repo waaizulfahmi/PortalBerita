@@ -59,7 +59,7 @@ const Read = (props) => {
             <div className="text-sm breadcrumbs ml-3 md:ml-4 lg:ml-2 xl:ml-1">
                 <ul>
                     <li>
-                        <Link href="/">Beranda</Link>
+                        <Link href="/">Berand1</Link>
                     </li>
                     <li>
                         <Link

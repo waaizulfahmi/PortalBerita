@@ -18,7 +18,7 @@ const Navbar = () => {
                         as="button"
                         className="btn btn-ghost normal-case lg:text-4xl xl:ml-20 text-2xl text-white"
                     >
-                        Panelwarta.<span className="text-orange-400">id</span>
+                        panelwarta.<span className="text-orange-400">id</span>
                     </Link>
                 </div>
                 <div className=" flex lg:flex-none gap-3 xl:mr-20">
@@ -107,29 +107,113 @@ const Navbar = () => {
             </div>
 
             <div className="xl:container md:mx-auto">
-            <div className="navbar bg-violet-200 rounded-lg mt-2">
-                <div className="navbar-start">
-                    <div className="dropdown">
-                        <label tabIndex={0} className="btn btn-ghost lg:hidden">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-5 w-5"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
+                <div className="navbar bg-violet-200 rounded-lg mt-2">
+                    <div className="navbar-start">
+                        <div className="dropdown">
+                            <label
+                                tabIndex={0}
+                                className="btn btn-ghost lg:hidden"
                             >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M4 6h16M4 12h8m-8 6h16"
-                                />
-                            </svg>
-                        </label>
-                        <ul
-                            tabIndex={0}
-                            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-56"
-                        >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-5 w-5"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
+                                        d="M4 6h16M4 12h8m-8 6h16"
+                                    />
+                                </svg>
+                            </label>
+                            <ul
+                                tabIndex={0}
+                                className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-56"
+                            >
+                                <li>
+                                    <Link href={route("home")} as="button">
+                                        Berita
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        href={route("shownews", {
+                                            category: "Olahraga",
+                                        })}
+                                        as="button"
+                                    >
+                                        Olahraga
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        href={route("shownews", {
+                                            category: "Wisata",
+                                        })}
+                                        as="button"
+                                    >
+                                        Wisata
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        href={route("shownews", {
+                                            category: "Kuliner",
+                                        })}
+                                        as="button"
+                                    >
+                                        Kuliner
+                                    </Link>
+                                </li>
+
+                                <li>
+                                    <Link
+                                        href={route("shownews", {
+                                            category: "Bisnis",
+                                        })}
+                                        as="button"
+                                    >
+                                        Bisnis
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        href={route("shownews", {
+                                            category: "Daerah",
+                                        })}
+                                        as="button"
+                                    >
+                                        Daerah
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        href={route("shownews", {
+                                            category: "Nasional",
+                                        })}
+                                        as="button"
+                                    >
+                                        Nasional
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        href={route("shownews", {
+                                            category: "Mancanegara",
+                                        })}
+                                        as="button"
+                                    >
+                                        Mancanegara
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="navbar-center hidden lg:flex">
+                        <ul className="menu menu-horizontal px-1">
                             <li>
                                 <Link href={route("home")} as="button">
                                     Berita
@@ -165,7 +249,16 @@ const Navbar = () => {
                                     Kuliner
                                 </Link>
                             </li>
-
+                            <li>
+                                <Link
+                                    href={route("shownews", {
+                                        category: "Profile",
+                                    })}
+                                    as="button"
+                                >
+                                    Profile
+                                </Link>
+                            </li>
                             <li>
                                 <Link
                                     href={route("shownews", {
@@ -208,100 +301,10 @@ const Navbar = () => {
                             </li>
                         </ul>
                     </div>
+                    <div className="navbar-end">
+                        <h4 className="font-bold text-lg mr-2">{date}</h4>
+                    </div>
                 </div>
-                <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
-                        <li>
-                            <Link href={route("home")} as="button">
-                                Berita
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href={route("shownews", {
-                                    category: "Olahraga",
-                                })}
-                                as="button"
-                            >
-                                Olahraga
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href={route("shownews", {
-                                    category: "Wisata",
-                                })}
-                                as="button"
-                            >
-                                Wisata
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href={route("shownews", {
-                                    category: "Kuliner",
-                                })}
-                                as="button"
-                            >
-                                Kuliner
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href={route("shownews", {
-                                    category: "Profile",
-                                })}
-                                as="button"
-                            >
-                                Profile
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href={route("shownews", {
-                                    category: "Bisnis",
-                                })}
-                                as="button"
-                            >
-                                Bisnis
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href={route("shownews", {
-                                    category: "Daerah",
-                                })}
-                                as="button"
-                            >
-                                Daerah
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href={route("shownews", {
-                                    category: "Nasional",
-                                })}
-                                as="button"
-                            >
-                                Nasional
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href={route("shownews", {
-                                    category: "Mancanegara",
-                                })}
-                                as="button"
-                            >
-                                Mancanegara
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
-                <div className="navbar-end">
-                    <h4 className="font-bold text-lg mr-2">{date}</h4>
-                </div>
-            </div>
             </div>
         </div>
     );

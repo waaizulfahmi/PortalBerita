@@ -172,7 +172,7 @@ class NewsController extends Controller
     public function comment( News $news){
         $user = $news::select('author')->where('author',  auth()->user()->name)->get()->pluck('author')->first();
   
-        $comment = Comments::join('news', 'comments.slug_post' ,'=', 'news.slug')->where('news.author', '=', $user)->get(['comment', 'username', 'slug_post']);
+        $comment = Comments::join('news', 'comments.slug_post' ,'=', 'news.slug')->where('news.author', '=', $user)->get(['comment', 'username', 'slug_post', 'sentiment', 'id_post']);
 
 
         return Inertia::render('DashboardPages/ListComment', [
@@ -182,7 +182,7 @@ class NewsController extends Controller
 
 
     public function delete_comment(Request $request, Comments $comment){
-        $comment= Comments::find($request->id);
+        $comment= Comments::find($request->id_post);
         $comment->delete();
 
         return to_route('list.comment')->with('message', 'Data Berhasil Dihapus !');

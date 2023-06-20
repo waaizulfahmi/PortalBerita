@@ -143,7 +143,7 @@ export default function Authenticated({ auth, header, children }) {
                                                             className="btn btn-ghost btn-circle avatar ml-3"
                                                         >
                                                             <div className=" realtive z-10 w-12 h-12 rounded-full overflow-hidden border-4 border-gray-400 hover:border-gray-300 focus:border-gray-300 focus:outline-none">
-                                                                <img src="https://source.unsplash.com/uJ8LNVCBjFQ/400x400" />
+                                                                <img src="/storage/post-images/profile.jpg" />
                                                             </div>
                                                         </label>
                                                         {/* <svg
@@ -163,11 +163,11 @@ export default function Authenticated({ auth, header, children }) {
                                             </Dropdown.Trigger>
 
                                             <Dropdown.Content>
-                                                <Dropdown.Link
+                                                {/* <Dropdown.Link
                                                     href={route("profile.edit")}
                                                 >
                                                     Profile
-                                                </Dropdown.Link>
+                                                </Dropdown.Link> */}
                                                 <Dropdown.Link
                                                     href={route("logout")}
                                                     method="post"

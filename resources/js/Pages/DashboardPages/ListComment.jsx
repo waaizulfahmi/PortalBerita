@@ -33,6 +33,17 @@ const ListComment = (props) => {
                             </span> */}
                         </td>
                         <td>{comment.comment}</td>
+                        <td>
+                            {comment.sentiment == "[0]\n" ? (
+                                <div className="badge badge-error badge-outline">
+                                    Negatif
+                                </div>
+                            ) : (
+                                <div className="badge badge-accent badge-outline">
+                                    Positif{" "}
+                                </div>
+                            )}
+                        </td>
                         {/* <td>{comment.slug.substring(0, 30) + "..."}</td> */}
                         <td>
                             {/* <div className="btn btn-info btn-xs mx-2"></div> */}
@@ -68,7 +79,7 @@ const ListComment = (props) => {
                                             href={route("delete.comment")}
                                             method="post"
                                             data={{
-                                                id: comment.id,
+                                                id_post: comment.id,
                                             }}
                                             className="btn btn-warning"
                                         >
@@ -175,6 +186,7 @@ const ListComment = (props) => {
                             <th>Topik</th>
                             <th>Username</th>
                             <th>Komentar</th>
+                            <th>Sentimen</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>

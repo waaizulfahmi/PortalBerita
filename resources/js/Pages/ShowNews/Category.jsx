@@ -40,11 +40,7 @@ const isNews = (news) => {
                             <span className="text-xs sm:text-xs text-gray-500 dark:text-gray-300 mb-1 xl:mb-3">
                                 {formatDate(dateString)}
                             </span>
-<<<<<<< HEAD
-                            <p className="text-xs sm:text-xs">
-=======
                             <p className="text-sm">
->>>>>>> 11c3678a734a866dc848863043c80a64105e8e5c
                                 dilihat sebanyak {data.views} kali
                             </p>
                         </div>
